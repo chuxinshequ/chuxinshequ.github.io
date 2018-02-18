@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Help on 不忘初心</title>
-    <link>https://chuxin-community.github.io/categories/help/</link>
+    <link>https://chuxinshequ.github.io/categories/help/</link>
     <description>Recent content in Help on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
     <lastBuildDate>Tue, 30 Jan 2018 23:30:01 +0000</lastBuildDate>
     
-	<atom:link href="https://chuxin-community.github.io/categories/help/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chuxinshequ.github.io/categories/help/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Markdown Tables Sample 表格示例</title>
-      <link>https://chuxin-community.github.io/posts/huzhenghui/help/markdown-tables-sample/</link>
+      <link>https://chuxinshequ.github.io/posts/huzhenghui/help/markdown-tables-sample/</link>
       <pubDate>Tue, 30 Jan 2018 23:30:01 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/huzhenghui/help/markdown-tables-sample/</guid>
+      <guid>https://chuxinshequ.github.io/posts/huzhenghui/help/markdown-tables-sample/</guid>
       <description> Markdown Tables Sample 表格示例  Name | Age --------|------ Bob | 27 Alice | 23     Name Age     Bob 27   Alice 23    </description>
     </item>
     
     <item>
       <title>Front Matter Sample 格式示例</title>
-      <link>https://chuxin-community.github.io/posts/huzhenghui/help/front-matter-sample/</link>
+      <link>https://chuxinshequ.github.io/posts/huzhenghui/help/front-matter-sample/</link>
       <pubDate>Tue, 30 Jan 2018 17:54:55 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/huzhenghui/help/front-matter-sample/</guid>
+      <guid>https://chuxinshequ.github.io/posts/huzhenghui/help/front-matter-sample/</guid>
       <description>Front Matter Sample 格式示例 目前使用的 Hugo 支持 Markdown Front Matter 语法 https://jekyllrb.com/docs/frontmatter/ 主要涉及 title、date、tags、categories四个变量 也就是 .md 文件的开头需要包含如下内容
 --- title: Post Format Sample 文章格式示例 date: 2018-01-30 17:54:55 tags: [help] categories: help ---  需要注意 Hugo 按照 .md 文件中的 date 变量排序，如果不写或者格式错误，那么就会被排在最后了。 可以在 GitHub 中预览 Markdown Front Matter 语法是否正确，例如上例预览效果为
    title date tags categories     Post Format Sample 文章格式示例 2018-01-30 09:54:55 -0800 help help    预览中在 date 变量看到时区，也就是 -0800 或者类似的字样代表正确。</description>

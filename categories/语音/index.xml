@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>语音 on 不忘初心</title>
-    <link>https://chuxin-community.github.io/categories/%E8%AF%AD%E9%9F%B3/</link>
+    <link>https://chuxinshequ.github.io/categories/%E8%AF%AD%E9%9F%B3/</link>
     <description>Recent content in 语音 on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
     <lastBuildDate>Tue, 16 Aug 2016 16:55:56 +0000</lastBuildDate>
     
-	<atom:link href="https://chuxin-community.github.io/categories/%E8%AF%AD%E9%9F%B3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chuxinshequ.github.io/categories/%E8%AF%AD%E9%9F%B3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>科大讯飞与灵云语音对比</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</link>
       <pubDate>Tue, 16 Aug 2016 16:55:56 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 对比     科大讯飞 灵云语音     语音能力 语音合成、语音识别、语义、命令词、唤醒 没有独立的唤醒功能，需要使用命令词实现唤醒。   初始化 我们购买完离线资源包以后，集成到工程里，就可以保持在离线环境下使用 即使使用离线语音能力，第一次使用的时候，也必须要联网，激活离线语音能力以后，才可以使用   网络请求 各种请求均异步操作，不会阻塞线程。 在线文字语义识别，是同步操作，其它是异步操作过程。（同步操作时间超过5秒会导致Android终端抛出NAR异常导致崩溃）   语义 场景定义灵活，开发者可在后台自定义，通过申请的方式，可以开通自定义场景，目前免费开放。语义解析失败，可以将语音转文字。 场景的定义需要联系客服人员开通，自定义场景需要付费（说是一般一个场景2万元）。语义解析失败不能转成文字   语音唤醒 支持（官方自称低功耗） 实际没有唤醒功能，是使用离线命令词的方式模拟出了唤醒，效果不理想。尚未发现可以发现可以设置门限值等常用参数的API。   命令词识别 离线使用BNF语法，在线使用ABNF语法，语法可以使用占位符等等的操作符 离线和在线都使用JSGF语法。    灵云唤醒机制 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
 个人认为这种方式实现唤醒效果不好，原因如下：
@@ -31,10 +31,10 @@
     
     <item>
       <title>灵云语音唤醒</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
       <pubDate>Tue, 16 Aug 2016 16:41:32 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
       <description> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 严格来讲，灵云没有语音唤醒功能，但是通过命令词的方式可以实现
 实现方式 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
@@ -47,10 +47,10 @@
     
     <item>
       <title>灵云语音识别</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
       <pubDate>Mon, 15 Aug 2016 17:19:29 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 源码 GitHub
 在线语音识别 SDK下载 灵云SDK下载
@@ -60,10 +60,10 @@ SDK集成 下载SDK以后，将jar和so导入工程
     
     <item>
       <title>灵云语义理解</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</link>
       <pubDate>Mon, 15 Aug 2016 17:13:32 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 GitHub
 SDK下载 灵云SDK下载
@@ -73,10 +73,10 @@ SDK集成 下载SDK以后，将jar和so导入工程
     
     <item>
       <title>灵云语音合成</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
       <pubDate>Fri, 12 Aug 2016 12:57:44 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 注册 官网
 注册比较简单，就不做过多介绍了，注册万应用以后，在后台创建自己的应用，创建完应用以后需要给应用开通对应的语音能力。
@@ -88,10 +88,10 @@ SDK集成 下载SDK以后，将jar和so导入工程
     
     <item>
       <title>科大讯飞离线语音合成（语记）</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</link>
       <pubDate>Sun, 30 Aug 2015 18:14:13 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 离线语音合成（语记） 讯飞的语音合成有三种方式
  在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用语记实现离线语音合成
@@ -105,10 +105,10 @@ SDK集成 下载SDK以后，将jar和so导入工程
     
     <item>
       <title>科大讯飞离线语音合成</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
       <pubDate>Sun, 30 Aug 2015 18:06:35 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 离线语音合成（离线资源包） 讯飞的语音合成有三种方式
  在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用离线资源包实现离线语音合成，因为正式版是要付费的，所以这里使用试用的离线包（35天试用期、3个装机量）。
@@ -122,10 +122,10 @@ package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application
     
     <item>
       <title>科大讯飞语义识别</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
       <pubDate>Sun, 30 Aug 2015 18:00:28 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9064463
 语义测试接口 地址：http://osp.voicecloud.cn/index.php/default/quicktest/index
@@ -141,10 +141,10 @@ package com.example.kongqw.kqwunderstanddemo; import android.app.Application; im
     
     <item>
       <title>科大讯飞在线语音合成</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
       <pubDate>Sat, 29 Aug 2015 18:19:12 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9062261
 下载SDK 1. 选择服务 2. 选择平台 3. 选择应用 4. 下载SDK 说明 之前的工程都是在Eclipse下演示的，随着Android Studio的普及，我这里也开始使用Android Studio写Demo，虽然细节导入jar包和so库的过程可能不太一样，但是整体的流程是一样的。
@@ -156,10 +156,10 @@ package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application
     
     <item>
       <title>科大讯飞语音识别</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
       <pubDate>Fri, 21 Aug 2015 18:31:38 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 离线语音识别（语记） 效果图 源码 下载地址：http://download.csdn.net/detail/q4878802/9032149
 下载语记并安装离线资源 集成 初始化 在清单文件中application标签下添加
@@ -169,10 +169,10 @@ package com.example.kqwlocalspeechdemo; import com.iflytek.cloud.SpeechConstant;
     
     <item>
       <title>科大讯飞离线命令词&#43;语义识别</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D&#43;%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D&#43;%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
       <pubDate>Thu, 20 Aug 2015 18:46:11 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D&#43;%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D&#43;%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
       <description> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 离线命令词+语义识别 意思就是先走离线命令词识别，如果离线命令词识别没有识别到结果，那么就再走语义接口，如果已开通对应场景，则转为语义，如果没有开通对应场景，则将语音转为文字
 效果图  说的话满足本地构建的语法&amp;mdash;-离线命令词识别   说的话离线命令词无法识别，走语义识别并且满足语义场景&amp;mdash;-将语音转为语义   说话既不满足离线命令词识别也不满足语义开通的场景&amp;mdash;-将语音转为文字  程序和离线命令词识别基本一样
@@ -184,10 +184,10 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
     
     <item>
       <title>科大讯飞语音唤醒</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
       <pubDate>Wed, 19 Aug 2015 18:53:57 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 语音唤醒 唤醒功能，顾名思义，通过语音，唤醒服务，做我们想做的事情。
 效果图  开启应用后说讯飞语音或者讯飞语点唤醒
@@ -203,10 +203,10 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
     
     <item>
       <title>科大讯飞离线命令词识别</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</link>
       <pubDate>Wed, 19 Aug 2015 17:41:31 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图  示例源码  地址：http://download.csdn.net/detail/q4878802/9023825
 步骤： 1. 下载SDK 前面文章有，就不在复述了。这里要选择离线命令词的服务以后，重新加载，因为需要下载离线命令词识别的资源文件

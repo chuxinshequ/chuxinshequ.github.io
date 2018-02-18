@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Im on 不忘初心</title>
-    <link>https://chuxin-community.github.io/categories/im/</link>
+    <link>https://chuxinshequ.github.io/categories/im/</link>
     <description>Recent content in Im on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
     <lastBuildDate>Mon, 22 Aug 2016 18:36:12 +0000</lastBuildDate>
     
-	<atom:link href="https://chuxin-community.github.io/categories/im/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chuxinshequ.github.io/categories/im/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>环信即时通讯在Android平台的部署</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Mon, 22 Aug 2016 18:36:12 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 官网 环信
 下载SDK

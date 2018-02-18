@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>正弦波 on 不忘初心</title>
-    <link>https://chuxin-community.github.io/tags/%E6%AD%A3%E5%BC%A6%E6%B3%A2/</link>
+    <link>https://chuxinshequ.github.io/tags/%E6%AD%A3%E5%BC%A6%E6%B3%A2/</link>
     <description>Recent content in 正弦波 on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
     <lastBuildDate>Mon, 29 Aug 2016 15:01:34 +0000</lastBuildDate>
     
-	<atom:link href="https://chuxin-community.github.io/tags/%E6%AD%A3%E5%BC%A6%E6%B3%A2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chuxinshequ.github.io/tags/%E6%AD%A3%E5%BC%A6%E6%B3%A2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android输出正弦波音频信号(左右声道对称)</title>
-      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0/</link>
+      <link>https://chuxinshequ.github.io/posts/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0/</link>
       <pubDate>Mon, 29 Aug 2016 15:01:34 +0000</pubDate>
       
-      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0/</guid>
+      <guid>https://chuxinshequ.github.io/posts/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 需求：左右声道分别输出不同的音频数据，波形要是一个正弦波，左右声道还要对称！ 对硬件不是很了解，说是要通过音波避障。
 效果图 之前已经介绍了如何在左右声道输出不同的音频数据。 那么这里主要介绍如何模拟出波形是正弦波的音频数据。
