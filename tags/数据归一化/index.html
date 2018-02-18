@@ -168,6 +168,56 @@
 
                         
                         
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/">数据归一化和其在sklearn中的处理</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/"><i class="fa fa-calendar-o"></i> September 1, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">一：数据归一化 数据归一化（标准化）处理是数据挖掘的一项基础工作，不同评价指标往往具有不同的量纲和量纲单位，这样的情况会影响到数据分析的结果，为了消除指标之间的量纲影响，需要进行数据标准化处理，以解决数据指标之间的可比性。原始数据经过数据标准化处理后，各指标处于同一数量级，适合进行综合对比评价。  归一化方法有两种形式，一种是把数变为（0，1）之间的小数，一种是把有量纲表达式变为无量纲表达式。在机器学习中我们更关注的把数据变到0～1之间，接下来我们讨论的也是第一种形式。
+1）min-max标准化 min-max标准化也叫做离差标准化，是对原始数据的线性变换，使结果落到[0,1]区间，其对应的数学公式如下：
+$$ X_{scale} = \frac{x-min}{max-min} $$
+对应的python实现为
+# x为数据 比如说 [1,2,1,3,2,4,1] def Normalization(x): return [(float(i)-min(x))/float(max(x)-min(x)) for i in x]  如果要将数据转换到[-1,1]之间，可以修改其数学公式为：
+$$ X{scale} = \frac{x-x{mean}}{max-min} $$ x_mean 表示平均值。
+对应的python实现为
+import numpy as np # x为数据 比如说 [1,2,1,3,2,4,1] def Normalization(x): return [(float(i)-np.mean(x))/float(max(x)-min(x)) for i in x]  其中max为样本数据的最大值，min为样本数据的最小值。这种方法有个缺陷就是当有新数据加入时，可能导致max和min的变化，需要重新定义。
+该标准化方法有一个缺点就是，如果数据中有一些偏离正常数据的异常点，就会导致标准化结果的不准确性。比如说一个公司员工（A，B，C，D）的薪水为6k,8k,7k,10w,这种情况下进行归一化对每个员工来讲都是不合理的。
+当然还有一些其他的办法也能实现数据的标准化。
+2）z-score标准化 z-score标准化也叫标准差标准化，代表的是分值偏离均值的程度，经过处理的数据符合标准正态分布，即均值为0，标准差为1。其转化函数为
+$$ X_{scale} = \frac{x-\mu }{\sigma } $$
+其中μ为所有样本数据的均值，σ为所有样本数据的标准差。
+其对应的python实现为：
+import numpy as np #x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] def z_score(x): return (x - np.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
 
                         <ul class="pager">
                             
@@ -411,6 +461,45 @@
             <h4></h4>
 
             <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
+                    </div>
+                </div>
                 
             </div>
 

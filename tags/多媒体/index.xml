@@ -14,10 +14,10 @@
     
     <item>
       <title>Android播放音效</title>
-      <link>https://chuxinshequ.github.io/posts/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</link>
       <pubDate>Wed, 16 Nov 2016 10:56:36 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/posts/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 有些时候程序需要播放几个很短的低延迟的音效来响应与用户的交互。
 Android通过SoundPool将文件音频缓存加载到内存中，然后在响应用户操作的时候快速地播放。 Android框架低通了SoundPool来解码小音频文件，并在内存中操作它们来进行音频快速和重复的播放。SoundPool还有一些其他特性，比如可以在运行时控制音量和播放速度。

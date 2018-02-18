@@ -168,6 +168,43 @@
 
                         
                         
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/">Android播放音效</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/"><i class="fa fa-calendar-o"></i> November 16, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+有些时候程序需要播放几个很短的低延迟的音效来响应与用户的交互。
+Android通过SoundPool将文件音频缓存加载到内存中，然后在响应用户操作的时候快速地播放。 Android框架低通了SoundPool来解码小音频文件，并在内存中操作它们来进行音频快速和重复的播放。SoundPool还有一些其他特性，比如可以在运行时控制音量和播放速度。
+播放音效也很简单，总共分5步
+准备音频文件 将音频文件放置在assets目录下
+初始化SoundPool SoundPool mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);  加载音频文件 int streamID = mSoundPool.load(getApplicationContext().getAssets().openFd(&quot;beep/beep1.mp3&quot;), 1);  播放音频文件 mSoundPool.play(streamID, 10, 10, 1, 0, 1.0f);  释放SoundPool mSoundPool.release(); mSoundPool = null;  Code package com.kongqw.kqwplaybeepdemo; import android.media.AudioManager; import android.media.SoundPool; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.util.Log; import android.view.View; import java.io.IOException; import java.util.HashMap; public class MainActivity extends AppCompatActivity implements View.OnClickListener { private static final String TAG = &quot;MainActivity&quot;; private SoundPool mSoundPool; private int streamID; private HashMap&lt;String, Integer&gt; mSoundMap; @Override protected void onCreate(Bundle savedInstanceState) { super.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
 
                         <ul class="pager">
                             
@@ -411,6 +448,45 @@
             <h4></h4>
 
             <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
+                    </div>
+                </div>
                 
             </div>
 

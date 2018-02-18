@@ -168,6 +168,440 @@
 
                         
                         
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/">OpenCV检测图像轮廓</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/"><i class="fa fa-calendar-o"></i> August 22, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+轮廓只不过是图像中连接的曲线，或者图像中连通部分的边界，轮廓通常以图像中的边缘来计算，但是，边缘和轮廓的区别在于轮廓是闭合的，而边缘可以是任意的。边缘的概念局限于点及其邻域像素，轮廓将目标作为整体进行处理。
+效果图 源码 KqwOpenCVFeaturesDemo
+步骤  将图像置灰 使用Canny边缘检测检测出图像的边缘 调用Imgproc.findContours()方法检测图像轮廓 在新的图像上画出轮廓  封装 /** * 找出轮廓 * * @param bitmap 要检测的图片 */ public void findContours(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&lt;Bitmap, Mat&gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 原图置灰 Imgproc.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/">OpenCV使用霍夫变换检测图像中的形状</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/"><i class="fa fa-calendar-o"></i> August 22, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+霍夫变换是一种被广泛使用的利用数学等式的参数形式在图像中检测形状的技术。 例如直线、椭圆、圆等形状。
+霍夫变换可以检测任何能以参数形式表示的形状，随着形状的复杂（维数的增加，例如球体），计算的消耗也会增加。 我们通常只考虑简单的霍夫形状，例如直线和圆。
+源码 KqwOpenCVFeaturesDemo
+霍夫直线 效果图 步骤  将图像置灰 调用Imgproc.HoughLinesP(cannyEdges, lines, 1, Math.PI / 180, 50, 20, 20) 方法获取直线的数据
+ 第一个参数：图像输入 第二个参数：图像输出 第三个参数：图像指定像素中r的解析度 第四个参数：图像指定像素中θ的解析度 第五个参数：直线上点数的阈值 第六个参数：直线上点数的最小值  在图像上绘制直线
+  封装 /** * 霍夫直线 * * @param bitmap 要检测的图片 */ public void houghLines(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&lt;Bitmap, Mat&gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/">OpenCV使用Harris算法实现角点检测</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/"><i class="fa fa-calendar-o"></i> August 19, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+角点是两条边缘的交点或者在局部邻域中有多个显著边缘方向的点。Harris角点检测是一种在角点检测中最常见的技术。
+Harris角点检测器在图像上使用滑动窗口计算亮度的变化。
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Harris角点检测 * * @param bitmap 要检测的图片 */ public void harris(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&lt;Bitmap, Mat&gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/">OpenCV使用Sobel滤波器实现图像边缘检测</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"><i class="fa fa-calendar-o"></i> August 19, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+Sobel滤波器也叫Sobel算子，与Canny边缘检测一样，需要计算像素的灰度梯度，只不过是换用另一种方式。
+使用Sobel算子计算边缘的步骤  将图像转为灰度图像
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  计算水平方向灰度梯度的绝对值
+Imgproc.Sobel(grayMat, grad_x, CvType.CV_16S, 1, 0, 3, 1, 0); Core.convertScaleAbs(grad_x, abs_grad_x);  计算垂直方法灰度梯度的绝对值
+Imgproc.Sobel(grayMat, grad_y, CvType.CV_16S, 0, 1, 3, 1, 0); Core.convertScaleAbs(grad_y, abs_grad_y);  计算最终梯度
+// 计算结果梯度 Core.addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 1, sobel);   最终的梯度实质上就是边缘。
+这里用到了两个3 * 3的核对图像做卷积来近似地计算水平和垂直方向的灰度梯度
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Sobel滤波器 * * @param bitmap 要检测的图片 */ public void sobel(Bitmap bitmap) { if (null !</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/">OpenCV使用Canny边缘检测器实现图像边缘检测</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"><i class="fa fa-calendar-o"></i> August 19, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+Canny边缘检测器是一种被广泛使用的算法，并被认为是边缘检测最优的算法，该方法使用了比高斯差分算法更复杂的技巧，如多向灰度梯度和滞后阈值化。
+Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模糊半径执行高斯模糊来减少图像内的噪声。 计算图像的梯度：这里计算图像的梯度，并将梯度分类为垂直、水平和斜对角。这一步的输出用于在下一步中计算真正的边缘。 非最大值抑制：利用上一步计算出来的梯度方向，检测某一像素在梯度的正方向和负方向上是否是局部最大值，如果是，则抑制该像素（像素不属于边缘）。这是一种边缘细化技术，用最急剧的变换选出边缘点。 用滞后阈值化选择边缘：最后一步，检查某一条边缘是否明显到足以作为最终输出，最后去除所有不明显的边缘。  算法比较复杂，但是使用很简单，首先将图像灰度化
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  然后调用Imgproc.Canny()方法即可
+// Canny边缘检测器检测图像边缘 Imgproc.Canny(grayMat, cannyEdges, 10, 100);   第一个参数表示图像输入 第二个参数表述图像输出 第三个参数表示低阈值 第四个参数表示高阈值  在Canny边缘检测算法中，将图像中的点归为三类：
+ 被抑制点
+灰度梯度值 &lt; 低阈值
+ 弱边缘点
+低阈值 &lt;= 灰度梯度值 &lt;= 高阈值
+ 强边缘点
+高阈值 &lt; 灰度梯度值
+  封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Canny边缘检测算法 * * @param bitmap 要检测的图片 */ public void canny(Bitmap bitmap) { if (null !</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/">OpenCV高斯差分技术实现图像边缘检测</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/"><i class="fa fa-calendar-o"></i> August 19, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+边缘是图像中像素亮度变化明显的点。
+高斯差分算法步骤  将图像转为灰度图像
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  用两个不同的模糊半径对灰度图像执行高斯模糊（取得两幅高斯模糊图像）
+// 以两个不同的模糊半径对图像做模糊处理 Imgproc.GaussianBlur(grayMat, blur1, new Size(15, 15), 5); Imgproc.GaussianBlur(grayMat, blur2, new Size(21, 21), 5);  将两幅高斯模糊图像做减法，得到一幅包含边缘点的结果图像
+// 将两幅模糊后的图像相减 Mat diff = new Mat(); Core.absdiff(blur1, blur2, diff);   该方法只对图像做了高斯模糊，这是计算图像边缘最快的方法之一，但是，该方法的结果也不是很理想，这种方式对某些图像效果很好，但是在某些情况下可能会完全失效。
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 高斯差分算法边缘检测 * * @param bitmap 要检测的图片 */ public void differenceOfGaussian(Bitmap bitmap) { if (null != mSubscriber) Observable .</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/">OpenCV实现图像阈值化</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/"><i class="fa fa-calendar-o"></i> August 18, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+阈值化是一种将我们想要在图像中分析的区域分割出来的方法。 我们把每个像素值都与一个预设的阈值做比较，再根据比较的结果调整像素值。
+类似这样
+Imgproc.threshold(src, src, 100, 255, Imgproc.THRESH_BINARY);  其中100是阈值，255是最大值（纯白色的值）。
+常量    名称 常量     二值阈值化 Imgproc.THRESH_BINARY   阈值化到零 Imgproc.THRESH_TOZERO   截断阈值化 Imgproc.THRESH_TRUNC   反转二值阈值化 Imgproc.THRESH_BINARY_INV   反转阈值化到零 Imgproc.THRESH_TOZERO_INV    自适应阈值 上述的阈值化是全局性的，我们也可以根据邻域像素为任意像素计算阈值。
+自适应阈值用到的3个参数
+ 自适应方法
+ Imgproc.ADAPTIVE_THRESH_MEAN_C：阈值是邻域像素的值 Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C：阈值是领域像素的加权和，权重来自高斯核  块尺寸：邻域的大小
+ 常量C：从对每个像素计算得到的均值或加权均值减去的常量
+  图像置灰
+Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);  自适应阈值化</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/">OpenCV实现图像暗区扩张（腐蚀图片）</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/"><i class="fa fa-calendar-o"></i> August 18, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+暗区扩张，也叫腐蚀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最小值代替锚点像素。
+我们首先定义一个合适大小的核
+Mat kernelErode = Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE, new Size(5, 5));  然后调用Imgproc.erode()方法把图像的暗区放大
+// 扩大暗区（腐蚀） Imgproc.erode(src, src, kernelErode);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 扩大图片暗区（腐蚀图片） * * @param bitmap 要处理的图片 */ public void erode(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&lt;Bitmap, Bitmap&gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelErode = Imgproc.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/">OpenCV实现图像亮区扩张</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/"><i class="fa fa-calendar-o"></i> August 18, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+亮区扩张，也叫膨胀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最大值代替锚点像素。膨胀可以用来融合可能被分割的目标。
+我们首先定义一个合适大小的核
+Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3, 3));  然后调用Imgproc.dilate()方法把图像的亮区放大
+// 扩大亮区 Imgproc.dilate(src, src, kernelDilate);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 扩大图片亮区 * * @param bitmap 要处理的图片 */ public void dilate(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&lt;Bitmap, Bitmap&gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelDilate = Imgproc.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/">OpenCV实现图片锐化</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/"><i class="fa fa-calendar-o"></i> August 18, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+锐化也可以看作是一种线性滤波操作，并且锚点像素有较高的权重，而周围的像素权重较低。 因此，我们可以自定义一个这样的核。
+/* 自定义核 0	-1	0 -1 5	-1 0	-1	0 */ Mat kernel = new Mat(3, 3, CvType.CV_16SC1); kernel.put(0, 0, 0, -1, 0, -1, 5, -1, 0, -1, 0);  这里我们将图像的深度设为16SC1，表示包含一个通道（C1），图像中的每个像素包含一个16比特有符号整型数（16S）。
+定义完核以后，我们对图像和核做卷积操作
+// 对图像和自定义核做卷积 Imgproc.filter2D(src, src, src.depth(), kernel);   第一个参数表示输入的图像 第二个参数表示输出的图像 第三个参数表示图像的深度 第四个参数是我们自定义的核  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 锐化图片 * * @param bitmap 要处理的图片 */ public void filter2D(Bitmap bitmap) { // 使用RxJava处理图片 if (null !</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
 
                         <ul class="pager">
                             
@@ -175,7 +609,7 @@
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next"><a href="https://chuxinshequ.github.io//categories/opencv/page/2/"> &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -411,6 +845,45 @@
             <h4></h4>
 
             <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
+                    </div>
+                </div>
                 
             </div>
 

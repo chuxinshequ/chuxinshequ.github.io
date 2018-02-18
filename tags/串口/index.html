@@ -168,6 +168,52 @@
 
                         
                         
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/">Android串口通信</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/"><i class="fa fa-calendar-o"></i> November 1, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+ 串口通信偏向嵌入式一点，是Android设备通过串口与其他设备进行通信的一种方式，本文介绍的Android纯串口的通信，并不是手机上的USB串口通信。
+  手机上是没有这个串口的哦。
+ 关于串口通信，Google已经给出了源码，地址在GitHub android-serialport-api
+四年前的代码，还是Eclipse工程，本文主要介绍如何在Android Studio中使用。
+源码地址在 KqwSerialPortDemo
+集成 Java层的代码，Google已经给封装在 SerialPort.java
+导入.so 没有什么难度了，将so导入到项目
+导入jni文件 在main目录下创建cpp文件夹，并将jni源文件和CMakeLists.txt导入
+在build.gradle配置cmake路径。
+android { …… externalNativeBuild { cmake { path &quot;src/main/cpp/CMakeLists.txt&quot; } } …… ｝  修改jni源文件 这里要注意jni文件函数名的写法：Java_包名_类名_方法名
+在将源码里的jni导入过来的时候，包名是源码Demo的包名，我们在自己的工程里要换成自己的包名、类名，源文件和头文件都要记得改。
+修改CMakeLists.txt与SerialPort.java CMakeLists.txt
+cmake_minimum_required(VERSION 3.4.1) add_library(SerialPort SHARED SerialPort.c) # Include libraries needed for libserial_port lib target_link_libraries(SerialPort android log)  SerialPort.java
+static { System.loadLibrary(&quot;SerialPort&quot;); System.loadLibrary(&quot;serial_port&quot;); }  使用 基类 需要使用串口通信的类继承 SerialPortActivity.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
 
                         <ul class="pager">
                             
@@ -411,6 +457,45 @@
             <h4></h4>
 
             <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
+                    </div>
+                </div>
                 
             </div>
 

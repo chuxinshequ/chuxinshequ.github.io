@@ -168,6 +168,102 @@
 
                         
                         
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/">几种距离计算公式在数据挖掘中的应用场景分析</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/"><i class="fa fa-calendar-o"></i> September 20, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">本文涉及以下几种距离计算公式的分析，参考资料为《面向程序员的数据挖掘指南》
+ 曼哈顿距离 欧几里得距离 闵可夫斯基距离 皮尔逊相关系数 余弦相似度   之前整理过一篇关于距离相关的文章：[机器学习算法中的距离和相似性计算公式，分析以及python实现]()
+闵可夫斯基距离 两个n维变量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的闵可夫斯基距离定义为： $$ \sqrt[p]{ \sum{k=1}^{n} \left | x{1k}-x_{2k} \right |^p} $$
+其中p是一个变参数。
+当p=1时，就是曼哈顿距离
+当p=2时，就是欧氏距离
+当p→∞时，就是切比雪夫距离
+根据变参数的不同，闵氏距离可以表示一类的距离。
+p值越大，单个维度的差值大小会对整体距离有更大的影响
+曼哈顿距离／欧几里得距离的瑕疵 在《面向程序员的数据挖掘指南》中给出了这样一组样例数据, 下图为一个在线音乐网站的的用户评分情况，用户可以用1-5星来评价一个乐队，下边是8位用户对8个乐队的评价： 表中的横线表示用户没有对乐队进行评价，我们在计算两个用户的距离时，只采用他们都评价过的乐队。
+现在来求Angelica和Bill的距离，因为他们共同评分过的乐队有5个，所以使用其对该5个乐队的评分进行曼哈顿距离的计算为：
+Dis_1 = |3.5-2| + |2-3.5| + |5-2| + |1.5-3.5| + |2-3| = 9  同样使用欧式距离计算为：
+Dis_2 = sqrt( (3.5-2)^2 + (2-3.5)^2 + (5-2)^2 + (1.5-3.5)^2 + (2-3)^2 ) = 4.3  当对Angelica和Bill，Bill和Chan进行距离对比时，由于两者的共同评分过的乐队均为5，数据都在一个5维空间里，是公平的，如果现在要计算Angelica和Hailey与Bill的距离时，会发现，Angelica与Bill共同评分的有5个乐队，Hailey与Bill共同评分的有3个乐队，也就是说两者数据一个在5维空间里，一个在三维空间里，这样明显是不公平的。这将会对我们进行计算时产生不好的影响，所以曼哈顿距离和欧几里得距离在数据完整的情况下效果最好。
+用户问题／皮尔逊相关系数／分数膨胀 现象——用户问题 仔细观察用户对乐队的评分数据，可以发现每个用户的评分标准不同：
+ Bill没有打出极端的分数，都在2-4分之间 Jordyn似乎喜欢所有的乐队，打分都在4-5之间 Hailey是一个有趣的人，他的评分不是1就是4  那么如何比较这些用户呢？比如说Hailey的4分是相当于Jordyn的4分还是5分呢？我觉得更接近5分，这样一来，就影响推荐系统的准确性了！</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/">MachingLearning中的距离和相似性计算以及python实现</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/"><i class="fa fa-calendar-o"></i> July 16, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">前言 写这篇文章的目的不是说摘抄网上其他人的总结，刚才最近在看这方面的东西，为了让自己能够实际的去感受下每种求距离公式的差别，然后用python进行具体实现。  在机器学习中，经常要用到距离和相似性的计算公式，我么要常计算个体之间的差异大小，继而评价个人之间的差异性和相似性，最常见的就是数据分析中的相关分析，数据挖掘中的分类和聚类算法。如利用k-means进行聚类时，判断个体所属的类别，要利用距离计算公式计算个体到簇心的距离，如利用KNN进行分类时，计算个体与已知类别之间的相似性，从而判断个体所属的类别等。
+文章编辑的过程中或许存在一个错误或者不合理的地方，欢迎指正。
+参考：http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html
+推荐：https://my.oschina.net/hunglish/blog/787596
+欧氏距离 也称欧几里得距离，是指在m维空间中两个点之间的真实距离。欧式距离在ML中使用的范围比较广，也比较通用，就比如说利用k-Means对二维平面内的数据点进行聚类，对魔都房价的聚类分析（price/m^2 与平均房价）等。
+二维空间的欧氏距离 二维平面上两点a(x1,y1)与b(x2,y2)间的欧氏距离
+$$ d12 =\sqrt{(x{1}-x{2})^2+(y{1}-y{2})^2} $$ python 实现为：
+# coding: utf-8 from numpy import * def twoPointDistance(a,b): d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 ) return d print 'a,b 二维距离为：',twoPointDistance((1,1),(2,2))  三维空间的欧氏距离 三维空间两点a(x1,y1,z1)与b(x2,y2,z2)间的欧氏距离
+$$d12 =\sqrt{(x{1}-x{2})^2+(y{1}-y{2})^2+(z{1}-z{2})^2}$$ python 实现为：
+def threePointDistance(a,b): d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 + (a[2]-b[2])**2 ) return d print 'a,b 三维距离为：',threePointDistance((1,1,1),(2,2,2))  多维空间的欧氏距离 两个n维向量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的欧氏距离
+$$ \sqrt{\sum{n}^{k=1}(x{1k}-x_{2k})^2 } $$ python 实现为：</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
 
                         <ul class="pager">
                             
@@ -411,6 +507,45 @@
             <h4></h4>
 
             <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
+                    </div>
+                </div>
                 
             </div>
 

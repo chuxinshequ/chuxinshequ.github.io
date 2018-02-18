@@ -14,10 +14,10 @@
     
     <item>
       <title>Hexo-Yilia加入相册功能</title>
-      <link>https://chuxinshequ.github.io/posts/thinkgamer/%E9%9A%8F%E6%89%8B%E8%AE%B0/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Thu, 14 Dec 2017 17:55:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/posts/thinkgamer/%E9%9A%8F%E6%89%8B%E8%AE%B0/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</guid>
       <description>参考：点击查看
 但是其中有一些小问题，自己便重新整理了一下（本文适用于使用github存放照片）
  主页新建相册链接 主题_config.json文件的menu 中加入 相册和对应的链接

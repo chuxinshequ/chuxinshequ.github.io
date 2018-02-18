@@ -168,6 +168,50 @@
 
                         
                         
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/">打造简洁高效的动态权限管理器</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/229">229</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/"><i class="fa fa-calendar-o"></i> February 16, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图
+GitHub地址：PermissionsManager
+随着Android 6.0的普及，动态权限的重要性也开始时慢慢体现出来。为了更好的保护用户隐私，Android 6.0要求在进行敏感操作之前，必须要向用户请示申请权限。
+如何使用，在之前的文章里也已经介绍过了，但是用起来比较麻烦。Android6.0动态获取权限
+我希望可以封装一下，使用之前创建一个动态权限的管理对象，他有两个回调来告诉我权限申请成功或者失败，像这样：
+mPermissionsManager = new PermissionsManager(this) { @Override public void authorized(int requestCode) { // TODO 权限通过 } @Override public void noAuthorization(int requestCode, String[] lacksPermissions) { // TODO 有权限没有通过 } };  使用的时候，可以直接调用一个方法，把要请示的权限传进去就可以进行校验，像这样：
+// 检查权限 mPermissionsManager.checkPermissions(&quot;请求码&quot;, &quot;要校验的权限&quot;);  于是乎，下面封装的动态权限管理器就来了：
+动态权限管理器 package com.kongqw.permissionslibrary; import android.app.Activity; import android.content.Context; import android.content.Intent; import android.content.pm.PackageManager; import android.net.Uri; import android.provider.Settings; import android.support.annotation.NonNull; import android.support.v4.app.ActivityCompat; import android.support.v4.content.ContextCompat; import java.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
 
                         <ul class="pager">
                             
@@ -411,6 +455,45 @@
             <h4></h4>
 
             <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
+                    </div>
+                </div>
                 
             </div>
 

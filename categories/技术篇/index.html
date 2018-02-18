@@ -168,6 +168,409 @@
 
                         
                         
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/"><i class="fa fa-calendar-o"></i> December 14, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">在机器学习领域，体梯度下降算法分为三种
+ 批量梯度下降算法（BGD，Batch gradient descent algorithm） 随机梯度下降算法（SGD，Stochastic gradient descent algorithm） 小批量梯度下降算法（MBGD，Mini-batch gradient descent algorithm）   批量梯度下降算法 BGD是最原始的梯度下降算法，每一次迭代使用全部的样本，即权重的迭代公式中(公式中用$\theta$代替$\theta_i$)， $$ \jmath (\theta _0,\theta _1,&hellip;,\theta n)=\sum{i=0}^{m}( h_\theta(x_0,x_1,&hellip;,x_n)-y_i )^2
+$$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,&hellip;,\theta _n)}{\partial \theta _i} $$ $$ 公式(1) $$
+这里的m代表所有的样本，表示从第一个样本遍历到最后一个样本。
+特点：
+ 能达到全局最优解，易于并行实现 当样本数目很多时，训练过程缓慢  随机梯度下降算法 SGD的思想是更新每一个参数时都使用一个样本来进行更新，即公式（1）中m为1。每次更新参数都只使用一个样本，进行多次更新。这样在样本量很大的情况下，可能只用到其中的一部分样本就能得到最优解了。 但是，SGD伴随的一个问题是噪音较BGD要多，使得SGD并不是每次迭代都向着整体最优化方向。
+特点： - 训练速度快 - 准确度下降，并不是最优解，不易于并行实现
+小批量梯度下降算法 MBGD的算法思想就是在更新每一参数时都使用一部分样本来进行更新，也就是公式（1）中的m的值大于1小于所有样本的数量。
+相对于随机梯度下降，Mini-batch梯度下降降低了收敛波动性，即降低了参数更新的方差，使得更新更加稳定。相对于批量梯度下降，其提高了每次学习的速度。并且其不用担心内存瓶颈从而可以利用矩阵运算进行高效计算。一般而言每次更新随机选择[50,256]个样本进行学习，但是也要根据具体问题而选择，实践中可以进行多次试验，选择一个更新速度与更次次数都较适合的样本数。mini-batch梯度下降可以保证收敛性，常用于神经网络中。
+补充 在样本量较小的情况下，可以使用批量梯度下降算法，样本量较大的情况或者线上，可以使用随机梯度下降算法或者小批量梯度下降算法。
+在机器学习中的无约束优化算法，除了梯度下降以外，还有前面提到的最小二乘法，此外还有牛顿法和拟牛顿法。
+梯度下降法和最小二乘法相比，梯度下降法需要选择步长，而最小二乘法不需要。梯度下降法是迭代求解，最小二乘法是计算解析解。如果样本量不算很大，且存在解析解，最小二乘法比起梯度下降法要有优势，计算速度很快。但是如果样本量很大，用最小二乘法由于需要求一个超级大的逆矩阵，这时就很难或者很慢才能求解解析解了，使用迭代的梯度下降法比较有优势。
+梯度下降法和牛顿法/拟牛顿法相比，两者都是迭代求解，不过梯度下降法是梯度求解，而牛顿法/拟牛顿法是用二阶的海森矩阵的逆矩阵或伪逆矩阵求解。相对而言，使用牛顿法/拟牛顿法收敛更快。但是每次迭代的时间比梯度下降法长。</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">梯度算法之梯度上升和梯度下降</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/"><i class="fa fa-calendar-o"></i> December 14, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">第一次看见随机梯度上升算法是看《机器学习实战》这本书，当时也是一知半解，只是大概知道和高等数学中的函数求导有一定的关系。下边我们就好好研究下随机梯度上升（下降）和梯度上升（下降）。 
+高数中的导数 设导数 y = f(x) 在 $ x_0 $的某个邻域内有定义，当自变量从 $ x0 $ 变成 $$ x{0} + \Delta x $$ 函数y=f(x)的增量
+$$ \Delta y = f(x_0 + \Delta x) - f(x_0) $$ 与自变量的增量 $ \Delta x $ 之比：
+$$ \frac{ \Delta y }{ \Delta x } = \frac{ f(x_0 + \Delta x)-f(x0) }{ \Delta x } $$ 称为f(x)的平均变化率。 如 $ \Delta x \rightarrow 0 $ 平均变化率的极限 $$ \lim{\Delta x \rightarrow 0} \frac{ \Delta y }{ \Delta x } = \lim_{\Delta x \rightarrow 0} \frac{ f(x_0 + \Delta x)-f(x_0) }{ \Delta x } $$ 存在，则称极限值为f(x)在$ x_0 $ 处的导数，并说f(x)在$ x_0 $ 处可导或有导数。当平均变化率极限不存在时，就说f(x)在 $ x_0 $ 处不可导或没有导数。</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/">异常检测之指数平滑（利用elasticsearch来实现）</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/"><i class="fa fa-calendar-o"></i> November 20, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">指数平滑法是一种特殊的加权平均法，加权的特点是对离预测值较近的历史数据给予较大的权数，对离预测期较远的历史数据给予较小的权数，权数由近到远按指数规律递减，所以，这种预测方法被称为指数平滑法。它可分为一次指数平滑法、二次指数平滑法及更高次指数平滑法。 
+关于指数平滑的得相关资料：  ES API接口： &gt; https://github.com/IBBD/IBBD.github.io/blob/master/elk/aggregations-pipeline.md https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-pipeline-movavg-aggregation.html
+ 理论概念 &gt; http://blog.sina.com.cn/s/blog_4b9acb5201016nkd.html
+  ES移动平均聚合：Moving Average的四种模型 simple 就是使用窗口内的值的和除于窗口值，通常窗口值越大，最后的结果越平滑: (a1 + a2 + &hellip; + an) / n
+curl -XPOST 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -d' { &quot;size&quot;: 0, &quot;aggs&quot;: { &quot;my_date_histo&quot;:{ &quot;date_histogram&quot;:{ &quot;field&quot;:&quot;date&quot;, &quot;interval&quot;:&quot;1M&quot; }, &quot;aggs&quot;:{ &quot;the_sum&quot;:{ &quot;sum&quot;:{ &quot;field&quot;: &quot;price&quot; } }, &quot;the_movavg&quot;:{ &quot;moving_avg&quot;:{ &quot;buckets_path&quot;: &quot;the_sum&quot;, &quot;window&quot; : 30, &quot;model&quot; : &quot;simple&quot; } } } } } } '  线性模型：Linear 对窗口内的值先做线性变换处理，再求平均：(a1 * 1 + a2 * 2 + &hellip; + an * n) / (1 + 2 + &hellip; + n)</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/">Elasticsearch-DSL部分集合</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/"><i class="fa fa-calendar-o"></i> November 14, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">ELK是日志收集分析神器，在这篇文章中将会介绍一些ES的常用命令。
+点击阅读：ELK Stack 从入门到放弃 
+DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 shards, which is over the limit of 1000. This limit exists because querying many shards at the same time can make the job of the coordinating node very CPU and/or memory intensive. It is usually a better idea to have a smaller number of larger shards. Update [action.search.shard_count.limit] to a greater value if you really want to query that many shards at the same time.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/">数据结构算法之链表</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/"><i class="fa fa-calendar-o"></i> November 13, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">链表面试总结，使用python实现，参考：https://www.cnblogs.com/lixiaohui-ambition/archive/2012/09/25/2703195.html 
+#coding:utf-8 # 定义链表 class ListNode: def __init__(self): self.data = None self.pnext = None # 链表操作类 class ListNode_handle: def __init__(self): self.cur_node = None # 链表添加元素 def add(self,data): ln = ListNode() ln.data = data ln.pnext = self.cur_node self.cur_node = ln return ln # 打印链表 def prt(self,ln): while ln: print(ln.data,end=&quot; &quot;) ln = ln.pnext # 逆序输出 def _reverse(self,ln): _list = [] while ln: _list.append(ln.data) ln = ln.pnext ln_2 = ListNode() ln_h = ListNode_handle() for i in _list: ln_2 = ln_h.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/">数据结构算法之合并两个有序序列</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/"><i class="fa fa-calendar-o"></i> November 13, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">有序序列的合并，python实现。 
+#coding:utf-8 a = [2,4,6,8,10] b = [3,5,7,9,11,13,15] c = [] def merge(a,b): i,j = 0,0 while i&lt;=len(a)-1 and j&lt;=len(b)-1: if a[i]&lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&lt;=len(a)-1: for m in a[i:]: c.append(m) if j&lt;=len(b)-1: for n in b[j:]: c.append(n) print(c) merge(a,b)  运行结果为：
+[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15]  </p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/">数据结构算法之排序</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/"><i class="fa fa-calendar-o"></i> November 13, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">数据结构面试中经常会被问到篇排序相关的问题，那么这篇文章会研究下怎么用python来实现排序。
+ 冒泡排序 #coding：utf-8 # 冒泡排序 def maopao(): a = [2,1,4,3,9,5,6,8,7] for i in range(len(a)-1): for j in range(len(a)-1-i): if a[j]&gt;a[j+1]: temp = a[j] a[j] = a[j+1] a[j+1] = temp print(a) maopao()  结果为：
+[1, 2, 3, 4, 5, 6, 7, 8, 9]  归并排序 # 归并排序 def merge(a,b): i,j = 0,0 c = [] while i&lt;=len(a)-1 and j&lt;=len(b)-1: if a[i]&lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&lt;=len(a)-1: for m in a[i:]: c.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/">数据结构算法之二叉树</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/"><i class="fa fa-calendar-o"></i> November 13, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">数据结构面试中经常会被问到篇二叉树相关的问题，那么这篇文章会研究下怎么用python来进行二叉树的构建和遍历。
+ 注意：py2中
+print root.elem,  在py3中要换成
+print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node: def __init__(self,elem = -1,): self.elem = elem self.left = None self.right = None # 定义二叉树 class Tree: def __init__(self): self.root = Node() self.myqu = [] # 添加节点 def add(self,elem): node = Node(elem) if self.root.elem == -1: # 判断如果是根节点 self.root = node self.myqu.append(self.root) else: treenode = self.myqu[0] if treenode.left == None: treenode.left = node self.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/">回归分析之Sklearn实现电力预测</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/"><i class="fa fa-calendar-o"></i> November 7, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">参考原文：http://www.cnblogs.com/pinard/p/6016029.html 这里进行了手动实现，增强记忆。 
+1：数据集介绍 使用的数据是UCI大学公开的机器学习数据
+数据的介绍在这： http://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant
+数据的下载地址在这：http://archive.ics.uci.edu/ml/machine-learning-databases/00294/
+里面是一个循环发电场的数据，共有9568个样本数据，每个数据有5列，分别是:AT（温度）, V（压力）, AP（湿度）, RH（压强）, PE（输出电力)。我们不用纠结于每项具体的意思。
+我们的问题是得到一个线性的关系，对应PE是样本输出，而AT/V/AP/RH这4个是样本特征， 机器学习的目的就是得到一个线性回归模型，即:
+$$ PE = \theta _{0} + \theta _{0} * AT + \theta _{0} * V +\theta _{0} * AP +\theta _{0}*RH $$
+而需要学习的，就是θ0,θ1,θ2,θ3,θ4这5个参数。
+2：准备数据 下载源数据之后，解压会得到一个xlsx的文件，打开另存为csv文件，数据已经整理好，没有非法数据，但是数据并没有进行归一化，不过这里我们可以使用sklearn来帮我处理
+sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details/77761884
+3：使用pandas来进行数据的读取 import pandas as pd # pandas 读取数据 data = pd.read_csv(&quot;Folds5x2_pp.csv&quot;) data.head()  然后会看到如下结果，说明数据读取成功：
+	AT	V	AP	RH	PE 0	8.34	40.77	1010.84	90.01	480.48 1	23.64	58.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">回归分析之线性回归（N元线性回归）</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"><i class="fa fa-calendar-o"></i> September 29, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">在上一篇文章中我们介绍了 回归分析之理论篇，在其中我们有聊到线性回归和非线性回归，包括广义线性回归，这一篇文章我们来聊下回归分析中的线性回归。
+ 一元线性回归 预测房价： 输入编号 | 平方米 | 价格 -|-|- 1 | 150 | 6450 2 | 200 | 7450 3| 250 |8450 4| 300 |9450 5| 350 |11450 6| 400 |15450 7| 600| 18450
+针对上边这种一元数据来讲，我们可以构建的一元线性回归函数为 $$ H(x) = k*x + b $$ 其中H(x)为平方米价格表，k是一元回归系数，b为常数。最小二乘法的公式： $$ k =\frac{ \sum{1}^{n} (x{i} - \bar{x} )(y{i} - \bar{y}) } { \sum{1}^{n}(x_{i}-\bar{x})^{2} } $$ 自己使用python代码实现为：
+def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量列表和因变量列表 &quot;&quot;&quot; meanX = sum(x) * 1.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
 
                         <ul class="pager">
                             
@@ -175,7 +578,7 @@
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next"><a href="https://chuxinshequ.github.io//categories/%E6%8A%80%E6%9C%AF%E7%AF%87/page/2/"> &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -411,6 +814,45 @@
             <h4></h4>
 
             <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
+                    </div>
+                </div>
                 
             </div>
 
