@@ -172,6 +172,52 @@
                             <div class="row">
                                 <div class="col-md-4">
                                   <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/">MachingLearning中的距离和相似性计算以及python实现</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/230">230</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/"><i class="fa fa-calendar-o"></i> July 16, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">前言 写这篇文章的目的不是说摘抄网上其他人的总结，刚才最近在看这方面的东西，为了让自己能够实际的去感受下每种求距离公式的差别，然后用python进行具体实现。  在机器学习中，经常要用到距离和相似性的计算公式，我么要常计算个体之间的差异大小，继而评价个人之间的差异性和相似性，最常见的就是数据分析中的相关分析，数据挖掘中的分类和聚类算法。如利用k-means进行聚类时，判断个体所属的类别，要利用距离计算公式计算个体到簇心的距离，如利用KNN进行分类时，计算个体与已知类别之间的相似性，从而判断个体所属的类别等。
+文章编辑的过程中或许存在一个错误或者不合理的地方，欢迎指正。
+参考：http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html
+推荐：https://my.oschina.net/hunglish/blog/787596
+欧氏距离 也称欧几里得距离，是指在m维空间中两个点之间的真实距离。欧式距离在ML中使用的范围比较广，也比较通用，就比如说利用k-Means对二维平面内的数据点进行聚类，对魔都房价的聚类分析（price/m^2 与平均房价）等。
+二维空间的欧氏距离 二维平面上两点a(x1,y1)与b(x2,y2)间的欧氏距离
+$$ d12 =\sqrt{(x{1}-x{2})^2+(y{1}-y{2})^2} $$ python 实现为：
+# coding: utf-8 from numpy import * def twoPointDistance(a,b): d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 ) return d print 'a,b 二维距离为：',twoPointDistance((1,1),(2,2))  三维空间的欧氏距离 三维空间两点a(x1,y1,z1)与b(x2,y2,z2)间的欧氏距离
+$$d12 =\sqrt{(x{1}-x{2})^2+(y{1}-y{2})^2+(z{1}-z{2})^2}$$ python 实现为：
+def threePointDistance(a,b): d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 + (a[2]-b[2])**2 ) return d print 'a,b 三维距离为：',threePointDistance((1,1,1),(2,2,2))  多维空间的欧氏距离 两个n维向量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的欧氏距离
+$$ \sqrt{\sum{n}^{k=1}(x{1k}-x_{2k})^2 } $$ python 实现为：</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
                                       <a href="https://chuxinshequ.github.io/blog/2017/04/16/%E4%B8%80%E5%88%87%E7%9A%84%E9%97%B9%E9%97%B9%E5%93%84%E5%93%84%E5%8F%AA%E6%98%AF%E4%BB%96%E5%9C%A8%E6%B0%B4%E5%B8%98%E6%B4%9E%E8%BA%B2%E9%81%BF%E9%A3%8E%E6%B2%99%E9%82%A3%E6%99%9A%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A2%A6/">
                                           
                                           <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
@@ -549,47 +595,6 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
                             </div>
                         </section>
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
-                                          
-                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">App启动优化最佳实践</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"><i class="fa fa-calendar-o"></i> November 14, 2016</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
- 看了医生写的文章一触即发——App启动优化最佳实践，收获是有的。
- 做Android开发，一定写给过启动页，在这里做一些初始化的操作，还有就是显示推广信息。
-很普通的一个页面，以前测试也给我提出过bug，应用在启动的时候，有时候有白屏/黑屏。当时能做的就是尽量较少耗时操作，上面医生的文章里也有提到，但是通过主题的方式优化这个问题之前还真是不知道的。
-下面主要总结一下通过主题的方式优化启动页（医生还提到了在子线程初始化和使用IntentService初始化，都是属于异步初始化，还有延迟初始化，就不说了）
-效果图 通过修改主题优化启动时白屏/黑屏  原理请移步到医生的文章，我就不复述了，之所以会看到白屏或者黑屏，是和我们的主题有关系的，因为系统默认使用的主题，背景色就是白色/黑色。那么我们自定义一个主题，让默认的样式就是我们想要的，就优化了白屏/黑屏的问题。
- 首先，我们自定义一个主题,设置一个我们想要的背景
-&lt;!-- 启动页主题 --&gt; &lt;style name=&quot;SplashTheme&quot; parent=&quot;@style/Theme.AppCompat.Light.NoActionBar&quot;&gt; &lt;item name=&quot;android:windowBackground&quot;&gt;@drawable/start_window&lt;/item&gt; &lt;/style&gt;  自定义背景start_window.xml
-&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:opacity=&quot;opaque&quot;&gt; &lt;!-- The background color, preferably the same as your normal theme --&gt; &lt;item android:drawable=&quot;@android:color/holo_blue_dark&quot; /&gt; &lt;!-- Your product logo - 144dp color version of your app icon --&gt; &lt;item&gt; &lt;bitmap android:gravity=&quot;center&quot; android:src=&quot;@mipmap/ic_launcher&quot; /&gt; &lt;/item&gt; &lt;/layer-list&gt;  最后，在清单文件设置启动页使用我们自定义的主题
-&lt;?xml version=&quot;1.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="btn btn-template-main"></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
 
                         <ul class="pager">
                             
@@ -647,7 +652,7 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked">
             
-            <li><a href="https://chuxinshequ.github.io/categories/help">help (2)</a>
+            <li><a href="https://chuxinshequ.github.io/categories/help">help (3)</a>
             </li>
             
             <li><a href="https://chuxinshequ.github.io/categories/im">im (1)</a>
@@ -836,6 +841,19 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">How to compose article in chuxinshequ.github.io</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
@@ -857,19 +875,6 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
                     </div>
                 </div>
                 

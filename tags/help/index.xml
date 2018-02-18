@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 30 Jan 2018 23:30:01 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Feb 2018 02:02:02 +0000</lastBuildDate>
     
 	<atom:link href="https://chuxinshequ.github.io/tags/help/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to compose article in chuxinshequ.github.io</title>
+      <link>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/</link>
+      <pubDate>Mon, 19 Feb 2018 02:02:02 +0000</pubDate>
+      
+      <guid>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/</guid>
+      <description>chuxinshequ.github.io Alpha Step 1 (manual, only once) &amp;ldquo;git submodule add&amp;rdquo; git repository and create soft link
+Step 2 create article in git reposity
+Important Please enter the correct format date in Front Matter in front of Markdown article. https://github.com/huzhenghui/public-article/blob/master/posts/help/Front-Matter-Sample.md
+Step 3 create new issue to trigger CI/CD https://github.com/chuxinshequ/chuxinshequ.github.io/issues/new
+Step 4 wait 5 minutes then visit https://chuxinshequ.github.io/blog/</description>
+    </item>
     
     <item>
       <title>Markdown Tables Sample 表格示例</title>

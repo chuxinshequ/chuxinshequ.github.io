@@ -531,6 +531,47 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
+                                    <a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h4><a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">App启动优化最佳实践</a></h4>
+                            <p class="author-category">
+                            
+                             November 14, 2016
+                            </p>
+                            <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+ 看了医生写的文章一触即发——App启动优化最佳实践，收获是有的。
+ 做Android开发，一定写给过启动页，在这里做一些初始化的操作，还有就是显示推广信息。
+很普通的一个页面，以前测试也给我提出过bug，应用在启动的时候，有时候有白屏/黑屏。当时能做的就是尽量较少耗时操作，上面医生的文章里也有提到，但是通过主题的方式优化这个问题之前还真是不知道的。
+下面主要总结一下通过主题的方式优化启动页（医生还提到了在子线程初始化和使用IntentService初始化，都是属于异步初始化，还有延迟初始化，就不说了）
+效果图 通过修改主题优化启动时白屏/黑屏  原理请移步到医生的文章，我就不复述了，之所以会看到白屏或者黑屏，是和我们的主题有关系的，因为系统默认使用的主题，背景色就是白色/黑色。那么我们自定义一个主题，让默认的样式就是我们想要的，就优化了白屏/黑屏的问题。
+ 首先，我们自定义一个主题,设置一个我们想要的背景
+&lt;!-- 启动页主题 --&gt; &lt;style name=&quot;SplashTheme&quot; parent=&quot;@style/Theme.AppCompat.Light.NoActionBar&quot;&gt; &lt;item name=&quot;android:windowBackground&quot;&gt;@drawable/start_window&lt;/item&gt; &lt;/style&gt;  自定义背景start_window.xml
+&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:opacity=&quot;opaque&quot;&gt; &lt;!-- The background color, preferably the same as your normal theme --&gt; &lt;item android:drawable=&quot;@android:color/holo_blue_dark&quot; /&gt; &lt;!-- Your product logo - 144dp color version of your app icon --&gt; &lt;item&gt; &lt;bitmap android:gravity=&quot;center&quot; android:src=&quot;@mipmap/ic_launcher&quot; /&gt; &lt;/item&gt; &lt;/layer-list&gt;  最后，在清单文件设置启动页使用我们自定义的主题
+&lt;?xml version=&quot;1.</p>
+                            <p class="read-more">
+                              <a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="btn btn-template-main"></a>
+                            </p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="box-image-text blog">
+                        <div class="top">
+                            <div class="image" style="overflow:hidden">
+                                
+                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                
+                            </div>
+                            <div class="bg"></div>
+                            <div class="text">
+                                <p class="buttons">
                                     <a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
                                 </p>
                             </div>
@@ -628,47 +669,6 @@ static { System.loadLibrary(&quot;SerialPort&quot;); System.loadLibrary(&quot;se
 在13年军训结束之后，我构思了整个体系，定了这本书的名字——《这夏未眠》，熟悉我的朋友，也知道这是我的QQ网名，QQ作为那个时代的记忆，总会残留一些悲伤的故事，于是我到现在四年了，我从没换过QQ网名，或许是害怕，害怕那些好久不联系的朋友，找不到我吧。</p>
                             <p class="read-more">
                               <a href="https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E5%BA%8F/" class="btn btn-template-main"></a>
-                            </p>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="box-image-text blog">
-                        <div class="top">
-                            <div class="image" style="overflow:hidden">
-                                
-                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                
-                            </div>
-                            <div class="bg"></div>
-                            <div class="text">
-                                <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/">OpenCV&#43;JavaCV实现人脸识别</a></h4>
-                            <p class="author-category">
-                            
-                             September 9, 2016
-                            </p>
-                            <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
-OpenCV主要实现人脸检测功能
-JavaCV主要实现人脸对比功能
-具体的就不啰嗦了，本来最近很忙，主要是因为好多人私信我要 Android使用OpenCV实现「人脸检测」和「人脸识别」 的Demo，今天特意抽出时间写了一下。
-效果图 源码 KqwFaceDetectionDemo
-感觉有用的话，就给个star吧，谢谢！！
-注意 最后啰嗦一点，如果你的程序是跑在手机、pad等设备上，一般没有什么问题。 但是如果你是在自己的开发板上跑，可能会有一些小插曲。
-比如我司的机器人是定制的Android板子，对系统做了裁剪，很多摄像头的方法可能就用不了
-例如这样一个错误
-AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程序的时候，OpenCV会提示，没有找到可用摄像头或者摄像头被锁住（大概这个意思，我就不截图了），一种可能是设备真的没有接摄像头，也有可能是摄像头定制过，导致某些方法用不了，比如上面的错误就是我遇到的其中一个。</p>
-                            <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="btn btn-template-main"></a>
                             </p>
                         </div>
                     </div>
@@ -791,6 +791,19 @@ AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程�
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">How to compose article in chuxinshequ.github.io</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
@@ -812,19 +825,6 @@ AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程�
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
                     </div>
                 </div>
                 

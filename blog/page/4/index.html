@@ -172,6 +172,47 @@
                             <div class="row">
                                 <div class="col-md-4">
                                   <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">App启动优化最佳实践</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"><i class="fa fa-calendar-o"></i> November 14, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+ 看了医生写的文章一触即发——App启动优化最佳实践，收获是有的。
+ 做Android开发，一定写给过启动页，在这里做一些初始化的操作，还有就是显示推广信息。
+很普通的一个页面，以前测试也给我提出过bug，应用在启动的时候，有时候有白屏/黑屏。当时能做的就是尽量较少耗时操作，上面医生的文章里也有提到，但是通过主题的方式优化这个问题之前还真是不知道的。
+下面主要总结一下通过主题的方式优化启动页（医生还提到了在子线程初始化和使用IntentService初始化，都是属于异步初始化，还有延迟初始化，就不说了）
+效果图 通过修改主题优化启动时白屏/黑屏  原理请移步到医生的文章，我就不复述了，之所以会看到白屏或者黑屏，是和我们的主题有关系的，因为系统默认使用的主题，背景色就是白色/黑色。那么我们自定义一个主题，让默认的样式就是我们想要的，就优化了白屏/黑屏的问题。
+ 首先，我们自定义一个主题,设置一个我们想要的背景
+&lt;!-- 启动页主题 --&gt; &lt;style name=&quot;SplashTheme&quot; parent=&quot;@style/Theme.AppCompat.Light.NoActionBar&quot;&gt; &lt;item name=&quot;android:windowBackground&quot;&gt;@drawable/start_window&lt;/item&gt; &lt;/style&gt;  自定义背景start_window.xml
+&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:opacity=&quot;opaque&quot;&gt; &lt;!-- The background color, preferably the same as your normal theme --&gt; &lt;item android:drawable=&quot;@android:color/holo_blue_dark&quot; /&gt; &lt;!-- Your product logo - 144dp color version of your app icon --&gt; &lt;item&gt; &lt;bitmap android:gravity=&quot;center&quot; android:src=&quot;@mipmap/ic_launcher&quot; /&gt; &lt;/item&gt; &lt;/layer-list&gt;  最后，在清单文件设置启动页使用我们自定义的主题
+&lt;?xml version=&quot;1.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
                                       <a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/">
                                           
                                           <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
@@ -532,48 +573,6 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
                             </div>
                         </section>
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/">
-                                          
-                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/">OpenCV使用霍夫变换检测图像中的形状</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          
-                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
-                                          
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/"><i class="fa fa-calendar-o"></i> August 22, 2016</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
-霍夫变换是一种被广泛使用的利用数学等式的参数形式在图像中检测形状的技术。 例如直线、椭圆、圆等形状。
-霍夫变换可以检测任何能以参数形式表示的形状，随着形状的复杂（维数的增加，例如球体），计算的消耗也会增加。 我们通常只考虑简单的霍夫形状，例如直线和圆。
-源码 KqwOpenCVFeaturesDemo
-霍夫直线 效果图 步骤  将图像置灰 调用Imgproc.HoughLinesP(cannyEdges, lines, 1, Math.PI / 180, 50, 20, 20) 方法获取直线的数据
- 第一个参数：图像输入 第二个参数：图像输出 第三个参数：图像指定像素中r的解析度 第四个参数：图像指定像素中θ的解析度 第五个参数：直线上点数的阈值 第六个参数：直线上点数的最小值  在图像上绘制直线
-  封装 /** * 霍夫直线 * * @param bitmap 要检测的图片 */ public void houghLines(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&lt;Bitmap, Mat&gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/" class="btn btn-template-main"></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
 
                         <ul class="pager">
                             
@@ -631,7 +630,7 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked">
             
-            <li><a href="https://chuxinshequ.github.io/categories/help">help (2)</a>
+            <li><a href="https://chuxinshequ.github.io/categories/help">help (3)</a>
             </li>
             
             <li><a href="https://chuxinshequ.github.io/categories/im">im (1)</a>
@@ -820,6 +819,19 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">How to compose article in chuxinshequ.github.io</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
@@ -841,19 +853,6 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
                     </div>
                 </div>
                 

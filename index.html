@@ -531,6 +531,42 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
+                                    <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h4><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">How to compose article in chuxinshequ.github.io</a></h4>
+                            <p class="author-category">
+                            
+                             February 19, 2018
+                            </p>
+                            <p class="intro">chuxinshequ.github.io Alpha Step 1 (manual, only once) &ldquo;git submodule add&rdquo; git repository and create soft link
+Step 2 create article in git reposity
+Important Please enter the correct format date in Front Matter in front of Markdown article. https://github.com/huzhenghui/public-article/blob/master/posts/help/Front-Matter-Sample.md
+Step 3 create new issue to trigger CI/CD https://github.com/chuxinshequ/chuxinshequ.github.io/issues/new
+Step 4 wait 5 minutes then visit https://chuxinshequ.github.io/blog/</p>
+                            <p class="read-more">
+                              <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/" class="btn btn-template-main"></a>
+                            </p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="box-image-text blog">
+                        <div class="top">
+                            <div class="image" style="overflow:hidden">
+                                
+                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                
+                            </div>
+                            <div class="bg"></div>
+                            <div class="text">
+                                <p class="buttons">
                                     <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
                                 </p>
                             </div>
@@ -617,50 +653,6 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
 3：py文件和文件夹都放在项目根目录下 4：生成json 执行  python tools.</p>
                             <p class="read-more">
                               <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/" class="btn btn-template-main"></a>
-                            </p>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="box-image-text blog">
-                        <div class="top">
-                            <div class="image" style="overflow:hidden">
-                                
-                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                
-                            </div>
-                            <div class="bg"></div>
-                            <div class="text">
-                                <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降</a></h4>
-                            <p class="author-category">
-                            
-                             December 14, 2017
-                            </p>
-                            <p class="intro">在机器学习领域，体梯度下降算法分为三种
- 批量梯度下降算法（BGD，Batch gradient descent algorithm） 随机梯度下降算法（SGD，Stochastic gradient descent algorithm） 小批量梯度下降算法（MBGD，Mini-batch gradient descent algorithm）   批量梯度下降算法 BGD是最原始的梯度下降算法，每一次迭代使用全部的样本，即权重的迭代公式中(公式中用$\theta$代替$\theta_i$)， $$ \jmath (\theta _0,\theta _1,&hellip;,\theta n)=\sum{i=0}^{m}( h_\theta(x_0,x_1,&hellip;,x_n)-y_i )^2
-$$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,&hellip;,\theta _n)}{\partial \theta _i} $$ $$ 公式(1) $$
-这里的m代表所有的样本，表示从第一个样本遍历到最后一个样本。
-特点：
- 能达到全局最优解，易于并行实现 当样本数目很多时，训练过程缓慢  随机梯度下降算法 SGD的思想是更新每一个参数时都使用一个样本来进行更新，即公式（1）中m为1。每次更新参数都只使用一个样本，进行多次更新。这样在样本量很大的情况下，可能只用到其中的一部分样本就能得到最优解了。 但是，SGD伴随的一个问题是噪音较BGD要多，使得SGD并不是每次迭代都向着整体最优化方向。
-特点： - 训练速度快 - 准确度下降，并不是最优解，不易于并行实现
-小批量梯度下降算法 MBGD的算法思想就是在更新每一参数时都使用一部分样本来进行更新，也就是公式（1）中的m的值大于1小于所有样本的数量。
-相对于随机梯度下降，Mini-batch梯度下降降低了收敛波动性，即降低了参数更新的方差，使得更新更加稳定。相对于批量梯度下降，其提高了每次学习的速度。并且其不用担心内存瓶颈从而可以利用矩阵运算进行高效计算。一般而言每次更新随机选择[50,256]个样本进行学习，但是也要根据具体问题而选择，实践中可以进行多次试验，选择一个更新速度与更次次数都较适合的样本数。mini-batch梯度下降可以保证收敛性，常用于神经网络中。
-补充 在样本量较小的情况下，可以使用批量梯度下降算法，样本量较大的情况或者线上，可以使用随机梯度下降算法或者小批量梯度下降算法。
-在机器学习中的无约束优化算法，除了梯度下降以外，还有前面提到的最小二乘法，此外还有牛顿法和拟牛顿法。
-梯度下降法和最小二乘法相比，梯度下降法需要选择步长，而最小二乘法不需要。梯度下降法是迭代求解，最小二乘法是计算解析解。如果样本量不算很大，且存在解析解，最小二乘法比起梯度下降法要有优势，计算速度很快。但是如果样本量很大，用最小二乘法由于需要求一个超级大的逆矩阵，这时就很难或者很慢才能求解解析解了，使用迭代的梯度下降法比较有优势。
-梯度下降法和牛顿法/拟牛顿法相比，两者都是迭代求解，不过梯度下降法是梯度求解，而牛顿法/拟牛顿法是用二阶的海森矩阵的逆矩阵或伪逆矩阵求解。相对而言，使用牛顿法/拟牛顿法收敛更快。但是每次迭代的时间比梯度下降法长。</p>
-                            <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/" class="btn btn-template-main"></a>
                             </p>
                         </div>
                     </div>
@@ -783,6 +775,19 @@ $$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">How to compose article in chuxinshequ.github.io</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
@@ -804,19 +809,6 @@ $$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
                     </div>
                 </div>
                 

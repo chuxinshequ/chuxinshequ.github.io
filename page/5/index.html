@@ -531,6 +531,44 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
+                                    <a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h4><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/">OpenCV使用霍夫变换检测图像中的形状</a></h4>
+                            <p class="author-category">
+                            
+                             August 22, 2016
+                            </p>
+                            <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+霍夫变换是一种被广泛使用的利用数学等式的参数形式在图像中检测形状的技术。 例如直线、椭圆、圆等形状。
+霍夫变换可以检测任何能以参数形式表示的形状，随着形状的复杂（维数的增加，例如球体），计算的消耗也会增加。 我们通常只考虑简单的霍夫形状，例如直线和圆。
+源码 KqwOpenCVFeaturesDemo
+霍夫直线 效果图 步骤  将图像置灰 调用Imgproc.HoughLinesP(cannyEdges, lines, 1, Math.PI / 180, 50, 20, 20) 方法获取直线的数据
+ 第一个参数：图像输入 第二个参数：图像输出 第三个参数：图像指定像素中r的解析度 第四个参数：图像指定像素中θ的解析度 第五个参数：直线上点数的阈值 第六个参数：直线上点数的最小值  在图像上绘制直线
+  封装 /** * 霍夫直线 * * @param bitmap 要检测的图片 */ public void houghLines(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&lt;Bitmap, Mat&gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.</p>
+                            <p class="read-more">
+                              <a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/" class="btn btn-template-main"></a>
+                            </p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="box-image-text blog">
+                        <div class="top">
+                            <div class="image" style="overflow:hidden">
+                                
+                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                
+                            </div>
+                            <div class="bg"></div>
+                            <div class="text">
+                                <p class="buttons">
                                     <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
                                 </p>
                             </div>
@@ -637,46 +675,6 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
 /** * Canny边缘检测算法 * * @param bitmap 要检测的图片 */ public void canny(Bitmap bitmap) { if (null !</p>
                             <p class="read-more">
                               <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
-                            </p>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="box-image-text blog">
-                        <div class="top">
-                            <div class="image" style="overflow:hidden">
-                                
-                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                
-                            </div>
-                            <div class="bg"></div>
-                            <div class="text">
-                                <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/">OpenCV高斯差分技术实现图像边缘检测</a></h4>
-                            <p class="author-category">
-                            
-                             August 19, 2016
-                            </p>
-                            <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
-效果图 源码 KqwOpenCVFeaturesDemo
-边缘是图像中像素亮度变化明显的点。
-高斯差分算法步骤  将图像转为灰度图像
-// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  用两个不同的模糊半径对灰度图像执行高斯模糊（取得两幅高斯模糊图像）
-// 以两个不同的模糊半径对图像做模糊处理 Imgproc.GaussianBlur(grayMat, blur1, new Size(15, 15), 5); Imgproc.GaussianBlur(grayMat, blur2, new Size(21, 21), 5);  将两幅高斯模糊图像做减法，得到一幅包含边缘点的结果图像
-// 将两幅模糊后的图像相减 Mat diff = new Mat(); Core.absdiff(blur1, blur2, diff);   该方法只对图像做了高斯模糊，这是计算图像边缘最快的方法之一，但是，该方法的结果也不是很理想，这种方式对某些图像效果很好，但是在某些情况下可能会完全失效。
-封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
-/** * 高斯差分算法边缘检测 * * @param bitmap 要检测的图片 */ public void differenceOfGaussian(Bitmap bitmap) { if (null != mSubscriber) Observable .</p>
-                            <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
                             </p>
                         </div>
                     </div>
@@ -799,6 +797,19 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">How to compose article in chuxinshequ.github.io</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
@@ -820,19 +831,6 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
                     </div>
                 </div>
                 

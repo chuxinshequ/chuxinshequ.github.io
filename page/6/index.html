@@ -531,6 +531,41 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
+                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h4><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/">OpenCV高斯模糊方法</a></h4>
+                            <p class="author-category">
+                            
+                             August 17, 2016
+                            </p>
+                            <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
+                            <p class="read-more">
+                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                            </p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="box-image-text blog">
+                        <div class="top">
+                            <div class="image" style="overflow:hidden">
+                                
+                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                
+                            </div>
+                            <div class="bg"></div>
+                            <div class="text">
+                                <p class="buttons">
                                     <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
                                 </p>
                             </div>
@@ -637,45 +672,6 @@ File -&gt; New -&gt; Import Module
 单从语音能力角度来比较，讯飞更好。</p>
                             <p class="read-more">
                               <a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/" class="btn btn-template-main"></a>
-                            </p>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="box-image-text blog">
-                        <div class="top">
-                            <div class="image" style="overflow:hidden">
-                                
-                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                
-                            </div>
-                            <div class="bg"></div>
-                            <div class="text">
-                                <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/">灵云语音唤醒</a></h4>
-                            <p class="author-category">
-                            
-                             August 16, 2016
-                            </p>
-                            <p class="intro"> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
-严格来讲，灵云没有语音唤醒功能，但是通过命令词的方式可以实现
-实现方式 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
-我个人认为这种方式实现唤醒意义不大，所以没有做demo，原因如下：
- 录音都有前端点超时时间和后端点超时时间,这样一来，即使我们准确的说出唤醒词，也要在说完唤醒词以后，保证在后端点时间内不再有声音录入，才能提高被唤醒的几率。
- 唤醒不是即时的，即使我们准确的说出唤醒词，并保持不再有声音录入，也要至少等待后端点时间过去，录音结束以后，才会识别（被唤醒）。
- 这种方式的唤醒其实就是在进行语音识别，如果一直开启唤醒，消耗性能，耗电。
-   前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  </p>
-                            <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/" class="btn btn-template-main"></a>
                             </p>
                         </div>
                     </div>
@@ -798,6 +794,19 @@ File -&gt; New -&gt; Import Module
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">How to compose article in chuxinshequ.github.io</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
@@ -819,19 +828,6 @@ File -&gt; New -&gt; Import Module
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
                     </div>
                 </div>
                 

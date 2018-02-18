@@ -172,6 +172,45 @@
                             <div class="row">
                                 <div class="col-md-4">
                                   <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/">OpenCV高斯模糊方法</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          
+                                          in <a href="https://chuxinshequ.github.io/categories/79">79</a>
+                                          
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/"><i class="fa fa-calendar-o"></i> August 17, 2016</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
                                       <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/">
                                           
                                           <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
@@ -560,50 +599,6 @@ SDK SDK下载
                             </div>
                         </section>
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/">
-                                          
-                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/">科大讯飞离线语音合成（语记）</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          
-                                          in <a href="https://chuxinshequ.github.io/categories/232">232</a>
-                                          
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/"><i class="fa fa-calendar-o"></i> August 30, 2015</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
-离线语音合成（语记） 讯飞的语音合成有三种方式
- 在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用语记实现离线语音合成
-效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9063593
-说明 使用语记实现离线语音合成和在线语音合成的步骤非常相似，下载SDK的方式是一样的，一样是选择在线语音合成，只不过是使用离线引擎就可以借用语音合成语音了。
-在线语音合成地址：http://blog.csdn.net/q4878802/article/details/48092495
-下面说说和在线语音合成不用的地方
-1. 下载并安装语记，下载离线资源 离线语音听写的文章里有介绍，地址： http://blog.csdn.net/q4878802/article/details/47834601
-2. 网络权限就可以删掉了，本地合成不需要联网，但是获取网络状态的权限一定要有。 &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;  3. 将识别引擎改为本地引擎 // 引擎类型 本地 mTts.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_LOCAL);  4. 在Application初始化的类里把引擎模式设置的参数注释掉 // param.append(&quot;,&quot;); // param.append(SpeechConstant.ENGINE_MODE + &quot;=&quot; + SpeechConstant.MODE_MSC);  SpeechConstant.MODE_MSC 参数意思是使用离线包资源，如果离线包资源找不到会走网络识别，如果设置这种模式是不会使用语记（语音+）的如果使用离线包，就需要这条参数。</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/" class="btn btn-template-main"></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
 
                         <ul class="pager">
                             
@@ -661,7 +656,7 @@ SDK SDK下载
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked">
             
-            <li><a href="https://chuxinshequ.github.io/categories/help">help (2)</a>
+            <li><a href="https://chuxinshequ.github.io/categories/help">help (3)</a>
             </li>
             
             <li><a href="https://chuxinshequ.github.io/categories/im">im (1)</a>
@@ -850,6 +845,19 @@ SDK SDK下载
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">How to compose article in chuxinshequ.github.io</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
@@ -871,19 +879,6 @@ SDK SDK下载
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Hexo-Yilia加入相册功能">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/">Hexo-Yilia加入相册功能</a></h5>
                     </div>
                 </div>
                 
