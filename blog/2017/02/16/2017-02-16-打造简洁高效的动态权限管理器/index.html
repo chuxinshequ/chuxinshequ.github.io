@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>打造简洁高效的动态权限管理器</title>
+  <meta name="author" content="" />
+
+  
+  <meta name="keywords" content="devows, hugo, go">	
+  
+
+  
+  <meta name="description" content="Site template made by devcows using hugo">	
+  
+
+  <meta name="generator" content="Hugo 0.30.2" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="https://daonao.github.io/chuxin/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="https://daonao.github.io/chuxin/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+
+  
+  <link href="https://daonao.github.io/chuxin/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="https://daonao.github.io/chuxin/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://daonao.github.io/chuxin/img/apple-touch-icon.png" />
+  
+
+  <link href="https://daonao.github.io/chuxin/css/owl.carousel.css" rel="stylesheet">
+  <link href="https://daonao.github.io/chuxin/css/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://daonao.github.io/index.xml" type="application/rss+xml" title="不忘初心">
+
+  
+  <meta property="og:title" content="打造简洁高效的动态权限管理器" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/chuxin/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8//" />
+  <meta property="og:image" content="img/logo.png" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://daonao.github.io/chuxin/">
+                    <img src="https://daonao.github.io/chuxin/img/logo.png" alt="打造简洁高效的动态权限管理器 logo" class="hidden-xs hidden-sm">
+                    <img src="https://daonao.github.io/chuxin/img/logo-small.png" alt="打造简洁高效的动态权限管理器 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">打造简洁高效的动态权限管理器 - </span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only"></span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/chuxin/chuxin/">Home</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/chuxin/chuxin/blog/">Blog</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/chuxin/chuxin/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/chuxin/chuxin/contact/">Contact</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>打造简洁高效的动态权限管理器</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">February 16, 2017</p>
+
+                        <div id="post-content">
+                          
+
+<hr />
+
+<p>转载请说明出处！
+作者：<a href="http://kongqw.github.io/about/index.html">kqw攻城狮</a>
+出处：<a href="http://kongqw.com/2017/02/16/2017-02-16-打造简洁高效的动态权限管理器/">个人站</a> | <a href="http://blog.csdn.net/q4878802/article/details/55254158">CSDN</a></p>
+
+<hr />
+
+<p>效果图</p>
+
+<p><img src="http://img.blog.csdn.net/20170216120006799?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcTQ4Nzg4MDI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" /></p>
+
+<p>GitHub地址：<a href="https://github.com/kongqw/PermissionsManager">PermissionsManager</a></p>
+
+<p>随着Android 6.0的普及，动态权限的重要性也开始时慢慢体现出来。为了更好的保护用户隐私，Android 6.0要求在进行敏感操作之前，必须要向用户请示申请权限。</p>
+
+<p>如何使用，在之前的文章里也已经介绍过了，但是用起来比较麻烦。<a href="http://blog.csdn.net/q4878802/article/details/50419004?locationNum=1&amp;fps=1">Android6.0动态获取权限</a></p>
+
+<p>我希望可以封装一下，使用之前创建一个动态权限的管理对象，他有两个回调来告诉我权限申请成功或者失败，像这样：</p>
+
+<pre><code class="language-java">mPermissionsManager = new PermissionsManager(this) {
+    @Override
+    public void authorized(int requestCode) {
+        // TODO 权限通过
+    }
+
+    @Override
+    public void noAuthorization(int requestCode, String[] lacksPermissions) {
+        // TODO 有权限没有通过
+    }
+};
+</code></pre>
+
+<p>使用的时候，可以直接调用一个方法，把要请示的权限传进去就可以进行校验，像这样：</p>
+
+<pre><code class="language-java">// 检查权限
+mPermissionsManager.checkPermissions(&quot;请求码&quot;, &quot;要校验的权限&quot;);
+</code></pre>
+
+<p>于是乎，下面封装的动态权限管理器就来了：</p>
+
+<h2 id="动态权限管理器">动态权限管理器</h2>
+
+<pre><code class="language-java">package com.kongqw.permissionslibrary;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+
+import java.util.ArrayList;
+
+/**
+ * Created by kongqingwei on 2017/2/15.
+ * 检查权限的类
+ */
+
+public abstract class PermissionsManager {
+
+    private static final String PACKAGE_URL_SCHEME = &quot;package:&quot;;
+    private Activity mTargetActivity;
+
+    public abstract void authorized(int requestCode);
+
+    public abstract void noAuthorization(int requestCode, String[] lacksPermissions);
+
+    public PermissionsManager(Activity targetActivity) {
+        mTargetActivity = targetActivity;
+    }
+
+    /**
+     * 检查权限
+     *
+     * @param requestCode 请求码
+     * @param permissions 准备校验的权限
+     */
+    public void checkPermissions(int requestCode, String... permissions) {
+
+        ArrayList&lt;String&gt; lacks = new ArrayList&lt;&gt;();
+        for (String permission : permissions) {
+            if (ContextCompat.checkSelfPermission(mTargetActivity.getApplicationContext(), permission) == PackageManager.PERMISSION_DENIED) {
+                lacks.add(permission);
+            }
+        }
+
+        if (!lacks.isEmpty()) {
+            // 有权限没有授权
+            String[] lacksPermissions = new String[lacks.size()];
+            lacksPermissions = lacks.toArray(lacksPermissions);
+            //申请CAMERA权限
+            ActivityCompat.requestPermissions(mTargetActivity, lacksPermissions, requestCode);
+        } else {
+            // 授权
+            authorized(requestCode);
+        }
+    }
+
+    /**
+     * 复查权限
+     * &lt;p&gt;
+     * 调用checkPermissions方法后，会提示用户对权限的申请做出选择，选择以后（同意或拒绝）
+     * TargetActivity会回调onRequestPermissionsResult方法，
+     * 在onRequestPermissionsResult回调方法里，我们调用此方法来复查权限，检查用户的选择是否通过了权限申请
+     *
+     * @param requestCode  请求码
+     * @param permissions  权限
+     * @param grantResults 授权结果
+     */
+    public void recheckPermissions(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        for (int grantResult : grantResults) {
+            if (grantResult == PackageManager.PERMISSION_DENIED) {
+                // 未授权
+                noAuthorization(requestCode, permissions);
+                return;
+            }
+        }
+        // 授权
+        authorized(requestCode);
+    }
+
+    /**
+     * 进入应用设置
+     *
+     * @param context context
+     */
+    public static void startAppSettings(Context context) {
+        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setData(Uri.parse(PACKAGE_URL_SCHEME + context.getPackageName()));
+        context.startActivity(intent);
+    }
+}
+</code></pre>
+
+<h2 id="应用">应用</h2>
+
+<p>使用起来的逻辑也比较清晰简单，一共3步：</p>
+
+<h3 id="1-初始化权限管理器">1. 初始化权限管理器</h3>
+
+<pre><code class="language-java">// 初始化
+mPermissionsManager = new PermissionsManager(this) {
+    @Override
+    public void authorized(int requestCode) {
+        Toast.makeText(getApplicationContext(), requestCode + &quot; ： 全部权限通过&quot;, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void noAuthorization(int requestCode, String[] lacksPermissions) {
+        Toast.makeText(getApplicationContext(), requestCode + &quot; ： 有权限没有通过！需要授权&quot;, Toast.LENGTH_SHORT).show();
+        for (String permission : lacksPermissions) {
+            Log.i(TAG, &quot;noAuthorization: &quot; + permission);
+        }
+    }
+};
+</code></pre>
+
+<h3 id="2-检查权限">2. 检查权限</h3>
+
+<pre><code class="language-java">// 要校验的权限
+String[] PERMISSIONS = new String[]{Manifest.permission.RECORD_AUDIO, Manifest.permission.CAMERA};
+// 检查权限
+mPermissionsManager.checkPermissions(0, PERMISSIONS);
+</code></pre>
+
+<h3 id="3-复查权限">3. 复查权限</h3>
+
+<p>用户对权限申请的提示做出选择以后，要重写TargetActivity的<code>onRequestPermissionsResult</code>方法来复查权限，检查权限是否通过。</p>
+
+<pre><code class="language-java">@Override
+public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    // 用户做出选择以后复查权限，判断是否通过了权限申请
+    mPermissionsManager.recheckPermissions(requestCode, permissions, grantResults);
+}
+</code></pre>
+
+<p>进入应用设置页面</p>
+
+<p>最后，权限没有通过，是不能使用的，如果一定要用，一般要提示用户缺少权限，到应用设置页面去吧权限打开，再回来使用。
+对话框就不写了，进入到应用的设置页面可以直接调用<code>PermissionsManager</code>里的<code>startAppSettings</code>方法，进入到该应用的设置页面，修改权限</p>
+
+<pre><code class="language-java">PermissionsManager.startAppSettings(getApplicationContext());
+</code></pre>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "devcows" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="hidden" name="sitesearch" value="https://daonao.github.io/chuxin/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/composer">composer (1)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/docker">docker (5)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/git">git (1)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/help">help (2)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/im">im (1)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/linux">linux (1)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/nginx">nginx (3)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/opencv">opencv (15)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/php">php (6)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/powershell">powershell (3)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/windows">windows (3)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/%e5%a4%8f%e6%9c%aa%e7%9c%a0">夏未眠 (2)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/%e5%bc%80%e6%ba%90">开源 (5)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/%e6%8a%80%e6%9c%af%e7%af%87">技术篇 (14)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/%e8%af%ad%e9%9f%b3">语音 (13)</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/categories/%e9%9a%8f%e6%89%8b%e8%ae%b0">随手记 (3)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/aes"><i class="fa fa-tags"></i> aes</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/android"><i class="fa fa-tags"></i> android</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/cifs"><i class="fa fa-tags"></i> cifs</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/composer"><i class="fa fa-tags"></i> composer</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/docker"><i class="fa fa-tags"></i> docker</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/elk"><i class="fa fa-tags"></i> elk</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/es"><i class="fa fa-tags"></i> es</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/gd"><i class="fa fa-tags"></i> gd</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/git"><i class="fa fa-tags"></i> git</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/gradle"><i class="fa fa-tags"></i> gradle</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/help"><i class="fa fa-tags"></i> help</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/hexo"><i class="fa fa-tags"></i> hexo</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/im"><i class="fa fa-tags"></i> im</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/linux"><i class="fa fa-tags"></i> linux</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/nginx"><i class="fa fa-tags"></i> nginx</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/opencv"><i class="fa fa-tags"></i> opencv</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/php"><i class="fa fa-tags"></i> php</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/powershell"><i class="fa fa-tags"></i> powershell</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/sklearn"><i class="fa fa-tags"></i> sklearn</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/windows"><i class="fa fa-tags"></i> windows</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e4%b8%b2%e5%8f%a3"><i class="fa fa-tags"></i> 串口</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%8a%a0%e5%af%86"><i class="fa fa-tags"></i> 加密</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%8a%a8%e6%80%81%e6%9d%83%e9%99%90"><i class="fa fa-tags"></i> 动态权限</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%8d%b3%e6%8b%bf%e5%8d%b3%e7%94%a8"><i class="fa fa-tags"></i> 即拿即用</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%9b%9e%e5%bd%92%e5%88%86%e6%9e%90"><i class="fa fa-tags"></i> 回归分析</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%a3%b0%e9%81%93"><i class="fa fa-tags"></i> 声道</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%a4%8f%e6%9c%aa%e7%9c%a0"><i class="fa fa-tags"></i> 夏未眠</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%a4%9a%e5%aa%92%e4%bd%93"><i class="fa fa-tags"></i> 多媒体</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%bc%80%e6%ba%90"><i class="fa fa-tags"></i> 开源</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e5%bc%82%e5%b8%b8%e6%a3%80%e6%b5%8b"><i class="fa fa-tags"></i> 异常检测</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e6%91%87%e6%9d%86"><i class="fa fa-tags"></i> 摇杆</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e6%95%b0%e6%8d%ae%e5%bd%92%e4%b8%80%e5%8c%96"><i class="fa fa-tags"></i> 数据归一化</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84"><i class="fa fa-tags"></i> 数据结构</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e6%96%87%e4%bb%b6%e5%ad%98%e5%8f%96"><i class="fa fa-tags"></i> 文件存取</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e6%a2%af%e5%ba%a6%e4%b8%8b%e9%99%8d"><i class="fa fa-tags"></i> 梯度下降</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e6%ad%a3%e5%bc%a6%e6%b3%a2"><i class="fa fa-tags"></i> 正弦波</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83"><i class="fa fa-tags"></i> 正态分布</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e7%8e%af%e4%bf%a1"><i class="fa fa-tags"></i> 环信</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e8%93%9d%e7%89%99"><i class="fa fa-tags"></i> 蓝牙</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e8%93%9d%e7%89%99%e9%80%9a%e4%bf%a1"><i class="fa fa-tags"></i> 蓝牙通信</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e8%af%ad%e9%9f%b3"><i class="fa fa-tags"></i> 语音</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e8%b7%9d%e7%a6%bb%e8%ae%a1%e7%ae%97"><i class="fa fa-tags"></i> 距离计算</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e9%9a%8f%e6%89%8b%e8%ae%b0"><i class="fa fa-tags"></i> 随手记</a>
+            </li>
+            
+            <li><a href="https://daonao.github.io/chuxin/tags/%e9%9b%b7%e8%be%be"><i class="fa fa-tags"></i> 雷达</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4></h4>
+
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4></h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://daonao.github.io/chuxin/blog/2018/02/06/docker-decoupling-operation-tool-and-runtime-tool/">
+                          
+                            <img src="https://daonao.github.io/chuxin/img/placeholder.png" class="img-responsive" alt="借助Docker解耦合运维工具和运行时工具">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://daonao.github.io/chuxin/blog/2018/02/06/docker-decoupling-operation-tool-and-runtime-tool/">借助Docker解耦合运维工具和运行时工具</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-router-from-windows-share-folder/">
+                          
+                            <img src="https://daonao.github.io/chuxin/img/placeholder.png" class="img-responsive" alt="（开包即用，不用看代码！）在 Docker 中用 nginx 和 PHP-fpm 运行来自 Windows 共享文件夹的路由模式网站">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-router-from-windows-share-folder/">（开包即用，不用看代码！）在 Docker 中用 nginx 和 PHP-fpm 运行来自 Windows 共享文件夹的路由模式网站</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-from-windows-share-folder/">
+                          
+                            <img src="https://daonao.github.io/chuxin/img/placeholder.png" class="img-responsive" alt="（开包即用，不用看代码！）在 Docker 中用 nginx 和 PHP-fpm 运行来自 Windows 共享文件夹的网站">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-from-windows-share-folder/">（开包即用，不用看代码！）在 Docker 中用 nginx 和 PHP-fpm 运行来自 Windows 共享文件夹的网站</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4></h4>
+
+            <strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      
+
+
+            <a href="/contact" class="btn btn-small btn-template-main"></a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
+            
+            <p class="pull-right">
+               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              
+
+               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y&v=3.exp"></script>
+
+<script src="https://daonao.github.io/chuxin/js/hpneo.gmaps.js"></script>
+<script src="https://daonao.github.io/chuxin/js/gmaps.init.js"></script>
+<script src="https://daonao.github.io/chuxin/js/front.js"></script>
+
+
+<script src="https://daonao.github.io/chuxin/js/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Powershell on 不忘初心</title>
+    <link>https://daonao.github.io/chuxin/categories/powershell/</link>
+    <description>Recent content in Powershell on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 04 Feb 2018 16:41:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://daonao.github.io/chuxin/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>（开包即用，不用看代码！）在 Docker 中用 nginx 和 PHP-fpm 运行来自 Windows 共享文件夹的路由模式网站</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-router-from-windows-share-folder/</link>
+      <pubDate>Sun, 04 Feb 2018 16:41:05 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-router-from-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博
+准备  PowerShell git docker 使用docker-machine命令可以找到一台可用的Docker主机  开包即用，不用看代码！ 初始化 进入一个文件夹。
+下载已经写好的开源项目
+git clone https://github.com/huzhenghui/Docker-run-nginx-PHP-fpm-web-server-router-from-Windows-share-folder  进入开源项目文件夹
+cd Docker-run-nginx-PHP-fpm-web-server-router-from-Windows-share-folder  更新子模块代码
+git submodule update --init  使用管理员权限的PowerShell运行共享文件夹到Docker的脚本。
+.\share-windows-folder-to-docker\share-windows-folder-to-docker.ps1 -workingDir . -volumeName nginx-PHP-fpm-web-server-router  查看文件夹是否共享成功
+docker run --rm -v nginx-PHP-fpm-web-server-router:/share alpine ls /share  如果成功将看到开源项目的如下文件列表
+LICENSE docker-compose.yml nginx php share-windows-folder-to-docker  使用PHP内建的Web Server的路由方式 启动PHP内建web server
+docker run -it --rm -v nginx-PHP-fpm-web-server-router:/nginx-PHP-fpm-web-server-router -p 80:80 php -S 0.0.0.0:80 -t /nginx-PHP-fpm-web-server-router/php/public index.</description>
+    </item>
+    
+    <item>
+      <title>（开包即用，不用看代码！）在 Docker 中用 nginx 和 PHP-fpm 运行来自 Windows 共享文件夹的网站</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-from-windows-share-folder/</link>
+      <pubDate>Sun, 04 Feb 2018 15:41:05 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-from-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博
+准备  PowerShell git docker 使用docker-machine命令可以找到一台可用的Docker主机  开包即用，不用看代码！ 初始化 进入一个文件夹。
+下载已经写好的开源项目
+git clone https://github.com/huzhenghui/Docker-run-nginx-PHP-fpm-web-server-from-Windows-share-folder  进入开源项目文件夹
+cd Docker-run-nginx-PHP-fpm-web-server-from-Windows-share-folder  更新子模块代码
+git submodule update --init  使用管理员权限的PowerShell运行共享文件夹到Docker的脚本。
+.\share-windows-folder-to-docker\share-windows-folder-to-docker.ps1 -workingDir . -volumeName nginx-PHP-fpm-web-server  查看文件夹是否共享成功
+docker run --rm -v nginx-PHP-fpm-web-server:/share alpine ls /share  如果成功将看到开源项目的如下文件列表
+LICENSE docker-compose.yml nginx php share-windows-folder-to-docker  使用PHP内建的Web Server 启动PHP内建web server
+docker run -it --rm -v nginx-PHP-fpm-web-server:/nginx-PHP-fpm-web-server -p 80:80 php -S 0.0.0.0:80 -t /nginx-PHP-fpm-web-server/php/public  正确启动将看到如下信息</description>
+    </item>
+    
+    <item>
+      <title>在 Docker 中运行来自 Windows 共享文件夹的 PHP 脚本</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/01/31/docker-run-a-single-php-script-from-windows-share-folder/</link>
+      <pubDate>Wed, 31 Jan 2018 15:58:04 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/01/31/docker-run-a-single-php-script-from-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博讨论
+在 Docker 中运行 PHP 程序的一种方式是在Dockerfile中使用COPY命令复制源代码到Docker容器中，如果是在本机中，也可以把本地PHP项目文件夹加载到Docker容器中。如果是虚拟机，例如Docker for Windows在Hyper-V中安装的虚拟机，Docker客户端会自动创建共享文件夹到虚拟机中，而对于使用docker-machine命令创建的虚拟机，Docker客户端就不自动管理了，如果是固定位置运行的程序，可以手工设置共享文件夹，如果是临时运行的话，手工设置共享文件夹未免有些繁琐，此时可以借助PowerShell脚本完成共享操作。
+假设电脑上的docker-machine中包含一台docker主机且运行正常，不限于本机、本机中的虚拟机或者其他位置，只要在局域网中能相互访问即可。
+使用管理员角色启动PowerShell。
+下载示例代码。
+git clone https://github.com/huzhenghui/Docker-run-a-single-PHP-script-from-Windows-share-folder  进入项目目录。
+cd Docker-run-a-single-PHP-script-from-Windows-share-folder  更新子模块。
+git submodule update --init  运行自动共享脚本。
+share-windows-folder-to-docker/share-windows-folder-to-docker.ps1 -workingDir ./src -volumeName Docker-run-a-single-PHP-script-from-Windows-share-folder  该脚本将自动把示例项目中的./src文件夹共享到Docker主机中的卷。
+测试共享。
+docker run --rm -v Docker-run-a-single-PHP-script-from-Windows-share-folder:/share alpine ls /share  将看到列出文件夹中的文件
+phpinfo.php  运行PHP程序
+docker run -it --rm -v Docker-run-a-single-PHP-script-from-Windows-share-folder:/src -w /src php:latest php phpinfo.php  可以看到输出运行结果。
+这种方式把Docker容器作为PHP的运行时环境，而不是单独的PHP程序，因此只需要一个PHP镜像，不需要单独为每个程序创建镜像。例如PHP程序消耗较大的计算资源，而又希望程序和输入、输出的文件都保存在Windows设备时，就适合使用这种方式。
+使用的方式也很简单，直接在项目中引入即可。
+git submodule add https://github.com/huzhenghui/share-windows-folder-to-docker  </description>
+    </item>
+    
+  </channel>
+</rss>

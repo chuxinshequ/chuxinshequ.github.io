@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on 不忘初心</title>
+    <link>https://daonao.github.io/chuxin/tags/php/</link>
+    <description>Recent content in Php on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 12 Feb 2018 11:31:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://daonao.github.io/chuxin/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>（开包即用，不用看代码！）Windows下NetBeans调试Docker中nginx&#43;PHP-fpm路由的八种配置以及两种控制台配置两种DotNet配置</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/12/netbeans-xdebug-php-fpm-in-docker-by-windows-share-folder/</link>
+      <pubDate>Mon, 12 Feb 2018 11:31:13 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/12/netbeans-xdebug-php-fpm-in-docker-by-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博
+准备环境  带有PowerShell的Windows操作系统，测试环境为Windows 10，其他版本没有测试过。 Windows上安装有Docker docker-machine命令能找到一台运行中的Docker主机 Docker主机不限于Windows上的虚拟机中安装，但是应当处于相同子网中。 Windows上安装有NetBeans  准备程序 启动PowerShell进入一个文件夹
+下载项目代码
+git clone https://github.com/huzhenghui/Netbeans-Xdebug-PHP-fpm-in-Docker-by-Windows-share-folder.git  进入项目文件夹
+cd Netbeans-Xdebug-PHP-fpm-in-Docker-by-Windows-share-folder  更新子模块代码
+git submodule update --init  设置共享到Docker的Volume卷名称，应当注意避免和Docker上已有的卷名冲突
+$env:VOLUME_NAME=&amp;quot;Netbeans-Xdebug-PHP-fpm-in-Docker-by-Windows-share-folder&amp;quot;  使用脚本把Windows文件夹共享到Docker，脚本具体执行过程详见源代码。
+.\share-windows-folder-to-docker\share-windows-folder-to-docker.ps1 -workingDir . -volumeName ${env:VOLUME_NAME}  测试共享效果
+docker run --rm -v ${env:VOLUME_NAME}:/share alpine ls /share  共享成功将能看到Windows项目文件夹的内容
+八种NetBeans、Xdebug、nginx、PHP-fpm、PHP路由的排列组合配置    NetBeans Xdebug nginx PHP-fpm PHP路由 命令     不需要 不需要 不需要 docker-compose-f docker-compose.php.yml up   不需要 不需要 需要 docker-compose-f docker-compose.</description>
+    </item>
+    
+    <item>
+      <title>借助Docker解耦合运维工具和运行时工具</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/06/docker-decoupling-operation-tool-and-runtime-tool/</link>
+      <pubDate>Tue, 06 Feb 2018 23:58:04 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/06/docker-decoupling-operation-tool-and-runtime-tool/</guid>
+      <description>CSDN博客
+微博文章
+微博
+在部署的时候，经常会遇到这样的情况，运维工具和运行时工具互相干扰，借助Docker可以很方便的解决这个问题，下面以部署Zend Expressive Skeleton为例说明（这个例子中没有运维工具和运行时工具互相干扰的问题，仅用于演示）。
+准备 本例假设在Windows操作系统中，Linux的情况可能会更简单些。假设使用docker-machine命令可以访问到一台Docker主机。
+公共部分 为了不纠缠具体的技术细节，本例已经把和具体项目无关的公共部分独立为开源项目。
+进入工作目录。
+下载使用Docker运行nginx+PHP-fpm路由模式的代码
+git clone https://github.com/huzhenghui/Docker-run-nginx-PHP-fpm-web-server-router-from-Windows-share-folder zend-expressive-skeleton  进入项目文件夹
+cd zend-expressive-skeleton  更新子模块代码
+git submodule update --init  由于Docker主机上的卷需要唯一名称，本文使用一个环境变量。
+$env:VOLUME_NAME=&amp;quot;zend-expressive-skeleton&amp;quot;  以管理员权限启动PowerShell，运行把Windows文件夹共享到Docker主机的脚本，此处要求docker-machine命令能访问到一台运行中的Docker主机，更多选项请参考其中的源代码。
+.\share-windows-folder-to-docker\share-windows-folder-to-docker.ps1 -workingDir . -volumeName ${env:VOLUME_NAME}  测试卷的加载情况。
+docker run --rm -v ${env:VOLUME_NAME}:/nginx-PHP-fpm-web-server-router alpine ls /nginx-PHP-fpm-web-server-router  显示文件夹的内容即代表共享成功。
+LICENSE docker-compose.yml nginx php share-windows-folder-to-docker  交互安装模式 在公共部分的基础上，可以交互安装。
+先删除原有位置的代码。
+docker run -it --rm -v ${env:VOLUME_NAME}:/nginx-PHP-fpm-web-server-router --entrypoint /bin/sh alpine -c &amp;quot;rm -rf /nginx-PHP-fpm-web-server-router/php&amp;quot;  然后安装。</description>
+    </item>
+    
+    <item>
+      <title>（开包即用，不用看代码！）在 Docker 中用 nginx 和 PHP-fpm 运行来自 Windows 共享文件夹的路由模式网站</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-router-from-windows-share-folder/</link>
+      <pubDate>Sun, 04 Feb 2018 16:41:05 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-router-from-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博
+准备  PowerShell git docker 使用docker-machine命令可以找到一台可用的Docker主机  开包即用，不用看代码！ 初始化 进入一个文件夹。
+下载已经写好的开源项目
+git clone https://github.com/huzhenghui/Docker-run-nginx-PHP-fpm-web-server-router-from-Windows-share-folder  进入开源项目文件夹
+cd Docker-run-nginx-PHP-fpm-web-server-router-from-Windows-share-folder  更新子模块代码
+git submodule update --init  使用管理员权限的PowerShell运行共享文件夹到Docker的脚本。
+.\share-windows-folder-to-docker\share-windows-folder-to-docker.ps1 -workingDir . -volumeName nginx-PHP-fpm-web-server-router  查看文件夹是否共享成功
+docker run --rm -v nginx-PHP-fpm-web-server-router:/share alpine ls /share  如果成功将看到开源项目的如下文件列表
+LICENSE docker-compose.yml nginx php share-windows-folder-to-docker  使用PHP内建的Web Server的路由方式 启动PHP内建web server
+docker run -it --rm -v nginx-PHP-fpm-web-server-router:/nginx-PHP-fpm-web-server-router -p 80:80 php -S 0.0.0.0:80 -t /nginx-PHP-fpm-web-server-router/php/public index.</description>
+    </item>
+    
+    <item>
+      <title>（开包即用，不用看代码！）在 Docker 中用 nginx 和 PHP-fpm 运行来自 Windows 共享文件夹的网站</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-from-windows-share-folder/</link>
+      <pubDate>Sun, 04 Feb 2018 15:41:05 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/04/docker-run-nginx-php-fpm-web-server-from-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博
+准备  PowerShell git docker 使用docker-machine命令可以找到一台可用的Docker主机  开包即用，不用看代码！ 初始化 进入一个文件夹。
+下载已经写好的开源项目
+git clone https://github.com/huzhenghui/Docker-run-nginx-PHP-fpm-web-server-from-Windows-share-folder  进入开源项目文件夹
+cd Docker-run-nginx-PHP-fpm-web-server-from-Windows-share-folder  更新子模块代码
+git submodule update --init  使用管理员权限的PowerShell运行共享文件夹到Docker的脚本。
+.\share-windows-folder-to-docker\share-windows-folder-to-docker.ps1 -workingDir . -volumeName nginx-PHP-fpm-web-server  查看文件夹是否共享成功
+docker run --rm -v nginx-PHP-fpm-web-server:/share alpine ls /share  如果成功将看到开源项目的如下文件列表
+LICENSE docker-compose.yml nginx php share-windows-folder-to-docker  使用PHP内建的Web Server 启动PHP内建web server
+docker run -it --rm -v nginx-PHP-fpm-web-server:/nginx-PHP-fpm-web-server -p 80:80 php -S 0.0.0.0:80 -t /nginx-PHP-fpm-web-server/php/public  正确启动将看到如下信息</description>
+    </item>
+    
+    <item>
+      <title>使用 Docker 测试 PHP CVE-2018-5711 漏洞</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/01/test-php-cve-2018-5711-by-docker/</link>
+      <pubDate>Thu, 01 Feb 2018 19:22:12 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/01/test-php-cve-2018-5711-by-docker/</guid>
+      <description>CSDN博客
+微博文章
+微博
+漏洞说明 编号为PHP CVE-2018-5711的漏洞能让运行PHP的服务器瞬间宕机，原理是gd库在遇到特定非法格式的gif图片时会耗尽CPU，影响范围如下：
+ PHP 5 &amp;lt; 5.6.33 PHP 7.0 &amp;lt; 7.0.27 PHP 7.1 &amp;lt; 7.1.13 PHP 7.2 &amp;lt; 7.2.1  其中列出的都是该系列的最高版本，也就是说几乎所有使用gd库的PHP都需要为此更新到最高版本。
+下面介绍这个漏洞在Docker中验证的方法，需要强调，这里提供了非法格式的git图片文件，如果上传到没有更新的服务器，不排除服务器宕机的可能，造成经济损失将违反相关法律。
+PHP 7.2.0版本中的漏洞 下载代码
+git clone https://github.com/huzhenghui/Test-7-2-0-PHP-CVE-2018-5711.git  进入项目文件夹
+cd Test-7-2-0-PHP-CVE-2018-5711  构建Docker镜像
+docker build -t test-7-2-0-php-cve-2018-5711 .  构建成功后查看PHP版本
+docker run --rm test-7-2-0-php-cve-2018-5711 -v  可以看到
+PHP 7.2.0 (cli) (built: Jan 4 2018 01:20:58) ( NTS ) Copyright (c) 1997-2017 The PHP Group Zend Engine v3.</description>
+    </item>
+    
+    <item>
+      <title>PHP 7.2禁止类名为Object的巨坑</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/01/31/object-added-as-fully-reserved-classname-since-php-7.2/</link>
+      <pubDate>Wed, 31 Jan 2018 20:36:04 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/01/31/object-added-as-fully-reserved-classname-since-php-7.2/</guid>
+      <description>CSDN博客
+微博文章
+微博
+PHP 7.2禁止类名为Object的巨坑 2018年1月4日PHP 7.2.1发布，很多之前处于观望的小伙伴开始打算升级PHP了，不过要注意到2017年11月30日发布的PHP 7.2.0开始禁止类名为Object，这将导致很多包出错。特别是很多包的兼容性只写了最低版本，没有写最高版本，使用PHP 7.2的时候composer并不会提示兼容性错误，而PHP的autoload的延迟加载特性，又会导致仅在涉及的时候才会提示错误。例如这样的场景： 程序使用框架F，使用第三方模块M，而模块M中在特定参数的情况会调用模块N，模块N中包含一个类名为Object的类。在开发的时候，模块N并不会涉及到，因此在PHP 7.2中开发很久也不会遇到这个问题。可是给客户部署的时候，出现了使用模块N的情况。
+这时候，如果降级到PHP 7.1，那么程序中已经大量使用的PHP 7.2的特性就都需要修改，特别是禁止类名使用Object的特性的根源——Object类型提示，就全部要修改，而且需要增加相应的程序判断。
+如果不降级，那么就需要修改模块N中所有涉及到Object的地方，程序员都知道修改别人的代码多么痛苦。
+最后说说这个坑。
+PHP 7.2.0 Released 中包含 Object typehint 对象类型提示 ，其中提到 Backward Incompatible Changes 向后兼容变更
+ Although &amp;lsquo;object&amp;rsquo; is already a soft reserved word, this RFC adds object as fully reserved classname.
+ 从这里可以看出，object一直是一个软soft保留字，程序中本来就不应该使用，这次只不过变成了完全保留字而已。
+例如 yii2 也做了修改 https://github.com/yiisoft/yii2/blob/master/framework/base/Object.php
+尽管这么大的坑，不过好处也多多，官方给出的例子如下：
+参数类型 function acceptsObject(object $obj) { ... } // This code can be statically analyzed to be correct acceptsObject(json_decode(&#39;{}&#39;)); // This code can be statically analyzed to be correct acceptsObject(new \MyObject()); // This can be statically analysed to contain an error.</description>
+    </item>
+    
+    <item>
+      <title>在 Docker 中运行来自 Windows 共享文件夹的 PHP 脚本</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/01/31/docker-run-a-single-php-script-from-windows-share-folder/</link>
+      <pubDate>Wed, 31 Jan 2018 15:58:04 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/01/31/docker-run-a-single-php-script-from-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博讨论
+在 Docker 中运行 PHP 程序的一种方式是在Dockerfile中使用COPY命令复制源代码到Docker容器中，如果是在本机中，也可以把本地PHP项目文件夹加载到Docker容器中。如果是虚拟机，例如Docker for Windows在Hyper-V中安装的虚拟机，Docker客户端会自动创建共享文件夹到虚拟机中，而对于使用docker-machine命令创建的虚拟机，Docker客户端就不自动管理了，如果是固定位置运行的程序，可以手工设置共享文件夹，如果是临时运行的话，手工设置共享文件夹未免有些繁琐，此时可以借助PowerShell脚本完成共享操作。
+假设电脑上的docker-machine中包含一台docker主机且运行正常，不限于本机、本机中的虚拟机或者其他位置，只要在局域网中能相互访问即可。
+使用管理员角色启动PowerShell。
+下载示例代码。
+git clone https://github.com/huzhenghui/Docker-run-a-single-PHP-script-from-Windows-share-folder  进入项目目录。
+cd Docker-run-a-single-PHP-script-from-Windows-share-folder  更新子模块。
+git submodule update --init  运行自动共享脚本。
+share-windows-folder-to-docker/share-windows-folder-to-docker.ps1 -workingDir ./src -volumeName Docker-run-a-single-PHP-script-from-Windows-share-folder  该脚本将自动把示例项目中的./src文件夹共享到Docker主机中的卷。
+测试共享。
+docker run --rm -v Docker-run-a-single-PHP-script-from-Windows-share-folder:/share alpine ls /share  将看到列出文件夹中的文件
+phpinfo.php  运行PHP程序
+docker run -it --rm -v Docker-run-a-single-PHP-script-from-Windows-share-folder:/src -w /src php:latest php phpinfo.php  可以看到输出运行结果。
+这种方式把Docker容器作为PHP的运行时环境，而不是单独的PHP程序，因此只需要一个PHP镜像，不需要单独为每个程序创建镜像。例如PHP程序消耗较大的计算资源，而又希望程序和输入、输出的文件都保存在Windows设备时，就适合使用这种方式。
+使用的方式也很简单，直接在项目中引入即可。
+git submodule add https://github.com/huzhenghui/share-windows-folder-to-docker  </description>
+    </item>
+    
+  </channel>
+</rss>

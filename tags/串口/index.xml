@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>串口 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/%E4%B8%B2%E5%8F%A3/</link>
+    <description>Recent content in 串口 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 01 Nov 2016 15:40:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/%E4%B8%B2%E5%8F%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android串口通信</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</link>
+      <pubDate>Tue, 01 Nov 2016 15:40:53 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+ 串口通信偏向嵌入式一点，是Android设备通过串口与其他设备进行通信的一种方式，本文介绍的Android纯串口的通信，并不是手机上的USB串口通信。
+  手机上是没有这个串口的哦。
+ 关于串口通信，Google已经给出了源码，地址在GitHub android-serialport-api
+四年前的代码，还是Eclipse工程，本文主要介绍如何在Android Studio中使用。
+源码地址在 KqwSerialPortDemo
+集成 Java层的代码，Google已经给封装在 SerialPort.java
+导入.so 没有什么难度了，将so导入到项目
+导入jni文件 在main目录下创建cpp文件夹，并将jni源文件和CMakeLists.txt导入
+在build.gradle配置cmake路径。
+android { …… externalNativeBuild { cmake { path &amp;quot;src/main/cpp/CMakeLists.txt&amp;quot; } } …… ｝  修改jni源文件 这里要注意jni文件函数名的写法：Java_包名_类名_方法名
+在将源码里的jni导入过来的时候，包名是源码Demo的包名，我们在自己的工程里要换成自己的包名、类名，源文件和头文件都要记得改。
+修改CMakeLists.txt与SerialPort.java CMakeLists.txt
+cmake_minimum_required(VERSION 3.4.1) add_library(SerialPort SHARED SerialPort.c) # Include libraries needed for libserial_port lib target_link_libraries(SerialPort android log)  SerialPort.java
+static { System.loadLibrary(&amp;quot;SerialPort&amp;quot;); System.loadLibrary(&amp;quot;serial_port&amp;quot;); }  使用 基类 需要使用串口通信的类继承 SerialPortActivity.</description>
+    </item>
+    
+  </channel>
+</rss>

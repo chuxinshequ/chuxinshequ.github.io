@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dotnet on 不忘初心</title>
+    <link>https://daonao.github.io/chuxin/tags/dotnet/</link>
+    <description>Recent content in Dotnet on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 12 Feb 2018 11:31:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://daonao.github.io/chuxin/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>（开包即用，不用看代码！）Windows下NetBeans调试Docker中nginx&#43;PHP-fpm路由的八种配置以及两种控制台配置两种DotNet配置</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/12/netbeans-xdebug-php-fpm-in-docker-by-windows-share-folder/</link>
+      <pubDate>Mon, 12 Feb 2018 11:31:13 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/12/netbeans-xdebug-php-fpm-in-docker-by-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博
+准备环境  带有PowerShell的Windows操作系统，测试环境为Windows 10，其他版本没有测试过。 Windows上安装有Docker docker-machine命令能找到一台运行中的Docker主机 Docker主机不限于Windows上的虚拟机中安装，但是应当处于相同子网中。 Windows上安装有NetBeans  准备程序 启动PowerShell进入一个文件夹
+下载项目代码
+git clone https://github.com/huzhenghui/Netbeans-Xdebug-PHP-fpm-in-Docker-by-Windows-share-folder.git  进入项目文件夹
+cd Netbeans-Xdebug-PHP-fpm-in-Docker-by-Windows-share-folder  更新子模块代码
+git submodule update --init  设置共享到Docker的Volume卷名称，应当注意避免和Docker上已有的卷名冲突
+$env:VOLUME_NAME=&amp;quot;Netbeans-Xdebug-PHP-fpm-in-Docker-by-Windows-share-folder&amp;quot;  使用脚本把Windows文件夹共享到Docker，脚本具体执行过程详见源代码。
+.\share-windows-folder-to-docker\share-windows-folder-to-docker.ps1 -workingDir . -volumeName ${env:VOLUME_NAME}  测试共享效果
+docker run --rm -v ${env:VOLUME_NAME}:/share alpine ls /share  共享成功将能看到Windows项目文件夹的内容
+八种NetBeans、Xdebug、nginx、PHP-fpm、PHP路由的排列组合配置    NetBeans Xdebug nginx PHP-fpm PHP路由 命令     不需要 不需要 不需要 docker-compose-f docker-compose.php.yml up   不需要 不需要 需要 docker-compose-f docker-compose.</description>
+    </item>
+    
+  </channel>
+</rss>

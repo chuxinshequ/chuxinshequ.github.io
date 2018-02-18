@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aes on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/aes/</link>
+    <description>Recent content in Aes on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 04 Aug 2017 15:32:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/aes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android AES 加密、解密</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</link>
+      <pubDate>Fri, 04 Aug 2017 15:32:49 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</guid>
+      <description>AES加密介绍
+ASE 加密、解密的关键在于秘钥、只有使用加密时使用的秘钥，才可以解密。
+生成秘钥的代码网上一大堆，下面的代码可生成一个秘钥
+private SecretKey generateKey(String seed) throws Exception { // 获取秘钥生成器 KeyGenerator keyGenerator = KeyGenerator.getInstance(&amp;quot;AES&amp;quot;); // 通过种子初始化 SecureRandom secureRandom = new SecureRandom(); secureRandom.setSeed(seed.getBytes(&amp;quot;UTF-8&amp;quot;)); keyGenerator.init(128, secureRandom); // 生成秘钥并返回 return keyGenerator.generateKey(); }  然后使用秘钥进行加密
+private byte[] encrypt(String content, SecretKey secretKey) throws Exception { // 秘钥 byte[] enCodeFormat = secretKey.getEncoded(); // 创建AES秘钥 SecretKeySpec key = new SecretKeySpec(enCodeFormat, &amp;quot;AES&amp;quot;); // 创建密码器 Cipher cipher = Cipher.getInstance(&amp;quot;AES&amp;quot;); // 初始化加密器 cipher.init(Cipher.ENCRYPT_MODE, key); // 加密 return cipher.</description>
+    </item>
+    
+  </channel>
+</rss>

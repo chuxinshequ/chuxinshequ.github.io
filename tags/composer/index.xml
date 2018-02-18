@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Composer on 不忘初心</title>
+    <link>https://daonao.github.io/chuxin/tags/composer/</link>
+    <description>Recent content in Composer on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 06 Feb 2018 23:58:04 +0000</lastBuildDate>
+    
+	<atom:link href="https://daonao.github.io/chuxin/tags/composer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>借助Docker解耦合运维工具和运行时工具</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/06/docker-decoupling-operation-tool-and-runtime-tool/</link>
+      <pubDate>Tue, 06 Feb 2018 23:58:04 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/06/docker-decoupling-operation-tool-and-runtime-tool/</guid>
+      <description>CSDN博客
+微博文章
+微博
+在部署的时候，经常会遇到这样的情况，运维工具和运行时工具互相干扰，借助Docker可以很方便的解决这个问题，下面以部署Zend Expressive Skeleton为例说明（这个例子中没有运维工具和运行时工具互相干扰的问题，仅用于演示）。
+准备 本例假设在Windows操作系统中，Linux的情况可能会更简单些。假设使用docker-machine命令可以访问到一台Docker主机。
+公共部分 为了不纠缠具体的技术细节，本例已经把和具体项目无关的公共部分独立为开源项目。
+进入工作目录。
+下载使用Docker运行nginx+PHP-fpm路由模式的代码
+git clone https://github.com/huzhenghui/Docker-run-nginx-PHP-fpm-web-server-router-from-Windows-share-folder zend-expressive-skeleton  进入项目文件夹
+cd zend-expressive-skeleton  更新子模块代码
+git submodule update --init  由于Docker主机上的卷需要唯一名称，本文使用一个环境变量。
+$env:VOLUME_NAME=&amp;quot;zend-expressive-skeleton&amp;quot;  以管理员权限启动PowerShell，运行把Windows文件夹共享到Docker主机的脚本，此处要求docker-machine命令能访问到一台运行中的Docker主机，更多选项请参考其中的源代码。
+.\share-windows-folder-to-docker\share-windows-folder-to-docker.ps1 -workingDir . -volumeName ${env:VOLUME_NAME}  测试卷的加载情况。
+docker run --rm -v ${env:VOLUME_NAME}:/nginx-PHP-fpm-web-server-router alpine ls /nginx-PHP-fpm-web-server-router  显示文件夹的内容即代表共享成功。
+LICENSE docker-compose.yml nginx php share-windows-folder-to-docker  交互安装模式 在公共部分的基础上，可以交互安装。
+先删除原有位置的代码。
+docker run -it --rm -v ${env:VOLUME_NAME}:/nginx-PHP-fpm-web-server-router --entrypoint /bin/sh alpine -c &amp;quot;rm -rf /nginx-PHP-fpm-web-server-router/php&amp;quot;  然后安装。</description>
+    </item>
+    
+  </channel>
+</rss>

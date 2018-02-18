@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>环信 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/%E7%8E%AF%E4%BF%A1/</link>
+    <description>Recent content in 环信 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 22 Aug 2016 18:36:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/%E7%8E%AF%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>环信即时通讯在Android平台的部署</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 22 Aug 2016 18:36:12 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+官网 环信
+下载SDK
+创建一个工程 如果想要封装性好一点，也可以在工程里再创建一个环信的Library，然后将SDK里的jar和.so，都导入到工程
+清单文件 下面是环信Library库里面的清单文件，包含了权限的设置、APPKEY的设置和服务的声明等。
+&amp;lt;manifest xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot; package=&amp;quot;……&amp;quot;&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.VIBRATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.RECORD_AUDIO&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.CAMERA&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.GET_TASKS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.CHANGE_WIFI_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WAKE_LOCK&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.MODIFY_AUDIO_SETTINGS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_PHONE_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.RECEIVE_BOOT_COMPLETED&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.USE_CREDENTIALS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;com.android.launcher.permission.READ_SETTINGS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.BROADCAST_STICKY&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.</description>
+    </item>
+    
+  </channel>
+</rss>

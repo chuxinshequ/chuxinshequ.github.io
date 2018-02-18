@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文件存取 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/</link>
+    <description>Recent content in 文件存取 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 15 Sep 2017 14:46:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>即拿即用一Android文件存取</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/</link>
+      <pubDate>Fri, 15 Sep 2017 14:46:37 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/</guid>
+      <description>写文件 读文件 Assets文件读取 Bitmap保存 文件删除  写文件 /** * 写文件 * * @param filePath 文件绝对路径 * @param content 写入内容 * @return 写入是否成功 */ public static boolean writeFile(String filePath, String content) { FileOutputStream fileOutputStream = null; BufferedOutputStream bufferedOutputStream = null; try { File file = new File(filePath); if (file.createNewFile()) { fileOutputStream = new FileOutputStream(filePath); bufferedOutputStream = new BufferedOutputStream(fileOutputStream); bufferedOutputStream.write(content.getBytes(&amp;quot;UTF-8&amp;quot;)); bufferedOutputStream.flush(); return true; } } catch (IOException e) { e.printStackTrace(); } finally { if (null !</description>
+    </item>
+    
+  </channel>
+</rss>

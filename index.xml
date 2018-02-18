@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>不忘初心</title>
+    <link>https://chuxin-community.github.io/</link>
+    <description>Recent content on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 30 Jan 2018 23:30:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown Tables Sample 表格示例</title>
+      <link>https://chuxin-community.github.io/posts/huzhenghui/help/markdown-tables-sample/</link>
+      <pubDate>Tue, 30 Jan 2018 23:30:01 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/huzhenghui/help/markdown-tables-sample/</guid>
+      <description> Markdown Tables Sample 表格示例  Name | Age --------|------ Bob | 27 Alice | 23     Name Age     Bob 27   Alice 23    </description>
+    </item>
+    
+    <item>
+      <title>Front Matter Sample 格式示例</title>
+      <link>https://chuxin-community.github.io/posts/huzhenghui/help/front-matter-sample/</link>
+      <pubDate>Tue, 30 Jan 2018 17:54:55 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/huzhenghui/help/front-matter-sample/</guid>
+      <description>Front Matter Sample 格式示例 目前使用的 Hugo 支持 Markdown Front Matter 语法 https://jekyllrb.com/docs/frontmatter/ 主要涉及 title、date、tags、categories四个变量 也就是 .md 文件的开头需要包含如下内容
+--- title: Post Format Sample 文章格式示例 date: 2018-01-30 17:54:55 tags: [help] categories: help ---  需要注意 Hugo 按照 .md 文件中的 date 变量排序，如果不写或者格式错误，那么就会被排在最后了。 可以在 GitHub 中预览 Markdown Front Matter 语法是否正确，例如上例预览效果为
+   title date tags categories     Post Format Sample 文章格式示例 2018-01-30 09:54:55 -0800 help help    预览中在 date 变量看到时区，也就是 -0800 或者类似的字样代表正确。</description>
+    </item>
+    
+    <item>
+      <title>Hexo-Yilia加入相册功能</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E9%9A%8F%E6%89%8B%E8%AE%B0/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Thu, 14 Dec 2017 17:55:29 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E9%9A%8F%E6%89%8B%E8%AE%B0/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</guid>
+      <description>参考：点击查看
+但是其中有一些小问题，自己便重新整理了一下（本文适用于使用github存放照片）
+ 主页新建相册链接 主题_config.json文件的menu 中加入 相册和对应的链接
+themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录并拷贝相应文件 使用的是litten 大神的博客 photos文件夹，对应的路径为： https://github.com/litten/BlogBackup/tree/master/source/photos
+自己的项目根目录下的source文件夹下新建photos文件夹，将下载的几个文件放在该文件夹中，或者不用新建，直接将下载的photos文件夹放在source目录下。
+文件修改  修改 ins.js 文件的 render()函数 这个函数是用来渲染数据的 修改图片的路径地址.minSrc 小图的路径. src 大图的路径.修改为自己的图片路径(github的路径) 例如我的为： ``` var minSrc = &amp;lsquo;https://raw.githubusercontent.com/Thinkgamer/GitBlog/master/min_photos/&#39; + data.link[i] + &amp;lsquo;.min.jpg&amp;rsquo;; var src = &amp;lsquo;https://raw.githubusercontent.com/Thinkgamer/GitBlog/master/photos/&#39; + data.link[i];  # 生成json 1：下载相应python工具文件 - tools.py - ImageProcess.py 下载地址：https://github.com/Thinkgamer/GitBlog 2：新建photos和min_photos文件夹 在项目根目录下创建，用来存放照片和压缩后的照片  mkdir photos mkdir min_photos
+3：py文件和文件夹都放在项目根目录下 4：生成json 执行  python tools.</description>
+    </item>
+    
+    <item>
+      <title>梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link>
+      <pubDate>Thu, 14 Dec 2017 14:40:43 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid>
+      <description>在机器学习领域，体梯度下降算法分为三种
+ 批量梯度下降算法（BGD，Batch gradient descent algorithm） 随机梯度下降算法（SGD，Stochastic gradient descent algorithm） 小批量梯度下降算法（MBGD，Mini-batch gradient descent algorithm）   批量梯度下降算法 BGD是最原始的梯度下降算法，每一次迭代使用全部的样本，即权重的迭代公式中(公式中用$\theta$代替$\theta_i$)， $$ \jmath (\theta _0,\theta _1,&amp;hellip;,\theta n)=\sum{i=0}^{m}( h_\theta(x_0,x_1,&amp;hellip;,x_n)-y_i )^2
+$$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,&amp;hellip;,\theta _n)}{\partial \theta _i} $$ $$ 公式(1) $$
+这里的m代表所有的样本，表示从第一个样本遍历到最后一个样本。
+特点：
+ 能达到全局最优解，易于并行实现 当样本数目很多时，训练过程缓慢  随机梯度下降算法 SGD的思想是更新每一个参数时都使用一个样本来进行更新，即公式（1）中m为1。每次更新参数都只使用一个样本，进行多次更新。这样在样本量很大的情况下，可能只用到其中的一部分样本就能得到最优解了。 但是，SGD伴随的一个问题是噪音较BGD要多，使得SGD并不是每次迭代都向着整体最优化方向。
+特点： - 训练速度快 - 准确度下降，并不是最优解，不易于并行实现
+小批量梯度下降算法 MBGD的算法思想就是在更新每一参数时都使用一部分样本来进行更新，也就是公式（1）中的m的值大于1小于所有样本的数量。
+相对于随机梯度下降，Mini-batch梯度下降降低了收敛波动性，即降低了参数更新的方差，使得更新更加稳定。相对于批量梯度下降，其提高了每次学习的速度。并且其不用担心内存瓶颈从而可以利用矩阵运算进行高效计算。一般而言每次更新随机选择[50,256]个样本进行学习，但是也要根据具体问题而选择，实践中可以进行多次试验，选择一个更新速度与更次次数都较适合的样本数。mini-batch梯度下降可以保证收敛性，常用于神经网络中。
+补充 在样本量较小的情况下，可以使用批量梯度下降算法，样本量较大的情况或者线上，可以使用随机梯度下降算法或者小批量梯度下降算法。
+在机器学习中的无约束优化算法，除了梯度下降以外，还有前面提到的最小二乘法，此外还有牛顿法和拟牛顿法。
+梯度下降法和最小二乘法相比，梯度下降法需要选择步长，而最小二乘法不需要。梯度下降法是迭代求解，最小二乘法是计算解析解。如果样本量不算很大，且存在解析解，最小二乘法比起梯度下降法要有优势，计算速度很快。但是如果样本量很大，用最小二乘法由于需要求一个超级大的逆矩阵，这时就很难或者很慢才能求解解析解了，使用迭代的梯度下降法比较有优势。
+梯度下降法和牛顿法/拟牛顿法相比，两者都是迭代求解，不过梯度下降法是梯度求解，而牛顿法/拟牛顿法是用二阶的海森矩阵的逆矩阵或伪逆矩阵求解。相对而言，使用牛顿法/拟牛顿法收敛更快。但是每次迭代的时间比梯度下降法长。</description>
+    </item>
+    
+    <item>
+      <title>梯度算法之梯度上升和梯度下降</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link>
+      <pubDate>Thu, 14 Dec 2017 14:11:11 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid>
+      <description>第一次看见随机梯度上升算法是看《机器学习实战》这本书，当时也是一知半解，只是大概知道和高等数学中的函数求导有一定的关系。下边我们就好好研究下随机梯度上升（下降）和梯度上升（下降）。 
+高数中的导数 设导数 y = f(x) 在 $ x_0 $的某个邻域内有定义，当自变量从 $ x0 $ 变成 $$ x{0} + \Delta x $$ 函数y=f(x)的增量
+$$ \Delta y = f(x_0 + \Delta x) - f(x_0) $$ 与自变量的增量 $ \Delta x $ 之比：
+$$ \frac{ \Delta y }{ \Delta x } = \frac{ f(x_0 + \Delta x)-f(x0) }{ \Delta x } $$ 称为f(x)的平均变化率。 如 $ \Delta x \rightarrow 0 $ 平均变化率的极限 $$ \lim{\Delta x \rightarrow 0} \frac{ \Delta y }{ \Delta x } = \lim_{\Delta x \rightarrow 0} \frac{ f(x_0 + \Delta x)-f(x_0) }{ \Delta x } $$ 存在，则称极限值为f(x)在$ x_0 $ 处的导数，并说f(x)在$ x_0 $ 处可导或有导数。当平均变化率极限不存在时，就说f(x)在 $ x_0 $ 处不可导或没有导数。</description>
+    </item>
+    
+    <item>
+      <title>异常检测之指数平滑（利用elasticsearch来实现）</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/elk/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Mon, 20 Nov 2017 17:18:54 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/elk/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</guid>
+      <description>指数平滑法是一种特殊的加权平均法，加权的特点是对离预测值较近的历史数据给予较大的权数，对离预测期较远的历史数据给予较小的权数，权数由近到远按指数规律递减，所以，这种预测方法被称为指数平滑法。它可分为一次指数平滑法、二次指数平滑法及更高次指数平滑法。 
+关于指数平滑的得相关资料：  ES API接口： &amp;gt; https://github.com/IBBD/IBBD.github.io/blob/master/elk/aggregations-pipeline.md https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-pipeline-movavg-aggregation.html
+ 理论概念 &amp;gt; http://blog.sina.com.cn/s/blog_4b9acb5201016nkd.html
+  ES移动平均聚合：Moving Average的四种模型 simple 就是使用窗口内的值的和除于窗口值，通常窗口值越大，最后的结果越平滑: (a1 + a2 + &amp;hellip; + an) / n
+curl -XPOST &#39;localhost:9200/_search?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39; { &amp;quot;size&amp;quot;: 0, &amp;quot;aggs&amp;quot;: { &amp;quot;my_date_histo&amp;quot;:{ &amp;quot;date_histogram&amp;quot;:{ &amp;quot;field&amp;quot;:&amp;quot;date&amp;quot;, &amp;quot;interval&amp;quot;:&amp;quot;1M&amp;quot; }, &amp;quot;aggs&amp;quot;:{ &amp;quot;the_sum&amp;quot;:{ &amp;quot;sum&amp;quot;:{ &amp;quot;field&amp;quot;: &amp;quot;price&amp;quot; } }, &amp;quot;the_movavg&amp;quot;:{ &amp;quot;moving_avg&amp;quot;:{ &amp;quot;buckets_path&amp;quot;: &amp;quot;the_sum&amp;quot;, &amp;quot;window&amp;quot; : 30, &amp;quot;model&amp;quot; : &amp;quot;simple&amp;quot; } } } } } } &#39;  线性模型：Linear 对窗口内的值先做线性变换处理，再求平均：(a1 * 1 + a2 * 2 + &amp;hellip; + an * n) / (1 + 2 + &amp;hellip; + n)</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch-DSL部分集合</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/elk/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</link>
+      <pubDate>Tue, 14 Nov 2017 17:26:48 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/elk/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</guid>
+      <description>ELK是日志收集分析神器，在这篇文章中将会介绍一些ES的常用命令。
+点击阅读：ELK Stack 从入门到放弃 
+DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 shards, which is over the limit of 1000. This limit exists because querying many shards at the same time can make the job of the coordinating node very CPU and/or memory intensive. It is usually a better idea to have a smaller number of larger shards. Update [action.search.shard_count.limit] to a greater value if you really want to query that many shards at the same time.</description>
+    </item>
+    
+    <item>
+      <title>数据结构算法之链表</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Mon, 13 Nov 2017 00:58:37 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</guid>
+      <description>链表面试总结，使用python实现，参考：https://www.cnblogs.com/lixiaohui-ambition/archive/2012/09/25/2703195.html 
+#coding:utf-8 # 定义链表 class ListNode: def __init__(self): self.data = None self.pnext = None # 链表操作类 class ListNode_handle: def __init__(self): self.cur_node = None # 链表添加元素 def add(self,data): ln = ListNode() ln.data = data ln.pnext = self.cur_node self.cur_node = ln return ln # 打印链表 def prt(self,ln): while ln: print(ln.data,end=&amp;quot; &amp;quot;) ln = ln.pnext # 逆序输出 def _reverse(self,ln): _list = [] while ln: _list.append(ln.data) ln = ln.pnext ln_2 = ListNode() ln_h = ListNode_handle() for i in _list: ln_2 = ln_h.</description>
+    </item>
+    
+    <item>
+      <title>数据结构算法之合并两个有序序列</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Mon, 13 Nov 2017 00:55:29 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</guid>
+      <description>有序序列的合并，python实现。 
+#coding:utf-8 a = [2,4,6,8,10] b = [3,5,7,9,11,13,15] c = [] def merge(a,b): i,j = 0,0 while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.append(m) if j&amp;lt;=len(b)-1: for n in b[j:]: c.append(n) print(c) merge(a,b)  运行结果为：
+[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15]  </description>
+    </item>
+    
+    <item>
+      <title>数据结构算法之排序</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Mon, 13 Nov 2017 00:51:28 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</guid>
+      <description>数据结构面试中经常会被问到篇排序相关的问题，那么这篇文章会研究下怎么用python来实现排序。
+ 冒泡排序 #coding：utf-8 # 冒泡排序 def maopao(): a = [2,1,4,3,9,5,6,8,7] for i in range(len(a)-1): for j in range(len(a)-1-i): if a[j]&amp;gt;a[j+1]: temp = a[j] a[j] = a[j+1] a[j+1] = temp print(a) maopao()  结果为：
+[1, 2, 3, 4, 5, 6, 7, 8, 9]  归并排序 # 归并排序 def merge(a,b): i,j = 0,0 c = [] while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.</description>
+    </item>
+    
+    <item>
+      <title>数据结构算法之二叉树</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Mon, 13 Nov 2017 00:44:41 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>数据结构面试中经常会被问到篇二叉树相关的问题，那么这篇文章会研究下怎么用python来进行二叉树的构建和遍历。
+ 注意：py2中
+print root.elem,  在py3中要换成
+print (root.elem,end=&amp;quot; &amp;quot;)  # coding:utf-8 # 定义节点类 class Node: def __init__(self,elem = -1,): self.elem = elem self.left = None self.right = None # 定义二叉树 class Tree: def __init__(self): self.root = Node() self.myqu = [] # 添加节点 def add(self,elem): node = Node(elem) if self.root.elem == -1: # 判断如果是根节点 self.root = node self.myqu.append(self.root) else: treenode = self.myqu[0] if treenode.left == None: treenode.left = node self.</description>
+    </item>
+    
+    <item>
+      <title>回归分析之Sklearn实现电力预测</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/</link>
+      <pubDate>Tue, 07 Nov 2017 13:39:15 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/</guid>
+      <description>参考原文：http://www.cnblogs.com/pinard/p/6016029.html 这里进行了手动实现，增强记忆。 
+1：数据集介绍 使用的数据是UCI大学公开的机器学习数据
+数据的介绍在这： http://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant
+数据的下载地址在这：http://archive.ics.uci.edu/ml/machine-learning-databases/00294/
+里面是一个循环发电场的数据，共有9568个样本数据，每个数据有5列，分别是:AT（温度）, V（压力）, AP（湿度）, RH（压强）, PE（输出电力)。我们不用纠结于每项具体的意思。
+我们的问题是得到一个线性的关系，对应PE是样本输出，而AT/V/AP/RH这4个是样本特征， 机器学习的目的就是得到一个线性回归模型，即:
+$$ PE = \theta _{0} + \theta _{0} * AT + \theta _{0} * V +\theta _{0} * AP +\theta _{0}*RH $$
+而需要学习的，就是θ0,θ1,θ2,θ3,θ4这5个参数。
+2：准备数据 下载源数据之后，解压会得到一个xlsx的文件，打开另存为csv文件，数据已经整理好，没有非法数据，但是数据并没有进行归一化，不过这里我们可以使用sklearn来帮我处理
+sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details/77761884
+3：使用pandas来进行数据的读取 import pandas as pd # pandas 读取数据 data = pd.read_csv(&amp;quot;Folds5x2_pp.csv&amp;quot;) data.head()  然后会看到如下结果，说明数据读取成功：
+	AT	V	AP	RH	PE 0	8.34	40.77	1010.84	90.01	480.48 1	23.64	58.</description>
+    </item>
+    
+    <item>
+      <title>Android屏幕适配</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-11-06-android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D/</link>
+      <pubDate>Mon, 06 Nov 2017 11:12:58 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-11-06-android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D/</guid>
+      <description>老文章了，拿到个人站里。
+生成适配文件，我们先创建工具类，通过工具类直接生成适配文件，放到工程中即可。
+工具类  下面工具类中，列举了10余种屏幕尺寸，如果有特殊分辨率需要适配，在main方法中添加即可。
+设计师标注通常会以某个尺寸为基准标注一套尺寸，下面工具类以 720 * 1280 分辨率为基准，实际开发过程中，与设计师保持一致即可。
+ MakeXml.java
+import java.io.File; import java.io.FileNotFoundException; import java.io.FileOutputStream; import java.io.PrintWriter; /** * Created by kongqw on 2015/11/21. */ public class MakeXml { // Mac路径 private final static String rootPath = &amp;quot;layoutroot/values-{0}x{1}/&amp;quot;; // Windows 路径 // private final static String rootPath = &amp;quot;C:\\layoutroot\\values-{0}x{1}\\&amp;quot;; /** * 设置基准分辨率 * 一般标注按照多大的图标，这里我们就设置多大尺寸 */ private final static float dw = 720f; private final static float dh = 1280f; private final static String WTemplate = &amp;quot;&amp;lt;dimen name=\&amp;quot;x{0}\&amp;quot;&amp;gt;{1}px&amp;lt;/dimen&amp;gt;\n&amp;quot;; private final static String HTemplate = &amp;quot;&amp;lt;dimen name=\&amp;quot;y{0}\&amp;quot;&amp;gt;{1}px&amp;lt;/dimen&amp;gt;\n&amp;quot;; // 手机分辨率 public static void main(String [] args){ makeString(320, 480); makeString(480, 800); makeString(480, 854); makeString(540, 960); makeString(600, 1024); makeString(720, 1184); makeString(720, 1196); makeString(720, 1280); makeString(768, 1024); makeString(800, 1280); makeString(1080, 1812); makeString(1080, 1920); makeString(1440, 2560); } public static void makeString(int w, int h) { StringBuffer sb = new StringBuffer(); sb.</description>
+    </item>
+    
+    <item>
+      <title>回归分析之线性回归（N元线性回归）</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Fri, 29 Sep 2017 16:45:14 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid>
+      <description>在上一篇文章中我们介绍了 回归分析之理论篇，在其中我们有聊到线性回归和非线性回归，包括广义线性回归，这一篇文章我们来聊下回归分析中的线性回归。
+ 一元线性回归 预测房价： 输入编号 | 平方米 | 价格 -|-|- 1 | 150 | 6450 2 | 200 | 7450 3| 250 |8450 4| 300 |9450 5| 350 |11450 6| 400 |15450 7| 600| 18450
+针对上边这种一元数据来讲，我们可以构建的一元线性回归函数为 $$ H(x) = k*x + b $$ 其中H(x)为平方米价格表，k是一元回归系数，b为常数。最小二乘法的公式： $$ k =\frac{ \sum{1}^{n} (x{i} - \bar{x} )(y{i} - \bar{y}) } { \sum{1}^{n}(x_{i}-\bar{x})^{2} } $$ 自己使用python代码实现为：
+def leastsq(x,y): &amp;quot;&amp;quot;&amp;quot; x,y分别是要拟合的数据的自变量列表和因变量列表 &amp;quot;&amp;quot;&amp;quot; meanX = sum(x) * 1.</description>
+    </item>
+    
+    <item>
+      <title>几种距离计算公式在数据挖掘中的应用场景分析</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/</link>
+      <pubDate>Wed, 20 Sep 2017 10:23:39 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/</guid>
+      <description>本文涉及以下几种距离计算公式的分析，参考资料为《面向程序员的数据挖掘指南》
+ 曼哈顿距离 欧几里得距离 闵可夫斯基距离 皮尔逊相关系数 余弦相似度   之前整理过一篇关于距离相关的文章：[机器学习算法中的距离和相似性计算公式，分析以及python实现]()
+闵可夫斯基距离 两个n维变量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的闵可夫斯基距离定义为： $$ \sqrt[p]{ \sum{k=1}^{n} \left | x{1k}-x_{2k} \right |^p} $$
+其中p是一个变参数。
+当p=1时，就是曼哈顿距离
+当p=2时，就是欧氏距离
+当p→∞时，就是切比雪夫距离
+根据变参数的不同，闵氏距离可以表示一类的距离。
+p值越大，单个维度的差值大小会对整体距离有更大的影响
+曼哈顿距离／欧几里得距离的瑕疵 在《面向程序员的数据挖掘指南》中给出了这样一组样例数据, 下图为一个在线音乐网站的的用户评分情况，用户可以用1-5星来评价一个乐队，下边是8位用户对8个乐队的评价： 表中的横线表示用户没有对乐队进行评价，我们在计算两个用户的距离时，只采用他们都评价过的乐队。
+现在来求Angelica和Bill的距离，因为他们共同评分过的乐队有5个，所以使用其对该5个乐队的评分进行曼哈顿距离的计算为：
+Dis_1 = |3.5-2| + |2-3.5| + |5-2| + |1.5-3.5| + |2-3| = 9  同样使用欧式距离计算为：
+Dis_2 = sqrt( (3.5-2)^2 + (2-3.5)^2 + (5-2)^2 + (1.5-3.5)^2 + (2-3)^2 ) = 4.3  当对Angelica和Bill，Bill和Chan进行距离对比时，由于两者的共同评分过的乐队均为5，数据都在一个5维空间里，是公平的，如果现在要计算Angelica和Hailey与Bill的距离时，会发现，Angelica与Bill共同评分的有5个乐队，Hailey与Bill共同评分的有3个乐队，也就是说两者数据一个在5维空间里，一个在三维空间里，这样明显是不公平的。这将会对我们进行计算时产生不好的影响，所以曼哈顿距离和欧几里得距离在数据完整的情况下效果最好。
+用户问题／皮尔逊相关系数／分数膨胀 现象——用户问题 仔细观察用户对乐队的评分数据，可以发现每个用户的评分标准不同：
+ Bill没有打出极端的分数，都在2-4分之间 Jordyn似乎喜欢所有的乐队，打分都在4-5之间 Hailey是一个有趣的人，他的评分不是1就是4  那么如何比较这些用户呢？比如说Hailey的4分是相当于Jordyn的4分还是5分呢？我觉得更接近5分，这样一来，就影响推荐系统的准确性了！</description>
+    </item>
+    
+    <item>
+      <title>Git指令</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-09-19-git%E6%8C%87%E4%BB%A4/</link>
+      <pubDate>Tue, 19 Sep 2017 12:04:34 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-09-19-git%E6%8C%87%E4%BB%A4/</guid>
+      <description> 查看用户名及邮箱地址 $ git config user.name $ git config user.email  修改用户名及邮箱地址 $ git config --global user.name &amp;quot;用户名&amp;quot; $ git config --global user.email &amp;quot;邮箱地址&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>即拿即用一Android文件存取</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/</link>
+      <pubDate>Fri, 15 Sep 2017 14:46:37 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/</guid>
+      <description>写文件 读文件 Assets文件读取 Bitmap保存 文件删除  写文件 /** * 写文件 * * @param filePath 文件绝对路径 * @param content 写入内容 * @return 写入是否成功 */ public static boolean writeFile(String filePath, String content) { FileOutputStream fileOutputStream = null; BufferedOutputStream bufferedOutputStream = null; try { File file = new File(filePath); if (file.createNewFile()) { fileOutputStream = new FileOutputStream(filePath); bufferedOutputStream = new BufferedOutputStream(fileOutputStream); bufferedOutputStream.write(content.getBytes(&amp;quot;UTF-8&amp;quot;)); bufferedOutputStream.flush(); return true; } } catch (IOException e) { e.printStackTrace(); } finally { if (null !</description>
+    </item>
+    
+    <item>
+      <title>数据归一化和其在sklearn中的处理</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 01 Sep 2017 11:33:50 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/</guid>
+      <description>一：数据归一化 数据归一化（标准化）处理是数据挖掘的一项基础工作，不同评价指标往往具有不同的量纲和量纲单位，这样的情况会影响到数据分析的结果，为了消除指标之间的量纲影响，需要进行数据标准化处理，以解决数据指标之间的可比性。原始数据经过数据标准化处理后，各指标处于同一数量级，适合进行综合对比评价。  归一化方法有两种形式，一种是把数变为（0，1）之间的小数，一种是把有量纲表达式变为无量纲表达式。在机器学习中我们更关注的把数据变到0～1之间，接下来我们讨论的也是第一种形式。
+1）min-max标准化 min-max标准化也叫做离差标准化，是对原始数据的线性变换，使结果落到[0,1]区间，其对应的数学公式如下：
+$$ X_{scale} = \frac{x-min}{max-min} $$
+对应的python实现为
+# x为数据 比如说 [1,2,1,3,2,4,1] def Normalization(x): return [(float(i)-min(x))/float(max(x)-min(x)) for i in x]  如果要将数据转换到[-1,1]之间，可以修改其数学公式为：
+$$ X{scale} = \frac{x-x{mean}}{max-min} $$ x_mean 表示平均值。
+对应的python实现为
+import numpy as np # x为数据 比如说 [1,2,1,3,2,4,1] def Normalization(x): return [(float(i)-np.mean(x))/float(max(x)-min(x)) for i in x]  其中max为样本数据的最大值，min为样本数据的最小值。这种方法有个缺陷就是当有新数据加入时，可能导致max和min的变化，需要重新定义。
+该标准化方法有一个缺点就是，如果数据中有一些偏离正常数据的异常点，就会导致标准化结果的不准确性。比如说一个公司员工（A，B，C，D）的薪水为6k,8k,7k,10w,这种情况下进行归一化对每个员工来讲都是不合理的。
+当然还有一些其他的办法也能实现数据的标准化。
+2）z-score标准化 z-score标准化也叫标准差标准化，代表的是分值偏离均值的程度，经过处理的数据符合标准正态分布，即均值为0，标准差为1。其转化函数为
+$$ X_{scale} = \frac{x-\mu }{\sigma } $$
+其中μ为所有样本数据的均值，σ为所有样本数据的标准差。
+其对应的python实现为：
+import numpy as np #x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] def z_score(x): return (x - np.</description>
+    </item>
+    
+    <item>
+      <title>Android AES 加密、解密</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</link>
+      <pubDate>Fri, 04 Aug 2017 15:32:49 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</guid>
+      <description>AES加密介绍
+ASE 加密、解密的关键在于秘钥、只有使用加密时使用的秘钥，才可以解密。
+生成秘钥的代码网上一大堆，下面的代码可生成一个秘钥
+private SecretKey generateKey(String seed) throws Exception { // 获取秘钥生成器 KeyGenerator keyGenerator = KeyGenerator.getInstance(&amp;quot;AES&amp;quot;); // 通过种子初始化 SecureRandom secureRandom = new SecureRandom(); secureRandom.setSeed(seed.getBytes(&amp;quot;UTF-8&amp;quot;)); keyGenerator.init(128, secureRandom); // 生成秘钥并返回 return keyGenerator.generateKey(); }  然后使用秘钥进行加密
+private byte[] encrypt(String content, SecretKey secretKey) throws Exception { // 秘钥 byte[] enCodeFormat = secretKey.getEncoded(); // 创建AES秘钥 SecretKeySpec key = new SecretKeySpec(enCodeFormat, &amp;quot;AES&amp;quot;); // 创建密码器 Cipher cipher = Cipher.getInstance(&amp;quot;AES&amp;quot;); // 初始化加密器 cipher.init(Cipher.ENCRYPT_MODE, key); // 加密 return cipher.</description>
+    </item>
+    
+    <item>
+      <title>MachingLearning中的距离和相似性计算以及python实现</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Sun, 16 Jul 2017 12:14:43 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/</guid>
+      <description>前言 写这篇文章的目的不是说摘抄网上其他人的总结，刚才最近在看这方面的东西，为了让自己能够实际的去感受下每种求距离公式的差别，然后用python进行具体实现。  在机器学习中，经常要用到距离和相似性的计算公式，我么要常计算个体之间的差异大小，继而评价个人之间的差异性和相似性，最常见的就是数据分析中的相关分析，数据挖掘中的分类和聚类算法。如利用k-means进行聚类时，判断个体所属的类别，要利用距离计算公式计算个体到簇心的距离，如利用KNN进行分类时，计算个体与已知类别之间的相似性，从而判断个体所属的类别等。
+文章编辑的过程中或许存在一个错误或者不合理的地方，欢迎指正。
+参考：http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html
+推荐：https://my.oschina.net/hunglish/blog/787596
+欧氏距离 也称欧几里得距离，是指在m维空间中两个点之间的真实距离。欧式距离在ML中使用的范围比较广，也比较通用，就比如说利用k-Means对二维平面内的数据点进行聚类，对魔都房价的聚类分析（price/m^2 与平均房价）等。
+二维空间的欧氏距离 二维平面上两点a(x1,y1)与b(x2,y2)间的欧氏距离
+$$ d12 =\sqrt{(x{1}-x{2})^2+(y{1}-y{2})^2} $$ python 实现为：
+# coding: utf-8 from numpy import * def twoPointDistance(a,b): d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 ) return d print &#39;a,b 二维距离为：&#39;,twoPointDistance((1,1),(2,2))  三维空间的欧氏距离 三维空间两点a(x1,y1,z1)与b(x2,y2,z2)间的欧氏距离
+$$d12 =\sqrt{(x{1}-x{2})^2+(y{1}-y{2})^2+(z{1}-z{2})^2}$$ python 实现为：
+def threePointDistance(a,b): d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 + (a[2]-b[2])**2 ) return d print &#39;a,b 三维距离为：&#39;,threePointDistance((1,1,1),(2,2,2))  多维空间的欧氏距离 两个n维向量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的欧氏距离
+$$ \sqrt{\sum{n}^{k=1}(x{1k}-x_{2k})^2 } $$ python 实现为：</description>
+    </item>
+    
+    <item>
+      <title>一切的闹闹哄哄，只是他在水帘洞躲避风沙那晚做的一个梦</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E9%9A%8F%E6%89%8B%E8%AE%B0/%E4%B8%80%E5%88%87%E7%9A%84%E9%97%B9%E9%97%B9%E5%93%84%E5%93%84%E5%8F%AA%E6%98%AF%E4%BB%96%E5%9C%A8%E6%B0%B4%E5%B8%98%E6%B4%9E%E8%BA%B2%E9%81%BF%E9%A3%8E%E6%B2%99%E9%82%A3%E6%99%9A%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A2%A6/</link>
+      <pubDate>Sun, 16 Apr 2017 01:03:56 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E9%9A%8F%E6%89%8B%E8%AE%B0/%E4%B8%80%E5%88%87%E7%9A%84%E9%97%B9%E9%97%B9%E5%93%84%E5%93%84%E5%8F%AA%E6%98%AF%E4%BB%96%E5%9C%A8%E6%B0%B4%E5%B8%98%E6%B4%9E%E8%BA%B2%E9%81%BF%E9%A3%8E%E6%B2%99%E9%82%A3%E6%99%9A%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A2%A6/</guid>
+      <description>送同学走之后，我在路边默默的站了有五分钟，突然觉得我无处可去，有一种深入骨髓的悲哀和无奈，然后我就想起了一个命题，“如今的你，何去何从！”我不知道为什么会突然想到这样一个命题，或许是我们每个人都是至尊宝吧。其实每个人对《大话》的理解都是有所不同的，同样的人在不同的时期认识也会有偏差，就好比我第一次看的时候，笑得腹背抽筋，呲牙咧嘴，第二次看的时候，笑得少了，想的多了，过后便什么感觉也没有了，第三次看得时候，忽然觉得不知道是该哭还是该笑，笑得时候太牵强，哭得时候太尴尬。第四次便是这一次，看完之后觉得有一种无可奈何的悲哀。
+  对《大话》的解读 有人说这是一部烂片，也有人说这是一部经典，有人说这是对西游文化的过度消费，有人说这是一代人的反思与成长，有人说阴差阳错的蝴蝶效应，让一个年代的人支撑起了这部超越中国电影水平50年的无厘头式作品，也有人说这是一部笑中带泪，总有一天你走在路上也会像一条狗的悲剧。
+一千个人眼中有一千个哈姆雷特，对于一部影视作品，我们无法去评论任何一个人的理解是对还是错，因为经历不同，就像你不能把你的情感强加到别人身上。喜欢一部作品，在不知不觉间你会忽略他的缺点，讨厌一个事物，在不知不觉间就会放大他的短处。我们也不能用我们现代的思维和观念去评判20世纪港台电影的文化和情感。
+至尊宝的路线是，有人给他点了三颗痣，拔出来紫青宝剑，开启了与紫霞的交涉，娶亲，戴上紧箍咒，大战牛魔王，西天取经。其实至尊宝这条路线，何尝不是我们的漫漫人生路呢，至尊宝用月光宝盒来寻找500年前的白晶晶，却阴差阳错遇到了紫霞仙子，最后在对白晶晶失而复得之后又得知紫霞在他内心留下的一滴眼泪，最终大彻大悟，明白了舍生取义，参透了生亦何哀，死亦何苦。我们的人生不也一样，总会有各种各样的未知因素影响我们的选择，在努力面对眼前一切之后，最终回头感叹年华，围炉小饮，本来无一物，何处惹尘埃。
+对于紫霞和至尊宝的爱情，没有这种体验，是不会懂的，越是深情的人越容易受伤，她放下尊严来爱他，终于他后悔了。在至尊宝的梦里，紫霞仙子说：“飞蛾明明知道前面是火堆，却还义无反顾的扑进去。”她笑一下，接着说：“飞蛾就是这么傻！”而同样的至尊宝，“有一个名字叫紫霞的，你叫七百八十四次“，时光真是个好东西，所谓雕刻时光，是说生活像把钝刀，锉平我们的触觉，而电影则是解毒的重药，它让人突然领悟到，我们的内心要比自己想像的敏感干净得多！你等的那么辛苦，他却陌生到让你心疼。以至于在人生的不同阶段去欣赏《大话》，似乎都能从中找到某些影子，原先是笑，后来是苦，到最后便是沉默了。城墙上的一吻，至尊宝变成了旁观者，他借用夕阳武士的身份和转世的紫霞完成了他告别的深情，于是他的背影，他的离开，寂寞成了“好像一条狗”。
+他好像一条狗呀！ -“那个人的样子好怪啊” -“我也看到了，他好像条狗啊” 是呀，英雄的离开，留下的永远只是背影，只不过在至尊宝这里加上了悲剧色彩，加上了人艰不拆的辛酸泪，以至于多少年后才明白了至尊宝转身离开有多难。至尊宝的结局是一个男人的悲怆与无奈。
+至尊宝用了月光宝盒来寻找500年前的白晶晶，同时遇到了在她看来，他是她的命中注定的紫霞仙子，直到后来牛魔王的出现，夺走了紫霞，夺走了白晶晶，夺走了至尊宝往日的快乐，他明白他要夺回这一切，可是面对戏剧般的月光宝盒，至尊宝得到的更多是无力和苍白，面对这些无情的现实，幻想一次又一次地破灭。直到最后的关头，至尊宝终于醒悟，靠月光宝盒不行，至尊宝更是没有那个本事，只有成为孙悟空，只有戴上那个金刚圈，他才有能力同牛魔王一较高下。
+这是一个极大的讽刺。你想要得到吗？好，那么你必须先放弃至尊宝的身份，你必须做出选择，必须忍受无尽的痛苦，他想要化解时间无尽的仇恨，就必须放弃自己的感情，不是不爱，而是大彻大悟之后的大爱，他必需化身为孙悟空，帮助唐三藏取得经书，化解这世间的恨。
+那么至尊宝的放弃是自觉自愿的醒悟吗？不，他并不愿意，但是他必须拯救紫霞，必须化解人间的恨，他别无选择，他必须戴上紧箍咒。虽然成为了孙悟空，成了大英雄，但他对自己的生存状态极度不满。所以在最后，孙悟空将他心中残存的至尊宝的影子幻化作一位夕阳武士，在对现实世界彻底失望后，只能构造一个虚幻的想象来了却这桩心愿，并借武士的口中表达了对自己生存状态的不满，活得好象是一条狗一样。唉，一个男人的悲怆和无奈。
+那句意中人，满足了多少人的少女心 “我知道有一天，他会在一个万众瞩目的情况下出现，身披金甲圣衣，脚踏七色云彩来娶我” “我的意中人是个盖世英雄，有一天他会踏着云彩来娶我” 这两句分别是紫霞在牛魔王娶她前的晚上和死前对孙悟空说的，多么经典的台词，以至于现在多少人还幻想着自己的意中人。
+进入至尊宝内心的只有两个女人，一个是白晶晶，一个是紫霞，白晶晶问的是“他最喜欢的人是不是我”，紫霞问的是“他跟他的娘子是不是很恩爱呀？”，白晶晶的爱是一种索求的爱，而紫霞的爱则是无怨无悔的。
+所以最终至尊宝回来了，在化身为孙悟空之后，身披金甲圣衣，脚踏七色云彩而来，他实现了紫霞的梦想，只不过加了一层掩饰与牵强。
+从现如今这个角度反思紫霞的意中人，我是不太赞同的，童话毕竟是童话，正是这个经典的对白，让多少人活在自己的想象中，我们都渴望对方是个“意中人”的形象，可是我们却忽略乐一个”等价“的观念，你凭什么拥有你的”意中人“，你配得上吗？这不仅让我想起了另外一个命题：“不要去羡慕那些散发光芒的成功者，因为你不知道他背后付出的努力和艰辛”，这其实是一个道理，如果你仅仅是停留在幻想和计划的层面，那么你永远得不到你的”意中人“。
+我猜中了开头，可是我猜不着这结局 紫霞说猜得到开始，却猜不透这结局。大约直到最后，她也没能明白、没能理解至尊宝的苦心。又或者说，是至尊宝从来也未能真正了解她的心意。我曾经以为，死去的紫霞是最可怜的角色。可是，至尊宝又何尝不可怜呢，他甚至，连伤心的权利也没有了。在紫霞死去的一瞬间，他的心也已经跟着死去了。在他余下的人生里，再也不会有欢笑、快乐，再也不会有那样一个可以在他心里流下眼泪的女孩子。就算取回西经又能如何，心爱的人再也会不来了。就算成佛又能如何，没有了你，整个世界对我来说都毫无意义。
+《大话》把遗憾和难题抛给了时间 又一次的时空穿梭后，面对城头男女，孙悟空附身夕阳武士，给出无数人热泪纵横，内心中期盼的最后答案。 没有失去过，也永远不能明白得到的快乐。 附身后的孙悟空发自内心肺腑地给了女子一记深深长吻，这一吻穿越地老天荒，不再相信自欺欺人的一万年，他那般语气坚决地说出了那三个字。 先前拒不让步的夕阳武士，拥抱着爱人幸福陶醉。 转身远去的孙悟空了却尘缘心事，消失在大漠黄沙尽头。 只是每次在紫霞被刺中或者孙悟空松手的瞬间，还是会心潮如水甚至潸然泪下。 十年大话，一群人围坐着观看《大话西游》的狂热时代过去了，心底保存的泪水也慢慢尘封直至故事终结。毫无拘束的开怀大笑渐渐沦为一个人的狂欢，难加掩饰的心底苍凉逐渐成了人生重担
+如今的你，何去何从 “如今的你，何去何从？” “对呀，何去何从”
+真的羡慕至尊宝最初为了营救白晶晶，借用外力，使用月光宝盒穿越回500年前，为了解救紫霞，戴上紧箍咒。
+而你呢？没有目标，你便是一个游荡的灵魂。
+加长版加了什么 1：紫霞刚出现时在沙漠和雪蛤精，孔雀王的对话以及 他们的拔剑抢婚，与影片中紫霞和至尊宝在 牛魔王婚礼上遇见时雪蛤精，孔雀王和反对结婚作了呼应。
+2：约好二更相见，原版是牛夫人出现 ，然后是至尊宝直接被猪八戒和沙师弟拉去救师父，加长版中先是牛夫人出现，然后牛魔王，然后至尊宝
+3：牛魔王婚礼时猪八戒和沙僧在小妖堆里跟他们“打成一片”
+4：至尊宝被青霞揍晕第二次之后，早上跟紫霞说的那通话“你要让我拿点信物给他看, 你有什么项链啊,首饰啊,金银珠宝啊,月光宝盒啊什么的……”原版的这段声音不是石班瑜所配。新版中，这段声音是重新配音，换上了石班瑜的声音。
+5：2K画面的修复
+一切的闹闹哄哄，只是他在水帘洞躲避风沙那晚做的一个梦</description>
+    </item>
+    
+    <item>
+      <title>Android APK添加系统签名</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-04-05-android-apk%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E7%AD%BE%E5%90%8D/</link>
+      <pubDate>Wed, 05 Apr 2017 11:52:01 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-04-05-android-apk%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E7%AD%BE%E5%90%8D/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+将应用设置为系统级应用。可以调用系统级别API。
+下载 签名文件
+在AndroidManifest.xml中添加sharedUserId 为 android.uid.system，设置应用为系统级。
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt; &amp;lt;manifest xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot; package=&amp;quot;……&amp;quot; android:sharedUserId=&amp;quot;android.uid.system&amp;quot;&amp;gt; …… &amp;lt;/manifest&amp;gt;  生成APK
+ 此时生成的APK是无法安装并运行的，因为在上一步已经设置了应用为系统级应用，但是还并没有添加系统签名。
+ 解压下载好的签名文件并添加系统签名
+java -jar signapk.jar platform.x509.pem platform.pk8 上一步生成的未添加系统签名的APK文件.apk 要生成的签名文件.apk  </description>
+    </item>
+    
+    <item>
+      <title>Android蓝牙通信——AndroidBluetoothManager</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager/</link>
+      <pubDate>Thu, 16 Mar 2017 18:24:36 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+
+To get a Git project into your build:
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+allprojects { repositories { ... maven { url &#39;https://jitpack.io&#39; } } }  Step 2. Add the dependency
+dependencies { compile &#39;com.github.kongqw:AndroidBluetoothManager:1.0.0&#39; }  AndroidBluetoothManager
+效果图 PNG
+GIF
+基础功能 添加权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.BLUETOOTH&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.</description>
+    </item>
+    
+    <item>
+      <title>Android自定义雷达扫描控件</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6/</link>
+      <pubDate>Fri, 10 Mar 2017 18:28:14 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+Android 雷达扫描控件 
+To get a Git project into your build:
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+allprojects { repositories { ... maven { url &#39;https://jitpack.io&#39; } } }  Step 2. Add the dependency
+dependencies { compile &#39;com.github.kongqw:AndroidRadarScanView:1.0.1&#39; }  源码：AndroidRadarScanView
+效果图 XML &amp;lt;com.kongqw.radarscanviewlibrary.RadarScanView android:id=&amp;quot;@+id/radarScanView&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; /&amp;gt;  初始化 radarScanView = (RadarScanView) findViewById(R.</description>
+    </item>
+    
+    <item>
+      <title>Gradle常用技巧</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Thu, 02 Mar 2017 14:46:09 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+Gradle http://google.github.io/android-gradle-dsl/current/index.html
+https://docs.gradle.org/current/userguide/java_plugin.html
+打包多个版本 开发过程中我们经常需要打包多个版本的apk，最为常见的，一个是release版本，一个是debug版本，他们可能使用的api也有所区别，手动改起来总是很麻烦。 我们可以通过Gradle，配置多个版本，他们有各自的参数来区分不同的版本。如下，在 app/build.gradle 系统默认会给我生成release版本，我们可以手动自己添加一个版本，我这里命名为debug，分别添加了三种类型的参数。
+apply plugin: &#39;com.android.application&#39; android { …… buildTypes { release { …… buildConfigField(&amp;quot;boolean&amp;quot;, &amp;quot;isDebug&amp;quot;, &amp;quot;false&amp;quot;) } debug { // 添加了boolean类型的参数 buildConfigField(&amp;quot;boolean&amp;quot;, &amp;quot;isDebug&amp;quot;, &amp;quot;true&amp;quot;) // 添加了String类型的参数 buildConfigField(&amp;quot;String&amp;quot;, &amp;quot;coder&amp;quot;, &amp;quot;\&amp;quot;kongqw\&amp;quot;&amp;quot;) // 添加了int类型的参数 buildConfigField(&amp;quot;int&amp;quot;, &amp;quot;age&amp;quot;, &amp;quot;26&amp;quot;) } } } …… dependencies { …… }  添加完成后Rebuild，会在 BuildConfig 下看到我们添加的参数
+因为是静态变量，取值时直接用类名点变量名即可
+上述属于在Java代码中添加字段，同样的，Gradle也支持添加xml属性，类似这样
+apply plugin: &#39;com.android.application&#39; android { …… defaultConfig { …… } buildTypes { release { …… } debug { …… resValue(&amp;quot;bool&amp;quot;, &amp;quot;is_debug&amp;quot;, &amp;quot;true&amp;quot;) resValue(&amp;quot;string&amp;quot;, &amp;quot;coder&amp;quot;, &amp;quot;\&amp;quot;kongqw\&amp;quot;&amp;quot;) resValue(&amp;quot;integer&amp;quot;, &amp;quot;age&amp;quot;, &amp;quot;26&amp;quot;) } } } dependencies { …… }  添加完以后Rebuild，会在generated.</description>
+    </item>
+    
+    <item>
+      <title>打造简洁高效的动态权限管理器</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/</link>
+      <pubDate>Thu, 16 Feb 2017 10:50:45 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图
+GitHub地址：PermissionsManager
+随着Android 6.0的普及，动态权限的重要性也开始时慢慢体现出来。为了更好的保护用户隐私，Android 6.0要求在进行敏感操作之前，必须要向用户请示申请权限。
+如何使用，在之前的文章里也已经介绍过了，但是用起来比较麻烦。Android6.0动态获取权限
+我希望可以封装一下，使用之前创建一个动态权限的管理对象，他有两个回调来告诉我权限申请成功或者失败，像这样：
+mPermissionsManager = new PermissionsManager(this) { @Override public void authorized(int requestCode) { // TODO 权限通过 } @Override public void noAuthorization(int requestCode, String[] lacksPermissions) { // TODO 有权限没有通过 } };  使用的时候，可以直接调用一个方法，把要请示的权限传进去就可以进行校验，像这样：
+// 检查权限 mPermissionsManager.checkPermissions(&amp;quot;请求码&amp;quot;, &amp;quot;要校验的权限&amp;quot;);  于是乎，下面封装的动态权限管理器就来了：
+动态权限管理器 package com.kongqw.permissionslibrary; import android.app.Activity; import android.content.Context; import android.content.Intent; import android.content.pm.PackageManager; import android.net.Uri; import android.provider.Settings; import android.support.annotation.NonNull; import android.support.v4.app.ActivityCompat; import android.support.v4.content.ContextCompat; import java.</description>
+    </item>
+    
+    <item>
+      <title>Android自定义View绘图基础</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-12-13-android%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 13 Dec 2016 16:16:52 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-12-13-android%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+Android自定义View绘图基础 View的测量 控件的测量可以说是固定写法，原生的View只支持EXACTLY的测量模式，我们自定义的控件可以重写onMeasure方法
+@Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) { setMeasuredDimension(getMeasuredSize(widthMeasureSpec), getMeasuredSize(heightMeasureSpec)); }  onMeasure方法给我们返回的widthMeasureSpec和heightMeasureSpec，我们并不能直接拿过来使用，需要使用MeasureSpec类进行解析，来获取测量后的具体值。 首先需要获取测量模式
+MeasureSpec.getMode(measureSpec)  getMode方法返回是测量的模式，有以下3种类型： - MeasureSpec.EXACTLY : 精确值模式（指定值/match_parent） - MeasureSpec.AT_MOST : 最大值模式（wrap_content） - MeasureSpec.UNSPECIFIED : 不指定大小的测量模式（一般用不上）
+获取到了测量模式以后，获取测量后的大小
+MeasureSpec.getSize(measureSpec)  根据上面的意思，可以封装我们的getMeasuredSize方法
+// 默认大小 private static final int DEFAULT_SIZE = 200; /** * 获取测量后的大小 * * @param measureSpec measureSpec * @return measuredSize */ private int getMeasuredSize(int measureSpec) { switch (MeasureSpec.getMode(measureSpec)) { case MeasureSpec.</description>
+    </item>
+    
+    <item>
+      <title>Android与Javascript交互</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-11-16-android%E4%B8%8Ejavascript%E4%BA%A4%E4%BA%92/</link>
+      <pubDate>Wed, 16 Nov 2016 17:59:39 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-11-16-android%E4%B8%8Ejavascript%E4%BA%A4%E4%BA%92/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+本篇参考Android与HTML+JS交互入门
+效果图 加载本地Html contentWebView = (WebView) findViewById(R.id.webview); // 加载Assets下的Html contentWebView.loadUrl(&amp;quot;file:///android_asset/html/test.html&amp;quot;);  启用Javascript contentWebView.getSettings().setJavaScriptEnabled(true); contentWebView.addJavascriptInterface(this, &amp;quot;android&amp;quot;);  Android调用Javascript的方法 Javascript写法
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; function jsFunction(){ document.getElementById(&amp;quot;content&amp;quot;).innerHTML = &amp;quot;JS方法被调用&amp;quot;; } function jsFunctionArg(arg){ document.getElementById(&amp;quot;content&amp;quot;).innerHTML = &amp;quot;JS方法被调用并收到参数：&amp;lt;br/&amp;gt;&amp;quot; + arg; } &amp;lt;/script&amp;gt;  Android写法
+// 调用JS的jsFunction方法 contentWebView.loadUrl(&amp;quot;javascript:jsFunction()&amp;quot;); // 调用JS的jsFunctionArg方法 contentWebView.loadUrl(&amp;quot;javascript:jsFunctionArg(&#39;[Android传递过来的数据]&#39;)&amp;quot;);  Javascript调用Android的方法 Android方法
+@JavascriptInterface public void androidFunction() { Snackbar.make(contentWebView, &amp;quot;Android的方法被调用&amp;quot;, Snackbar.LENGTH_SHORT).show(); }  @JavascriptInterface public void androidFunction(String text) { Snackbar.make(contentWebView, &amp;quot;Android的方法被调用并收到参数 : \n&amp;quot; + text, Snackbar.</description>
+    </item>
+    
+    <item>
+      <title>Android播放音效</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</link>
+      <pubDate>Wed, 16 Nov 2016 10:56:36 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+有些时候程序需要播放几个很短的低延迟的音效来响应与用户的交互。
+Android通过SoundPool将文件音频缓存加载到内存中，然后在响应用户操作的时候快速地播放。 Android框架低通了SoundPool来解码小音频文件，并在内存中操作它们来进行音频快速和重复的播放。SoundPool还有一些其他特性，比如可以在运行时控制音量和播放速度。
+播放音效也很简单，总共分5步
+准备音频文件 将音频文件放置在assets目录下
+初始化SoundPool SoundPool mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);  加载音频文件 int streamID = mSoundPool.load(getApplicationContext().getAssets().openFd(&amp;quot;beep/beep1.mp3&amp;quot;), 1);  播放音频文件 mSoundPool.play(streamID, 10, 10, 1, 0, 1.0f);  释放SoundPool mSoundPool.release(); mSoundPool = null;  Code package com.kongqw.kqwplaybeepdemo; import android.media.AudioManager; import android.media.SoundPool; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.util.Log; import android.view.View; import java.io.IOException; import java.util.HashMap; public class MainActivity extends AppCompatActivity implements View.OnClickListener { private static final String TAG = &amp;quot;MainActivity&amp;quot;; private SoundPool mSoundPool; private int streamID; private HashMap&amp;lt;String, Integer&amp;gt; mSoundMap; @Override protected void onCreate(Bundle savedInstanceState) { super.</description>
+    </item>
+    
+    <item>
+      <title>App启动优化最佳实践</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Mon, 14 Nov 2016 17:43:17 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+ 看了医生写的文章一触即发——App启动优化最佳实践，收获是有的。
+ 做Android开发，一定写给过启动页，在这里做一些初始化的操作，还有就是显示推广信息。
+很普通的一个页面，以前测试也给我提出过bug，应用在启动的时候，有时候有白屏/黑屏。当时能做的就是尽量较少耗时操作，上面医生的文章里也有提到，但是通过主题的方式优化这个问题之前还真是不知道的。
+下面主要总结一下通过主题的方式优化启动页（医生还提到了在子线程初始化和使用IntentService初始化，都是属于异步初始化，还有延迟初始化，就不说了）
+效果图 通过修改主题优化启动时白屏/黑屏  原理请移步到医生的文章，我就不复述了，之所以会看到白屏或者黑屏，是和我们的主题有关系的，因为系统默认使用的主题，背景色就是白色/黑色。那么我们自定义一个主题，让默认的样式就是我们想要的，就优化了白屏/黑屏的问题。
+ 首先，我们自定义一个主题,设置一个我们想要的背景
+&amp;lt;!-- 启动页主题 --&amp;gt; &amp;lt;style name=&amp;quot;SplashTheme&amp;quot; parent=&amp;quot;@style/Theme.AppCompat.Light.NoActionBar&amp;quot;&amp;gt; &amp;lt;item name=&amp;quot;android:windowBackground&amp;quot;&amp;gt;@drawable/start_window&amp;lt;/item&amp;gt; &amp;lt;/style&amp;gt;  自定义背景start_window.xml
+&amp;lt;layer-list xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot; android:opacity=&amp;quot;opaque&amp;quot;&amp;gt; &amp;lt;!-- The background color, preferably the same as your normal theme --&amp;gt; &amp;lt;item android:drawable=&amp;quot;@android:color/holo_blue_dark&amp;quot; /&amp;gt; &amp;lt;!-- Your product logo - 144dp color version of your app icon --&amp;gt; &amp;lt;item&amp;gt; &amp;lt;bitmap android:gravity=&amp;quot;center&amp;quot; android:src=&amp;quot;@mipmap/ic_launcher&amp;quot; /&amp;gt; &amp;lt;/item&amp;gt; &amp;lt;/layer-list&amp;gt;  最后，在清单文件设置启动页使用我们自定义的主题
+&amp;lt;?xml version=&amp;quot;1.</description>
+    </item>
+    
+    <item>
+      <title>Android串口通信</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</link>
+      <pubDate>Tue, 01 Nov 2016 15:40:53 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+ 串口通信偏向嵌入式一点，是Android设备通过串口与其他设备进行通信的一种方式，本文介绍的Android纯串口的通信，并不是手机上的USB串口通信。
+  手机上是没有这个串口的哦。
+ 关于串口通信，Google已经给出了源码，地址在GitHub android-serialport-api
+四年前的代码，还是Eclipse工程，本文主要介绍如何在Android Studio中使用。
+源码地址在 KqwSerialPortDemo
+集成 Java层的代码，Google已经给封装在 SerialPort.java
+导入.so 没有什么难度了，将so导入到项目
+导入jni文件 在main目录下创建cpp文件夹，并将jni源文件和CMakeLists.txt导入
+在build.gradle配置cmake路径。
+android { …… externalNativeBuild { cmake { path &amp;quot;src/main/cpp/CMakeLists.txt&amp;quot; } } …… ｝  修改jni源文件 这里要注意jni文件函数名的写法：Java_包名_类名_方法名
+在将源码里的jni导入过来的时候，包名是源码Demo的包名，我们在自己的工程里要换成自己的包名、类名，源文件和头文件都要记得改。
+修改CMakeLists.txt与SerialPort.java CMakeLists.txt
+cmake_minimum_required(VERSION 3.4.1) add_library(SerialPort SHARED SerialPort.c) # Include libraries needed for libserial_port lib target_link_libraries(SerialPort android log)  SerialPort.java
+static { System.loadLibrary(&amp;quot;SerialPort&amp;quot;); System.loadLibrary(&amp;quot;serial_port&amp;quot;); }  使用 基类 需要使用串口通信的类继承 SerialPortActivity.</description>
+    </item>
+    
+    <item>
+      <title>这夏未眠.简介</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Thu, 15 Sep 2016 18:13:50 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B/</guid>
+      <description>书整体分为三部分《夏之过往》，《夏之流年》，《夏之未至》。整本书讲的是男主人公顾艾哲（小艾）与莫晨（晨晨）之间的故事，从初中到高中再到大学，从相遇到相知再到相离。  两人同在陌乘一中念初中，同班同学，在中考来临的那段日子，两人相互鼓励，于是顾艾哲（小艾）考上了他从来都没有想过能考上的孟川一高，而莫晨（晨晨）呢，考上了预料之中的平阳一高，而她在这之前却从来没告诉过顾艾哲（小艾）她要去平阳，就这样，两个人分开了，一些都看起来那么顺理成章，一切又看起来那么暗淡失望。
+在经历过高中的二年之后，顾艾哲（小艾）终于联系上了莫晨（晨晨），那天晚上，他用妈妈的电话给莫晨（晨晨）通了两个小时的电话，似乎要把两人两年里没有说的话都说完，可是有太多的话是无法用言语表达的，就这样电话欠费了，终止了聊天，可是那天晚上，小艾高兴的一宿没睡，那一晚上，他的笑容都是幸福的。
+可是事情永远不会那么顺利，在香山公园里，当他拿起他买的情侣戒指送给晨晨时，晨晨没有接受，说了一堆他也没有听进去的话，就这样，又开始了分离，而谁也不知道这次分离竟然时一辈子的再也不见。
+后来的后来，他又遇见了别的女孩，不知道是不是因为后来的女孩都像小艾记忆里的莫晨。只知道，他都很珍惜。</description>
+    </item>
+    
+    <item>
+      <title>这夏未眠.序</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E5%BA%8F/</link>
+      <pubDate>Thu, 15 Sep 2016 18:08:51 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E5%BA%8F/</guid>
+      <description>这本书的整体构思是小主大学一年级时刚去的时候的一个想法，当时刚刚步入大学的我们，心里是那么的迷茫与懵懂，开学前两周，除了军训还是军训，晚上偶尔有个空闲时间，我想大概也许是无聊的，记得那个时候坐在图书馆靠窗的位置，看着窗外，没有明月，没有佳人，有的只是一望无际的黑暗。  那个时候，还没有遇到你所想遇到的人，或许回忆还沉淀在高中的时光里，或是幸福，或是苦涩，或是幸福之后的苦涩，回过头来，看着满屋子的学长学姐，心里是及其复杂的，有种说不出的难过，那时候我是不是在想，现在的你（们）会在哪里念大学呢？
+想着想着眼角便淌出了泪水，我想我的大学要完成一件至少我自己觉得满意的事，于是便有了你现在看到的这个序，不知道是不是受郭敬明的影响，因为我看过他的唯一一本小说，也是我看过的唯一一本小说——《夏至未至》，我想写一本书，或者更准确的说，我想写一个人的青春。
+在13年军训结束之后，我构思了整个体系，定了这本书的名字——《这夏未眠》，熟悉我的朋友，也知道这是我的QQ网名，QQ作为那个时代的记忆，总会残留一些悲伤的故事，于是我到现在四年了，我从没换过QQ网名，或许是害怕，害怕那些好久不联系的朋友，找不到我吧。</description>
+    </item>
+    
+    <item>
+      <title>OpenCV&#43;JavaCV实现人脸识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Fri, 09 Sep 2016 16:29:53 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+OpenCV主要实现人脸检测功能
+JavaCV主要实现人脸对比功能
+具体的就不啰嗦了，本来最近很忙，主要是因为好多人私信我要 Android使用OpenCV实现「人脸检测」和「人脸识别」 的Demo，今天特意抽出时间写了一下。
+效果图 源码 KqwFaceDetectionDemo
+感觉有用的话，就给个star吧，谢谢！！
+注意 最后啰嗦一点，如果你的程序是跑在手机、pad等设备上，一般没有什么问题。 但是如果你是在自己的开发板上跑，可能会有一些小插曲。
+比如我司的机器人是定制的Android板子，对系统做了裁剪，很多摄像头的方法可能就用不了
+例如这样一个错误
+AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程序的时候，OpenCV会提示，没有找到可用摄像头或者摄像头被锁住（大概这个意思，我就不截图了），一种可能是设备真的没有接摄像头，也有可能是摄像头定制过，导致某些方法用不了，比如上面的错误就是我遇到的其中一个。</description>
+    </item>
+    
+    <item>
+      <title>Android自定义摇杆</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86/</link>
+      <pubDate>Thu, 01 Sep 2016 17:37:11 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwRockerDemo
+喜欢就给个star，谢谢！
+功能  支持自适应大小 支持2个方向、4个方向、8个方向的摇动监听 支持摇动角度获取 可选回调模式 支持可摇动区域自定义 支持摇杆自定义 支持设置图片、色值、Shape图形  使用 &amp;lt;kong.qingwei.rockerlibrary.RockerView android:id=&amp;quot;@+id/rockerView_center&amp;quot; android:layout_width=&amp;quot;100dp&amp;quot; android:layout_height=&amp;quot;100dp&amp;quot; android:layout_centerHorizontal=&amp;quot;true&amp;quot; kongqw:areaBackground=&amp;quot;#FF333333&amp;quot; kongqw:rockerBackground=&amp;quot;#FF987654&amp;quot; kongqw:rockerRadius=&amp;quot;15dp&amp;quot; /&amp;gt;  参数    参数 是否必须 描述     areaBackground 可选 可摇动区域的背景   rockerBackground 可选 摇杆的背景   rockerRadius 可选 摇杆半径    设置回调方式 setCallBackMode(CallBackMode mode)  参数
+   回调方式 描述     CALL_BACK_MODE_MOVE 有移动就立刻回调   CALL_BACK_MODE_STATE_CHANGE 状态有变化的时候回调    监听摇动角度 返回角度的取值范围：[0°,360°)</description>
+    </item>
+    
+    <item>
+      <title>Android输出正弦波音频信号(左右声道对称)</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0/</link>
+      <pubDate>Mon, 29 Aug 2016 15:01:34 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+需求：左右声道分别输出不同的音频数据，波形要是一个正弦波，左右声道还要对称！ 对硬件不是很了解，说是要通过音波避障。
+效果图 之前已经介绍了如何在左右声道输出不同的音频数据。 那么这里主要介绍如何模拟出波形是正弦波的音频数据。
+模拟正弦波 /** * 模拟正弦波音频数据 * @param isLeft 左右声道 * @return 音频数据 */ private short[] initData(boolean isLeft) { double phase = 0.0; int amp = 10000; short[] data = new short[bufferSize]; double phaseIncrement = (2 * Math.PI * mFrequency) / mSampleRateInHz; for (int i = 0; i &amp;lt; bufferSize; i++) { if (isLeft) { data[i] = (short) (amp * Math.sin(phase)); } else { data[i] = (short) (-amp * Math.</description>
+    </item>
+    
+    <item>
+      <title>Android左右声道的控制</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6/</link>
+      <pubDate>Fri, 26 Aug 2016 15:36:50 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 AndroidSoundManagerDemo
+我这里主要是用到了AudioTrack实现的左右声道的控制，手机一般都只有两个声道，即左声道和右声道，我们在输出的时候可以选择单声道，也可以选择双声道（立体声）。
+查看了AudioTrack的API，提供了play()、pause()、stop()、write()等一系列的方法。 通过write()方法，可以实现将音频数据发送出去（播放出来）。
+AudioTrack对象的构造 有三个构造方法
+AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioFormat, int bufferSizeInBytes, int mode) AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioFormat, int bufferSizeInBytes, int mode, int sessionId) AudioTrack (AudioAttributes attributes, AudioFormat format, int bufferSizeInBytes, int mode, int sessionId)  主要参数有如下几个
+ streamType：以什么形式播放
+ STREAM_VOICE_CALL STREAM_SYSTEM STREAM_RING STREAM_MUSIC STREAM_ALARM STREAM_NOTIFICATION  sampleRateInHz：采样率
+ channelConfig：声道
+ AudioFormat.CHANNEL_OUT_MONO：输出单声道音频数据 AudioFormat.</description>
+    </item>
+    
+    <item>
+      <title>环信即时通讯在Android平台的部署</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 22 Aug 2016 18:36:12 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+官网 环信
+下载SDK
+创建一个工程 如果想要封装性好一点，也可以在工程里再创建一个环信的Library，然后将SDK里的jar和.so，都导入到工程
+清单文件 下面是环信Library库里面的清单文件，包含了权限的设置、APPKEY的设置和服务的声明等。
+&amp;lt;manifest xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot; package=&amp;quot;……&amp;quot;&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.VIBRATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.RECORD_AUDIO&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.CAMERA&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.GET_TASKS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.CHANGE_WIFI_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WAKE_LOCK&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.MODIFY_AUDIO_SETTINGS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_PHONE_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.RECEIVE_BOOT_COMPLETED&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.USE_CREDENTIALS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;com.android.launcher.permission.READ_SETTINGS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.BROADCAST_STICKY&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV检测图像轮廓</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/</link>
+      <pubDate>Mon, 22 Aug 2016 11:35:23 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+轮廓只不过是图像中连接的曲线，或者图像中连通部分的边界，轮廓通常以图像中的边缘来计算，但是，边缘和轮廓的区别在于轮廓是闭合的，而边缘可以是任意的。边缘的概念局限于点及其邻域像素，轮廓将目标作为整体进行处理。
+效果图 源码 KqwOpenCVFeaturesDemo
+步骤  将图像置灰 使用Canny边缘检测检测出图像的边缘 调用Imgproc.findContours()方法检测图像轮廓 在新的图像上画出轮廓  封装 /** * 找出轮廓 * * @param bitmap 要检测的图片 */ public void findContours(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&amp;lt;Bitmap, Mat&amp;gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 原图置灰 Imgproc.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV使用霍夫变换检测图像中的形状</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/</link>
+      <pubDate>Mon, 22 Aug 2016 10:34:41 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+霍夫变换是一种被广泛使用的利用数学等式的参数形式在图像中检测形状的技术。 例如直线、椭圆、圆等形状。
+霍夫变换可以检测任何能以参数形式表示的形状，随着形状的复杂（维数的增加，例如球体），计算的消耗也会增加。 我们通常只考虑简单的霍夫形状，例如直线和圆。
+源码 KqwOpenCVFeaturesDemo
+霍夫直线 效果图 步骤  将图像置灰 调用Imgproc.HoughLinesP(cannyEdges, lines, 1, Math.PI / 180, 50, 20, 20) 方法获取直线的数据
+ 第一个参数：图像输入 第二个参数：图像输出 第三个参数：图像指定像素中r的解析度 第四个参数：图像指定像素中θ的解析度 第五个参数：直线上点数的阈值 第六个参数：直线上点数的最小值  在图像上绘制直线
+  封装 /** * 霍夫直线 * * @param bitmap 要检测的图片 */ public void houghLines(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&amp;lt;Bitmap, Mat&amp;gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV使用Harris算法实现角点检测</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 19 Aug 2016 19:32:39 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+角点是两条边缘的交点或者在局部邻域中有多个显著边缘方向的点。Harris角点检测是一种在角点检测中最常见的技术。
+Harris角点检测器在图像上使用滑动窗口计算亮度的变化。
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Harris角点检测 * * @param bitmap 要检测的图片 */ public void harris(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&amp;lt;Bitmap, Mat&amp;gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV使用Sobel滤波器实现图像边缘检测</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 19 Aug 2016 17:35:55 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+Sobel滤波器也叫Sobel算子，与Canny边缘检测一样，需要计算像素的灰度梯度，只不过是换用另一种方式。
+使用Sobel算子计算边缘的步骤  将图像转为灰度图像
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  计算水平方向灰度梯度的绝对值
+Imgproc.Sobel(grayMat, grad_x, CvType.CV_16S, 1, 0, 3, 1, 0); Core.convertScaleAbs(grad_x, abs_grad_x);  计算垂直方法灰度梯度的绝对值
+Imgproc.Sobel(grayMat, grad_y, CvType.CV_16S, 0, 1, 3, 1, 0); Core.convertScaleAbs(grad_y, abs_grad_y);  计算最终梯度
+// 计算结果梯度 Core.addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 1, sobel);   最终的梯度实质上就是边缘。
+这里用到了两个3 * 3的核对图像做卷积来近似地计算水平和垂直方向的灰度梯度
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Sobel滤波器 * * @param bitmap 要检测的图片 */ public void sobel(Bitmap bitmap) { if (null !</description>
+    </item>
+    
+    <item>
+      <title>OpenCV使用Canny边缘检测器实现图像边缘检测</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 19 Aug 2016 16:31:02 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+Canny边缘检测器是一种被广泛使用的算法，并被认为是边缘检测最优的算法，该方法使用了比高斯差分算法更复杂的技巧，如多向灰度梯度和滞后阈值化。
+Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模糊半径执行高斯模糊来减少图像内的噪声。 计算图像的梯度：这里计算图像的梯度，并将梯度分类为垂直、水平和斜对角。这一步的输出用于在下一步中计算真正的边缘。 非最大值抑制：利用上一步计算出来的梯度方向，检测某一像素在梯度的正方向和负方向上是否是局部最大值，如果是，则抑制该像素（像素不属于边缘）。这是一种边缘细化技术，用最急剧的变换选出边缘点。 用滞后阈值化选择边缘：最后一步，检查某一条边缘是否明显到足以作为最终输出，最后去除所有不明显的边缘。  算法比较复杂，但是使用很简单，首先将图像灰度化
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  然后调用Imgproc.Canny()方法即可
+// Canny边缘检测器检测图像边缘 Imgproc.Canny(grayMat, cannyEdges, 10, 100);   第一个参数表示图像输入 第二个参数表述图像输出 第三个参数表示低阈值 第四个参数表示高阈值  在Canny边缘检测算法中，将图像中的点归为三类：
+ 被抑制点
+灰度梯度值 &amp;lt; 低阈值
+ 弱边缘点
+低阈值 &amp;lt;= 灰度梯度值 &amp;lt;= 高阈值
+ 强边缘点
+高阈值 &amp;lt; 灰度梯度值
+  封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Canny边缘检测算法 * * @param bitmap 要检测的图片 */ public void canny(Bitmap bitmap) { if (null !</description>
+    </item>
+    
+    <item>
+      <title>OpenCV高斯差分技术实现图像边缘检测</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 19 Aug 2016 11:42:04 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+边缘是图像中像素亮度变化明显的点。
+高斯差分算法步骤  将图像转为灰度图像
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  用两个不同的模糊半径对灰度图像执行高斯模糊（取得两幅高斯模糊图像）
+// 以两个不同的模糊半径对图像做模糊处理 Imgproc.GaussianBlur(grayMat, blur1, new Size(15, 15), 5); Imgproc.GaussianBlur(grayMat, blur2, new Size(21, 21), 5);  将两幅高斯模糊图像做减法，得到一幅包含边缘点的结果图像
+// 将两幅模糊后的图像相减 Mat diff = new Mat(); Core.absdiff(blur1, blur2, diff);   该方法只对图像做了高斯模糊，这是计算图像边缘最快的方法之一，但是，该方法的结果也不是很理想，这种方式对某些图像效果很好，但是在某些情况下可能会完全失效。
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 高斯差分算法边缘检测 * * @param bitmap 要检测的图片 */ public void differenceOfGaussian(Bitmap bitmap) { if (null != mSubscriber) Observable .</description>
+    </item>
+    
+    <item>
+      <title>OpenCV实现图像阈值化</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/</link>
+      <pubDate>Thu, 18 Aug 2016 18:59:50 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+阈值化是一种将我们想要在图像中分析的区域分割出来的方法。 我们把每个像素值都与一个预设的阈值做比较，再根据比较的结果调整像素值。
+类似这样
+Imgproc.threshold(src, src, 100, 255, Imgproc.THRESH_BINARY);  其中100是阈值，255是最大值（纯白色的值）。
+常量    名称 常量     二值阈值化 Imgproc.THRESH_BINARY   阈值化到零 Imgproc.THRESH_TOZERO   截断阈值化 Imgproc.THRESH_TRUNC   反转二值阈值化 Imgproc.THRESH_BINARY_INV   反转阈值化到零 Imgproc.THRESH_TOZERO_INV    自适应阈值 上述的阈值化是全局性的，我们也可以根据邻域像素为任意像素计算阈值。
+自适应阈值用到的3个参数
+ 自适应方法
+ Imgproc.ADAPTIVE_THRESH_MEAN_C：阈值是邻域像素的值 Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C：阈值是领域像素的加权和，权重来自高斯核  块尺寸：邻域的大小
+ 常量C：从对每个像素计算得到的均值或加权均值减去的常量
+  图像置灰
+Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);  自适应阈值化</description>
+    </item>
+    
+    <item>
+      <title>OpenCV实现图像暗区扩张（腐蚀图片）</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Thu, 18 Aug 2016 18:19:08 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+暗区扩张，也叫腐蚀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最小值代替锚点像素。
+我们首先定义一个合适大小的核
+Mat kernelErode = Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE, new Size(5, 5));  然后调用Imgproc.erode()方法把图像的暗区放大
+// 扩大暗区（腐蚀） Imgproc.erode(src, src, kernelErode);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 扩大图片暗区（腐蚀图片） * * @param bitmap 要处理的图片 */ public void erode(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&amp;lt;Bitmap, Bitmap&amp;gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelErode = Imgproc.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV实现图像亮区扩张</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/</link>
+      <pubDate>Thu, 18 Aug 2016 17:43:36 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+亮区扩张，也叫膨胀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最大值代替锚点像素。膨胀可以用来融合可能被分割的目标。
+我们首先定义一个合适大小的核
+Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3, 3));  然后调用Imgproc.dilate()方法把图像的亮区放大
+// 扩大亮区 Imgproc.dilate(src, src, kernelDilate);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 扩大图片亮区 * * @param bitmap 要处理的图片 */ public void dilate(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&amp;lt;Bitmap, Bitmap&amp;gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelDilate = Imgproc.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV实现图片锐化</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/</link>
+      <pubDate>Thu, 18 Aug 2016 16:39:48 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+锐化也可以看作是一种线性滤波操作，并且锚点像素有较高的权重，而周围的像素权重较低。 因此，我们可以自定义一个这样的核。
+/* 自定义核 0	-1	0 -1 5	-1 0	-1	0 */ Mat kernel = new Mat(3, 3, CvType.CV_16SC1); kernel.put(0, 0, 0, -1, 0, -1, 5, -1, 0, -1, 0);  这里我们将图像的深度设为16SC1，表示包含一个通道（C1），图像中的每个像素包含一个16比特有符号整型数（16S）。
+定义完核以后，我们对图像和核做卷积操作
+// 对图像和自定义核做卷积 Imgproc.filter2D(src, src, src.depth(), kernel);   第一个参数表示输入的图像 第二个参数表示输出的图像 第三个参数表示图像的深度 第四个参数是我们自定义的核  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 锐化图片 * * @param bitmap 要处理的图片 */ public void filter2D(Bitmap bitmap) { // 使用RxJava处理图片 if (null !</description>
+    </item>
+    
+    <item>
+      <title>2OpenCV中值模糊方法</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 18 Aug 2016 15:19:25 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的中值模糊方法  // 中值模糊方法 Imgproc.medianBlur(src, src, 33);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.Subscriber; import rx.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV高斯模糊方法</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 17 Aug 2016 18:57:10 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV均值模糊方法</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 17 Aug 2016 18:07:51 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV的部署</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 17 Aug 2016 17:56:29 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+官网 官网
+之前时间比较紧张，在网上找了很多文章，写了一个人脸识别的程序，也是模棱两可，今天开始抽时间系统学习一下OpenCV在Android上的使用。
+OpenCV版本 后面用到的是OpenCV的2.4.11版本，据说新的3.x的版本和2.x的版本改动较大，2.x的版本学习完可以再看看与3.x版本的区别。毕竟老版本的学习资源更多一些。
+SDK 我们下载完SDK以后，里面会有一个Library的库供我们使用，但是核心的功能不在这里面，它只是一个调用的工具，我们还需要安装OpenCV Manager，在下载的SDK里有一个apk的文件夹，里面是对应各个cup架构的Manager，选择对应的Manager安装就可以了。 除了安装OpenCV Manager，也可以直接在工程里添加so，但是这会使我们的APK体积大大增加，不过这不是我们要关心的，我们主要学习怎么使用OpenCV。
+OpenCV的图像存储 OpenCV使用Mat对象存储图像，该对象保存了图像的行数、列数、数据等能唯一标识该图像的信息，并且可以利用该数据还原图像，不同的图像所包含的信息量也不同，例如彩色图像所包含的信息量就要比灰色图像多得多。因为灰色图是单通道的，彩色图是三通道的。
+灰色图  数字代表指定颜色的亮度 以整数表示时，取值范围是0~255，0表示纯黑色，255表示纯白色。 以浮点数表示时，取值范围是0~1，0表示纯黑色，1表示纯白色。
+ 彩色图  第一通道表示蓝色，第二通道表示绿色，第三通道表示红色。
+ OpenCV的线性滤波器 有的时候，图像信息量太大，处理的时间就会比较长（有的时候可能不需要这么信息就可以解析出来我们想要的结果了），为了解决这个问题，OpenCV提供了一个线性滤波器，可以对图片进行模糊处理。
+很多线性滤波器都利用了称为核的数字向量，核可以看作是沿着像素滑动的窗口，并把计算结果输出给核像素。
+下面的图中，是一个3 * 3的核作用在了一副10 * 10的图像上。
+创建OpenCV工程 Android Studio版本：2.1
+ 创建Android Studio工程，命名为FirstOpenCVDemo 导入OpenCV Library
+File -&amp;gt; New -&amp;gt; Import Module
+ 引用OpenCV Library
+ 安装OpenCV Manager
+加载OpenCV Manager，如果诶呦安装会有提示
+  private BaseLoaderCallback mOpenCVCallBack = new BaseLoaderCallback(this) { @Override public void onManagerConnected(int status) { switch (status) { case LoaderCallbackInterface.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞与灵云语音对比</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Tue, 16 Aug 2016 16:55:56 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+对比     科大讯飞 灵云语音     语音能力 语音合成、语音识别、语义、命令词、唤醒 没有独立的唤醒功能，需要使用命令词实现唤醒。   初始化 我们购买完离线资源包以后，集成到工程里，就可以保持在离线环境下使用 即使使用离线语音能力，第一次使用的时候，也必须要联网，激活离线语音能力以后，才可以使用   网络请求 各种请求均异步操作，不会阻塞线程。 在线文字语义识别，是同步操作，其它是异步操作过程。（同步操作时间超过5秒会导致Android终端抛出NAR异常导致崩溃）   语义 场景定义灵活，开发者可在后台自定义，通过申请的方式，可以开通自定义场景，目前免费开放。语义解析失败，可以将语音转文字。 场景的定义需要联系客服人员开通，自定义场景需要付费（说是一般一个场景2万元）。语义解析失败不能转成文字   语音唤醒 支持（官方自称低功耗） 实际没有唤醒功能，是使用离线命令词的方式模拟出了唤醒，效果不理想。尚未发现可以发现可以设置门限值等常用参数的API。   命令词识别 离线使用BNF语法，在线使用ABNF语法，语法可以使用占位符等等的操作符 离线和在线都使用JSGF语法。    灵云唤醒机制 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
+个人认为这种方式实现唤醒效果不好，原因如下：
+ 录音都有前端点超时时间和后端点超时时间，这样一来，即使我们准确的说出唤醒词，也要在说完唤醒词以后，保证在后端点时间内不再有声音录入，才能提高被唤醒的几率。
+ 唤醒不是即时的，即使我们准确的说出唤醒词，并保持不再有声音录入，也要至少等待后端点时间过去，录音结束以后，才会识别（被唤醒）。
+ 这种方式的唤醒其实就是在进行语音识别，如果一直开启唤醒，消耗性能，耗电。
+   前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  总结 科大讯飞语音方面更灵活，更好用。
+灵云语音，在人工智能方面提供的技术更全面（还包括图像识别，手写识别，人脸识别，指纹识别、机器翻译等），偏定制（智能家居、车载系统、机器人等智能设备的定制）。
+单从语音能力角度来比较，讯飞更好。</description>
+    </item>
+    
+    <item>
+      <title>灵云语音唤醒</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
+      <pubDate>Tue, 16 Aug 2016 16:41:32 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
+      <description> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+严格来讲，灵云没有语音唤醒功能，但是通过命令词的方式可以实现
+实现方式 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
+我个人认为这种方式实现唤醒意义不大，所以没有做demo，原因如下：
+ 录音都有前端点超时时间和后端点超时时间,这样一来，即使我们准确的说出唤醒词，也要在说完唤醒词以后，保证在后端点时间内不再有声音录入，才能提高被唤醒的几率。
+ 唤醒不是即时的，即使我们准确的说出唤醒词，并保持不再有声音录入，也要至少等待后端点时间过去，录音结束以后，才会识别（被唤醒）。
+ 这种方式的唤醒其实就是在进行语音识别，如果一直开启唤醒，消耗性能，耗电。
+   前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  </description>
+    </item>
+    
+    <item>
+      <title>灵云语音识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Mon, 15 Aug 2016 17:19:29 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+源码 GitHub
+在线语音识别 SDK下载 灵云SDK下载
+SDK集成 下载SDK以后，将jar和so导入工程
+权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.SYSTEM_ALERT_WINDOW&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_COARSE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.RECORD_AUDIO&amp;quot; /&amp;gt;  封装 灵云配置类 package kong.qingwei.kqwhcidemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &amp;quot;3d5d5466&amp;quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &amp;quot;eca643ff7b3c758745d7cf516e808d34&amp;quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &amp;quot;test.</description>
+    </item>
+    
+    <item>
+      <title>灵云语义理解</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 15 Aug 2016 17:13:32 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 GitHub
+SDK下载 灵云SDK下载
+SDK集成 下载SDK以后，将jar和so导入工程
+权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.SYSTEM_ALERT_WINDOW&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_COARSE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt;  封装 灵云配置类 package kong.qingwei.kqwhcidemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &amp;quot;3d5d5466&amp;quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &amp;quot;eca643ff7b3c758745d7cf516e808d34&amp;quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &amp;quot;test.</description>
+    </item>
+    
+    <item>
+      <title>灵云语音合成</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <pubDate>Fri, 12 Aug 2016 12:57:44 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+注册 官网
+注册比较简单，就不做过多介绍了，注册万应用以后，在后台创建自己的应用，创建完应用以后需要给应用开通对应的语音能力。
+集成 下载灵云SDK
+如果使用在线功能，下载对应的SDK，里面有jar包和so，就可以满足需求了。如果要使用离线的语音功能，还需要下载灵云资源文件
+源码 GitHub
+灵云在线语音合成 权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.SYSTEM_ALERT_WINDOW&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_COARSE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt;  配置类 package kong.qingwei.kqwhcittsdemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &amp;quot;填入自己的APP KEY&amp;quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &amp;quot;填入自己的DEVELOPER KEY&amp;quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &amp;quot;test.</description>
+    </item>
+    
+    <item>
+      <title>Android蓝牙通信</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1/</link>
+      <pubDate>Tue, 02 Aug 2016 17:44:54 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+Android蓝牙通信 效果图  两台真机设备
+ 源码 GitHub
+ 关于蓝牙的开关控制，设置设备可见、搜索附近的蓝牙设备，已经封装到了 BluetoothManager 类
+ 关于设备的连接、通信。已经封装到了 BluetoothService 类
+  注：下面的全部内容，主要是思路，具体的可以参考上面的源码，如果对你有帮助记得给个赞哦。
+权限 &amp;lt;!-- 蓝牙的权限 --&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.BLUETOOTH&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.BLUETOOTH_ADMIN&amp;quot; /&amp;gt;  蓝牙的打开与关闭 开启蓝牙 mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter(); /** * 开启蓝牙 */ public void openBluetooth() { try { mBluetoothAdapter.enable(); } catch (Exception e) { e.printStackTrace(); } }  关闭蓝牙 mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter(); /** * 关闭蓝牙 */ public void closeBluetooth() { try { mBluetoothAdapter.</description>
+    </item>
+    
+    <item>
+      <title>Android使用OpenCV实现人脸识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Wed, 06 Jul 2016 17:48:57 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 先上效果图，GIF不好弄
+在网上找了在Android平台上使用OpenCV相关的教程，很少，大部分也都主要是介绍下人脸检测，很少有讲人脸识别，还有的人连人脸检测和人脸识别的概念都没有搞清，人脸识别只是识别到有人脸，能获取到一个人脸的大概位置，有几个人脸，而人脸识别是要获取到人脸特征做对比，识别这个人脸。有好多文章都写自己在讲人脸识别，实际上他只是在做人脸检测。
+OpenCV官网
+官方给的Demo是在Eclipse工程下的，如果你现在已经是在Android Studio下开发，因为Eclipse工程有makefile文件，迁移到Android Studio好像还是有点麻烦，我是干脆就在Eclipse下跑的Demo。
+先甩过来官方给的一些文档：
+OpenCV4Android SDK
+Android Development with OpenCV
+实现方式 按照官方的文档，我们在Eclipse里导入Demo进去以后，是不能直接运行的，需要安装Manager的一个APK,然后在Demo工程里通过AIDL的方式，调用OpenCV的核心方法，不过Demo给实现的功能也只是一个人脸检测。
+SDK SDK下载
+下面来看一下SDK
+目录：
+ apk：Manager的apk doc：一些文档 samples：示例工程和一些编译好的apk sdk：一些库文件   当然, 如果你的C/C++足够好，你肯定可以自己编译一个库，直接导入到工程，就不用安装Manager了，可惜了我自己还不行，哈哈……无奈安装Manager把……
+ 如何将Demo导入到Eclipse并运行，上面官方的文档已经说的比较清楚了，至于会有什么问题就自行Google吧。
+人脸检测 其实人脸检测并不是重点，Demo里已经实现了人脸检测的功能。
+主要的实现方式：OpenCV有一个自己的org.opencv.android.JavaCameraView自定义控件，它循环的从摄像头抓取数据，在回调方法中，我们能获取到Mat数据，然后通过调用OpenCV的Native方法，检测当前是否有人脸，我们会获取到一个Rect数组，里面会有人脸数据，最后将人脸画在屏幕上，到此为止，Demo的人脸检测功能，就结束了。
+人脸识别 人脸识别我这里用到了JavaCV
+人脸识别逻辑：人脸识别的主要方式就是获取到人脸的特征值，然后将两个特征值做比对，取到一个相似度去做人脸识别，OpenCV这里的特征值，其实就是一张图片。 我们的从回调的Mat数据检测到有人脸以后，提取特征值（也就是保存人脸的一张图片到某个路径），然后比较特征值
+为了提高识别的准确度，需要在检测到人脸以后，把人脸的部分截取出来，然后置灰（置灰的目的是为了方式色泽和明暗度对识别有影响）。
+保存人脸特征值 /** * 特征保存 * * @param image Mat * @param rect 人脸信息 * @param fileName 文件名字 * @return 保存是否成功 */ public boolean saveImage(Mat image, Rect rect, String fileName) { try { String PATH = Environment.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞离线语音合成（语记）</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</link>
+      <pubDate>Sun, 30 Aug 2015 18:14:13 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+离线语音合成（语记） 讯飞的语音合成有三种方式
+ 在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用语记实现离线语音合成
+效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9063593
+说明 使用语记实现离线语音合成和在线语音合成的步骤非常相似，下载SDK的方式是一样的，一样是选择在线语音合成，只不过是使用离线引擎就可以借用语音合成语音了。
+在线语音合成地址：http://blog.csdn.net/q4878802/article/details/48092495
+下面说说和在线语音合成不用的地方
+1. 下载并安装语记，下载离线资源 离线语音听写的文章里有介绍，地址： http://blog.csdn.net/q4878802/article/details/47834601
+2. 网络权限就可以删掉了，本地合成不需要联网，但是获取网络状态的权限一定要有。 &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt;  3. 将识别引擎改为本地引擎 // 引擎类型 本地 mTts.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_LOCAL);  4. 在Application初始化的类里把引擎模式设置的参数注释掉 // param.append(&amp;quot;,&amp;quot;); // param.append(SpeechConstant.ENGINE_MODE + &amp;quot;=&amp;quot; + SpeechConstant.MODE_MSC);  SpeechConstant.MODE_MSC 参数意思是使用离线包资源，如果离线包资源找不到会走网络识别，如果设置这种模式是不会使用语记（语音+）的如果使用离线包，就需要这条参数。</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞离线语音合成</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <pubDate>Sun, 30 Aug 2015 18:06:35 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+离线语音合成（离线资源包） 讯飞的语音合成有三种方式
+ 在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用离线资源包实现离线语音合成，因为正式版是要付费的，所以这里使用试用的离线包（35天试用期、3个装机量）。
+效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9063779
+开通服务，下载SDK 之前已经介绍过，地址：http://blog.csdn.net/q4878802/article/details/47762169#t8
+将SDK里提供的jar包、so库、离线资源都拷贝到我们的工程（Android Studio工程） 创建的工程默认可能没有jniLibs和assets目录，我们要自己在main下创建这两个目录
+初始化 在清单文件中application标签下添加name属性
+android:name=&amp;quot;.InitApplication&amp;quot;  初始化
+package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application; import android.widget.Toast; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; /** * Created by kongqw on 2015/8/29. */ public class InitApplication extends Application { @Override public void onCreate() { Toast.makeText(this, &amp;quot;InitApplication&amp;quot;, Toast.LENGTH_LONG).show(); // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞语义识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Sun, 30 Aug 2015 18:00:28 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9064463
+语义测试接口 地址：http://osp.voicecloud.cn/index.php/default/quicktest/index
+开通服务，下载SDK 之前已经介绍过，地址：http://blog.csdn.net/q4878802/article/details/47762169#t8
+这里说一下，进入到SDK的下载界面，你发现找不到语义的服务，而在我们开通服务的时候都是默认就帮我们把语义的服务开启了，可能是因为语义是只能用网络的，没有本地的资源，所以只要选择一个在线的功能，使用的jar包应该都是一样的，为什么没有直接下载语义的SDK我也不是很清楚，但是都可以用。
+说明 之前的工程都是在Eclipse下演示的，随着Android Studio的普及，我这里也开始使用Android Studio写Demo，虽然导入jar包和so库的过程可能不太一样，但是整体的流程是一样的。
+将jar包和so库导入Android Studio工程  将jar包copy到libs目录下
+在main目录下创建jniLibs目录，将so文件copy过来
+ 初始化  在清单文件中application标签下添加name属性
+ android:name=&amp;quot;.InitApplication&amp;quot;  初始化
+package com.example.kongqw.kqwunderstanddemo; import android.app.Application; import android.widget.Toast; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; /** * Created by kongqw on 2015/8/29. */ public class InitApplication extends Application { @Override public void onCreate() { Toast.makeText(this, &amp;quot;InitApplication&amp;quot;, Toast.LENGTH_LONG).show(); // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞在线语音合成</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <pubDate>Sat, 29 Aug 2015 18:19:12 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9062261
+下载SDK 1. 选择服务 2. 选择平台 3. 选择应用 4. 下载SDK 说明 之前的工程都是在Eclipse下演示的，随着Android Studio的普及，我这里也开始使用Android Studio写Demo，虽然细节导入jar包和so库的过程可能不太一样，但是整体的流程是一样的。
+将jar包和so库导入Android Studio工程 将jar包copy到libs目录下 在main目录下创建jniLibs目录，将so文件copy过来
+添加网络权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot;/&amp;gt;  初始化 在清单文件中application标签下添加name属性
+android:name=&amp;quot;.InitApplication&amp;quot;  初始化
+package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application; import android.widget.Toast; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; /** * Created by kongqw on 2015/8/29. */ public class InitApplication extends Application { @Override public void onCreate() { Toast.makeText(this, &amp;quot;InitApplication&amp;quot;, Toast.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞语音识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Fri, 21 Aug 2015 18:31:38 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+离线语音识别（语记） 效果图 源码 下载地址：http://download.csdn.net/detail/q4878802/9032149
+下载语记并安装离线资源 集成 初始化 在清单文件中application标签下添加
+android:name=&amp;quot;InitKqwSpeech&amp;quot;  初始化
+package com.example.kqwlocalspeechdemo; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; import android.app.Application; public class InitKqwSpeech extends Application { @Override public void onCreate() { // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.append(&amp;quot;appid=55d33f09&amp;quot;); param.append(&amp;quot;,&amp;quot;); param.append(SpeechConstant.ENGINE_MODE + &amp;quot;=&amp;quot; + SpeechConstant.MODE_MSC); // param.append(&amp;quot;,&amp;quot;); // param.append(SpeechConstant.FORCE_LOGIN + &amp;quot;=true&amp;quot;); SpeechUtility.createUtility(InitKqwSpeech.this, param.toString()); super.onCreate(); } }  语音听写工具类 package com.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞离线命令词&#43;语义识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D&#43;%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Thu, 20 Aug 2015 18:46:11 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D&#43;%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
+      <description> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+离线命令词+语义识别 意思就是先走离线命令词识别，如果离线命令词识别没有识别到结果，那么就再走语义接口，如果已开通对应场景，则转为语义，如果没有开通对应场景，则将语音转为文字
+效果图  说的话满足本地构建的语法&amp;mdash;-离线命令词识别   说的话离线命令词无法识别，走语义识别并且满足语义场景&amp;mdash;-将语音转为语义   说话既不满足离线命令词识别也不满足语义开通的场景&amp;mdash;-将语音转为文字  程序和离线命令词识别基本一样
+离线命令词识别地址：http://blog.csdn.net/q4878802/article/details/47780485
+只要改一个参数，将识别引擎改为混合模式即可
+mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为使用的混合模式，当本地命令词没有识别到结果的时候会走在线语义（语义只有在线），所以，我们必须要先开通语义服务
+程序流程 最后  如果你直接用我的Demo，我用的是测试版的离线包，只有35天的试用期，而且装机量只有3个，如果大家都用，很可能是不能正常运行的 如果是参考我的demo自己写一个，千万不要忘记替换appid和资源文件。  </description>
+    </item>
+    
+    <item>
+      <title>科大讯飞语音唤醒</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
+      <pubDate>Wed, 19 Aug 2015 18:53:57 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+语音唤醒 唤醒功能，顾名思义，通过语音，唤醒服务，做我们想做的事情。
+效果图  开启应用后说讯飞语音或者讯飞语点唤醒
+ 源码下载 地址：http://download.csdn.net/detail/q4878802/9023213
+步骤 1. 创建应用，开通服务 地址：http://blog.csdn.net/q4878802/article/details/47762169
+2. 下载SDK 我们要使用的是讯飞的付费功能，选择唤醒服务，点击下载以后，会提示没有购买。点击“购买服务”
+点击购买一会看到付费情况，有项目需要，就必须购买，我们写Demo，讯飞给提供了体验版的SDK，和正式版的没有功能上的区别，但是只能试用35天，装机量只有3个，唤醒词不能改，只有“讯飞语音”和“讯飞语点”两个唤醒词。
+3. 解压SDK assets目录下是一些图片资源文件 doc目录下是一些开发文档 libs目录下是一些jar包和so库 res目录下是语音的资源文件，非常重要 sample目录下是Demo
+开发步骤 1. 添加权限 这里用到的唤醒功能不是所有的权限都用到的，具体用到了哪些权限，可以看上面的链接，用到哪写权限就加哪些权限，这个为了快速方便测试，把讯飞用到的权限都加上了。
+&amp;lt;uses-permission android:name=&amp;quot;android.permission.RECORD_AUDIO&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.CHANGE_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_PHONE_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_CONTACTS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt;  2. 初始化appid 我是将appid的初始化放在的Applicaiton下，具体可以下载源码
+// 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞离线命令词识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Wed, 19 Aug 2015 17:41:31 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图  示例源码  地址：http://download.csdn.net/detail/q4878802/9023825
+步骤： 1. 下载SDK 前面文章有，就不在复述了。这里要选择离线命令词的服务以后，重新加载，因为需要下载离线命令词识别的资源文件
+地址：http://blog.csdn.net/q4878802/article/details/47762169
+2. 集成方法 前面文章有，就不在复述了。
+地址：http://blog.csdn.net/q4878802/article/details/47778629
+3. 正题，开始集成 1. 添加权限 这里用到的唤醒功能不是所有的权限都用到的，具体用到了哪些权限，可以看上面的链接，用到哪写权限就加哪些权限，这个为了快速方便测试，把讯飞用到的权限都加上了。
+&amp;lt;uses-permission android:name=&amp;quot;android.permission.RECORD_AUDIO&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.CHANGE_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_PHONE_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_CONTACTS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt;  2. 初始化appid 我是将appid的初始化放在的Applicaiton下，具体可以下载源码
+// 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://chuxin-community.github.io/posts/huzhenghui/help/2018%E5%B9%B42%E6%9C%8818%E6%97%A521%E7%82%B945%E5%88%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/huzhenghui/help/2018%E5%B9%B42%E6%9C%8818%E6%97%A521%E7%82%B945%E5%88%86/</guid>
+      <description>2018年2月18日21点45分.md</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-04-15-android%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-04-15-android%E6%9C%8D%E5%8A%A1/</guid>
+      <description>layout: w title: Android服务 date: 2016-04-15 18:51:03 categories:
+tags: [服务,Android] 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+服务  Service 是一个可以在后台执行长时间运行操作而不使用用户界面的应用组件。服务可由其他应用组件启动，而且即使用户切换到其他应用，服务仍将在后台继续运行。 此外，组件可以绑定到服务，以与之进行交互，甚至是执行进程间通信 (IPC)。 例如，服务可以处理网络事务、播放音乐，执行文件 I/O 或与内容提供程序交互，而所有这一切均可在后台进行。
+ 服务基本上分为两种形式：
+ 启动
+ 当应用组件（如 Activity）通过调用 startService() 启动服务时，服务即处于“启动”状态。一旦启动，服务即可在后台无限期运行，即使启动服务的组件已被销毁也不受影响。 已启动的服务通常是执行单一操作，而且不会将结果返回给调用方。例如，它可能通过网络下载或上传文件。 操作完成后，服务会自行停止运行。
+ 绑定 &amp;gt; 当应用组件通过调用 bindService() 绑定到服务时，服务即处于“绑定”状态。绑定服务提供了一个客户端-服务器接口，允许组件与服务进行交互、发送请求、获取结果，甚至是利用进程间通信 (IPC) 跨进程执行这些操作。 仅当与另一个应用组件绑定时，绑定服务才会运行。 多个组件可以同时绑定到该服务，但全部取消绑定后，该服务即会被销毁。
+  虽然本文档是分开概括讨论这两种服务，但是您的服务可以同时以这两种方式运行，也就是说，它既可以是启动服务（以无限期运行），也允许绑定。问题只是在于您是否实现了一组回调方法：onStartCommand()（允许组件启动服务）和 onBind()（允许绑定服务）。
+无论应用是处于启动状态还是绑定状态，抑或处于启动并且绑定状态，任何应用组件均可像使用活动那样通过调用 Intent 来使用服务（即使此服务来自另一应用）。 不过，您可以通过清单文件将服务声明为私有服务，并阻止其他应用访问。 使用清单文件声明服务部分将对此做更详尽的阐述。
+ 注意：
+ 服务在其托管进程的主线程中运行，它既不创建自己的线程，也不在单独的进程中运行（除非另行指定）。 这意味着，如果服务将执行任何 CPU 密集型工作或阻止性操作（例如 MP3 播放或联网），则应在服务内创建新线程来完成这项工作。通过使用单独的线程，可以降低发生“应用无响应”(ANR) 错误的风险，而应用的主线程仍可继续专注于运行用户与 Activity 之间的交互。
+  基础知识 要创建服务，您必须创建 Service 的子类（或使用它的一个现有子类）。在实现中，您需要重写一些回调方法，以处理服务生命周期的某些关键方面并提供一种机制将组件绑定到服务（如适用）。 应重写的最重要的回调方法包括：</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on 不忘初心</title>
+    <link>https://daonao.github.io/chuxin/tags/test/</link>
+    <description>Recent content in Test on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 31 Jan 2018 13:57:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://daonao.github.io/chuxin/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://daonao.github.io/chuxin/posts/huzhenghui/hello-world/</link>
+      <pubDate>Wed, 31 Jan 2018 13:57:01 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/posts/huzhenghui/hello-world/</guid>
+      <description>Hello World Hello World from Typora which support OneDrive now.</description>
+    </item>
+    
+  </channel>
+</rss>

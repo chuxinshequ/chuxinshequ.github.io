@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opencv on 不忘初心</title>
+    <link>https://chuxin-community.github.io/categories/opencv/</link>
+    <description>Recent content in Opencv on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 22 Aug 2016 11:35:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/categories/opencv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OpenCV检测图像轮廓</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/</link>
+      <pubDate>Mon, 22 Aug 2016 11:35:23 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+轮廓只不过是图像中连接的曲线，或者图像中连通部分的边界，轮廓通常以图像中的边缘来计算，但是，边缘和轮廓的区别在于轮廓是闭合的，而边缘可以是任意的。边缘的概念局限于点及其邻域像素，轮廓将目标作为整体进行处理。
+效果图 源码 KqwOpenCVFeaturesDemo
+步骤  将图像置灰 使用Canny边缘检测检测出图像的边缘 调用Imgproc.findContours()方法检测图像轮廓 在新的图像上画出轮廓  封装 /** * 找出轮廓 * * @param bitmap 要检测的图片 */ public void findContours(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&amp;lt;Bitmap, Mat&amp;gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 原图置灰 Imgproc.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV使用霍夫变换检测图像中的形状</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/</link>
+      <pubDate>Mon, 22 Aug 2016 10:34:41 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+霍夫变换是一种被广泛使用的利用数学等式的参数形式在图像中检测形状的技术。 例如直线、椭圆、圆等形状。
+霍夫变换可以检测任何能以参数形式表示的形状，随着形状的复杂（维数的增加，例如球体），计算的消耗也会增加。 我们通常只考虑简单的霍夫形状，例如直线和圆。
+源码 KqwOpenCVFeaturesDemo
+霍夫直线 效果图 步骤  将图像置灰 调用Imgproc.HoughLinesP(cannyEdges, lines, 1, Math.PI / 180, 50, 20, 20) 方法获取直线的数据
+ 第一个参数：图像输入 第二个参数：图像输出 第三个参数：图像指定像素中r的解析度 第四个参数：图像指定像素中θ的解析度 第五个参数：直线上点数的阈值 第六个参数：直线上点数的最小值  在图像上绘制直线
+  封装 /** * 霍夫直线 * * @param bitmap 要检测的图片 */ public void houghLines(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&amp;lt;Bitmap, Mat&amp;gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV使用Harris算法实现角点检测</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 19 Aug 2016 19:32:39 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+角点是两条边缘的交点或者在局部邻域中有多个显著边缘方向的点。Harris角点检测是一种在角点检测中最常见的技术。
+Harris角点检测器在图像上使用滑动窗口计算亮度的变化。
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Harris角点检测 * * @param bitmap 要检测的图片 */ public void harris(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&amp;lt;Bitmap, Mat&amp;gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV使用Sobel滤波器实现图像边缘检测</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 19 Aug 2016 17:35:55 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+Sobel滤波器也叫Sobel算子，与Canny边缘检测一样，需要计算像素的灰度梯度，只不过是换用另一种方式。
+使用Sobel算子计算边缘的步骤  将图像转为灰度图像
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  计算水平方向灰度梯度的绝对值
+Imgproc.Sobel(grayMat, grad_x, CvType.CV_16S, 1, 0, 3, 1, 0); Core.convertScaleAbs(grad_x, abs_grad_x);  计算垂直方法灰度梯度的绝对值
+Imgproc.Sobel(grayMat, grad_y, CvType.CV_16S, 0, 1, 3, 1, 0); Core.convertScaleAbs(grad_y, abs_grad_y);  计算最终梯度
+// 计算结果梯度 Core.addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 1, sobel);   最终的梯度实质上就是边缘。
+这里用到了两个3 * 3的核对图像做卷积来近似地计算水平和垂直方向的灰度梯度
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Sobel滤波器 * * @param bitmap 要检测的图片 */ public void sobel(Bitmap bitmap) { if (null !</description>
+    </item>
+    
+    <item>
+      <title>OpenCV使用Canny边缘检测器实现图像边缘检测</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 19 Aug 2016 16:31:02 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+Canny边缘检测器是一种被广泛使用的算法，并被认为是边缘检测最优的算法，该方法使用了比高斯差分算法更复杂的技巧，如多向灰度梯度和滞后阈值化。
+Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模糊半径执行高斯模糊来减少图像内的噪声。 计算图像的梯度：这里计算图像的梯度，并将梯度分类为垂直、水平和斜对角。这一步的输出用于在下一步中计算真正的边缘。 非最大值抑制：利用上一步计算出来的梯度方向，检测某一像素在梯度的正方向和负方向上是否是局部最大值，如果是，则抑制该像素（像素不属于边缘）。这是一种边缘细化技术，用最急剧的变换选出边缘点。 用滞后阈值化选择边缘：最后一步，检查某一条边缘是否明显到足以作为最终输出，最后去除所有不明显的边缘。  算法比较复杂，但是使用很简单，首先将图像灰度化
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  然后调用Imgproc.Canny()方法即可
+// Canny边缘检测器检测图像边缘 Imgproc.Canny(grayMat, cannyEdges, 10, 100);   第一个参数表示图像输入 第二个参数表述图像输出 第三个参数表示低阈值 第四个参数表示高阈值  在Canny边缘检测算法中，将图像中的点归为三类：
+ 被抑制点
+灰度梯度值 &amp;lt; 低阈值
+ 弱边缘点
+低阈值 &amp;lt;= 灰度梯度值 &amp;lt;= 高阈值
+ 强边缘点
+高阈值 &amp;lt; 灰度梯度值
+  封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * Canny边缘检测算法 * * @param bitmap 要检测的图片 */ public void canny(Bitmap bitmap) { if (null !</description>
+    </item>
+    
+    <item>
+      <title>OpenCV高斯差分技术实现图像边缘检测</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Fri, 19 Aug 2016 11:42:04 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVFeaturesDemo
+边缘是图像中像素亮度变化明显的点。
+高斯差分算法步骤  将图像转为灰度图像
+// 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);  用两个不同的模糊半径对灰度图像执行高斯模糊（取得两幅高斯模糊图像）
+// 以两个不同的模糊半径对图像做模糊处理 Imgproc.GaussianBlur(grayMat, blur1, new Size(15, 15), 5); Imgproc.GaussianBlur(grayMat, blur2, new Size(21, 21), 5);  将两幅高斯模糊图像做减法，得到一幅包含边缘点的结果图像
+// 将两幅模糊后的图像相减 Mat diff = new Mat(); Core.absdiff(blur1, blur2, diff);   该方法只对图像做了高斯模糊，这是计算图像边缘最快的方法之一，但是，该方法的结果也不是很理想，这种方式对某些图像效果很好，但是在某些情况下可能会完全失效。
+封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 高斯差分算法边缘检测 * * @param bitmap 要检测的图片 */ public void differenceOfGaussian(Bitmap bitmap) { if (null != mSubscriber) Observable .</description>
+    </item>
+    
+    <item>
+      <title>OpenCV实现图像阈值化</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/</link>
+      <pubDate>Thu, 18 Aug 2016 18:59:50 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+阈值化是一种将我们想要在图像中分析的区域分割出来的方法。 我们把每个像素值都与一个预设的阈值做比较，再根据比较的结果调整像素值。
+类似这样
+Imgproc.threshold(src, src, 100, 255, Imgproc.THRESH_BINARY);  其中100是阈值，255是最大值（纯白色的值）。
+常量    名称 常量     二值阈值化 Imgproc.THRESH_BINARY   阈值化到零 Imgproc.THRESH_TOZERO   截断阈值化 Imgproc.THRESH_TRUNC   反转二值阈值化 Imgproc.THRESH_BINARY_INV   反转阈值化到零 Imgproc.THRESH_TOZERO_INV    自适应阈值 上述的阈值化是全局性的，我们也可以根据邻域像素为任意像素计算阈值。
+自适应阈值用到的3个参数
+ 自适应方法
+ Imgproc.ADAPTIVE_THRESH_MEAN_C：阈值是邻域像素的值 Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C：阈值是领域像素的加权和，权重来自高斯核  块尺寸：邻域的大小
+ 常量C：从对每个像素计算得到的均值或加权均值减去的常量
+  图像置灰
+Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);  自适应阈值化</description>
+    </item>
+    
+    <item>
+      <title>OpenCV实现图像暗区扩张（腐蚀图片）</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Thu, 18 Aug 2016 18:19:08 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+暗区扩张，也叫腐蚀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最小值代替锚点像素。
+我们首先定义一个合适大小的核
+Mat kernelErode = Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE, new Size(5, 5));  然后调用Imgproc.erode()方法把图像的暗区放大
+// 扩大暗区（腐蚀） Imgproc.erode(src, src, kernelErode);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 扩大图片暗区（腐蚀图片） * * @param bitmap 要处理的图片 */ public void erode(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&amp;lt;Bitmap, Bitmap&amp;gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelErode = Imgproc.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV实现图像亮区扩张</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/</link>
+      <pubDate>Thu, 18 Aug 2016 17:43:36 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+亮区扩张，也叫膨胀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最大值代替锚点像素。膨胀可以用来融合可能被分割的目标。
+我们首先定义一个合适大小的核
+Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3, 3));  然后调用Imgproc.dilate()方法把图像的亮区放大
+// 扩大亮区 Imgproc.dilate(src, src, kernelDilate);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 扩大图片亮区 * * @param bitmap 要处理的图片 */ public void dilate(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&amp;lt;Bitmap, Bitmap&amp;gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelDilate = Imgproc.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV实现图片锐化</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/</link>
+      <pubDate>Thu, 18 Aug 2016 16:39:48 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+锐化也可以看作是一种线性滤波操作，并且锚点像素有较高的权重，而周围的像素权重较低。 因此，我们可以自定义一个这样的核。
+/* 自定义核 0	-1	0 -1 5	-1 0	-1	0 */ Mat kernel = new Mat(3, 3, CvType.CV_16SC1); kernel.put(0, 0, 0, -1, 0, -1, 5, -1, 0, -1, 0);  这里我们将图像的深度设为16SC1，表示包含一个通道（C1），图像中的每个像素包含一个16比特有符号整型数（16S）。
+定义完核以后，我们对图像和核做卷积操作
+// 对图像和自定义核做卷积 Imgproc.filter2D(src, src, src.depth(), kernel);   第一个参数表示输入的图像 第二个参数表示输出的图像 第三个参数表示图像的深度 第四个参数是我们自定义的核  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 锐化图片 * * @param bitmap 要处理的图片 */ public void filter2D(Bitmap bitmap) { // 使用RxJava处理图片 if (null !</description>
+    </item>
+    
+    <item>
+      <title>2OpenCV中值模糊方法</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 18 Aug 2016 15:19:25 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的中值模糊方法  // 中值模糊方法 Imgproc.medianBlur(src, src, 33);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.Subscriber; import rx.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV高斯模糊方法</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 17 Aug 2016 18:57:10 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV均值模糊方法</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 17 Aug 2016 18:07:51 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV的部署</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 17 Aug 2016 17:56:29 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+官网 官网
+之前时间比较紧张，在网上找了很多文章，写了一个人脸识别的程序，也是模棱两可，今天开始抽时间系统学习一下OpenCV在Android上的使用。
+OpenCV版本 后面用到的是OpenCV的2.4.11版本，据说新的3.x的版本和2.x的版本改动较大，2.x的版本学习完可以再看看与3.x版本的区别。毕竟老版本的学习资源更多一些。
+SDK 我们下载完SDK以后，里面会有一个Library的库供我们使用，但是核心的功能不在这里面，它只是一个调用的工具，我们还需要安装OpenCV Manager，在下载的SDK里有一个apk的文件夹，里面是对应各个cup架构的Manager，选择对应的Manager安装就可以了。 除了安装OpenCV Manager，也可以直接在工程里添加so，但是这会使我们的APK体积大大增加，不过这不是我们要关心的，我们主要学习怎么使用OpenCV。
+OpenCV的图像存储 OpenCV使用Mat对象存储图像，该对象保存了图像的行数、列数、数据等能唯一标识该图像的信息，并且可以利用该数据还原图像，不同的图像所包含的信息量也不同，例如彩色图像所包含的信息量就要比灰色图像多得多。因为灰色图是单通道的，彩色图是三通道的。
+灰色图  数字代表指定颜色的亮度 以整数表示时，取值范围是0~255，0表示纯黑色，255表示纯白色。 以浮点数表示时，取值范围是0~1，0表示纯黑色，1表示纯白色。
+ 彩色图  第一通道表示蓝色，第二通道表示绿色，第三通道表示红色。
+ OpenCV的线性滤波器 有的时候，图像信息量太大，处理的时间就会比较长（有的时候可能不需要这么信息就可以解析出来我们想要的结果了），为了解决这个问题，OpenCV提供了一个线性滤波器，可以对图片进行模糊处理。
+很多线性滤波器都利用了称为核的数字向量，核可以看作是沿着像素滑动的窗口，并把计算结果输出给核像素。
+下面的图中，是一个3 * 3的核作用在了一副10 * 10的图像上。
+创建OpenCV工程 Android Studio版本：2.1
+ 创建Android Studio工程，命名为FirstOpenCVDemo 导入OpenCV Library
+File -&amp;gt; New -&amp;gt; Import Module
+ 引用OpenCV Library
+ 安装OpenCV Manager
+加载OpenCV Manager，如果诶呦安装会有提示
+  private BaseLoaderCallback mOpenCVCallBack = new BaseLoaderCallback(this) { @Override public void onManagerConnected(int status) { switch (status) { case LoaderCallbackInterface.</description>
+    </item>
+    
+    <item>
+      <title>Android使用OpenCV实现人脸识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Wed, 06 Jul 2016 17:48:57 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 先上效果图，GIF不好弄
+在网上找了在Android平台上使用OpenCV相关的教程，很少，大部分也都主要是介绍下人脸检测，很少有讲人脸识别，还有的人连人脸检测和人脸识别的概念都没有搞清，人脸识别只是识别到有人脸，能获取到一个人脸的大概位置，有几个人脸，而人脸识别是要获取到人脸特征做对比，识别这个人脸。有好多文章都写自己在讲人脸识别，实际上他只是在做人脸检测。
+OpenCV官网
+官方给的Demo是在Eclipse工程下的，如果你现在已经是在Android Studio下开发，因为Eclipse工程有makefile文件，迁移到Android Studio好像还是有点麻烦，我是干脆就在Eclipse下跑的Demo。
+先甩过来官方给的一些文档：
+OpenCV4Android SDK
+Android Development with OpenCV
+实现方式 按照官方的文档，我们在Eclipse里导入Demo进去以后，是不能直接运行的，需要安装Manager的一个APK,然后在Demo工程里通过AIDL的方式，调用OpenCV的核心方法，不过Demo给实现的功能也只是一个人脸检测。
+SDK SDK下载
+下面来看一下SDK
+目录：
+ apk：Manager的apk doc：一些文档 samples：示例工程和一些编译好的apk sdk：一些库文件   当然, 如果你的C/C++足够好，你肯定可以自己编译一个库，直接导入到工程，就不用安装Manager了，可惜了我自己还不行，哈哈……无奈安装Manager把……
+ 如何将Demo导入到Eclipse并运行，上面官方的文档已经说的比较清楚了，至于会有什么问题就自行Google吧。
+人脸检测 其实人脸检测并不是重点，Demo里已经实现了人脸检测的功能。
+主要的实现方式：OpenCV有一个自己的org.opencv.android.JavaCameraView自定义控件，它循环的从摄像头抓取数据，在回调方法中，我们能获取到Mat数据，然后通过调用OpenCV的Native方法，检测当前是否有人脸，我们会获取到一个Rect数组，里面会有人脸数据，最后将人脸画在屏幕上，到此为止，Demo的人脸检测功能，就结束了。
+人脸识别 人脸识别我这里用到了JavaCV
+人脸识别逻辑：人脸识别的主要方式就是获取到人脸的特征值，然后将两个特征值做比对，取到一个相似度去做人脸识别，OpenCV这里的特征值，其实就是一张图片。 我们的从回调的Mat数据检测到有人脸以后，提取特征值（也就是保存人脸的一张图片到某个路径），然后比较特征值
+为了提高识别的准确度，需要在检测到人脸以后，把人脸的部分截取出来，然后置灰（置灰的目的是为了方式色泽和明暗度对识别有影响）。
+保存人脸特征值 /** * 特征保存 * * @param image Mat * @param rect 人脸信息 * @param fileName 文件名字 * @return 保存是否成功 */ public boolean saveImage(Mat image, Rect rect, String fileName) { try { String PATH = Environment.</description>
+    </item>
+    
+  </channel>
+</rss>

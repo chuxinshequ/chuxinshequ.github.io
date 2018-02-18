@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>不忘初心 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.30.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://daonao.github.io/chuxin/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+      <link href="https://daonao.github.io/chuxin/posts/index.xml" rel="alternate" type="application/rss+xml" title="不忘初心" />
+      <link href="https://daonao.github.io/chuxin/posts/index.xml" rel="feed" type="application/rss+xml" title="不忘初心" />
+    
+
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://daonao.github.io/chuxin/posts/" />
+
+
+
+<meta property="og:updated_time" content="2016-08-18T18:59:50&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://daonao.github.io/chuxin/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://daonao.github.io/chuxin/" class="f3 fw2 hover-white no-underline white-90 dib">
+      不忘初心
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      
+    </div>
+  </article>
+  <div class="mw8 center">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/" class="link black dim">
+        OpenCV实现图像阈值化
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+阈值化是一种将我们想要在图像中分析的区域分割出来的方法。 我们把每个像素值都与一个预设的阈值做比较，再根据比较的结果调整像素值。
+类似这样
+Imgproc.threshold(src, src, 100, 255, Imgproc.THRESH_BINARY);  其中100是阈值，255是最大值（纯白色的值）。
+常量    名称 常量     二值阈值化 Imgproc.THRESH_BINARY   阈值化到零 Imgproc.THRESH_TOZERO   截断阈值化 Imgproc.THRESH_TRUNC   反转二值阈值化 Imgproc.THRESH_BINARY_INV   反转阈值化到零 Imgproc.THRESH_TOZERO_INV    自适应阈值 上述的阈值化是全局性的，我们也可以根据邻域像素为任意像素计算阈值。
+自适应阈值用到的3个参数
+ 自适应方法
+ Imgproc.ADAPTIVE_THRESH_MEAN_C：阈值是邻域像素的值 Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C：阈值是领域像素的加权和，权重来自高斯核  块尺寸：邻域的大小
+ 常量C：从对每个像素计算得到的均值或加权均值减去的常量
+  图像置灰
+Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);  自适应阈值化
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/" class="link black dim">
+        OpenCV实现图像暗区扩张（腐蚀图片）
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+暗区扩张，也叫腐蚀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最小值代替锚点像素。
+我们首先定义一个合适大小的核
+Mat kernelErode = Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE, new Size(5, 5));  然后调用Imgproc.erode()方法把图像的暗区放大
+// 扩大暗区（腐蚀） Imgproc.erode(src, src, kernelErode);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 扩大图片暗区（腐蚀图片） * * @param bitmap 要处理的图片 */ public void erode(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&lt;Bitmap, Bitmap&gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelErode = Imgproc.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/" class="link black dim">
+        OpenCV实现图像亮区扩张
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+亮区扩张，也叫膨胀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最大值代替锚点像素。膨胀可以用来融合可能被分割的目标。
+我们首先定义一个合适大小的核
+Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3, 3));  然后调用Imgproc.dilate()方法把图像的亮区放大
+// 扩大亮区 Imgproc.dilate(src, src, kernelDilate);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 扩大图片亮区 * * @param bitmap 要处理的图片 */ public void dilate(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&lt;Bitmap, Bitmap&gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelDilate = Imgproc.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/" class="link black dim">
+        OpenCV实现图片锐化
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+锐化也可以看作是一种线性滤波操作，并且锚点像素有较高的权重，而周围的像素权重较低。 因此，我们可以自定义一个这样的核。
+/* 自定义核 0	-1	0 -1 5	-1 0	-1	0 */ Mat kernel = new Mat(3, 3, CvType.CV_16SC1); kernel.put(0, 0, 0, -1, 0, -1, 5, -1, 0, -1, 0);  这里我们将图像的深度设为16SC1，表示包含一个通道（C1），图像中的每个像素包含一个16比特有符号整型数（16S）。
+定义完核以后，我们对图像和核做卷积操作
+// 对图像和自定义核做卷积 Imgproc.filter2D(src, src, src.depth(), kernel);   第一个参数表示输入的图像 第二个参数表示输出的图像 第三个参数表示图像的深度 第四个参数是我们自定义的核  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+/** * 锐化图片 * * @param bitmap 要处理的图片 */ public void filter2D(Bitmap bitmap) { // 使用RxJava处理图片 if (null !
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="link black dim">
+        2OpenCV中值模糊方法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的中值模糊方法  // 中值模糊方法 Imgproc.medianBlur(src, src, 33);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.Subscriber; import rx.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="link black dim">
+        OpenCV高斯模糊方法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="link black dim">
+        OpenCV均值模糊方法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwOpenCVBlurDemo
+步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
+package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="link black dim">
+        OpenCV的部署
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+官网 官网
+之前时间比较紧张，在网上找了很多文章，写了一个人脸识别的程序，也是模棱两可，今天开始抽时间系统学习一下OpenCV在Android上的使用。
+OpenCV版本 后面用到的是OpenCV的2.4.11版本，据说新的3.x的版本和2.x的版本改动较大，2.x的版本学习完可以再看看与3.x版本的区别。毕竟老版本的学习资源更多一些。
+SDK 我们下载完SDK以后，里面会有一个Library的库供我们使用，但是核心的功能不在这里面，它只是一个调用的工具，我们还需要安装OpenCV Manager，在下载的SDK里有一个apk的文件夹，里面是对应各个cup架构的Manager，选择对应的Manager安装就可以了。 除了安装OpenCV Manager，也可以直接在工程里添加so，但是这会使我们的APK体积大大增加，不过这不是我们要关心的，我们主要学习怎么使用OpenCV。
+OpenCV的图像存储 OpenCV使用Mat对象存储图像，该对象保存了图像的行数、列数、数据等能唯一标识该图像的信息，并且可以利用该数据还原图像，不同的图像所包含的信息量也不同，例如彩色图像所包含的信息量就要比灰色图像多得多。因为灰色图是单通道的，彩色图是三通道的。
+灰色图  数字代表指定颜色的亮度 以整数表示时，取值范围是0~255，0表示纯黑色，255表示纯白色。 以浮点数表示时，取值范围是0~1，0表示纯黑色，1表示纯白色。
+ 彩色图  第一通道表示蓝色，第二通道表示绿色，第三通道表示红色。
+ OpenCV的线性滤波器 有的时候，图像信息量太大，处理的时间就会比较长（有的时候可能不需要这么信息就可以解析出来我们想要的结果了），为了解决这个问题，OpenCV提供了一个线性滤波器，可以对图片进行模糊处理。
+很多线性滤波器都利用了称为核的数字向量，核可以看作是沿着像素滑动的窗口，并把计算结果输出给核像素。
+下面的图中，是一个3 * 3的核作用在了一副10 * 10的图像上。
+创建OpenCV工程 Android Studio版本：2.1
+ 创建Android Studio工程，命名为FirstOpenCVDemo 导入OpenCV Library
+File -&gt; New -&gt; Import Module
+ 引用OpenCV Library
+ 安装OpenCV Manager
+加载OpenCV Manager，如果诶呦安装会有提示
+  private BaseLoaderCallback mOpenCVCallBack = new BaseLoaderCallback(this) { @Override public void onManagerConnected(int status) { switch (status) { case LoaderCallbackInterface.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/" class="link black dim">
+        科大讯飞与灵云语音对比
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+对比     科大讯飞 灵云语音     语音能力 语音合成、语音识别、语义、命令词、唤醒 没有独立的唤醒功能，需要使用命令词实现唤醒。   初始化 我们购买完离线资源包以后，集成到工程里，就可以保持在离线环境下使用 即使使用离线语音能力，第一次使用的时候，也必须要联网，激活离线语音能力以后，才可以使用   网络请求 各种请求均异步操作，不会阻塞线程。 在线文字语义识别，是同步操作，其它是异步操作过程。（同步操作时间超过5秒会导致Android终端抛出NAR异常导致崩溃）   语义 场景定义灵活，开发者可在后台自定义，通过申请的方式，可以开通自定义场景，目前免费开放。语义解析失败，可以将语音转文字。 场景的定义需要联系客服人员开通，自定义场景需要付费（说是一般一个场景2万元）。语义解析失败不能转成文字   语音唤醒 支持（官方自称低功耗） 实际没有唤醒功能，是使用离线命令词的方式模拟出了唤醒，效果不理想。尚未发现可以发现可以设置门限值等常用参数的API。   命令词识别 离线使用BNF语法，在线使用ABNF语法，语法可以使用占位符等等的操作符 离线和在线都使用JSGF语法。    灵云唤醒机制 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
+个人认为这种方式实现唤醒效果不好，原因如下：
+ 录音都有前端点超时时间和后端点超时时间，这样一来，即使我们准确的说出唤醒词，也要在说完唤醒词以后，保证在后端点时间内不再有声音录入，才能提高被唤醒的几率。
+ 唤醒不是即时的，即使我们准确的说出唤醒词，并保持不再有声音录入，也要至少等待后端点时间过去，录音结束以后，才会识别（被唤醒）。
+ 这种方式的唤醒其实就是在进行语音识别，如果一直开启唤醒，消耗性能，耗电。
+   前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  总结 科大讯飞语音方面更灵活，更好用。
+灵云语音，在人工智能方面提供的技术更全面（还包括图像识别，手写识别，人脸识别，指纹识别、机器翻译等），偏定制（智能家居、车载系统、机器人等智能设备的定制）。
+单从语音能力角度来比较，讯飞更好。
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/" class="link black dim">
+        灵云语音唤醒
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+严格来讲，灵云没有语音唤醒功能，但是通过命令词的方式可以实现
+实现方式 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
+我个人认为这种方式实现唤醒意义不大，所以没有做demo，原因如下：
+ 录音都有前端点超时时间和后端点超时时间,这样一来，即使我们准确的说出唤醒词，也要在说完唤醒词以后，保证在后端点时间内不再有声音录入，才能提高被唤醒的几率。
+ 唤醒不是即时的，即使我们准确的说出唤醒词，并保持不再有声音录入，也要至少等待后端点时间过去，录音结束以后，才会识别（被唤醒）。
+ 这种方式的唤醒其实就是在进行语音识别，如果一直开启唤醒，消耗性能，耗电。
+   前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  
+
+<ul class="pagination">
+    
+    <li>
+        <a href="/chuxin/posts/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li
+    >
+    <a href="/chuxin/posts/page/5/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="disabled"><span aria-hidden="true">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/5/">5</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    class="active"><a href="/chuxin/posts/page/6/">6</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/7/">7</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/8/">8</a></li>
+    
+    
+    <li
+    >
+    <a href="/chuxin/posts/page/7/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a href="/chuxin/posts/page/8/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://daonao.github.io/chuxin/" >
+    &copy; 2018 不忘初心
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="https://daonao.github.io/chuxin/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

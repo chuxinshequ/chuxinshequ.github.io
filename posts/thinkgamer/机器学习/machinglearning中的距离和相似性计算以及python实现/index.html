@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MachingLearning中的距离和相似性计算以及python实现</title>
+  <meta name="author" content="" />
+
+  
+  <meta name="keywords" content="devows, hugo, go">	
+  
+
+  
+  <meta name="description" content="Site template made by devcows using hugo">	
+  
+
+  <meta name="generator" content="Hugo 0.30.2" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="https://chuxin-community.github.io/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="https://chuxin-community.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+
+  
+  <link href="https://chuxin-community.github.io/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="https://chuxin-community.github.io/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://chuxin-community.github.io/img/apple-touch-icon.png" />
+  
+
+  <link href="https://chuxin-community.github.io/css/owl.carousel.css" rel="stylesheet">
+  <link href="https://chuxin-community.github.io/css/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://chuxin-community.github.io/index.xml" type="application/rss+xml" title="不忘初心">
+
+  
+  <meta property="og:title" content="MachingLearning中的距离和相似性计算以及python实现" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0//" />
+  <meta property="og:image" content="img/logo.png" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://chuxin-community.github.io/">
+                    <img src="https://chuxin-community.github.io/img/logo.png" alt="MachingLearning中的距离和相似性计算以及python实现 logo" class="hidden-xs hidden-sm">
+                    <img src="https://chuxin-community.github.io/img/logo-small.png" alt="MachingLearning中的距离和相似性计算以及python实现 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">MachingLearning中的距离和相似性计算以及python实现 - </span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only"></span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/blog/">Blog</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">Contact</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>MachingLearning中的距离和相似性计算以及python实现</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">July 16, 2017</p>
+
+                        <div id="post-content">
+                          
+
+<h1 id="前言">前言</h1>
+
+<p>写这篇文章的目的不是说摘抄网上其他人的总结，刚才最近在看这方面的东西，为了让自己能够实际的去感受下每种求距离公式的差别，然后用python进行具体实现。
+<!--More-->
+在机器学习中，经常要用到距离和相似性的计算公式，我么要常计算个体之间的差异大小，继而评价个人之间的差异性和相似性，最常见的就是数据分析中的相关分析，数据挖掘中的分类和聚类算法。如利用k-means进行聚类时，判断个体所属的类别，要利用距离计算公式计算个体到簇心的距离，如利用KNN进行分类时，计算个体与已知类别之间的相似性，从而判断个体所属的类别等。</p>
+
+<p>文章编辑的过程中或许存在一个错误或者不合理的地方，欢迎指正。</p>
+
+<p>参考：<a href="http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html">http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html</a></p>
+
+<p>推荐：<a href="https://my.oschina.net/hunglish/blog/787596">https://my.oschina.net/hunglish/blog/787596</a></p>
+
+<h1 id="欧氏距离">欧氏距离</h1>
+
+<p>也称欧几里得距离，是指在m维空间中两个点之间的真实距离。欧式距离在ML中使用的范围比较广，也比较通用，就比如说利用k-Means对二维平面内的数据点进行聚类，对魔都房价的聚类分析（price/m^2 与平均房价）等。</p>
+
+<h2 id="二维空间的欧氏距离">二维空间的欧氏距离</h2>
+
+<p>二维平面上两点a(x1,y1)与b(x2,y2)间的欧氏距离</p>
+
+<p>$$
+d12 =\sqrt{(x<em>{1}-x</em>{2})^2+(y<em>{1}-y</em>{2})^2}
+$$
+python 实现为：</p>
+
+<pre><code># coding: utf-8
+
+from numpy import *
+
+def twoPointDistance(a,b):
+	d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 )
+	return d
+
+print 'a,b 二维距离为：',twoPointDistance((1,1),(2,2))
+</code></pre>
+
+<h2 id="三维空间的欧氏距离">三维空间的欧氏距离</h2>
+
+<p>三维空间两点a(x1,y1,z1)与b(x2,y2,z2)间的欧氏距离</p>
+
+<p>$$d12 =\sqrt{(x<em>{1}-x</em>{2})^2+(y<em>{1}-y</em>{2})^2+(z<em>{1}-z</em>{2})^2}$$
+python 实现为：</p>
+
+<pre><code>def threePointDistance(a,b):
+	d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 + (a[2]-b[2])**2 )
+	return d
+
+print 'a,b 三维距离为：',threePointDistance((1,1,1),(2,2,2))
+</code></pre>
+
+<h2 id="多维空间的欧氏距离">多维空间的欧氏距离</h2>
+
+<p>两个n维向量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的欧氏距离</p>
+
+<p>$$
+\sqrt{\sum<em>{n}^{k=1}(x</em>{1k}-x_{2k})^2 }
+$$
+python 实现为：</p>
+
+<pre><code>def distance(a,b):
+	sum = 0
+	for i in range(len(a)):
+		sum += (a[i]-b[i])**2
+	return sqrt(sum)
+
+print 'a,b 多维距离为：',distance((1,1,2,2),(2,2,4,4))
+</code></pre>
+
+<p>这里传入的参数可以是任意维的，该公式也适应上边的二维和三维</p>
+
+<h1 id="标准欧氏距离">标准欧氏距离</h1>
+
+<p>标准化欧氏距离是针对简单欧氏距离的缺点而作的一种改进方案。标准欧氏距离的思路：既然数据各维分量的分布不一样，好吧！那我先将各个分量都“标准化”到均值、方差相等吧。均值和方差标准化到多少呢？这里先复习点统计学知识吧，假设样本集X的均值(mean)为m，标准差(standard deviation)为s，那么X的“标准化变量”表示为：</p>
+
+<p>　　而且标准化变量的数学期望为0，方差为1。因此样本集的标准化过程(standardization)用公式描述就是：
+　　
+$$
+X^* = \frac{X-m}{s}
+$$
+标准化后的值 =  ( 标准化前的值  － 分量的均值 ) /分量的标准差</p>
+
+<p>经过简单的推导就可以得到两个n维向量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的标准化欧氏距离的公式：</p>
+
+<p>$$
+d<em>{12} =\sqrt {\sum</em>{k=1}^{n} (\frac{x<em>{1k}-x</em>{2k}}{s_{k}})^2}
+$$
+如果将方差的倒数看成是一个权重，这个公式可以看成是一种加权欧氏距离(Weighted Euclidean distance)。</p>
+
+<p>python 实现为</p>
+
+<pre><code>def moreBZOSdis(a,b):
+    sumnum = 0
+    for i in range(len(a)):
+        # 计算si 分量标准差
+        avg = (a[i]-b[i])/2
+        si = sqrt( (a[i] - avg) ** 2 + (b[i] - avg) ** 2 )
+        sumnum += ((a[i]-b[i])/si ) ** 2
+	
+    return sqrt(sumnum)
+
+print 'a,b 标准欧式距离：',moreBZOSdis((1,2,1,2),(3,3,3,4))
+</code></pre>
+
+<h1 id="曼哈顿距离">曼哈顿距离</h1>
+
+<p>又称为城市街区距离（City Block distance）, 想象你在曼哈顿要从一个十字路口开车到另外一个十字路口，驾驶距离是两点间的直线距离吗？显然不是，除非你能穿越大楼。实际驾驶距离就是这个“曼哈顿距离”。而这也是曼哈顿距离名称的来源。同样曼哈顿距离也分为二维，三维和多维。</p>
+
+<p>在计程车几何学中，一个圆是由从圆心向各个固定曼哈顿距离标示出来的点围成的区域，因此这种圆其实就是旋转了45度的正方形。如果有一群圆，且任两圆皆相交，则整群圆必在某点相交；因此曼哈顿距离会形成一个超凸度量空间。</p>
+
+<p>这里有一篇人脸表情分类的论文采用的曼哈顿距离进行计算的，<a href="http://download.csdn.net/detail/gamer_gyt/9899825">一种人脸表情分类的新方法——Manhattan距离</a></p>
+
+<h2 id="二维曼哈顿距离">二维曼哈顿距离</h2>
+
+<p>二维平面两点a(x1,y1)与b(x2,y2)间的曼哈顿距离</p>
+
+<p>$$
+d12 =\left | x<em>{1}-x</em>{2} \right |  + \left |y<em>{1}-y</em>{2}  \right |
+$$
+python实现为</p>
+
+<pre><code>def twoMHDdis(a,b):
+    return abs(a[0]-b[0])+abs(a[1]-b[1])
+
+print 'a,b 二维曼哈顿距离为：', twoMHDdis((1,1),(2,2)) 
+</code></pre>
+
+<h2 id="三维曼哈顿距离">三维曼哈顿距离</h2>
+
+<p>三维平面两点a(x1,y1,z1)与b(x2,y2,z2)间的曼哈顿距离</p>
+
+<p>$$
+d12 =\left | x<em>{1}-x</em>{2} \right |  + \left |y<em>{1}-y</em>{2}  \right | + \left |z<em>{1}-z</em>{2}  \right |
+$$
+python实现为</p>
+
+<pre><code>def threeMHDdis(a,b):
+	return abs(a[0]-b[0])+abs(a[1]-b[1]) + abs(a[2]-b[2])
+ 
+print 'a,b 三维曼哈顿距离为：', threeMHDdis((1,1,1),(2,2,2)) 
+</code></pre>
+
+<h2 id="多维曼哈顿距离">多维曼哈顿距离</h2>
+
+<p>多维平面两点a(x1,y1)与b(x2,y2)间的曼哈顿距离
+$$
+d12 = \sum<em>{k=1}^{n} \left | x</em>{1k} - x_{2k} \right |
+$$
+python实现为</p>
+
+<pre><code>def moreMHDdis(a,b):
+    sum = 0 
+    for i in range(len(a)):
+        sum += abs(a[i]-b[i])
+    return sum
+
+print 'a,b 多维曼哈顿距离为：', moreMHDdis((1,1,1,1),(2,2,2,2)) 
+</code></pre>
+
+<p>由于维距离计算是比较灵活的，所以也同样适合二维和三维。</p>
+
+<h1 id="切比雪夫距离">切比雪夫距离</h1>
+
+<p>切比雪夫距离（Chebyshev Distance）的定义为：max( | x2-x1 | , |y2-y1 | , &hellip; ), 切比雪夫距离用的时候数据的维度必须是三个以上，这篇文章中<a href="http://blog.csdn.net/jerry81333/article/details/52632687">曼哈顿距离，欧式距离，明式距离，切比雪夫距离区别</a> 给了一个很形象的解释如下：</p>
+
+<pre><code>比如，有同样两个人，在纽约准备到北京参拜天安门，同一个地点出发的话，按照欧式距离来计算，是完全一样的。
+
+但是按照切比雪夫距离，这是完全不同的概念了。
+
+譬如，其中一个人是土豪，另一个人是中产阶级，第一个人就能当晚直接头等舱走人，而第二个人可能就要等机票什么时候打折再去，或者选择坐船什么的。
+
+这样来看的话，距离是不是就不一样了呢？
+
+或者还是不清楚，我再说的详细点。
+
+同样是这两个人，欧式距离是直接算最短距离的，而切比雪夫距离可能还得加上财力，比如第一个人财富值100，第二个只有30，虽然物理距离一样，但是所包含的内容却是不同的。
+</code></pre>
+
+<h2 id="二维切比雪夫距离">二维切比雪夫距离</h2>
+
+<p>二维平面两点a(x1,y1)与b(x2,y2)间的切比雪夫距离</p>
+
+<p>$$
+d<em>{12} = max( \left | x</em>{1} - x<em>{2} \right | , \left | y</em>{1} - y_{2} \right |)
+$$
+python 实现为</p>
+
+<pre><code>def twoQBXFdis(a,b):
+    return max( abs(a[0]-b[0]), abs(a[1]-b[1]))
+
+print 'a,b二维切比雪夫距离：' , twoQBXFdis((1,2),(3,4))
+</code></pre>
+
+<h2 id="多维切比雪夫距离">多维切比雪夫距离</h2>
+
+<p>两个n维向量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的切比雪夫距离
+$$
+d12 = max<em>{i\epsilon n}( \left | x</em>{1i} - x_{2i} \right | )
+$$</p>
+
+<p>python 实现为</p>
+
+<pre><code>def moreQBXFdis(a,b):
+    maxnum = 0
+    for i in range(len(a)):
+        if abs(a[i]-b[i]) &gt; maxnum:
+            maxnum = abs(a[i]-b[i])
+    return maxnum
+
+print 'a,b多维切比雪夫距离：' , moreQBXFdis((1,1,1,1),(3,4,3,4))
+</code></pre>
+
+<h1 id="马氏距离">马氏距离</h1>
+
+<p>有M个样本向量X1~Xm，协方差矩阵记为S，均值记为向量μ，则其中样本向量X到u的马氏距离表示为</p>
+
+<p>$$
+D(x) = \sqrt{(X-\mu )^TS^{-1}(X-\mu)}
+$$
+而其中向量Xi与Xj之间的马氏距离定义为
+$$
+D(X<em>{i},X</em>{j}) = \sqrt{(X<em>{i}-X</em>{j} )^TS^{-1}(X<em>{i}-X</em>{j} )}
+$$
+ 若协方差矩阵是单位矩阵（各个样本向量之间独立同分布）,则公式就成了：
+$$
+D(X<em>{i},X</em>{j}) = \sqrt{(X<em>{i}-X</em>{j} )^T(X<em>{i}-X</em>{j} )}
+$$
+也就是欧氏距离了。</p>
+
+<p>若协方差矩阵是对角矩阵，公式变成了标准化欧氏距离。</p>
+
+<p>马氏距离的优缺点：量纲无关，排除变量之间的相关性的干扰。</p>
+
+<h1 id="夹角余弦">夹角余弦</h1>
+
+<p>几何中夹角余弦可用来衡量两个向量方向的差异，机器学习中借用这一概念来衡量样本向量之间的差异。</p>
+
+<h2 id="二维空间向量的夹角余弦相似度">二维空间向量的夹角余弦相似度</h2>
+
+<p>在二维空间中向量A(x1,y1)与向量B(x2,y2)的夹角余弦公式：</p>
+
+<p>$$
+\cos \theta  = \frac{x<em>{1}x</em>{2} + y<em>{1}y</em>{2}}{ \sqrt{ x<em>{1}^2+x</em>{2}^2 }\sqrt{ y<em>{1}^2+y</em>{2}^2 } }
+$$
+python 实现为</p>
+
+<pre><code>def twoCos(a,b):
+    cos = (a[0]*b[0]+a[1]*b[1]) / (sqrt(a[0]**2 + b[0]**2) * sqrt(a[1]**2 + b[1]**2) )
+
+    return cos
+print 'a,b 二维夹角余弦距离：',twoCos((1,1),(2,2))
+</code></pre>
+
+<h2 id="多维空间向量的夹角余弦相似度">多维空间向量的夹角余弦相似度</h2>
+
+<p>两个n维样本点a(x11,x12,…,x1n)和b(x21,x22,…,x2n)的夹角余弦</p>
+
+<p>类似的，对于两个n维样本点a(x11,x12,…,x1n)和b(x21,x22,…,x2n)，可以使用类似于夹角余弦的概念来衡量它们间的相似程度。
+$$
+\cos \theta  = \frac{a \cdot  b}{\left | a \right | \left | b \right |}
+$$
+即：
+$$
+\cos \theta  = \frac{ \sum<em>{k=1}^{n} x</em>{1k}x<em>{2k} }{ \sqrt{ \sum</em>{k=1}^{n}x<em>{1k}^2 }\sqrt{ \sum</em>{k=1}^{n} x_{2k}^2 } }
+$$
+python实现为</p>
+
+<pre><code>def moreCos(a,b):
+    sum_fenzi = 0.0
+    sum_fenmu_1,sum_fenmu_2 = 0,0
+    for i in range(len(a)):
+        sum_fenzi += a[i]*b[i]
+        sum_fenmu_1 += a[i]**2 
+        sum_fenmu_2 += b[i]**2 
+
+    return sum_fenzi/( sqrt(sum_fenmu_1) * sqrt(sum_fenmu_2) )
+print 'a,b 多维夹角余弦距离：',moreCos((1,1,1,1),(2,2,2,2))
+</code></pre>
+
+<p>夹角余弦取值范围为[-1,1]。夹角余弦越大表示两个向量的夹角越小，夹角余弦越小表示两向量的夹角越大。当两个向量的方向重合时夹角余弦取最大值1，当两个向量的方向完全相反夹角余弦取最小值-1。</p>
+
+<h1 id="闵可夫斯基距离">闵可夫斯基距离</h1>
+
+<p>闵氏距离不是一种距离，而是一组距离的定义</p>
+
+<h2 id="定义">定义</h2>
+
+<p>两个n维变量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的闵可夫斯基距离定义为：
+$$
+\sqrt[p]{ \sum<em>{k=1}^{n} \left | x</em>{1k}-x_{2k} \right |^p}
+$$</p>
+
+<p>其中p是一个变参数。</p>
+
+<p>当p=1时，就是曼哈顿距离</p>
+
+<p>当p=2时，就是欧氏距离</p>
+
+<p>当p→∞时，就是切比雪夫距离</p>
+
+<p>根据变参数的不同，闵氏距离可以表示一类的距离。</p>
+
+<h2 id="闵氏距离的缺点">闵氏距离的缺点</h2>
+
+<p>闵氏距离，包括曼哈顿距离、欧氏距离和切比雪夫距离都存在明显的缺点。</p>
+
+<p>举个例子：二维样本(身高,体重)，其中身高范围是150 ~ 190，体重范围是50 ~ 60，有三个样本：a(180,50)，b(190,50)，c(180,60)。那么a与b之间的闵氏距离（无论是曼哈顿距离、欧氏距离或切比雪夫距离）等于a与c之间的闵氏距离，但是身高的10cm真的等价于体重的10kg么？因此用闵氏距离来衡量这些样本间的相似度很有问题。</p>
+
+<p>简单说来，闵氏距离的缺点主要有两个：(1)将各个分量的量纲(scale)，也就是“单位”当作相同的看待了。(2)没有考虑各个分量的分布（期望，方差等)可能是不同的。</p>
+
+<h1 id="汉明距离">汉明距离</h1>
+
+<h2 id="定义-1">定义</h2>
+
+<p>两个等长字符串s1与s2之间的汉明距离定义为将其中一个变为另外一个所需要作的最小替换次数。例如字符串“1111”与“1001”之间的汉明距离为2。</p>
+
+<p>应用：信息编码（为了增强容错性，应使得编码间的最小汉明距离尽可能大）。</p>
+
+<h2 id="python-实现">python 实现</h2>
+
+<pre><code>def hanmingDis(a,b):
+    sumnum = 0
+    for i in range(len(a)):
+        if a[i]!=b[i]:
+            sumnum += 1
+    return sumnum
+
+print 'a,b 汉明距离：',hanmingDis((1,1,2,3),(2,2,1,3))
+</code></pre>
+
+<h1 id="杰卡德距离-杰卡德相似系数">杰卡德距离 &amp; 杰卡德相似系数</h1>
+
+<h2 id="杰卡德距离">杰卡德距离</h2>
+
+<p>与杰卡德相似系数相反的概念是杰卡德距离(Jaccard distance)。杰卡德距离可用如下公式表示：
+$$
+J_{\delta} (A,B) = \frac{| A \bigcup B | - | A \bigcap B |}{| A \bigcup B |}
+$$
+杰卡德距离用两个集合中不同元素占所有元素的比例来衡量两个集合的区分度。</p>
+
+<p>python 实现</p>
+
+<pre><code>def jiekadeDis(a,b):
+    set_a = set(a)
+    set_b = set(b)
+    dis = float(len( (set_a | set_b) - (set_a &amp; set_b) ) )/ len(set_a | set_b)
+    return dis
+
+print 'a,b 杰卡德距离：', jiekadeDis((1,2,3),(2,3,4))
+</code></pre>
+
+<h2 id="杰卡德相似系数">杰卡德相似系数</h2>
+
+<p>两个集合A和B的交集元素在A，B的并集中所占的比例，称为两个集合的杰卡德相似系数，用符号J(A,B)表示。
+$$
+J(A,B) = \frac{| A \bigcap B |}{| A \bigcup B |}
+$$
+杰卡德相似系数是衡量两个集合的相似度一种指标。</p>
+
+<p>python 实现</p>
+
+<pre><code>def jiekadeXSDis(a,b):
+    set_a = set(a)
+    set_b = set(b)
+    dis = float(len(set_a &amp; set_b)  )/ len(set_a | set_b)
+    return dis
+
+print 'a,b 杰卡德相似系数：', jiekadeXSDis((1,2,3),(2,3,4))
+</code></pre>
+
+<h2 id="杰卡德相似系数与杰卡德距离的应用">杰卡德相似系数与杰卡德距离的应用</h2>
+
+<p>可将杰卡德相似系数用在衡量样本的相似度上。</p>
+
+<p>　　样本A与样本B是两个n维向量，而且所有维度的取值都是0或1。例如：A(0111)和B(1011)。我们将样本看成是一个集合，1表示集合包含该元素，0表示集合不包含该元素。</p>
+
+<p>p ：样本A与B都是1的维度的个数</p>
+
+<p>q ：样本A是1，样本B是0的维度的个数</p>
+
+<p>r ：样本A是0，样本B是1的维度的个数</p>
+
+<p>s ：样本A与B都是0的维度的个数</p>
+
+<p>那么样本A与B的杰卡德相似系数可以表示为：</p>
+
+<p>这里p+q+r可理解为A与B的并集的元素个数，而p是A与B的交集的元素个数。</p>
+
+<p>而样本A与B的杰卡德距离表示为：
+$$
+J= \frac{p}{p+q+r}
+$$</p>
+
+<h1 id="相关系数-相关距离">相关系数 &amp; 相关距离</h1>
+
+<h2 id="相关系数">相关系数</h2>
+
+<p>$$
+\rho_{XY} = \frac{Cov(X,Y)}{\sqrt{D(X)} \sqrt{D(Y)}}=\frac{ E( (X-EX) (Y-EY) ) }{ \sqrt{D(X)} \sqrt{D(Y)} }
+$$
+相关系数是衡量随机变量X与Y相关程度的一种方法，相关系数的取值范围是[-1,1]。相关系数的绝对值越大，则表明X与Y相关度越高。当X与Y线性相关时，相关系数取值为1（正线性相关）或-1（负线性相关）。</p>
+
+<p>python 实现
+相关系数可以利用numpy库中的corrcoef函数来计算
+例如 对于矩阵a,numpy.corrcoef(a)可计算行与行之间的相关系数，numpy.corrcoef(a,rowvar=0)用于计算各列之间的相关系数，输出为相关系数矩阵。</p>
+
+<pre><code>from numpy import  *
+a = array([[1, 1, 2, 2, 3],  
+       [2, 2, 3, 3, 5],  
+       [1, 4, 2, 2, 3]]) 
+
+print corrcoef(a)
+
+&gt;&gt;array([[ 1.        ,  0.97590007,  0.10482848],
+       [ 0.97590007,  1.        ,  0.17902872],
+       [ 0.10482848,  0.17902872,  1.        ]])
+
+print corrcoef(a,rowvar=0)
+
+&gt;&gt;array([[ 1.        , -0.18898224,  1.        ,  1.        ,  1.        ],
+       [-0.18898224,  1.        , -0.18898224, -0.18898224, -0.18898224],
+       [ 1.        , -0.18898224,  1.        ,  1.        ,  1.        ],
+       [ 1.        , -0.18898224,  1.        ,  1.        ,  1.        ],
+       [ 1.        , -0.18898224,  1.        ,  1.        ,  1.        ]])
+</code></pre>
+
+<h2 id="相关距离">相关距离</h2>
+
+<p>$$
+D_{xy} = 1 - \rho _{XY}
+$$</p>
+
+<p>python 实现（基于相关系数）
+同样针对矩阵a</p>
+
+<pre><code># 行之间的相关距离
+ones(shape(corrcoef(a)),int) - corrcoef(a)
+
+&gt;&gt;array([[ 0.        ,  0.02409993,  0.89517152],
+       [ 0.02409993,  0.        ,  0.82097128],
+       [ 0.89517152,  0.82097128,  0.        ]])
+       
+       
+# 列之间的相关距离
+ones(shape(corrcoef(a,rowvar = 0)),int) - corrcoef(a,rowvar = 0)
+
+&gt;&gt;array([[ 0.        ,  1.18898224,  0.        ,  0.        ,  0.        ],
+       [ 1.18898224,  0.        ,  1.18898224,  1.18898224,  1.18898224],
+       [ 0.        ,  1.18898224,  0.        ,  0.        ,  0.        ],
+       [ 0.        ,  1.18898224,  0.        ,  0.        ,  0.        ],
+       [ 0.        ,  1.18898224,  0.        ,  0.        ,  0.        ]])
+
+</code></pre>
+
+<h1 id="信息熵">信息熵</h1>
+
+<p>信息熵并不属于一种相似性度量，是衡量分布的混乱程度或分散程度的一种度量。分布越分散(或者说分布越平均)，信息熵就越大。分布越有序（或者说分布越集中），信息熵就越小。</p>
+
+<p>计算给定的样本集X的信息熵的公式：</p>
+
+<p>$$
+Entropy(X) = \sum<em>{i=1}^{n} -p</em>{i} log<em>{2}p</em>{i}
+$$</p>
+
+<p>参数的含义：</p>
+
+<p>n：样本集X的分类数</p>
+
+<p>pi：X中第i类元素出现的概率</p>
+
+<p>信息熵越大表明样本集S分类越分散，信息熵越小则表明样本集X分类越集中。。当S中n个分类出现的概率一样大时（都是1/n），信息熵取最大值log2(n)。当X只有一个分类时，信息熵取最小值0</p>
+
+<p>python进行计算和实现可参考：
+<a href="http://blog.csdn.net/autoliuweijie/article/details/52244246">http://blog.csdn.net/autoliuweijie/article/details/52244246</a></p>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "devcows" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="hidden" name="sitesearch" value="https://chuxin-community.github.io/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://chuxin-community.github.io/categories/help">help (2)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/im">im (1)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/opencv">opencv (15)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e5%a4%8f%e6%9c%aa%e7%9c%a0">夏未眠 (2)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e5%bc%80%e6%ba%90">开源 (5)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e6%8a%80%e6%9c%af%e7%af%87">技术篇 (13)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e8%af%ad%e9%9f%b3">语音 (13)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e9%9a%8f%e6%89%8b%e8%ae%b0">随手记 (2)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://chuxin-community.github.io/tags/aes"><i class="fa fa-tags"></i> aes</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/android"><i class="fa fa-tags"></i> android</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/elk"><i class="fa fa-tags"></i> elk</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/es"><i class="fa fa-tags"></i> es</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/gradle"><i class="fa fa-tags"></i> gradle</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/help"><i class="fa fa-tags"></i> help</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/hexo"><i class="fa fa-tags"></i> hexo</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/im"><i class="fa fa-tags"></i> im</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/opencv"><i class="fa fa-tags"></i> opencv</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/sklearn"><i class="fa fa-tags"></i> sklearn</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e4%b8%b2%e5%8f%a3"><i class="fa fa-tags"></i> 串口</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8a%a0%e5%af%86"><i class="fa fa-tags"></i> 加密</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8a%a8%e6%80%81%e6%9d%83%e9%99%90"><i class="fa fa-tags"></i> 动态权限</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8d%b3%e6%8b%bf%e5%8d%b3%e7%94%a8"><i class="fa fa-tags"></i> 即拿即用</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%9b%9e%e5%bd%92%e5%88%86%e6%9e%90"><i class="fa fa-tags"></i> 回归分析</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a3%b0%e9%81%93"><i class="fa fa-tags"></i> 声道</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a4%8f%e6%9c%aa%e7%9c%a0"><i class="fa fa-tags"></i> 夏未眠</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a4%9a%e5%aa%92%e4%bd%93"><i class="fa fa-tags"></i> 多媒体</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%bc%80%e6%ba%90"><i class="fa fa-tags"></i> 开源</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%bc%82%e5%b8%b8%e6%a3%80%e6%b5%8b"><i class="fa fa-tags"></i> 异常检测</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%91%87%e6%9d%86"><i class="fa fa-tags"></i> 摇杆</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%95%b0%e6%8d%ae%e5%bd%92%e4%b8%80%e5%8c%96"><i class="fa fa-tags"></i> 数据归一化</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84"><i class="fa fa-tags"></i> 数据结构</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%96%87%e4%bb%b6%e5%ad%98%e5%8f%96"><i class="fa fa-tags"></i> 文件存取</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%a2%af%e5%ba%a6%e4%b8%8b%e9%99%8d"><i class="fa fa-tags"></i> 梯度下降</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%ad%a3%e5%bc%a6%e6%b3%a2"><i class="fa fa-tags"></i> 正弦波</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e7%8e%af%e4%bf%a1"><i class="fa fa-tags"></i> 环信</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%93%9d%e7%89%99"><i class="fa fa-tags"></i> 蓝牙</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%93%9d%e7%89%99%e9%80%9a%e4%bf%a1"><i class="fa fa-tags"></i> 蓝牙通信</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%af%ad%e9%9f%b3"><i class="fa fa-tags"></i> 语音</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%b7%9d%e7%a6%bb%e8%ae%a1%e7%ae%97"><i class="fa fa-tags"></i> 距离计算</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e9%9a%8f%e6%89%8b%e8%ae%b0"><i class="fa fa-tags"></i> 随手记</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e9%9b%b7%e8%be%be"><i class="fa fa-tags"></i> 雷达</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4></h4>
+
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4></h4>
+
+            <div class="blog-entries">
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4></h4>
+
+            <strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      
+
+
+            <a href="/contact" class="btn btn-small btn-template-main"></a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
+            
+            <p class="pull-right">
+               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              
+
+               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y&v=3.exp"></script>
+
+<script src="https://chuxin-community.github.io/js/hpneo.gmaps.js"></script>
+<script src="https://chuxin-community.github.io/js/gmaps.init.js"></script>
+<script src="https://chuxin-community.github.io/js/front.js"></script>
+
+
+<script src="https://chuxin-community.github.io/js/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>语音 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/%E8%AF%AD%E9%9F%B3/</link>
+    <description>Recent content in 语音 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 16 Aug 2016 16:55:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/%E8%AF%AD%E9%9F%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>科大讯飞与灵云语音对比</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Tue, 16 Aug 2016 16:55:56 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+对比     科大讯飞 灵云语音     语音能力 语音合成、语音识别、语义、命令词、唤醒 没有独立的唤醒功能，需要使用命令词实现唤醒。   初始化 我们购买完离线资源包以后，集成到工程里，就可以保持在离线环境下使用 即使使用离线语音能力，第一次使用的时候，也必须要联网，激活离线语音能力以后，才可以使用   网络请求 各种请求均异步操作，不会阻塞线程。 在线文字语义识别，是同步操作，其它是异步操作过程。（同步操作时间超过5秒会导致Android终端抛出NAR异常导致崩溃）   语义 场景定义灵活，开发者可在后台自定义，通过申请的方式，可以开通自定义场景，目前免费开放。语义解析失败，可以将语音转文字。 场景的定义需要联系客服人员开通，自定义场景需要付费（说是一般一个场景2万元）。语义解析失败不能转成文字   语音唤醒 支持（官方自称低功耗） 实际没有唤醒功能，是使用离线命令词的方式模拟出了唤醒，效果不理想。尚未发现可以发现可以设置门限值等常用参数的API。   命令词识别 离线使用BNF语法，在线使用ABNF语法，语法可以使用占位符等等的操作符 离线和在线都使用JSGF语法。    灵云唤醒机制 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
+个人认为这种方式实现唤醒效果不好，原因如下：
+ 录音都有前端点超时时间和后端点超时时间，这样一来，即使我们准确的说出唤醒词，也要在说完唤醒词以后，保证在后端点时间内不再有声音录入，才能提高被唤醒的几率。
+ 唤醒不是即时的，即使我们准确的说出唤醒词，并保持不再有声音录入，也要至少等待后端点时间过去，录音结束以后，才会识别（被唤醒）。
+ 这种方式的唤醒其实就是在进行语音识别，如果一直开启唤醒，消耗性能，耗电。
+   前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  总结 科大讯飞语音方面更灵活，更好用。
+灵云语音，在人工智能方面提供的技术更全面（还包括图像识别，手写识别，人脸识别，指纹识别、机器翻译等），偏定制（智能家居、车载系统、机器人等智能设备的定制）。
+单从语音能力角度来比较，讯飞更好。</description>
+    </item>
+    
+    <item>
+      <title>灵云语音唤醒</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
+      <pubDate>Tue, 16 Aug 2016 16:41:32 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
+      <description> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+严格来讲，灵云没有语音唤醒功能，但是通过命令词的方式可以实现
+实现方式 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
+我个人认为这种方式实现唤醒意义不大，所以没有做demo，原因如下：
+ 录音都有前端点超时时间和后端点超时时间,这样一来，即使我们准确的说出唤醒词，也要在说完唤醒词以后，保证在后端点时间内不再有声音录入，才能提高被唤醒的几率。
+ 唤醒不是即时的，即使我们准确的说出唤醒词，并保持不再有声音录入，也要至少等待后端点时间过去，录音结束以后，才会识别（被唤醒）。
+ 这种方式的唤醒其实就是在进行语音识别，如果一直开启唤醒，消耗性能，耗电。
+   前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  </description>
+    </item>
+    
+    <item>
+      <title>灵云语音识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Mon, 15 Aug 2016 17:19:29 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+源码 GitHub
+在线语音识别 SDK下载 灵云SDK下载
+SDK集成 下载SDK以后，将jar和so导入工程
+权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.SYSTEM_ALERT_WINDOW&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_COARSE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.RECORD_AUDIO&amp;quot; /&amp;gt;  封装 灵云配置类 package kong.qingwei.kqwhcidemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &amp;quot;3d5d5466&amp;quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &amp;quot;eca643ff7b3c758745d7cf516e808d34&amp;quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &amp;quot;test.</description>
+    </item>
+    
+    <item>
+      <title>灵云语义理解</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 15 Aug 2016 17:13:32 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 GitHub
+SDK下载 灵云SDK下载
+SDK集成 下载SDK以后，将jar和so导入工程
+权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.SYSTEM_ALERT_WINDOW&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_COARSE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt;  封装 灵云配置类 package kong.qingwei.kqwhcidemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &amp;quot;3d5d5466&amp;quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &amp;quot;eca643ff7b3c758745d7cf516e808d34&amp;quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &amp;quot;test.</description>
+    </item>
+    
+    <item>
+      <title>灵云语音合成</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <pubDate>Fri, 12 Aug 2016 12:57:44 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+注册 官网
+注册比较简单，就不做过多介绍了，注册万应用以后，在后台创建自己的应用，创建完应用以后需要给应用开通对应的语音能力。
+集成 下载灵云SDK
+如果使用在线功能，下载对应的SDK，里面有jar包和so，就可以满足需求了。如果要使用离线的语音功能，还需要下载灵云资源文件
+源码 GitHub
+灵云在线语音合成 权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.SYSTEM_ALERT_WINDOW&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_COARSE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt;  配置类 package kong.qingwei.kqwhcittsdemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &amp;quot;填入自己的APP KEY&amp;quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &amp;quot;填入自己的DEVELOPER KEY&amp;quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &amp;quot;test.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞离线语音合成（语记）</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</link>
+      <pubDate>Sun, 30 Aug 2015 18:14:13 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+离线语音合成（语记） 讯飞的语音合成有三种方式
+ 在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用语记实现离线语音合成
+效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9063593
+说明 使用语记实现离线语音合成和在线语音合成的步骤非常相似，下载SDK的方式是一样的，一样是选择在线语音合成，只不过是使用离线引擎就可以借用语音合成语音了。
+在线语音合成地址：http://blog.csdn.net/q4878802/article/details/48092495
+下面说说和在线语音合成不用的地方
+1. 下载并安装语记，下载离线资源 离线语音听写的文章里有介绍，地址： http://blog.csdn.net/q4878802/article/details/47834601
+2. 网络权限就可以删掉了，本地合成不需要联网，但是获取网络状态的权限一定要有。 &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt;  3. 将识别引擎改为本地引擎 // 引擎类型 本地 mTts.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_LOCAL);  4. 在Application初始化的类里把引擎模式设置的参数注释掉 // param.append(&amp;quot;,&amp;quot;); // param.append(SpeechConstant.ENGINE_MODE + &amp;quot;=&amp;quot; + SpeechConstant.MODE_MSC);  SpeechConstant.MODE_MSC 参数意思是使用离线包资源，如果离线包资源找不到会走网络识别，如果设置这种模式是不会使用语记（语音+）的如果使用离线包，就需要这条参数。</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞离线语音合成</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <pubDate>Sun, 30 Aug 2015 18:06:35 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+离线语音合成（离线资源包） 讯飞的语音合成有三种方式
+ 在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用离线资源包实现离线语音合成，因为正式版是要付费的，所以这里使用试用的离线包（35天试用期、3个装机量）。
+效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9063779
+开通服务，下载SDK 之前已经介绍过，地址：http://blog.csdn.net/q4878802/article/details/47762169#t8
+将SDK里提供的jar包、so库、离线资源都拷贝到我们的工程（Android Studio工程） 创建的工程默认可能没有jniLibs和assets目录，我们要自己在main下创建这两个目录
+初始化 在清单文件中application标签下添加name属性
+android:name=&amp;quot;.InitApplication&amp;quot;  初始化
+package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application; import android.widget.Toast; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; /** * Created by kongqw on 2015/8/29. */ public class InitApplication extends Application { @Override public void onCreate() { Toast.makeText(this, &amp;quot;InitApplication&amp;quot;, Toast.LENGTH_LONG).show(); // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞语义识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Sun, 30 Aug 2015 18:00:28 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9064463
+语义测试接口 地址：http://osp.voicecloud.cn/index.php/default/quicktest/index
+开通服务，下载SDK 之前已经介绍过，地址：http://blog.csdn.net/q4878802/article/details/47762169#t8
+这里说一下，进入到SDK的下载界面，你发现找不到语义的服务，而在我们开通服务的时候都是默认就帮我们把语义的服务开启了，可能是因为语义是只能用网络的，没有本地的资源，所以只要选择一个在线的功能，使用的jar包应该都是一样的，为什么没有直接下载语义的SDK我也不是很清楚，但是都可以用。
+说明 之前的工程都是在Eclipse下演示的，随着Android Studio的普及，我这里也开始使用Android Studio写Demo，虽然导入jar包和so库的过程可能不太一样，但是整体的流程是一样的。
+将jar包和so库导入Android Studio工程  将jar包copy到libs目录下
+在main目录下创建jniLibs目录，将so文件copy过来
+ 初始化  在清单文件中application标签下添加name属性
+ android:name=&amp;quot;.InitApplication&amp;quot;  初始化
+package com.example.kongqw.kqwunderstanddemo; import android.app.Application; import android.widget.Toast; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; /** * Created by kongqw on 2015/8/29. */ public class InitApplication extends Application { @Override public void onCreate() { Toast.makeText(this, &amp;quot;InitApplication&amp;quot;, Toast.LENGTH_LONG).show(); // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞在线语音合成</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <pubDate>Sat, 29 Aug 2015 18:19:12 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9062261
+下载SDK 1. 选择服务 2. 选择平台 3. 选择应用 4. 下载SDK 说明 之前的工程都是在Eclipse下演示的，随着Android Studio的普及，我这里也开始使用Android Studio写Demo，虽然细节导入jar包和so库的过程可能不太一样，但是整体的流程是一样的。
+将jar包和so库导入Android Studio工程 将jar包copy到libs目录下 在main目录下创建jniLibs目录，将so文件copy过来
+添加网络权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot;/&amp;gt;  初始化 在清单文件中application标签下添加name属性
+android:name=&amp;quot;.InitApplication&amp;quot;  初始化
+package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application; import android.widget.Toast; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; /** * Created by kongqw on 2015/8/29. */ public class InitApplication extends Application { @Override public void onCreate() { Toast.makeText(this, &amp;quot;InitApplication&amp;quot;, Toast.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞语音识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Fri, 21 Aug 2015 18:31:38 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+离线语音识别（语记） 效果图 源码 下载地址：http://download.csdn.net/detail/q4878802/9032149
+下载语记并安装离线资源 集成 初始化 在清单文件中application标签下添加
+android:name=&amp;quot;InitKqwSpeech&amp;quot;  初始化
+package com.example.kqwlocalspeechdemo; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; import android.app.Application; public class InitKqwSpeech extends Application { @Override public void onCreate() { // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.append(&amp;quot;appid=55d33f09&amp;quot;); param.append(&amp;quot;,&amp;quot;); param.append(SpeechConstant.ENGINE_MODE + &amp;quot;=&amp;quot; + SpeechConstant.MODE_MSC); // param.append(&amp;quot;,&amp;quot;); // param.append(SpeechConstant.FORCE_LOGIN + &amp;quot;=true&amp;quot;); SpeechUtility.createUtility(InitKqwSpeech.this, param.toString()); super.onCreate(); } }  语音听写工具类 package com.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞离线命令词&#43;语义识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D&#43;%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Thu, 20 Aug 2015 18:46:11 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D&#43;%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
+      <description> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+离线命令词+语义识别 意思就是先走离线命令词识别，如果离线命令词识别没有识别到结果，那么就再走语义接口，如果已开通对应场景，则转为语义，如果没有开通对应场景，则将语音转为文字
+效果图  说的话满足本地构建的语法&amp;mdash;-离线命令词识别   说的话离线命令词无法识别，走语义识别并且满足语义场景&amp;mdash;-将语音转为语义   说话既不满足离线命令词识别也不满足语义开通的场景&amp;mdash;-将语音转为文字  程序和离线命令词识别基本一样
+离线命令词识别地址：http://blog.csdn.net/q4878802/article/details/47780485
+只要改一个参数，将识别引擎改为混合模式即可
+mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为使用的混合模式，当本地命令词没有识别到结果的时候会走在线语义（语义只有在线），所以，我们必须要先开通语义服务
+程序流程 最后  如果你直接用我的Demo，我用的是测试版的离线包，只有35天的试用期，而且装机量只有3个，如果大家都用，很可能是不能正常运行的 如果是参考我的demo自己写一个，千万不要忘记替换appid和资源文件。  </description>
+    </item>
+    
+    <item>
+      <title>科大讯飞语音唤醒</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
+      <pubDate>Wed, 19 Aug 2015 18:53:57 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+语音唤醒 唤醒功能，顾名思义，通过语音，唤醒服务，做我们想做的事情。
+效果图  开启应用后说讯飞语音或者讯飞语点唤醒
+ 源码下载 地址：http://download.csdn.net/detail/q4878802/9023213
+步骤 1. 创建应用，开通服务 地址：http://blog.csdn.net/q4878802/article/details/47762169
+2. 下载SDK 我们要使用的是讯飞的付费功能，选择唤醒服务，点击下载以后，会提示没有购买。点击“购买服务”
+点击购买一会看到付费情况，有项目需要，就必须购买，我们写Demo，讯飞给提供了体验版的SDK，和正式版的没有功能上的区别，但是只能试用35天，装机量只有3个，唤醒词不能改，只有“讯飞语音”和“讯飞语点”两个唤醒词。
+3. 解压SDK assets目录下是一些图片资源文件 doc目录下是一些开发文档 libs目录下是一些jar包和so库 res目录下是语音的资源文件，非常重要 sample目录下是Demo
+开发步骤 1. 添加权限 这里用到的唤醒功能不是所有的权限都用到的，具体用到了哪些权限，可以看上面的链接，用到哪写权限就加哪些权限，这个为了快速方便测试，把讯飞用到的权限都加上了。
+&amp;lt;uses-permission android:name=&amp;quot;android.permission.RECORD_AUDIO&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.CHANGE_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_PHONE_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_CONTACTS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt;  2. 初始化appid 我是将appid的初始化放在的Applicaiton下，具体可以下载源码
+// 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</description>
+    </item>
+    
+    <item>
+      <title>科大讯飞离线命令词识别</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</link>
+      <pubDate>Wed, 19 Aug 2015 17:41:31 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图  示例源码  地址：http://download.csdn.net/detail/q4878802/9023825
+步骤： 1. 下载SDK 前面文章有，就不在复述了。这里要选择离线命令词的服务以后，重新加载，因为需要下载离线命令词识别的资源文件
+地址：http://blog.csdn.net/q4878802/article/details/47762169
+2. 集成方法 前面文章有，就不在复述了。
+地址：http://blog.csdn.net/q4878802/article/details/47778629
+3. 正题，开始集成 1. 添加权限 这里用到的唤醒功能不是所有的权限都用到的，具体用到了哪些权限，可以看上面的链接，用到哪写权限就加哪些权限，这个为了快速方便测试，把讯飞用到的权限都加上了。
+&amp;lt;uses-permission android:name=&amp;quot;android.permission.RECORD_AUDIO&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_WIFI_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.CHANGE_NETWORK_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_PHONE_STATE&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_FINE_LOCATION&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.READ_CONTACTS&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot; /&amp;gt;  2. 初始化appid 我是将appid的初始化放在的Applicaiton下，具体可以下载源码
+// 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&amp;quot;=true&amp;quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</description>
+    </item>
+    
+  </channel>
+</rss>

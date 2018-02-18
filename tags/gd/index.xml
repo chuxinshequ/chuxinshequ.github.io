@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gd on 不忘初心</title>
+    <link>https://daonao.github.io/chuxin/tags/gd/</link>
+    <description>Recent content in Gd on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 01 Feb 2018 19:22:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://daonao.github.io/chuxin/tags/gd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用 Docker 测试 PHP CVE-2018-5711 漏洞</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/02/01/test-php-cve-2018-5711-by-docker/</link>
+      <pubDate>Thu, 01 Feb 2018 19:22:12 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/02/01/test-php-cve-2018-5711-by-docker/</guid>
+      <description>CSDN博客
+微博文章
+微博
+漏洞说明 编号为PHP CVE-2018-5711的漏洞能让运行PHP的服务器瞬间宕机，原理是gd库在遇到特定非法格式的gif图片时会耗尽CPU，影响范围如下：
+ PHP 5 &amp;lt; 5.6.33 PHP 7.0 &amp;lt; 7.0.27 PHP 7.1 &amp;lt; 7.1.13 PHP 7.2 &amp;lt; 7.2.1  其中列出的都是该系列的最高版本，也就是说几乎所有使用gd库的PHP都需要为此更新到最高版本。
+下面介绍这个漏洞在Docker中验证的方法，需要强调，这里提供了非法格式的git图片文件，如果上传到没有更新的服务器，不排除服务器宕机的可能，造成经济损失将违反相关法律。
+PHP 7.2.0版本中的漏洞 下载代码
+git clone https://github.com/huzhenghui/Test-7-2-0-PHP-CVE-2018-5711.git  进入项目文件夹
+cd Test-7-2-0-PHP-CVE-2018-5711  构建Docker镜像
+docker build -t test-7-2-0-php-cve-2018-5711 .  构建成功后查看PHP版本
+docker run --rm test-7-2-0-php-cve-2018-5711 -v  可以看到
+PHP 7.2.0 (cli) (built: Jan 4 2018 01:20:58) ( NTS ) Copyright (c) 1997-2017 The PHP Group Zend Engine v3.</description>
+    </item>
+    
+  </channel>
+</rss>

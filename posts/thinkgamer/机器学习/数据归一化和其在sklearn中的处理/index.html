@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>数据归一化和其在sklearn中的处理</title>
+  <meta name="author" content="" />
+
+  
+  <meta name="keywords" content="devows, hugo, go">	
+  
+
+  
+  <meta name="description" content="Site template made by devcows using hugo">	
+  
+
+  <meta name="generator" content="Hugo 0.30.2" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="https://chuxin-community.github.io/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="https://chuxin-community.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+
+  
+  <link href="https://chuxin-community.github.io/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="https://chuxin-community.github.io/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://chuxin-community.github.io/img/apple-touch-icon.png" />
+  
+
+  <link href="https://chuxin-community.github.io/css/owl.carousel.css" rel="stylesheet">
+  <link href="https://chuxin-community.github.io/css/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://chuxin-community.github.io/index.xml" type="application/rss+xml" title="不忘初心">
+
+  
+  <meta property="og:title" content="数据归一化和其在sklearn中的处理" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86//" />
+  <meta property="og:image" content="img/logo.png" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://chuxin-community.github.io/">
+                    <img src="https://chuxin-community.github.io/img/logo.png" alt="数据归一化和其在sklearn中的处理 logo" class="hidden-xs hidden-sm">
+                    <img src="https://chuxin-community.github.io/img/logo-small.png" alt="数据归一化和其在sklearn中的处理 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">数据归一化和其在sklearn中的处理 - </span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only"></span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/blog/">Blog</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">Contact</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>数据归一化和其在sklearn中的处理</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">September 1, 2017</p>
+
+                        <div id="post-content">
+                          
+
+<h1 id="一-数据归一化">一：数据归一化</h1>
+
+<p>数据归一化（标准化）处理是数据挖掘的一项基础工作，不同评价指标往往具有不同的量纲和量纲单位，这样的情况会影响到数据分析的结果，为了消除指标之间的量纲影响，需要进行数据标准化处理，以解决数据指标之间的可比性。原始数据经过数据标准化处理后，各指标处于同一数量级，适合进行综合对比评价。
+<!--More-->
+归一化方法有两种形式，一种是把数变为（0，1）之间的小数，一种是把有量纲表达式变为无量纲表达式。在机器学习中我们更关注的把数据变到0～1之间，接下来我们讨论的也是第一种形式。</p>
+
+<h2 id="1-min-max标准化">1）min-max标准化</h2>
+
+<p>min-max标准化也叫做离差标准化，是对原始数据的线性变换，使结果落到[0,1]区间，其对应的数学公式如下：</p>
+
+<p>$$
+X_{scale} = \frac{x-min}{max-min}
+$$</p>
+
+<p>对应的python实现为</p>
+
+<pre><code># x为数据 比如说 [1,2,1,3,2,4,1]
+def Normalization(x):
+    return [(float(i)-min(x))/float(max(x)-min(x)) for i in x]
+</code></pre>
+
+<p>如果要将数据转换到[-1,1]之间，可以修改其数学公式为：</p>
+
+<p>$$
+X<em>{scale} = \frac{x-x</em>{mean}}{max-min}
+$$
+x_mean 表示平均值。</p>
+
+<p>对应的python实现为</p>
+
+<pre><code>import numpy as np
+
+# x为数据 比如说 [1,2,1,3,2,4,1]
+def Normalization(x):
+    return [(float(i)-np.mean(x))/float(max(x)-min(x)) for i in x]
+</code></pre>
+
+<p>其中max为样本数据的最大值，min为样本数据的最小值。这种方法有个缺陷就是当有新数据加入时，可能导致max和min的变化，需要重新定义。</p>
+
+<p>该标准化方法有一个缺点就是，如果数据中有一些偏离正常数据的异常点，就会导致标准化结果的不准确性。比如说一个公司员工（A，B，C，D）的薪水为6k,8k,7k,10w,这种情况下进行归一化对每个员工来讲都是不合理的。</p>
+
+<p>当然还有一些其他的办法也能实现数据的标准化。</p>
+
+<h2 id="2-z-score标准化">2）z-score标准化</h2>
+
+<p>z-score标准化也叫标准差标准化，代表的是分值偏离均值的程度，经过处理的数据符合标准正态分布，即均值为0，标准差为1。其转化函数为</p>
+
+<p>$$
+X_{scale} = \frac{x-\mu }{\sigma }
+$$</p>
+
+<p>其中μ为所有样本数据的均值，σ为所有样本数据的标准差。</p>
+
+<p>其对应的python实现为：</p>
+
+<pre><code>import numpy as np
+
+#x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+def z_score(x):
+    return (x - np.mean(x) )/np.std(x, ddof = 1)
+</code></pre>
+
+<p>z-score标准化方法同样对于离群异常值的影响。接下来看一种改进的z-score标准化方法。</p>
+
+<h2 id="3-改进的z-score标准化">3）改进的z-score标准化</h2>
+
+<p>将标准分公式中的均值改为中位数，将标准差改为绝对偏差。</p>
+
+<p>$$
+X<em>{scale} = \frac{x-x</em>{center} }{\sigma_{1} }$$
+中位数是指将所有数据进行排序，取中间的那个值，如数据量是偶数，则取中间两个数据的平均值。</p>
+
+<p>σ1为所有样本数据的绝对偏差,其计算公式为：
+$$
+\frac{1}{N} \sum<em>{1}^{n}|x</em>{i} - x_{center}|
+$$</p>
+
+<hr />
+
+<h1 id="二-sklearn中的归一化">二：sklearn中的归一化</h1>
+
+<p>sklearn.preprocessing 提供了一些实用的函数 用来处理数据的维度，以供算法使用。</p>
+
+<h2 id="1-均值-标准差缩放">1）均值-标准差缩放</h2>
+
+<p>即我们上边对应的z-score标准化。
+在sklearn的学习中，数据集的标准化是很多机器学习模型算法的常见要求。如果个别特征看起来不是很符合正态分布，那么他们可能为表现不好。</p>
+
+<p>实际上，我们经常忽略分布的形状，只是通过减去整组数据的平均值，使之更靠近数据中心分布，然后通过将非连续数特征除以其标准偏差进行分类。</p>
+
+<p>例如，用于学习算法（例如支持向量机的RBF内核或线性模型的l1和l2正则化器）的目标函数中使用的许多元素假设所有特征都以零为中心并且具有相同顺序的方差。如果特征的方差大于其他数量级，则可能主导目标函数，使估计器无法按预期正确地学习其他特征。</p>
+
+<p>例子：</p>
+
+<pre><code>&gt;&gt;&gt; from sklearn import preprocessing
+&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; X_train = np.array([[ 1., -1.,  2.],
+...                     [ 2.,  0.,  0.],
+...                     [ 0.,  1., -1.]])
+&gt;&gt;&gt; X_scaled = preprocessing.scale(X_train)
+&gt;&gt;&gt; X_scaled
+array([[ 0.        , -1.22474487,  1.33630621],
+       [ 1.22474487,  0.        , -0.26726124],
+       [-1.22474487,  1.22474487, -1.06904497]])
+</code></pre>
+
+<p>标准化后的数据符合标准正太分布</p>
+
+<pre><code>&gt;&gt;&gt; X_scaled.mean(axis=0)
+array([ 0.,  0.,  0.])
+&gt;&gt;&gt; X_scaled.std(axis=0)
+array([ 1.,  1.,  1.])
+</code></pre>
+
+<p>预处理模块还提供了一个实用程序级StandardScaler，它实现了Transformer API来计算训练集上的平均值和标准偏差，以便能够稍后在测试集上重新应用相同的变换。</p>
+
+<pre><code>&gt;&gt;&gt; scaler = preprocessing.StandardScaler().fit(X_train)
+&gt;&gt;&gt; scaler
+StandardScaler(copy=True, with_mean=True, with_std=True)
+&gt;&gt;&gt; scaler.mean_
+array([ 1.        ,  0.        ,  0.33333333])
+&gt;&gt;&gt; scaler.scale_
+array([ 0.81649658,  0.81649658,  1.24721913])
+&gt;&gt;&gt; scaler.transform(X_train)
+array([[ 0.        , -1.22474487,  1.33630621],
+       [ 1.22474487,  0.        , -0.26726124],
+       [-1.22474487,  1.22474487, -1.06904497]])
+</code></pre>
+
+<p>使用转换器可以对新数据进行转换</p>
+
+<pre><code>&gt;&gt;&gt; X_test = [[-1., 1., 0.]]
+&gt;&gt;&gt; scaler.transform(X_test)
+array([[-2.44948974,  1.22474487, -0.26726124]])
+</code></pre>
+
+<h2 id="2-min-max标准化">2）min-max标准化</h2>
+
+<p>X_std = (X - X.min(axis=0)) / (X.max(axis=0) - X.min(axis=0))</p>
+
+<pre><code>
+&gt;&gt;&gt; X_train = np.array([[ 1., -1.,  2.],
+...                      [ 2.,  0.,  0.],
+...                      [ 0.,  1., -1.]])
+&gt;&gt;&gt; min_max_scaler = preprocessing.MinMaxScaler()
+&gt;&gt;&gt; X_train_minmax = min_max_scaler.fit_transform(X_train)
+&gt;&gt;&gt; X_train_minmax
+array([[ 0.5       ,  0.        ,  1.        ],
+       [ 1.        ,  0.5       ,  0.33333333],
+       [ 0.        ,  1.        ,  0.        ]])
+</code></pre>
+
+<p>上边我们创建的min_max_scaler 同样适用于新的测试数据</p>
+
+<pre><code>&gt;&gt;&gt; X_test = np.array([[ -3., -1.,  4.]])
+&gt;&gt;&gt; X_test_minmax = min_max_scaler.transform(X_test)
+&gt;&gt;&gt; X_test_minmax
+array([[-1.5       ,  0.        ,  1.66666667]])
+</code></pre>
+
+<p>可以通过scale_和min方法查看标准差和最小值</p>
+
+<pre><code>&gt;&gt;&gt; min_max_scaler.scale_ 
+array([ 0.5       ,  0.5       ,  0.33333333])
+&gt;&gt;&gt; min_max_scaler.min_
+array([ 0.        ,  0.5       ,  0.33333333])
+</code></pre>
+
+<h2 id="3-最大值标准化">3）最大值标准化</h2>
+
+<p>对于每个数值／每个维度的最大值</p>
+
+<pre><code>&gt;&gt;&gt; X_train
+array([[ 1., -1.,  2.],
+       [ 2.,  0.,  0.],
+       [ 0.,  1., -1.]])
+&gt;&gt;&gt; max_abs_scaler = preprocessing.MaxAbsScaler()
+&gt;&gt;&gt; X_train_maxabs = max_abs_scaler.fit_transform(X_train)
+&gt;&gt;&gt; X_train_maxabs
+array([[ 0.5, -1. ,  1. ],
+       [ 1. ,  0. ,  0. ],
+       [ 0. ,  1. , -0.5]])
+&gt;&gt;&gt; X_test = np.array([[ -3., -1.,  4.]])
+&gt;&gt;&gt; X_test_maxabs = max_abs_scaler.transform(X_test)
+&gt;&gt;&gt; X_test_maxabs                 
+array([[-1.5, -1. ,  2. ]])
+&gt;&gt;&gt; max_abs_scaler.scale_         
+array([ 2.,  1.,  2.])
+</code></pre>
+
+<h2 id="4-规范化">4）规范化</h2>
+
+<p>规范化是文本分类和聚类中向量空间模型的基础</p>
+
+<pre><code>&gt;&gt;&gt; X = [[ 1., -1.,  2.],
+...      [ 2.,  0.,  0.],
+...      [ 0.,  1., -1.]]
+&gt;&gt;&gt; X_normalized = preprocessing.normalize(X, norm='l2')
+&gt;&gt;&gt; X_normalized
+array([[ 0.40824829, -0.40824829,  0.81649658],
+       [ 1.        ,  0.        ,  0.        ],
+       [ 0.        ,  0.70710678, -0.70710678]])
+</code></pre>
+
+<p>解释：norm 该参数是可选的，默认值是l2（向量各元素的平方和然后求平方根），用来规范化每个非零向量，如果axis参数设置为0，则表示的是规范化每个非零的特征维度。</p>
+
+<p>机器学习中的范数规则：<a href="http://blog.csdn.net/zouxy09/article/details/24971995/">点击阅读</a><br>
+其他对应参数：<a href="http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.normalize.html#sklearn.preprocessing.normalize">点击查看</a></p>
+
+<p>preprocessing模块提供了训练种子的功能，我们可通过以下方式得到一个新的种子，并对新数据进行规范化处理。</p>
+
+<pre><code>&gt;&gt;&gt; normalizer = preprocessing.Normalizer().fit(X)
+&gt;&gt;&gt; normalizer
+Normalizer(copy=True, norm='l2')
+&gt;&gt;&gt; normalizer.transform(X)
+array([[ 0.40824829, -0.40824829,  0.81649658],
+       [ 1.        ,  0.        ,  0.        ],
+       [ 0.        ,  0.70710678, -0.70710678]])
+&gt;&gt;&gt; normalizer.transform([[-1,1,0]])
+array([[-0.70710678,  0.70710678,  0.        ]])
+</code></pre>
+
+<h2 id="5-二值化">5）二值化</h2>
+
+<p>将数据转换到0-1 之间</p>
+
+<pre><code>&gt;&gt;&gt; X
+[[1.0, -1.0, 2.0], [2.0, 0.0, 0.0], [0.0, 1.0, -1.0]]
+&gt;&gt;&gt; binarizer = preprocessing.Binarizer().fit(X)
+&gt;&gt;&gt; binarizer
+Binarizer(copy=True, threshold=0.0)
+&gt;&gt;&gt; binarizer.transform(X)
+array([[ 1.,  0.,  1.],
+       [ 1.,  0.,  0.],
+       [ 0.,  1.,  0.]])
+</code></pre>
+
+<p>可以调整二值化的门阀</p>
+
+<pre><code>&gt;&gt;&gt; binarizer = preprocessing.Binarizer(threshold=1.1)
+&gt;&gt;&gt; binarizer.transform(X)
+array([[ 0.,  0.,  1.],
+       [ 1.,  0.,  0.],
+       [ 0.,  0.,  0.]])
+</code></pre>
+
+<h2 id="6-编码的分类特征">6）编码的分类特征</h2>
+
+<p>通常情况下，特征不是作为连续值给定的。例如一个人可以有</p>
+
+<pre><code>[&quot;male&quot;, &quot;female&quot;], [&quot;from Europe&quot;, &quot;from US&quot;, &quot;from Asia&quot;], [&quot;uses Firefox&quot;, &quot;uses Chrome&quot;, &quot;uses Safari&quot;, &quot;uses Internet Explorer&quot;]
+</code></pre>
+
+<p>这些特征可以被有效的编码为整数，例如</p>
+
+<pre><code>[&quot;male&quot;, &quot;from US&quot;, &quot;uses Internet Explorer&quot;] =&gt; [0, 1, 3]
+[&quot;female&quot;, &quot;from Asia&quot;, &quot;uses Chrome&quot;] would be [1, 2, 1].
+</code></pre>
+
+<p>这样的整数不应该直接应用到scikit的算法中，可以通过one-of-k或者独热编码（OneHotEncorder），该种处理方式会把每个分类特征的m中可能值转换成m个二进制值。</p>
+
+<pre><code>&gt;&gt;&gt; enc = preprocessing.OneHotEncoder()
+&gt;&gt;&gt; enc.fit([[0, 0, 3], [1, 1, 0], [0, 2, 1], [1, 0, 2]])
+OneHotEncoder(categorical_features='all', dtype=&lt;class 'numpy.float64'&gt;,
+       handle_unknown='error', n_values='auto', sparse=True)
+&gt;&gt;&gt; enc.transform([[0,1,3]]).toarray()
+array([[ 1.,  0.,  0.,  1.,  0.,  0.,  0.,  0.,  1.]])
+</code></pre>
+
+<p>默认情况下，从数据集中自动推断出每个特征可以带多少个值。可以明确指定使用的参数n_values。在我们的数据集中有两种性别，三种可能的大陆和四种Web浏览器。然后，我们拟合估计量，并转换一个数据点。在结果中，前两个数字编码性别，下一组三个数字的大陆和最后四个Web浏览器。</p>
+
+<pre><code>&gt;&gt;&gt; enc = preprocessing.OneHotEncoder(n_values=[2,3,4])
+&gt;&gt;&gt; enc.fit([[1,2,3],[0,2,0]])
+OneHotEncoder(categorical_features='all', dtype=&lt;class 'numpy.float64'&gt;,
+       handle_unknown='error', n_values=[2, 3, 4], sparse=True)
+&gt;&gt;&gt; enc.transform([[1,0,0]]).toarray()
+array([[ 0.,  1.,  1.,  0.,  0.,  1.,  0.,  0.,  0.]])
+</code></pre>
+
+<h2 id="7-填补缺失值">7）填补缺失值</h2>
+
+<p>由于各种原因，真实数据中存在大量的空白值，这样的数据集，显然是不符合scikit的要求的，那么preprocessing模块提供这样一个功能，利用已知的数据来填补这些空白。</p>
+
+<pre><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; from sklearn.preprocessing import Imputer
+&gt;&gt;&gt; imp = Imputer(missing_values='NaN',strategy='mean',verbose=0)
+&gt;&gt;&gt; imp.fit([[1, 2], [np.nan, 3], [7, 6]])
+Imputer(axis=0, copy=True, missing_values='NaN', strategy='mean', verbose=0)
+&gt;&gt;&gt; X = [[np.nan, 2], [6, np.nan], [7, 6]]
+&gt;&gt;&gt; print(imp.transform(X))                           
+[[ 4.          2.        ]
+ [ 6.          3.66666667]
+ [ 7.          6.        ]]
+</code></pre>
+
+<p>Imputer同样支持稀疏矩阵</p>
+
+<pre><code>&gt;&gt;&gt; import scipy.sparse as sp
+&gt;&gt;&gt; X = sp.csc_matrix([[1,2],[0,3],[7,6]])
+&gt;&gt;&gt; imp = Imputer(missing_values=0,strategy='mean',axis=0)
+&gt;&gt;&gt; imp.fit(X)
+Imputer(axis=0, copy=True, missing_values=0, strategy='mean', verbose=0)
+&gt;&gt;&gt; X_test = sp.csc
+sp.csc          sp.csc_matrix(  
+&gt;&gt;&gt; X_test = sp.csc_matrix([[0,2],[6,0],[7,6]])
+&gt;&gt;&gt; print(imp.transform(X_test))
+[[ 4.          2.        ]
+ [ 6.          3.66666667]
+ [ 7.          6.        ]]
+</code></pre>
+
+<h2 id="8-生成多项式特征">8）生成多项式特征</h2>
+
+<p>通常，通过考虑输入数据的非线性特征来增加模型的复杂度是很有用的。一个简单而常用的方法是多项式特征，它可以得到特征的高阶和相互作用项。</p>
+
+<p>其遵循的原则是
+$$
+(X_1, X_2) -&gt; (1, X_1, X_2, X_1^2, X_1X_2, X_2^2)
+$$</p>
+
+<pre><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; from sklearn.preprocessing import PolynomialFeatures
+&gt;&gt;&gt; X = np.arange(6).reshape(3, 2)
+&gt;&gt;&gt; X                                                 
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+&gt;&gt;&gt; poly = PolynomialFeatures(2)
+&gt;&gt;&gt; poly.fit_transform(X)                             
+array([[  1.,   0.,   1.,   0.,   0.,   1.],
+       [  1.,   2.,   3.,   4.,   6.,   9.],
+       [  1.,   4.,   5.,  16.,  20.,  25.]])
+</code></pre>
+
+<p>有些情况下，有相互关系的标签才是必须的，这个时候可以通过设置 interaction_only=True 来进行多项式特征的生成</p>
+
+<pre><code>&gt;&gt;&gt; X = np.arange(9).reshape(3, 3)
+&gt;&gt;&gt; X                                                 
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+&gt;&gt;&gt; poly = PolynomialFeatures(degree=3, interaction_only=True)
+&gt;&gt;&gt; poly.fit_transform(X)                             
+array([[   1.,    0.,    1.,    2.,    0.,    0.,    2.,    0.],
+       [   1.,    3.,    4.,    5.,   12.,   15.,   20.,   60.],
+       [   1.,    6.,    7.,    8.,   42.,   48.,   56.,  336.]])
+</code></pre>
+
+<p>其遵循的规则是：
+$$
+(X_1, X_2, X_3) -&gt; (1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)
+$$</p>
+
+<hr />
+
+<p>对应的scikit-learn资料为： <a href="http://scikit-learn.org/stable/modules/preprocessing.html">http://scikit-learn.org/stable/modules/preprocessing.html</a></p>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "devcows" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="hidden" name="sitesearch" value="https://chuxin-community.github.io/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://chuxin-community.github.io/categories/help">help (2)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/im">im (1)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/opencv">opencv (15)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e5%a4%8f%e6%9c%aa%e7%9c%a0">夏未眠 (2)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e5%bc%80%e6%ba%90">开源 (5)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e6%8a%80%e6%9c%af%e7%af%87">技术篇 (13)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e8%af%ad%e9%9f%b3">语音 (13)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e9%9a%8f%e6%89%8b%e8%ae%b0">随手记 (2)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://chuxin-community.github.io/tags/aes"><i class="fa fa-tags"></i> aes</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/android"><i class="fa fa-tags"></i> android</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/elk"><i class="fa fa-tags"></i> elk</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/es"><i class="fa fa-tags"></i> es</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/gradle"><i class="fa fa-tags"></i> gradle</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/help"><i class="fa fa-tags"></i> help</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/hexo"><i class="fa fa-tags"></i> hexo</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/im"><i class="fa fa-tags"></i> im</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/opencv"><i class="fa fa-tags"></i> opencv</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/sklearn"><i class="fa fa-tags"></i> sklearn</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e4%b8%b2%e5%8f%a3"><i class="fa fa-tags"></i> 串口</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8a%a0%e5%af%86"><i class="fa fa-tags"></i> 加密</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8a%a8%e6%80%81%e6%9d%83%e9%99%90"><i class="fa fa-tags"></i> 动态权限</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8d%b3%e6%8b%bf%e5%8d%b3%e7%94%a8"><i class="fa fa-tags"></i> 即拿即用</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%9b%9e%e5%bd%92%e5%88%86%e6%9e%90"><i class="fa fa-tags"></i> 回归分析</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a3%b0%e9%81%93"><i class="fa fa-tags"></i> 声道</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a4%8f%e6%9c%aa%e7%9c%a0"><i class="fa fa-tags"></i> 夏未眠</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a4%9a%e5%aa%92%e4%bd%93"><i class="fa fa-tags"></i> 多媒体</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%bc%80%e6%ba%90"><i class="fa fa-tags"></i> 开源</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%bc%82%e5%b8%b8%e6%a3%80%e6%b5%8b"><i class="fa fa-tags"></i> 异常检测</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%91%87%e6%9d%86"><i class="fa fa-tags"></i> 摇杆</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%95%b0%e6%8d%ae%e5%bd%92%e4%b8%80%e5%8c%96"><i class="fa fa-tags"></i> 数据归一化</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84"><i class="fa fa-tags"></i> 数据结构</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%96%87%e4%bb%b6%e5%ad%98%e5%8f%96"><i class="fa fa-tags"></i> 文件存取</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%a2%af%e5%ba%a6%e4%b8%8b%e9%99%8d"><i class="fa fa-tags"></i> 梯度下降</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%ad%a3%e5%bc%a6%e6%b3%a2"><i class="fa fa-tags"></i> 正弦波</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e7%8e%af%e4%bf%a1"><i class="fa fa-tags"></i> 环信</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%93%9d%e7%89%99"><i class="fa fa-tags"></i> 蓝牙</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%93%9d%e7%89%99%e9%80%9a%e4%bf%a1"><i class="fa fa-tags"></i> 蓝牙通信</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%af%ad%e9%9f%b3"><i class="fa fa-tags"></i> 语音</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%b7%9d%e7%a6%bb%e8%ae%a1%e7%ae%97"><i class="fa fa-tags"></i> 距离计算</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e9%9a%8f%e6%89%8b%e8%ae%b0"><i class="fa fa-tags"></i> 随手记</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e9%9b%b7%e8%be%be"><i class="fa fa-tags"></i> 雷达</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4></h4>
+
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4></h4>
+
+            <div class="blog-entries">
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4></h4>
+
+            <strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      
+
+
+            <a href="/contact" class="btn btn-small btn-template-main"></a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
+            
+            <p class="pull-right">
+               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              
+
+               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y&v=3.exp"></script>
+
+<script src="https://chuxin-community.github.io/js/hpneo.gmaps.js"></script>
+<script src="https://chuxin-community.github.io/js/gmaps.init.js"></script>
+<script src="https://chuxin-community.github.io/js/front.js"></script>
+
+
+<script src="https://chuxin-community.github.io/js/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>

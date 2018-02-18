@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开源 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/%E5%BC%80%E6%BA%90/</link>
+    <description>Recent content in 开源 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 16 Mar 2017 18:24:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/%E5%BC%80%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android蓝牙通信——AndroidBluetoothManager</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager/</link>
+      <pubDate>Thu, 16 Mar 2017 18:24:36 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+
+To get a Git project into your build:
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+allprojects { repositories { ... maven { url &#39;https://jitpack.io&#39; } } }  Step 2. Add the dependency
+dependencies { compile &#39;com.github.kongqw:AndroidBluetoothManager:1.0.0&#39; }  AndroidBluetoothManager
+效果图 PNG
+GIF
+基础功能 添加权限 &amp;lt;uses-permission android:name=&amp;quot;android.permission.BLUETOOTH&amp;quot; /&amp;gt; &amp;lt;uses-permission android:name=&amp;quot;android.</description>
+    </item>
+    
+    <item>
+      <title>Android自定义雷达扫描控件</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6/</link>
+      <pubDate>Fri, 10 Mar 2017 18:28:14 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+Android 雷达扫描控件 
+To get a Git project into your build:
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+allprojects { repositories { ... maven { url &#39;https://jitpack.io&#39; } } }  Step 2. Add the dependency
+dependencies { compile &#39;com.github.kongqw:AndroidRadarScanView:1.0.1&#39; }  源码：AndroidRadarScanView
+效果图 XML &amp;lt;com.kongqw.radarscanviewlibrary.RadarScanView android:id=&amp;quot;@+id/radarScanView&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; /&amp;gt;  初始化 radarScanView = (RadarScanView) findViewById(R.</description>
+    </item>
+    
+    <item>
+      <title>Android自定义摇杆</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86/</link>
+      <pubDate>Thu, 01 Sep 2016 17:37:11 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 源码 KqwRockerDemo
+喜欢就给个star，谢谢！
+功能  支持自适应大小 支持2个方向、4个方向、8个方向的摇动监听 支持摇动角度获取 可选回调模式 支持可摇动区域自定义 支持摇杆自定义 支持设置图片、色值、Shape图形  使用 &amp;lt;kong.qingwei.rockerlibrary.RockerView android:id=&amp;quot;@+id/rockerView_center&amp;quot; android:layout_width=&amp;quot;100dp&amp;quot; android:layout_height=&amp;quot;100dp&amp;quot; android:layout_centerHorizontal=&amp;quot;true&amp;quot; kongqw:areaBackground=&amp;quot;#FF333333&amp;quot; kongqw:rockerBackground=&amp;quot;#FF987654&amp;quot; kongqw:rockerRadius=&amp;quot;15dp&amp;quot; /&amp;gt;  参数    参数 是否必须 描述     areaBackground 可选 可摇动区域的背景   rockerBackground 可选 摇杆的背景   rockerRadius 可选 摇杆半径    设置回调方式 setCallBackMode(CallBackMode mode)  参数
+   回调方式 描述     CALL_BACK_MODE_MOVE 有移动就立刻回调   CALL_BACK_MODE_STATE_CHANGE 状态有变化的时候回调    监听摇动角度 返回角度的取值范围：[0°,360°)</description>
+    </item>
+    
+  </channel>
+</rss>

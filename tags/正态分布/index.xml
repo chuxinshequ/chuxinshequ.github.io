@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>正态分布 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/</link>
+    <description>Recent content in 正态分布 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>回归分析之理论篇</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%90%86%E8%AE%BA%E7%AF%87/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%90%86%E8%AE%BA%E7%AF%87/</guid>
+      <description>2015年的机器学习博客其实都是看《机器学习实战》这本书时学到的，说实话当时也是知其然，不知其所以然，以至于对其理解不深刻，好多细节和理论知识都搞的是乱七八糟，自从工作之后再去看一个算法，思考的比之前多了点，查看资料也比之前多了点，生怕理解错误，影响其他人，当然在理解的程度上还是不够深刻，这也是一个学习的过程吧，记录一下，欢迎指正。
+CSDN链接：点击阅读 
+一：一些名词定义 1）指数分布族 指数分布族是指可以表示为指数形式的概率分布。 $$ f_X(x\mid\theta) = h(x) \exp \left (\eta(\theta) \cdot T(x) -A(\theta)\right ) $$ 其中，η为自然参数(nature parameter)，T(x)是充分统计量（sufficient statistic）。当参数A，h，T都固定以后，就定义了一个以η为参数的函数族。
+伯努利分布与高斯分布是两个典型的指数分布族
+伯努利分布 又名两点分布或者0-1分布，是一个离散型概率分布。假设1的概率为p，0的概率为q，则 其概率质量函数为：
+{\displaystyle f_{X}(x)=p^{x}(1-p)^{1-x}=\left\{{\begin{matrix}p&amp;amp;{\mbox{if }}x=1,\\q\ &amp;amp;{\mbox{if }}x=0.\\\end{matrix}}\right.}  其期望值为： $$ {\displaystyle \operatorname {E} [X]=\sum {i=0}^{1}x{i}f_{X}(x)=0+p=p} $$
+其方差为： $$ {\displaystyle \operatorname {var} [X]=\sum {i=0}^{1}(x{i}-E[X])^{2}f_{X}(x)=(0-p)^{2}(1-p)+(1-p)^{2}p=p(1-p)=pq} $$
+正态分布(高斯分布) 若随机变量X服从一个位置参数为 ${\displaystyle \mu }$ 、尺度参数为 ${\displaystyle \sigma } $ 的概率分布，记为： $$ X \sim N(\mu,\sigma^2), $$
+其概率密度函数为:
+f(x) = {1 \over \sigma\sqrt{2\pi} }\,e^{- {{(x-\mu )^2 \over 2\sigma^2}}}  正态分布的数学期望值或期望值$ {\displaystyle \mu } $ 等于位置参数，决定了分布的位置；其方差 $ {\displaystyle \sigma ^{2}} $ 的开平方或标准差$ {\displaystyle \sigma }$ 等于尺度参数，决定了分布的幅度。</description>
+    </item>
+    
+  </channel>
+</rss>

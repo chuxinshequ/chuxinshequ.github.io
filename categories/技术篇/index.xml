@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术篇 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/</link>
+    <description>Recent content in 技术篇 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 14 Dec 2017 14:40:43 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link>
+      <pubDate>Thu, 14 Dec 2017 14:40:43 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid>
+      <description>在机器学习领域，体梯度下降算法分为三种
+ 批量梯度下降算法（BGD，Batch gradient descent algorithm） 随机梯度下降算法（SGD，Stochastic gradient descent algorithm） 小批量梯度下降算法（MBGD，Mini-batch gradient descent algorithm）   批量梯度下降算法 BGD是最原始的梯度下降算法，每一次迭代使用全部的样本，即权重的迭代公式中(公式中用$\theta$代替$\theta_i$)， $$ \jmath (\theta _0,\theta _1,&amp;hellip;,\theta n)=\sum{i=0}^{m}( h_\theta(x_0,x_1,&amp;hellip;,x_n)-y_i )^2
+$$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,&amp;hellip;,\theta _n)}{\partial \theta _i} $$ $$ 公式(1) $$
+这里的m代表所有的样本，表示从第一个样本遍历到最后一个样本。
+特点：
+ 能达到全局最优解，易于并行实现 当样本数目很多时，训练过程缓慢  随机梯度下降算法 SGD的思想是更新每一个参数时都使用一个样本来进行更新，即公式（1）中m为1。每次更新参数都只使用一个样本，进行多次更新。这样在样本量很大的情况下，可能只用到其中的一部分样本就能得到最优解了。 但是，SGD伴随的一个问题是噪音较BGD要多，使得SGD并不是每次迭代都向着整体最优化方向。
+特点： - 训练速度快 - 准确度下降，并不是最优解，不易于并行实现
+小批量梯度下降算法 MBGD的算法思想就是在更新每一参数时都使用一部分样本来进行更新，也就是公式（1）中的m的值大于1小于所有样本的数量。
+相对于随机梯度下降，Mini-batch梯度下降降低了收敛波动性，即降低了参数更新的方差，使得更新更加稳定。相对于批量梯度下降，其提高了每次学习的速度。并且其不用担心内存瓶颈从而可以利用矩阵运算进行高效计算。一般而言每次更新随机选择[50,256]个样本进行学习，但是也要根据具体问题而选择，实践中可以进行多次试验，选择一个更新速度与更次次数都较适合的样本数。mini-batch梯度下降可以保证收敛性，常用于神经网络中。
+补充 在样本量较小的情况下，可以使用批量梯度下降算法，样本量较大的情况或者线上，可以使用随机梯度下降算法或者小批量梯度下降算法。
+在机器学习中的无约束优化算法，除了梯度下降以外，还有前面提到的最小二乘法，此外还有牛顿法和拟牛顿法。
+梯度下降法和最小二乘法相比，梯度下降法需要选择步长，而最小二乘法不需要。梯度下降法是迭代求解，最小二乘法是计算解析解。如果样本量不算很大，且存在解析解，最小二乘法比起梯度下降法要有优势，计算速度很快。但是如果样本量很大，用最小二乘法由于需要求一个超级大的逆矩阵，这时就很难或者很慢才能求解解析解了，使用迭代的梯度下降法比较有优势。
+梯度下降法和牛顿法/拟牛顿法相比，两者都是迭代求解，不过梯度下降法是梯度求解，而牛顿法/拟牛顿法是用二阶的海森矩阵的逆矩阵或伪逆矩阵求解。相对而言，使用牛顿法/拟牛顿法收敛更快。但是每次迭代的时间比梯度下降法长。</description>
+    </item>
+    
+    <item>
+      <title>梯度算法之梯度上升和梯度下降</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link>
+      <pubDate>Thu, 14 Dec 2017 14:11:11 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid>
+      <description>第一次看见随机梯度上升算法是看《机器学习实战》这本书，当时也是一知半解，只是大概知道和高等数学中的函数求导有一定的关系。下边我们就好好研究下随机梯度上升（下降）和梯度上升（下降）。 
+高数中的导数 设导数 y = f(x) 在 $ x_0 $的某个邻域内有定义，当自变量从 $ x0 $ 变成 $$ x{0} + \Delta x $$ 函数y=f(x)的增量
+$$ \Delta y = f(x_0 + \Delta x) - f(x_0) $$ 与自变量的增量 $ \Delta x $ 之比：
+$$ \frac{ \Delta y }{ \Delta x } = \frac{ f(x_0 + \Delta x)-f(x0) }{ \Delta x } $$ 称为f(x)的平均变化率。 如 $ \Delta x \rightarrow 0 $ 平均变化率的极限 $$ \lim{\Delta x \rightarrow 0} \frac{ \Delta y }{ \Delta x } = \lim_{\Delta x \rightarrow 0} \frac{ f(x_0 + \Delta x)-f(x_0) }{ \Delta x } $$ 存在，则称极限值为f(x)在$ x_0 $ 处的导数，并说f(x)在$ x_0 $ 处可导或有导数。当平均变化率极限不存在时，就说f(x)在 $ x_0 $ 处不可导或没有导数。</description>
+    </item>
+    
+    <item>
+      <title>异常检测之指数平滑（利用elasticsearch来实现）</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/elk/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Mon, 20 Nov 2017 17:18:54 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/elk/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</guid>
+      <description>指数平滑法是一种特殊的加权平均法，加权的特点是对离预测值较近的历史数据给予较大的权数，对离预测期较远的历史数据给予较小的权数，权数由近到远按指数规律递减，所以，这种预测方法被称为指数平滑法。它可分为一次指数平滑法、二次指数平滑法及更高次指数平滑法。 
+关于指数平滑的得相关资料：  ES API接口： &amp;gt; https://github.com/IBBD/IBBD.github.io/blob/master/elk/aggregations-pipeline.md https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-pipeline-movavg-aggregation.html
+ 理论概念 &amp;gt; http://blog.sina.com.cn/s/blog_4b9acb5201016nkd.html
+  ES移动平均聚合：Moving Average的四种模型 simple 就是使用窗口内的值的和除于窗口值，通常窗口值越大，最后的结果越平滑: (a1 + a2 + &amp;hellip; + an) / n
+curl -XPOST &#39;localhost:9200/_search?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39; { &amp;quot;size&amp;quot;: 0, &amp;quot;aggs&amp;quot;: { &amp;quot;my_date_histo&amp;quot;:{ &amp;quot;date_histogram&amp;quot;:{ &amp;quot;field&amp;quot;:&amp;quot;date&amp;quot;, &amp;quot;interval&amp;quot;:&amp;quot;1M&amp;quot; }, &amp;quot;aggs&amp;quot;:{ &amp;quot;the_sum&amp;quot;:{ &amp;quot;sum&amp;quot;:{ &amp;quot;field&amp;quot;: &amp;quot;price&amp;quot; } }, &amp;quot;the_movavg&amp;quot;:{ &amp;quot;moving_avg&amp;quot;:{ &amp;quot;buckets_path&amp;quot;: &amp;quot;the_sum&amp;quot;, &amp;quot;window&amp;quot; : 30, &amp;quot;model&amp;quot; : &amp;quot;simple&amp;quot; } } } } } } &#39;  线性模型：Linear 对窗口内的值先做线性变换处理，再求平均：(a1 * 1 + a2 * 2 + &amp;hellip; + an * n) / (1 + 2 + &amp;hellip; + n)</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch-DSL部分集合</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/elk/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</link>
+      <pubDate>Tue, 14 Nov 2017 17:26:48 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/elk/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</guid>
+      <description>ELK是日志收集分析神器，在这篇文章中将会介绍一些ES的常用命令。
+点击阅读：ELK Stack 从入门到放弃 
+DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 shards, which is over the limit of 1000. This limit exists because querying many shards at the same time can make the job of the coordinating node very CPU and/or memory intensive. It is usually a better idea to have a smaller number of larger shards. Update [action.search.shard_count.limit] to a greater value if you really want to query that many shards at the same time.</description>
+    </item>
+    
+    <item>
+      <title>数据结构算法之链表</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Mon, 13 Nov 2017 00:58:37 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</guid>
+      <description>链表面试总结，使用python实现，参考：https://www.cnblogs.com/lixiaohui-ambition/archive/2012/09/25/2703195.html 
+#coding:utf-8 # 定义链表 class ListNode: def __init__(self): self.data = None self.pnext = None # 链表操作类 class ListNode_handle: def __init__(self): self.cur_node = None # 链表添加元素 def add(self,data): ln = ListNode() ln.data = data ln.pnext = self.cur_node self.cur_node = ln return ln # 打印链表 def prt(self,ln): while ln: print(ln.data,end=&amp;quot; &amp;quot;) ln = ln.pnext # 逆序输出 def _reverse(self,ln): _list = [] while ln: _list.append(ln.data) ln = ln.pnext ln_2 = ListNode() ln_h = ListNode_handle() for i in _list: ln_2 = ln_h.</description>
+    </item>
+    
+    <item>
+      <title>数据结构算法之合并两个有序序列</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Mon, 13 Nov 2017 00:55:29 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</guid>
+      <description>有序序列的合并，python实现。 
+#coding:utf-8 a = [2,4,6,8,10] b = [3,5,7,9,11,13,15] c = [] def merge(a,b): i,j = 0,0 while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.append(m) if j&amp;lt;=len(b)-1: for n in b[j:]: c.append(n) print(c) merge(a,b)  运行结果为：
+[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15]  </description>
+    </item>
+    
+    <item>
+      <title>数据结构算法之排序</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Mon, 13 Nov 2017 00:51:28 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</guid>
+      <description>数据结构面试中经常会被问到篇排序相关的问题，那么这篇文章会研究下怎么用python来实现排序。
+ 冒泡排序 #coding：utf-8 # 冒泡排序 def maopao(): a = [2,1,4,3,9,5,6,8,7] for i in range(len(a)-1): for j in range(len(a)-1-i): if a[j]&amp;gt;a[j+1]: temp = a[j] a[j] = a[j+1] a[j+1] = temp print(a) maopao()  结果为：
+[1, 2, 3, 4, 5, 6, 7, 8, 9]  归并排序 # 归并排序 def merge(a,b): i,j = 0,0 c = [] while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.</description>
+    </item>
+    
+    <item>
+      <title>数据结构算法之二叉树</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Mon, 13 Nov 2017 00:44:41 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>数据结构面试中经常会被问到篇二叉树相关的问题，那么这篇文章会研究下怎么用python来进行二叉树的构建和遍历。
+ 注意：py2中
+print root.elem,  在py3中要换成
+print (root.elem,end=&amp;quot; &amp;quot;)  # coding:utf-8 # 定义节点类 class Node: def __init__(self,elem = -1,): self.elem = elem self.left = None self.right = None # 定义二叉树 class Tree: def __init__(self): self.root = Node() self.myqu = [] # 添加节点 def add(self,elem): node = Node(elem) if self.root.elem == -1: # 判断如果是根节点 self.root = node self.myqu.append(self.root) else: treenode = self.myqu[0] if treenode.left == None: treenode.left = node self.</description>
+    </item>
+    
+    <item>
+      <title>回归分析之Sklearn实现电力预测</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/</link>
+      <pubDate>Tue, 07 Nov 2017 13:39:15 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/</guid>
+      <description>参考原文：http://www.cnblogs.com/pinard/p/6016029.html 这里进行了手动实现，增强记忆。 
+1：数据集介绍 使用的数据是UCI大学公开的机器学习数据
+数据的介绍在这： http://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant
+数据的下载地址在这：http://archive.ics.uci.edu/ml/machine-learning-databases/00294/
+里面是一个循环发电场的数据，共有9568个样本数据，每个数据有5列，分别是:AT（温度）, V（压力）, AP（湿度）, RH（压强）, PE（输出电力)。我们不用纠结于每项具体的意思。
+我们的问题是得到一个线性的关系，对应PE是样本输出，而AT/V/AP/RH这4个是样本特征， 机器学习的目的就是得到一个线性回归模型，即:
+$$ PE = \theta _{0} + \theta _{0} * AT + \theta _{0} * V +\theta _{0} * AP +\theta _{0}*RH $$
+而需要学习的，就是θ0,θ1,θ2,θ3,θ4这5个参数。
+2：准备数据 下载源数据之后，解压会得到一个xlsx的文件，打开另存为csv文件，数据已经整理好，没有非法数据，但是数据并没有进行归一化，不过这里我们可以使用sklearn来帮我处理
+sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details/77761884
+3：使用pandas来进行数据的读取 import pandas as pd # pandas 读取数据 data = pd.read_csv(&amp;quot;Folds5x2_pp.csv&amp;quot;) data.head()  然后会看到如下结果，说明数据读取成功：
+	AT	V	AP	RH	PE 0	8.34	40.77	1010.84	90.01	480.48 1	23.64	58.</description>
+    </item>
+    
+    <item>
+      <title>回归分析之线性回归（N元线性回归）</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Fri, 29 Sep 2017 16:45:14 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid>
+      <description>在上一篇文章中我们介绍了 回归分析之理论篇，在其中我们有聊到线性回归和非线性回归，包括广义线性回归，这一篇文章我们来聊下回归分析中的线性回归。
+ 一元线性回归 预测房价： 输入编号 | 平方米 | 价格 -|-|- 1 | 150 | 6450 2 | 200 | 7450 3| 250 |8450 4| 300 |9450 5| 350 |11450 6| 400 |15450 7| 600| 18450
+针对上边这种一元数据来讲，我们可以构建的一元线性回归函数为 $$ H(x) = k*x + b $$ 其中H(x)为平方米价格表，k是一元回归系数，b为常数。最小二乘法的公式： $$ k =\frac{ \sum{1}^{n} (x{i} - \bar{x} )(y{i} - \bar{y}) } { \sum{1}^{n}(x_{i}-\bar{x})^{2} } $$ 自己使用python代码实现为：
+def leastsq(x,y): &amp;quot;&amp;quot;&amp;quot; x,y分别是要拟合的数据的自变量列表和因变量列表 &amp;quot;&amp;quot;&amp;quot; meanX = sum(x) * 1.</description>
+    </item>
+    
+    <item>
+      <title>几种距离计算公式在数据挖掘中的应用场景分析</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/</link>
+      <pubDate>Wed, 20 Sep 2017 10:23:39 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/</guid>
+      <description>本文涉及以下几种距离计算公式的分析，参考资料为《面向程序员的数据挖掘指南》
+ 曼哈顿距离 欧几里得距离 闵可夫斯基距离 皮尔逊相关系数 余弦相似度   之前整理过一篇关于距离相关的文章：[机器学习算法中的距离和相似性计算公式，分析以及python实现]()
+闵可夫斯基距离 两个n维变量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的闵可夫斯基距离定义为： $$ \sqrt[p]{ \sum{k=1}^{n} \left | x{1k}-x_{2k} \right |^p} $$
+其中p是一个变参数。
+当p=1时，就是曼哈顿距离
+当p=2时，就是欧氏距离
+当p→∞时，就是切比雪夫距离
+根据变参数的不同，闵氏距离可以表示一类的距离。
+p值越大，单个维度的差值大小会对整体距离有更大的影响
+曼哈顿距离／欧几里得距离的瑕疵 在《面向程序员的数据挖掘指南》中给出了这样一组样例数据, 下图为一个在线音乐网站的的用户评分情况，用户可以用1-5星来评价一个乐队，下边是8位用户对8个乐队的评价： 表中的横线表示用户没有对乐队进行评价，我们在计算两个用户的距离时，只采用他们都评价过的乐队。
+现在来求Angelica和Bill的距离，因为他们共同评分过的乐队有5个，所以使用其对该5个乐队的评分进行曼哈顿距离的计算为：
+Dis_1 = |3.5-2| + |2-3.5| + |5-2| + |1.5-3.5| + |2-3| = 9  同样使用欧式距离计算为：
+Dis_2 = sqrt( (3.5-2)^2 + (2-3.5)^2 + (5-2)^2 + (1.5-3.5)^2 + (2-3)^2 ) = 4.3  当对Angelica和Bill，Bill和Chan进行距离对比时，由于两者的共同评分过的乐队均为5，数据都在一个5维空间里，是公平的，如果现在要计算Angelica和Hailey与Bill的距离时，会发现，Angelica与Bill共同评分的有5个乐队，Hailey与Bill共同评分的有3个乐队，也就是说两者数据一个在5维空间里，一个在三维空间里，这样明显是不公平的。这将会对我们进行计算时产生不好的影响，所以曼哈顿距离和欧几里得距离在数据完整的情况下效果最好。
+用户问题／皮尔逊相关系数／分数膨胀 现象——用户问题 仔细观察用户对乐队的评分数据，可以发现每个用户的评分标准不同：
+ Bill没有打出极端的分数，都在2-4分之间 Jordyn似乎喜欢所有的乐队，打分都在4-5之间 Hailey是一个有趣的人，他的评分不是1就是4  那么如何比较这些用户呢？比如说Hailey的4分是相当于Jordyn的4分还是5分呢？我觉得更接近5分，这样一来，就影响推荐系统的准确性了！</description>
+    </item>
+    
+    <item>
+      <title>数据归一化和其在sklearn中的处理</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 01 Sep 2017 11:33:50 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/</guid>
+      <description>一：数据归一化 数据归一化（标准化）处理是数据挖掘的一项基础工作，不同评价指标往往具有不同的量纲和量纲单位，这样的情况会影响到数据分析的结果，为了消除指标之间的量纲影响，需要进行数据标准化处理，以解决数据指标之间的可比性。原始数据经过数据标准化处理后，各指标处于同一数量级，适合进行综合对比评价。  归一化方法有两种形式，一种是把数变为（0，1）之间的小数，一种是把有量纲表达式变为无量纲表达式。在机器学习中我们更关注的把数据变到0～1之间，接下来我们讨论的也是第一种形式。
+1）min-max标准化 min-max标准化也叫做离差标准化，是对原始数据的线性变换，使结果落到[0,1]区间，其对应的数学公式如下：
+$$ X_{scale} = \frac{x-min}{max-min} $$
+对应的python实现为
+# x为数据 比如说 [1,2,1,3,2,4,1] def Normalization(x): return [(float(i)-min(x))/float(max(x)-min(x)) for i in x]  如果要将数据转换到[-1,1]之间，可以修改其数学公式为：
+$$ X{scale} = \frac{x-x{mean}}{max-min} $$ x_mean 表示平均值。
+对应的python实现为
+import numpy as np # x为数据 比如说 [1,2,1,3,2,4,1] def Normalization(x): return [(float(i)-np.mean(x))/float(max(x)-min(x)) for i in x]  其中max为样本数据的最大值，min为样本数据的最小值。这种方法有个缺陷就是当有新数据加入时，可能导致max和min的变化，需要重新定义。
+该标准化方法有一个缺点就是，如果数据中有一些偏离正常数据的异常点，就会导致标准化结果的不准确性。比如说一个公司员工（A，B，C，D）的薪水为6k,8k,7k,10w,这种情况下进行归一化对每个员工来讲都是不合理的。
+当然还有一些其他的办法也能实现数据的标准化。
+2）z-score标准化 z-score标准化也叫标准差标准化，代表的是分值偏离均值的程度，经过处理的数据符合标准正态分布，即均值为0，标准差为1。其转化函数为
+$$ X_{scale} = \frac{x-\mu }{\sigma } $$
+其中μ为所有样本数据的均值，σ为所有样本数据的标准差。
+其对应的python实现为：
+import numpy as np #x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] def z_score(x): return (x - np.</description>
+    </item>
+    
+    <item>
+      <title>MachingLearning中的距离和相似性计算以及python实现</title>
+      <link>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Sun, 16 Jul 2017 12:14:43 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/</guid>
+      <description>前言 写这篇文章的目的不是说摘抄网上其他人的总结，刚才最近在看这方面的东西，为了让自己能够实际的去感受下每种求距离公式的差别，然后用python进行具体实现。  在机器学习中，经常要用到距离和相似性的计算公式，我么要常计算个体之间的差异大小，继而评价个人之间的差异性和相似性，最常见的就是数据分析中的相关分析，数据挖掘中的分类和聚类算法。如利用k-means进行聚类时，判断个体所属的类别，要利用距离计算公式计算个体到簇心的距离，如利用KNN进行分类时，计算个体与已知类别之间的相似性，从而判断个体所属的类别等。
+文章编辑的过程中或许存在一个错误或者不合理的地方，欢迎指正。
+参考：http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html
+推荐：https://my.oschina.net/hunglish/blog/787596
+欧氏距离 也称欧几里得距离，是指在m维空间中两个点之间的真实距离。欧式距离在ML中使用的范围比较广，也比较通用，就比如说利用k-Means对二维平面内的数据点进行聚类，对魔都房价的聚类分析（price/m^2 与平均房价）等。
+二维空间的欧氏距离 二维平面上两点a(x1,y1)与b(x2,y2)间的欧氏距离
+$$ d12 =\sqrt{(x{1}-x{2})^2+(y{1}-y{2})^2} $$ python 实现为：
+# coding: utf-8 from numpy import * def twoPointDistance(a,b): d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 ) return d print &#39;a,b 二维距离为：&#39;,twoPointDistance((1,1),(2,2))  三维空间的欧氏距离 三维空间两点a(x1,y1,z1)与b(x2,y2,z2)间的欧氏距离
+$$d12 =\sqrt{(x{1}-x{2})^2+(y{1}-y{2})^2+(z{1}-z{2})^2}$$ python 实现为：
+def threePointDistance(a,b): d = sqrt( (a[0]-b[0])**2 + (a[1]-b[1])**2 + (a[2]-b[2])**2 ) return d print &#39;a,b 三维距离为：&#39;,threePointDistance((1,1,1),(2,2,2))  多维空间的欧氏距离 两个n维向量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的欧氏距离
+$$ \sqrt{\sum{n}^{k=1}(x{1k}-x_{2k})^2 } $$ python 实现为：</description>
+    </item>
+    
+  </channel>
+</rss>

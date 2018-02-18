@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 不忘初心</title>
+    <link>https://daonao.github.io/chuxin/tags/linux/</link>
+    <description>Recent content in Linux on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 31 Jan 2018 15:58:04 +0000</lastBuildDate>
+    
+	<atom:link href="https://daonao.github.io/chuxin/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在 Docker 中运行来自 Windows 共享文件夹的 PHP 脚本</title>
+      <link>https://daonao.github.io/chuxin/blog/2018/01/31/docker-run-a-single-php-script-from-windows-share-folder/</link>
+      <pubDate>Wed, 31 Jan 2018 15:58:04 +0000</pubDate>
+      
+      <guid>https://daonao.github.io/chuxin/blog/2018/01/31/docker-run-a-single-php-script-from-windows-share-folder/</guid>
+      <description>CSDN博客
+微博文章
+微博讨论
+在 Docker 中运行 PHP 程序的一种方式是在Dockerfile中使用COPY命令复制源代码到Docker容器中，如果是在本机中，也可以把本地PHP项目文件夹加载到Docker容器中。如果是虚拟机，例如Docker for Windows在Hyper-V中安装的虚拟机，Docker客户端会自动创建共享文件夹到虚拟机中，而对于使用docker-machine命令创建的虚拟机，Docker客户端就不自动管理了，如果是固定位置运行的程序，可以手工设置共享文件夹，如果是临时运行的话，手工设置共享文件夹未免有些繁琐，此时可以借助PowerShell脚本完成共享操作。
+假设电脑上的docker-machine中包含一台docker主机且运行正常，不限于本机、本机中的虚拟机或者其他位置，只要在局域网中能相互访问即可。
+使用管理员角色启动PowerShell。
+下载示例代码。
+git clone https://github.com/huzhenghui/Docker-run-a-single-PHP-script-from-Windows-share-folder  进入项目目录。
+cd Docker-run-a-single-PHP-script-from-Windows-share-folder  更新子模块。
+git submodule update --init  运行自动共享脚本。
+share-windows-folder-to-docker/share-windows-folder-to-docker.ps1 -workingDir ./src -volumeName Docker-run-a-single-PHP-script-from-Windows-share-folder  该脚本将自动把示例项目中的./src文件夹共享到Docker主机中的卷。
+测试共享。
+docker run --rm -v Docker-run-a-single-PHP-script-from-Windows-share-folder:/share alpine ls /share  将看到列出文件夹中的文件
+phpinfo.php  运行PHP程序
+docker run -it --rm -v Docker-run-a-single-PHP-script-from-Windows-share-folder:/src -w /src php:latest php phpinfo.php  可以看到输出运行结果。
+这种方式把Docker容器作为PHP的运行时环境，而不是单独的PHP程序，因此只需要一个PHP镜像，不需要单独为每个程序创建镜像。例如PHP程序消耗较大的计算资源，而又希望程序和输入、输出的文件都保存在Windows设备时，就适合使用这种方式。
+使用的方式也很简单，直接在项目中引入即可。
+git submodule add https://github.com/huzhenghui/share-windows-folder-to-docker  </description>
+    </item>
+    
+  </channel>
+</rss>

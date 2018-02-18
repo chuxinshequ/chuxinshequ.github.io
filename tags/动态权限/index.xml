@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>动态权限 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90/</link>
+    <description>Recent content in 动态权限 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 16 Feb 2017 10:50:45 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>打造简洁高效的动态权限管理器</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/</link>
+      <pubDate>Thu, 16 Feb 2017 10:50:45 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图
+GitHub地址：PermissionsManager
+随着Android 6.0的普及，动态权限的重要性也开始时慢慢体现出来。为了更好的保护用户隐私，Android 6.0要求在进行敏感操作之前，必须要向用户请示申请权限。
+如何使用，在之前的文章里也已经介绍过了，但是用起来比较麻烦。Android6.0动态获取权限
+我希望可以封装一下，使用之前创建一个动态权限的管理对象，他有两个回调来告诉我权限申请成功或者失败，像这样：
+mPermissionsManager = new PermissionsManager(this) { @Override public void authorized(int requestCode) { // TODO 权限通过 } @Override public void noAuthorization(int requestCode, String[] lacksPermissions) { // TODO 有权限没有通过 } };  使用的时候，可以直接调用一个方法，把要请示的权限传进去就可以进行校验，像这样：
+// 检查权限 mPermissionsManager.checkPermissions(&amp;quot;请求码&amp;quot;, &amp;quot;要校验的权限&amp;quot;);  于是乎，下面封装的动态权限管理器就来了：
+动态权限管理器 package com.kongqw.permissionslibrary; import android.app.Activity; import android.content.Context; import android.content.Intent; import android.content.pm.PackageManager; import android.net.Uri; import android.provider.Settings; import android.support.annotation.NonNull; import android.support.v4.app.ActivityCompat; import android.support.v4.content.ContextCompat; import java.</description>
+    </item>
+    
+  </channel>
+</rss>

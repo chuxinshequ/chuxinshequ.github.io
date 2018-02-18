@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降</title>
+  <meta name="author" content="" />
+
+  
+  <meta name="keywords" content="devows, hugo, go">	
+  
+
+  
+  <meta name="description" content="Site template made by devcows using hugo">	
+  
+
+  <meta name="generator" content="Hugo 0.30.2" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="https://chuxin-community.github.io/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="https://chuxin-community.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+
+  
+  <link href="https://chuxin-community.github.io/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="https://chuxin-community.github.io/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://chuxin-community.github.io/img/apple-touch-icon.png" />
+  
+
+  <link href="https://chuxin-community.github.io/css/owl.carousel.css" rel="stylesheet">
+  <link href="https://chuxin-community.github.io/css/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://chuxin-community.github.io/index.xml" type="application/rss+xml" title="不忘初心">
+
+  
+  <meta property="og:title" content="梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/posts/thinkgamer/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D//" />
+  <meta property="og:image" content="img/logo.png" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://chuxin-community.github.io/">
+                    <img src="https://chuxin-community.github.io/img/logo.png" alt="梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降 logo" class="hidden-xs hidden-sm">
+                    <img src="https://chuxin-community.github.io/img/logo-small.png" alt="梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降 - </span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only"></span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/blog/">Blog</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">Contact</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">December 14, 2017</p>
+
+                        <div id="post-content">
+                          
+
+<p>在机器学习领域，体梯度下降算法分为三种</p>
+
+<ul>
+<li>批量梯度下降算法（BGD，Batch gradient descent algorithm）</li>
+<li>随机梯度下降算法（SGD，Stochastic gradient descent algorithm）</li>
+<li>小批量梯度下降算法（MBGD，Mini-batch gradient descent algorithm）</li>
+</ul>
+
+<!--More-->
+
+<h1 id="批量梯度下降算法">批量梯度下降算法</h1>
+
+<p>BGD是最原始的梯度下降算法，每一次迭代使用全部的样本，即权重的迭代公式中(公式中用$\theta$代替$\theta_i$)，
+$$
+\jmath (\theta _0,\theta _1,&hellip;,\theta <em>n)=\sum</em>{i=0}^{m}( h_\theta(x_0,x_1,&hellip;,x_n)-y_i )^2<br />
+$$
+$$
+\theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,&hellip;,\theta _n)}{\partial \theta _i}
+$$
+$$
+公式(1)
+$$</p>
+
+<p>这里的m代表所有的样本，表示从第一个样本遍历到最后一个样本。</p>
+
+<p>特点：</p>
+
+<ul>
+<li>能达到全局最优解，易于并行实现</li>
+<li>当样本数目很多时，训练过程缓慢</li>
+</ul>
+
+<h1 id="随机梯度下降算法">随机梯度下降算法</h1>
+
+<p>SGD的思想是更新每一个参数时都使用一个样本来进行更新，即公式（1）中m为1。每次更新参数都只使用一个样本，进行多次更新。这样在样本量很大的情况下，可能只用到其中的一部分样本就能得到最优解了。
+但是，SGD伴随的一个问题是噪音较BGD要多，使得SGD并不是每次迭代都向着整体最优化方向。</p>
+
+<p>特点：
+- 训练速度快
+- 准确度下降，并不是最优解，不易于并行实现</p>
+
+<h1 id="小批量梯度下降算法">小批量梯度下降算法</h1>
+
+<p>MBGD的算法思想就是在更新每一参数时都使用一部分样本来进行更新，也就是公式（1）中的m的值大于1小于所有样本的数量。</p>
+
+<p>相对于随机梯度下降，Mini-batch梯度下降降低了收敛波动性，即降低了参数更新的方差，使得更新更加稳定。相对于批量梯度下降，其提高了每次学习的速度。并且其不用担心内存瓶颈从而可以利用矩阵运算进行高效计算。一般而言每次更新随机选择[50,256]个样本进行学习，但是也要根据具体问题而选择，实践中可以进行多次试验，选择一个更新速度与更次次数都较适合的样本数。mini-batch梯度下降可以保证收敛性，常用于神经网络中。</p>
+
+<h1 id="补充">补充</h1>
+
+<p>在样本量较小的情况下，可以使用批量梯度下降算法，样本量较大的情况或者线上，可以使用随机梯度下降算法或者小批量梯度下降算法。</p>
+
+<p>在机器学习中的无约束优化算法，除了梯度下降以外，还有前面提到的最小二乘法，此外还有牛顿法和拟牛顿法。</p>
+
+<p>梯度下降法和最小二乘法相比，梯度下降法需要选择步长，而最小二乘法不需要。梯度下降法是迭代求解，最小二乘法是计算解析解。如果样本量不算很大，且存在解析解，最小二乘法比起梯度下降法要有优势，计算速度很快。但是如果样本量很大，用最小二乘法由于需要求一个超级大的逆矩阵，这时就很难或者很慢才能求解解析解了，使用迭代的梯度下降法比较有优势。</p>
+
+<p>梯度下降法和牛顿法/拟牛顿法相比，两者都是迭代求解，不过梯度下降法是梯度求解，而牛顿法/拟牛顿法是用二阶的海森矩阵的逆矩阵或伪逆矩阵求解。相对而言，使用牛顿法/拟牛顿法收敛更快。但是每次迭代的时间比梯度下降法长。</p>
+
+<h1 id="sklearn中的sgd">sklearn中的SGD</h1>
+
+<p>sklearn官网上查了一下，并没有找到BGD和MBGD的相关文档，只是看到可SGD的，感兴趣的可以直接去官网看英文文档，点击SGD查看：<a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html">SGD</a>，这也有一个中文的 <a href="http://sklearn.lzjqsdd.com/modules/sgd.html">SGD</a></p>
+
+<pre><code>In [1]: from sklearn.linear_model import SGDClassifier
+
+In [2]: X = [[0., 0.], [1., 1.]]
+
+In [3]: y = [0, 1]
+
+In [4]: clf = SGDClassifier(loss=&quot;hinge&quot;, penalty=&quot;l2&quot;)
+
+In [5]: clf.fit(X, y)
+Out[5]: 
+SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
+       eta0=0.0, fit_intercept=True, l1_ratio=0.15,
+       learning_rate='optimal', loss='hinge', n_iter=5, n_jobs=1,
+       penalty='l2', power_t=0.5, random_state=None, shuffle=True,
+       verbose=0, warm_start=False)
+
+In [6]:  clf.predict([[2., 2.]])
+Out[6]: array([1])
+
+In [7]: clf.coef_ 
+Out[7]: array([[ 9.91080278,  9.91080278]])
+
+In [8]: clf.intercept_ 
+Out[8]: array([-9.97004991])
+</code></pre>
+
+<p>参考：</p>
+
+<ul>
+<li><a href="https://www.cnblogs.com/pinard/p/5970503.html">https://www.cnblogs.com/pinard/p/5970503.html</a></li>
+<li><a href="http://blog.csdn.net/uestc_c2_403/article/details/74910107">http://blog.csdn.net/uestc_c2_403/article/details/74910107</a></li>
+</ul>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "devcows" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="hidden" name="sitesearch" value="https://chuxin-community.github.io/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://chuxin-community.github.io/categories/help">help (2)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/im">im (1)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/opencv">opencv (15)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e5%a4%8f%e6%9c%aa%e7%9c%a0">夏未眠 (2)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e5%bc%80%e6%ba%90">开源 (5)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e6%8a%80%e6%9c%af%e7%af%87">技术篇 (13)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e8%af%ad%e9%9f%b3">语音 (13)</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/categories/%e9%9a%8f%e6%89%8b%e8%ae%b0">随手记 (2)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://chuxin-community.github.io/tags/aes"><i class="fa fa-tags"></i> aes</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/android"><i class="fa fa-tags"></i> android</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/elk"><i class="fa fa-tags"></i> elk</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/es"><i class="fa fa-tags"></i> es</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/gradle"><i class="fa fa-tags"></i> gradle</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/help"><i class="fa fa-tags"></i> help</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/hexo"><i class="fa fa-tags"></i> hexo</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/im"><i class="fa fa-tags"></i> im</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/opencv"><i class="fa fa-tags"></i> opencv</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/sklearn"><i class="fa fa-tags"></i> sklearn</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e4%b8%b2%e5%8f%a3"><i class="fa fa-tags"></i> 串口</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8a%a0%e5%af%86"><i class="fa fa-tags"></i> 加密</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8a%a8%e6%80%81%e6%9d%83%e9%99%90"><i class="fa fa-tags"></i> 动态权限</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%8d%b3%e6%8b%bf%e5%8d%b3%e7%94%a8"><i class="fa fa-tags"></i> 即拿即用</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%9b%9e%e5%bd%92%e5%88%86%e6%9e%90"><i class="fa fa-tags"></i> 回归分析</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a3%b0%e9%81%93"><i class="fa fa-tags"></i> 声道</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a4%8f%e6%9c%aa%e7%9c%a0"><i class="fa fa-tags"></i> 夏未眠</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%a4%9a%e5%aa%92%e4%bd%93"><i class="fa fa-tags"></i> 多媒体</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%bc%80%e6%ba%90"><i class="fa fa-tags"></i> 开源</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e5%bc%82%e5%b8%b8%e6%a3%80%e6%b5%8b"><i class="fa fa-tags"></i> 异常检测</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%91%87%e6%9d%86"><i class="fa fa-tags"></i> 摇杆</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%95%b0%e6%8d%ae%e5%bd%92%e4%b8%80%e5%8c%96"><i class="fa fa-tags"></i> 数据归一化</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84"><i class="fa fa-tags"></i> 数据结构</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%96%87%e4%bb%b6%e5%ad%98%e5%8f%96"><i class="fa fa-tags"></i> 文件存取</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%a2%af%e5%ba%a6%e4%b8%8b%e9%99%8d"><i class="fa fa-tags"></i> 梯度下降</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e6%ad%a3%e5%bc%a6%e6%b3%a2"><i class="fa fa-tags"></i> 正弦波</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e7%8e%af%e4%bf%a1"><i class="fa fa-tags"></i> 环信</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%93%9d%e7%89%99"><i class="fa fa-tags"></i> 蓝牙</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%93%9d%e7%89%99%e9%80%9a%e4%bf%a1"><i class="fa fa-tags"></i> 蓝牙通信</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%af%ad%e9%9f%b3"><i class="fa fa-tags"></i> 语音</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e8%b7%9d%e7%a6%bb%e8%ae%a1%e7%ae%97"><i class="fa fa-tags"></i> 距离计算</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e9%9a%8f%e6%89%8b%e8%ae%b0"><i class="fa fa-tags"></i> 随手记</a>
+            </li>
+            
+            <li><a href="https://chuxin-community.github.io/tags/%e9%9b%b7%e8%be%be"><i class="fa fa-tags"></i> 雷达</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4></h4>
+
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4></h4>
+
+            <div class="blog-entries">
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4></h4>
+
+            <strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      
+
+
+            <a href="/contact" class="btn btn-small btn-template-main"></a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
+            
+            <p class="pull-right">
+               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              
+
+               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y&v=3.exp"></script>
+
+<script src="https://chuxin-community.github.io/js/hpneo.gmaps.js"></script>
+<script src="https://chuxin-community.github.io/js/gmaps.init.js"></script>
+<script src="https://chuxin-community.github.io/js/front.js"></script>
+
+
+<script src="https://chuxin-community.github.io/js/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>

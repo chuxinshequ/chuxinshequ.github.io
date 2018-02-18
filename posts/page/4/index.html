@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>不忘初心 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.30.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://daonao.github.io/chuxin/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+      <link href="https://daonao.github.io/chuxin/posts/index.xml" rel="alternate" type="application/rss+xml" title="不忘初心" />
+      <link href="https://daonao.github.io/chuxin/posts/index.xml" rel="feed" type="application/rss+xml" title="不忘初心" />
+    
+
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://daonao.github.io/chuxin/posts/" />
+
+
+
+<meta property="og:updated_time" content="2017-03-02T14:46:09&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://daonao.github.io/chuxin/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://daonao.github.io/chuxin/" class="f3 fw2 hover-white no-underline white-90 dib">
+      不忘初心
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      
+    </div>
+  </article>
+  <div class="mw8 center">
+    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/" class="link black dim">
+        Gradle常用技巧
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+Gradle http://google.github.io/android-gradle-dsl/current/index.html
+https://docs.gradle.org/current/userguide/java_plugin.html
+打包多个版本 开发过程中我们经常需要打包多个版本的apk，最为常见的，一个是release版本，一个是debug版本，他们可能使用的api也有所区别，手动改起来总是很麻烦。 我们可以通过Gradle，配置多个版本，他们有各自的参数来区分不同的版本。如下，在 app/build.gradle 系统默认会给我生成release版本，我们可以手动自己添加一个版本，我这里命名为debug，分别添加了三种类型的参数。
+apply plugin: 'com.android.application' android { …… buildTypes { release { …… buildConfigField(&quot;boolean&quot;, &quot;isDebug&quot;, &quot;false&quot;) } debug { // 添加了boolean类型的参数 buildConfigField(&quot;boolean&quot;, &quot;isDebug&quot;, &quot;true&quot;) // 添加了String类型的参数 buildConfigField(&quot;String&quot;, &quot;coder&quot;, &quot;\&quot;kongqw\&quot;&quot;) // 添加了int类型的参数 buildConfigField(&quot;int&quot;, &quot;age&quot;, &quot;26&quot;) } } } …… dependencies { …… }  添加完成后Rebuild，会在 BuildConfig 下看到我们添加的参数
+因为是静态变量，取值时直接用类名点变量名即可
+上述属于在Java代码中添加字段，同样的，Gradle也支持添加xml属性，类似这样
+apply plugin: 'com.android.application' android { …… defaultConfig { …… } buildTypes { release { …… } debug { …… resValue(&quot;bool&quot;, &quot;is_debug&quot;, &quot;true&quot;) resValue(&quot;string&quot;, &quot;coder&quot;, &quot;\&quot;kongqw\&quot;&quot;) resValue(&quot;integer&quot;, &quot;age&quot;, &quot;26&quot;) } } } dependencies { …… }  添加完以后Rebuild，会在generated.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/" class="link black dim">
+        打造简洁高效的动态权限管理器
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图
+GitHub地址：PermissionsManager
+随着Android 6.0的普及，动态权限的重要性也开始时慢慢体现出来。为了更好的保护用户隐私，Android 6.0要求在进行敏感操作之前，必须要向用户请示申请权限。
+如何使用，在之前的文章里也已经介绍过了，但是用起来比较麻烦。Android6.0动态获取权限
+我希望可以封装一下，使用之前创建一个动态权限的管理对象，他有两个回调来告诉我权限申请成功或者失败，像这样：
+mPermissionsManager = new PermissionsManager(this) { @Override public void authorized(int requestCode) { // TODO 权限通过 } @Override public void noAuthorization(int requestCode, String[] lacksPermissions) { // TODO 有权限没有通过 } };  使用的时候，可以直接调用一个方法，把要请示的权限传进去就可以进行校验，像这样：
+// 检查权限 mPermissionsManager.checkPermissions(&quot;请求码&quot;, &quot;要校验的权限&quot;);  于是乎，下面封装的动态权限管理器就来了：
+动态权限管理器 package com.kongqw.permissionslibrary; import android.app.Activity; import android.content.Context; import android.content.Intent; import android.content.pm.PackageManager; import android.net.Uri; import android.provider.Settings; import android.support.annotation.NonNull; import android.support.v4.app.ActivityCompat; import android.support.v4.content.ContextCompat; import java.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-12-13-android%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80/" class="link black dim">
+        Android自定义View绘图基础
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+Android自定义View绘图基础 View的测量 控件的测量可以说是固定写法，原生的View只支持EXACTLY的测量模式，我们自定义的控件可以重写onMeasure方法
+@Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) { setMeasuredDimension(getMeasuredSize(widthMeasureSpec), getMeasuredSize(heightMeasureSpec)); }  onMeasure方法给我们返回的widthMeasureSpec和heightMeasureSpec，我们并不能直接拿过来使用，需要使用MeasureSpec类进行解析，来获取测量后的具体值。 首先需要获取测量模式
+MeasureSpec.getMode(measureSpec)  getMode方法返回是测量的模式，有以下3种类型： - MeasureSpec.EXACTLY : 精确值模式（指定值/match_parent） - MeasureSpec.AT_MOST : 最大值模式（wrap_content） - MeasureSpec.UNSPECIFIED : 不指定大小的测量模式（一般用不上）
+获取到了测量模式以后，获取测量后的大小
+MeasureSpec.getSize(measureSpec)  根据上面的意思，可以封装我们的getMeasuredSize方法
+// 默认大小 private static final int DEFAULT_SIZE = 200; /** * 获取测量后的大小 * * @param measureSpec measureSpec * @return measuredSize */ private int getMeasuredSize(int measureSpec) { switch (MeasureSpec.getMode(measureSpec)) { case MeasureSpec.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-11-16-android%E4%B8%8Ejavascript%E4%BA%A4%E4%BA%92/" class="link black dim">
+        Android与Javascript交互
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+本篇参考Android与HTML+JS交互入门
+效果图 加载本地Html contentWebView = (WebView) findViewById(R.id.webview); // 加载Assets下的Html contentWebView.loadUrl(&quot;file:///android_asset/html/test.html&quot;);  启用Javascript contentWebView.getSettings().setJavaScriptEnabled(true); contentWebView.addJavascriptInterface(this, &quot;android&quot;);  Android调用Javascript的方法 Javascript写法
+&lt;script type=&quot;text/javascript&quot;&gt; function jsFunction(){ document.getElementById(&quot;content&quot;).innerHTML = &quot;JS方法被调用&quot;; } function jsFunctionArg(arg){ document.getElementById(&quot;content&quot;).innerHTML = &quot;JS方法被调用并收到参数：&lt;br/&gt;&quot; + arg; } &lt;/script&gt;  Android写法
+// 调用JS的jsFunction方法 contentWebView.loadUrl(&quot;javascript:jsFunction()&quot;); // 调用JS的jsFunctionArg方法 contentWebView.loadUrl(&quot;javascript:jsFunctionArg('[Android传递过来的数据]')&quot;);  Javascript调用Android的方法 Android方法
+@JavascriptInterface public void androidFunction() { Snackbar.make(contentWebView, &quot;Android的方法被调用&quot;, Snackbar.LENGTH_SHORT).show(); }  @JavascriptInterface public void androidFunction(String text) { Snackbar.make(contentWebView, &quot;Android的方法被调用并收到参数 : \n&quot; + text, Snackbar.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/" class="link black dim">
+        Android播放音效
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+有些时候程序需要播放几个很短的低延迟的音效来响应与用户的交互。
+Android通过SoundPool将文件音频缓存加载到内存中，然后在响应用户操作的时候快速地播放。 Android框架低通了SoundPool来解码小音频文件，并在内存中操作它们来进行音频快速和重复的播放。SoundPool还有一些其他特性，比如可以在运行时控制音量和播放速度。
+播放音效也很简单，总共分5步
+准备音频文件 将音频文件放置在assets目录下
+初始化SoundPool SoundPool mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);  加载音频文件 int streamID = mSoundPool.load(getApplicationContext().getAssets().openFd(&quot;beep/beep1.mp3&quot;), 1);  播放音频文件 mSoundPool.play(streamID, 10, 10, 1, 0, 1.0f);  释放SoundPool mSoundPool.release(); mSoundPool = null;  Code package com.kongqw.kqwplaybeepdemo; import android.media.AudioManager; import android.media.SoundPool; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.util.Log; import android.view.View; import java.io.IOException; import java.util.HashMap; public class MainActivity extends AppCompatActivity implements View.OnClickListener { private static final String TAG = &quot;MainActivity&quot;; private SoundPool mSoundPool; private int streamID; private HashMap&lt;String, Integer&gt; mSoundMap; @Override protected void onCreate(Bundle savedInstanceState) { super.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="link black dim">
+        App启动优化最佳实践
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+ 看了医生写的文章一触即发——App启动优化最佳实践，收获是有的。
+ 做Android开发，一定写给过启动页，在这里做一些初始化的操作，还有就是显示推广信息。
+很普通的一个页面，以前测试也给我提出过bug，应用在启动的时候，有时候有白屏/黑屏。当时能做的就是尽量较少耗时操作，上面医生的文章里也有提到，但是通过主题的方式优化这个问题之前还真是不知道的。
+下面主要总结一下通过主题的方式优化启动页（医生还提到了在子线程初始化和使用IntentService初始化，都是属于异步初始化，还有延迟初始化，就不说了）
+效果图 通过修改主题优化启动时白屏/黑屏  原理请移步到医生的文章，我就不复述了，之所以会看到白屏或者黑屏，是和我们的主题有关系的，因为系统默认使用的主题，背景色就是白色/黑色。那么我们自定义一个主题，让默认的样式就是我们想要的，就优化了白屏/黑屏的问题。
+ 首先，我们自定义一个主题,设置一个我们想要的背景
+&lt;!-- 启动页主题 --&gt; &lt;style name=&quot;SplashTheme&quot; parent=&quot;@style/Theme.AppCompat.Light.NoActionBar&quot;&gt; &lt;item name=&quot;android:windowBackground&quot;&gt;@drawable/start_window&lt;/item&gt; &lt;/style&gt;  自定义背景start_window.xml
+&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:opacity=&quot;opaque&quot;&gt; &lt;!-- The background color, preferably the same as your normal theme --&gt; &lt;item android:drawable=&quot;@android:color/holo_blue_dark&quot; /&gt; &lt;!-- Your product logo - 144dp color version of your app icon --&gt; &lt;item&gt; &lt;bitmap android:gravity=&quot;center&quot; android:src=&quot;@mipmap/ic_launcher&quot; /&gt; &lt;/item&gt; &lt;/layer-list&gt;  最后，在清单文件设置启动页使用我们自定义的主题
+&lt;?xml version=&quot;1.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/" class="link black dim">
+        Android串口通信
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+ 串口通信偏向嵌入式一点，是Android设备通过串口与其他设备进行通信的一种方式，本文介绍的Android纯串口的通信，并不是手机上的USB串口通信。
+  手机上是没有这个串口的哦。
+ 关于串口通信，Google已经给出了源码，地址在GitHub android-serialport-api
+四年前的代码，还是Eclipse工程，本文主要介绍如何在Android Studio中使用。
+源码地址在 KqwSerialPortDemo
+集成 Java层的代码，Google已经给封装在 SerialPort.java
+导入.so 没有什么难度了，将so导入到项目
+导入jni文件 在main目录下创建cpp文件夹，并将jni源文件和CMakeLists.txt导入
+在build.gradle配置cmake路径。
+android { …… externalNativeBuild { cmake { path &quot;src/main/cpp/CMakeLists.txt&quot; } } …… ｝  修改jni源文件 这里要注意jni文件函数名的写法：Java_包名_类名_方法名
+在将源码里的jni导入过来的时候，包名是源码Demo的包名，我们在自己的工程里要换成自己的包名、类名，源文件和头文件都要记得改。
+修改CMakeLists.txt与SerialPort.java CMakeLists.txt
+cmake_minimum_required(VERSION 3.4.1) add_library(SerialPort SHARED SerialPort.c) # Include libraries needed for libserial_port lib target_link_libraries(SerialPort android log)  SerialPort.java
+static { System.loadLibrary(&quot;SerialPort&quot;); System.loadLibrary(&quot;serial_port&quot;); }  使用 基类 需要使用串口通信的类继承 SerialPortActivity.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B/" class="link black dim">
+        这夏未眠.简介
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      书整体分为三部分《夏之过往》，《夏之流年》，《夏之未至》。整本书讲的是男主人公顾艾哲（小艾）与莫晨（晨晨）之间的故事，从初中到高中再到大学，从相遇到相知再到相离。  两人同在陌乘一中念初中，同班同学，在中考来临的那段日子，两人相互鼓励，于是顾艾哲（小艾）考上了他从来都没有想过能考上的孟川一高，而莫晨（晨晨）呢，考上了预料之中的平阳一高，而她在这之前却从来没告诉过顾艾哲（小艾）她要去平阳，就这样，两个人分开了，一些都看起来那么顺理成章，一切又看起来那么暗淡失望。
+在经历过高中的二年之后，顾艾哲（小艾）终于联系上了莫晨（晨晨），那天晚上，他用妈妈的电话给莫晨（晨晨）通了两个小时的电话，似乎要把两人两年里没有说的话都说完，可是有太多的话是无法用言语表达的，就这样电话欠费了，终止了聊天，可是那天晚上，小艾高兴的一宿没睡，那一晚上，他的笑容都是幸福的。
+可是事情永远不会那么顺利，在香山公园里，当他拿起他买的情侣戒指送给晨晨时，晨晨没有接受，说了一堆他也没有听进去的话，就这样，又开始了分离，而谁也不知道这次分离竟然时一辈子的再也不见。
+后来的后来，他又遇见了别的女孩，不知道是不是因为后来的女孩都像小艾记忆里的莫晨。只知道，他都很珍惜。
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E5%BA%8F/" class="link black dim">
+        这夏未眠.序
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      这本书的整体构思是小主大学一年级时刚去的时候的一个想法，当时刚刚步入大学的我们，心里是那么的迷茫与懵懂，开学前两周，除了军训还是军训，晚上偶尔有个空闲时间，我想大概也许是无聊的，记得那个时候坐在图书馆靠窗的位置，看着窗外，没有明月，没有佳人，有的只是一望无际的黑暗。  那个时候，还没有遇到你所想遇到的人，或许回忆还沉淀在高中的时光里，或是幸福，或是苦涩，或是幸福之后的苦涩，回过头来，看着满屋子的学长学姐，心里是及其复杂的，有种说不出的难过，那时候我是不是在想，现在的你（们）会在哪里念大学呢？
+想着想着眼角便淌出了泪水，我想我的大学要完成一件至少我自己觉得满意的事，于是便有了你现在看到的这个序，不知道是不是受郭敬明的影响，因为我看过他的唯一一本小说，也是我看过的唯一一本小说——《夏至未至》，我想写一本书，或者更准确的说，我想写一个人的青春。
+在13年军训结束之后，我构思了整个体系，定了这本书的名字——《这夏未眠》，熟悉我的朋友，也知道这是我的QQ网名，QQ作为那个时代的记忆，总会残留一些悲伤的故事，于是我到现在四年了，我从没换过QQ网名，或许是害怕，害怕那些好久不联系的朋友，找不到我吧。
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/chuxin/posts/kongqw/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="link black dim">
+        OpenCV&#43;JavaCV实现人脸识别
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+OpenCV主要实现人脸检测功能
+JavaCV主要实现人脸对比功能
+具体的就不啰嗦了，本来最近很忙，主要是因为好多人私信我要 Android使用OpenCV实现「人脸检测」和「人脸识别」 的Demo，今天特意抽出时间写了一下。
+效果图 源码 KqwFaceDetectionDemo
+感觉有用的话，就给个star吧，谢谢！！
+注意 最后啰嗦一点，如果你的程序是跑在手机、pad等设备上，一般没有什么问题。 但是如果你是在自己的开发板上跑，可能会有一些小插曲。
+比如我司的机器人是定制的Android板子，对系统做了裁剪，很多摄像头的方法可能就用不了
+例如这样一个错误
+AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程序的时候，OpenCV会提示，没有找到可用摄像头或者摄像头被锁住（大概这个意思，我就不截图了），一种可能是设备真的没有接摄像头，也有可能是摄像头定制过，导致某些方法用不了，比如上面的错误就是我遇到的其中一个。
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  
+
+<ul class="pagination">
+    
+    <li>
+        <a href="/chuxin/posts/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li
+    >
+    <a href="/chuxin/posts/page/3/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    class="active"><a href="/chuxin/posts/page/4/">4</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/5/">5</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="disabled"><span aria-hidden="true">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="/chuxin/posts/page/8/">8</a></li>
+    
+    
+    <li
+    >
+    <a href="/chuxin/posts/page/5/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a href="/chuxin/posts/page/8/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://daonao.github.io/chuxin/" >
+    &copy; 2018 不忘初心
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="https://daonao.github.io/chuxin/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

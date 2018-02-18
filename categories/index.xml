@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 不忘初心</title>
+    <link>https://chuxin-community.github.io/categories/</link>
+    <description>Recent content in Categories on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    
+	<atom:link href="https://chuxin-community.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Help</title>
+      <link>https://chuxin-community.github.io/categories/help/</link>
+      <pubDate>Tue, 30 Jan 2018 23:30:01 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/categories/help/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Im</title>
+      <link>https://chuxin-community.github.io/categories/im/</link>
+      <pubDate>Mon, 22 Aug 2016 18:36:12 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/categories/im/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opencv</title>
+      <link>https://chuxin-community.github.io/categories/opencv/</link>
+      <pubDate>Mon, 22 Aug 2016 11:35:23 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/categories/opencv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>夏未眠</title>
+      <link>https://chuxin-community.github.io/categories/%E5%A4%8F%E6%9C%AA%E7%9C%A0/</link>
+      <pubDate>Thu, 15 Sep 2016 18:13:50 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/categories/%E5%A4%8F%E6%9C%AA%E7%9C%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>开源</title>
+      <link>https://chuxin-community.github.io/categories/%E5%BC%80%E6%BA%90/</link>
+      <pubDate>Thu, 16 Mar 2017 18:24:36 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/categories/%E5%BC%80%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术篇</title>
+      <link>https://chuxin-community.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/</link>
+      <pubDate>Thu, 14 Dec 2017 14:40:43 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>语音</title>
+      <link>https://chuxin-community.github.io/categories/%E8%AF%AD%E9%9F%B3/</link>
+      <pubDate>Tue, 16 Aug 2016 16:55:56 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/categories/%E8%AF%AD%E9%9F%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>随手记</title>
+      <link>https://chuxin-community.github.io/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/</link>
+      <pubDate>Thu, 14 Dec 2017 17:55:29 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

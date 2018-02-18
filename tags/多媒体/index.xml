@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>多媒体 on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/%E5%A4%9A%E5%AA%92%E4%BD%93/</link>
+    <description>Recent content in 多媒体 on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 16 Nov 2016 10:56:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/%E5%A4%9A%E5%AA%92%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android播放音效</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</link>
+      <pubDate>Wed, 16 Nov 2016 10:56:36 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+有些时候程序需要播放几个很短的低延迟的音效来响应与用户的交互。
+Android通过SoundPool将文件音频缓存加载到内存中，然后在响应用户操作的时候快速地播放。 Android框架低通了SoundPool来解码小音频文件，并在内存中操作它们来进行音频快速和重复的播放。SoundPool还有一些其他特性，比如可以在运行时控制音量和播放速度。
+播放音效也很简单，总共分5步
+准备音频文件 将音频文件放置在assets目录下
+初始化SoundPool SoundPool mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);  加载音频文件 int streamID = mSoundPool.load(getApplicationContext().getAssets().openFd(&amp;quot;beep/beep1.mp3&amp;quot;), 1);  播放音频文件 mSoundPool.play(streamID, 10, 10, 1, 0, 1.0f);  释放SoundPool mSoundPool.release(); mSoundPool = null;  Code package com.kongqw.kqwplaybeepdemo; import android.media.AudioManager; import android.media.SoundPool; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.util.Log; import android.view.View; import java.io.IOException; import java.util.HashMap; public class MainActivity extends AppCompatActivity implements View.OnClickListener { private static final String TAG = &amp;quot;MainActivity&amp;quot;; private SoundPool mSoundPool; private int streamID; private HashMap&amp;lt;String, Integer&amp;gt; mSoundMap; @Override protected void onCreate(Bundle savedInstanceState) { super.</description>
+    </item>
+    
+  </channel>
+</rss>

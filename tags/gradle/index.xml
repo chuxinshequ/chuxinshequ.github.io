@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gradle on 不忘初心</title>
+    <link>https://chuxin-community.github.io/tags/gradle/</link>
+    <description>Recent content in Gradle on 不忘初心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 02 Mar 2017 14:46:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://chuxin-community.github.io/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gradle常用技巧</title>
+      <link>https://chuxin-community.github.io/posts/kongqw/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Thu, 02 Mar 2017 14:46:09 +0000</pubDate>
+      
+      <guid>https://chuxin-community.github.io/posts/kongqw/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+Gradle http://google.github.io/android-gradle-dsl/current/index.html
+https://docs.gradle.org/current/userguide/java_plugin.html
+打包多个版本 开发过程中我们经常需要打包多个版本的apk，最为常见的，一个是release版本，一个是debug版本，他们可能使用的api也有所区别，手动改起来总是很麻烦。 我们可以通过Gradle，配置多个版本，他们有各自的参数来区分不同的版本。如下，在 app/build.gradle 系统默认会给我生成release版本，我们可以手动自己添加一个版本，我这里命名为debug，分别添加了三种类型的参数。
+apply plugin: &#39;com.android.application&#39; android { …… buildTypes { release { …… buildConfigField(&amp;quot;boolean&amp;quot;, &amp;quot;isDebug&amp;quot;, &amp;quot;false&amp;quot;) } debug { // 添加了boolean类型的参数 buildConfigField(&amp;quot;boolean&amp;quot;, &amp;quot;isDebug&amp;quot;, &amp;quot;true&amp;quot;) // 添加了String类型的参数 buildConfigField(&amp;quot;String&amp;quot;, &amp;quot;coder&amp;quot;, &amp;quot;\&amp;quot;kongqw\&amp;quot;&amp;quot;) // 添加了int类型的参数 buildConfigField(&amp;quot;int&amp;quot;, &amp;quot;age&amp;quot;, &amp;quot;26&amp;quot;) } } } …… dependencies { …… }  添加完成后Rebuild，会在 BuildConfig 下看到我们添加的参数
+因为是静态变量，取值时直接用类名点变量名即可
+上述属于在Java代码中添加字段，同样的，Gradle也支持添加xml属性，类似这样
+apply plugin: &#39;com.android.application&#39; android { …… defaultConfig { …… } buildTypes { release { …… } debug { …… resValue(&amp;quot;bool&amp;quot;, &amp;quot;is_debug&amp;quot;, &amp;quot;true&amp;quot;) resValue(&amp;quot;string&amp;quot;, &amp;quot;coder&amp;quot;, &amp;quot;\&amp;quot;kongqw\&amp;quot;&amp;quot;) resValue(&amp;quot;integer&amp;quot;, &amp;quot;age&amp;quot;, &amp;quot;26&amp;quot;) } } } dependencies { …… }  添加完以后Rebuild，会在generated.</description>
+    </item>
+    
+  </channel>
+</rss>
