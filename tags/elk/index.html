@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="Elk logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="Elk logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Elk - </span>
+                    <span class="sr-only">Elk - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -202,7 +202,7 @@
  理论概念 &gt; http://blog.sina.com.cn/s/blog_4b9acb5201016nkd.html
   ES移动平均聚合：Moving Average的四种模型 simple 就是使用窗口内的值的和除于窗口值，通常窗口值越大，最后的结果越平滑: (a1 + a2 + &hellip; + an) / n
 curl -XPOST 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -d' { &quot;size&quot;: 0, &quot;aggs&quot;: { &quot;my_date_histo&quot;:{ &quot;date_histogram&quot;:{ &quot;field&quot;:&quot;date&quot;, &quot;interval&quot;:&quot;1M&quot; }, &quot;aggs&quot;:{ &quot;the_sum&quot;:{ &quot;sum&quot;:{ &quot;field&quot;: &quot;price&quot; } }, &quot;the_movavg&quot;:{ &quot;moving_avg&quot;:{ &quot;buckets_path&quot;: &quot;the_sum&quot;, &quot;window&quot; : 30, &quot;model&quot; : &quot;simple&quot; } } } } } } '  线性模型：Linear 对窗口内的值先做线性变换处理，再求平均：(a1 * 1 + a2 * 2 + &hellip; + an * n) / (1 + 2 + &hellip; + n)</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -240,7 +240,7 @@ curl -XPOST 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' 
                                     <p class="intro">ELK是日志收集分析神器，在这篇文章中将会介绍一些ES的常用命令。
 点击阅读：ELK Stack 从入门到放弃 
 DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 shards, which is over the limit of 1000. This limit exists because querying many shards at the same time can make the job of the coordinating node very CPU and/or memory intensive. It is usually a better idea to have a smaller number of larger shards. Update [action.search.shard_count.limit] to a greater value if you really want to query that many shards at the same time.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -249,11 +249,11 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
 
                         <ul class="pager">
                             
-                            <li class="previous disabled"><a href="#">&larr; </a></li>
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -272,13 +272,13 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -297,7 +297,7 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -340,7 +340,7 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -473,7 +473,7 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -486,7 +486,7 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -540,7 +540,7 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -553,7 +553,7 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -578,10 +578,10 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="Hexo logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="Hexo logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Hexo - </span>
+                    <span class="sr-only">Hexo - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -204,7 +204,7 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
 自己的项目根目录下的source文件夹下新建photos文件夹，将下载的几个文件放在该文件夹中，或者不用新建，直接将下载的photos文件夹放在source目录下。
 文件修改  修改 ins.js 文件的 render()函数 这个函数是用来渲染数据的 修改图片的路径地址.minSrc 小图的路径. src 大图的路径.修改为自己的图片路径(github的路径) 例如我的为： ``` var minSrc = &lsquo;https://raw.githubusercontent.com/Thinkgamer/GitBlog/master/min_photos/' + data.link[i] + &lsquo;.min.jpg&rsquo;; var src = &lsquo;https://raw.githubusercontent.com/Thinkgamer/GitBlog/master/photos/' + data.link[i];  # 生成json 1：下载相应python工具文件 - tools.py - ImageProcess.py 下载地址：https://github.com/Thinkgamer/GitBlog 2：新建photos和min_photos文件夹 在项目根目录下创建，用来存放照片和压缩后的照片  mkdir photos mkdir min_photos
 3：py文件和文件夹都放在项目根目录下 4：生成json 执行  python tools.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -213,11 +213,11 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
 
                         <ul class="pager">
                             
-                            <li class="previous disabled"><a href="#">&larr; </a></li>
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -236,13 +236,13 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -261,7 +261,7 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -304,7 +304,7 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -437,7 +437,7 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -450,7 +450,7 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -504,7 +504,7 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -517,7 +517,7 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -542,10 +542,10 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="语音 logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="语音 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">语音 - </span>
+                    <span class="sr-only">语音 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -204,7 +204,7 @@
 只要改一个参数，将识别引擎改为混合模式即可
 mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为使用的混合模式，当本地命令词没有识别到结果的时候会走在线语义（语义只有在线），所以，我们必须要先开通语义服务
 程序流程 最后  如果你直接用我的Demo，我用的是测试版的离线包，只有35天的试用期，而且装机量只有3个，如果大家都用，很可能是不能正常运行的 如果是参考我的demo自己写一个，千万不要忘记替换appid和资源文件。  </p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2015/08/20/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D-%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2015/08/20/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D-%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -250,7 +250,7 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
 开发步骤 1. 添加权限 这里用到的唤醒功能不是所有的权限都用到的，具体用到了哪些权限，可以看上面的链接，用到哪写权限就加哪些权限，这个为了快速方便测试，把讯飞用到的权限都加上了。
 &lt;uses-permission android:name=&quot;android.permission.RECORD_AUDIO&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.CHANGE_NETWORK_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.READ_CONTACTS&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;  2. 初始化appid 我是将appid的初始化放在的Applicaiton下，具体可以下载源码
 // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&quot;=true&quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -294,7 +294,7 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
 3. 正题，开始集成 1. 添加权限 这里用到的唤醒功能不是所有的权限都用到的，具体用到了哪些权限，可以看上面的链接，用到哪写权限就加哪些权限，这个为了快速方便测试，把讯飞用到的权限都加上了。
 &lt;uses-permission android:name=&quot;android.permission.RECORD_AUDIO&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.CHANGE_NETWORK_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.READ_CONTACTS&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;  2. 初始化appid 我是将appid的初始化放在的Applicaiton下，具体可以下载源码
 // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&quot;=true&quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -303,11 +303,11 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
 
                         <ul class="pager">
                             
-                            <li class="previous"><a href="https://chuxinshequ.github.io//categories/%E8%AF%AD%E9%9F%B3/">&larr; </a></li>
+                            <li class="previous"><a href="https://chuxinshequ.github.io//categories/%E8%AF%AD%E9%9F%B3/">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -326,13 +326,13 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -351,7 +351,7 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -394,7 +394,7 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -527,7 +527,7 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -540,7 +540,7 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -594,7 +594,7 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -607,7 +607,7 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -632,10 +632,10 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

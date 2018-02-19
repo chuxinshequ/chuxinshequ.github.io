@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="回归分析 logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="回归分析 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">回归分析 - </span>
+                    <span class="sr-only">回归分析 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -209,7 +209,7 @@ $$ PE = \theta _{0} + \theta _{0} * AT + \theta _{0} * V +\theta _{0} * AP +\the
 sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details/77761884
 3：使用pandas来进行数据的读取 import pandas as pd # pandas 读取数据 data = pd.read_csv(&quot;Folds5x2_pp.csv&quot;) data.head()  然后会看到如下结果，说明数据读取成功：
 	AT	V	AP	RH	PE 0	8.34	40.77	1010.84	90.01	480.48 1	23.64	58.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -248,7 +248,7 @@ sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details
  一元线性回归 预测房价： 输入编号 | 平方米 | 价格 -|-|- 1 | 150 | 6450 2 | 200 | 7450 3| 250 |8450 4| 300 |9450 5| 350 |11450 6| 400 |15450 7| 600| 18450
 针对上边这种一元数据来讲，我们可以构建的一元线性回归函数为 $$ H(x) = k*x + b $$ 其中H(x)为平方米价格表，k是一元回归系数，b为常数。最小二乘法的公式： $$ k =\frac{ \sum{1}^{n} (x{i} - \bar{x} )(y{i} - \bar{y}) } { \sum{1}^{n}(x_{i}-\bar{x})^{2} } $$ 自己使用python代码实现为：
 def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量列表和因变量列表 &quot;&quot;&quot; meanX = sum(x) * 1.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -257,11 +257,11 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
 
                         <ul class="pager">
                             
-                            <li class="previous disabled"><a href="#">&larr; </a></li>
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -280,13 +280,13 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -305,7 +305,7 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -348,7 +348,7 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -481,7 +481,7 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -494,7 +494,7 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -548,7 +548,7 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -561,7 +561,7 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -586,10 +586,10 @@ def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量�
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

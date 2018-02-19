@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="Blogs logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="Blogs logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Blogs - </span>
+                    <span class="sr-only">Blogs - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -204,7 +204,7 @@
 霍夫直线 效果图 步骤  将图像置灰 调用Imgproc.HoughLinesP(cannyEdges, lines, 1, Math.PI / 180, 50, 20, 20) 方法获取直线的数据
  第一个参数：图像输入 第二个参数：图像输出 第三个参数：图像指定像素中r的解析度 第四个参数：图像指定像素中θ的解析度 第五个参数：直线上点数的阈值 第六个参数：直线上点数的最小值  在图像上绘制直线
   封装 /** * 霍夫直线 * * @param bitmap 要检测的图片 */ public void houghLines(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&lt;Bitmap, Mat&gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@
 Harris角点检测器在图像上使用滑动窗口计算亮度的变化。
 封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 /** * Harris角点检测 * * @param bitmap 要检测的图片 */ public void harris(Bitmap bitmap) { if (null != mSubscriber) Observable .just(bitmap) // 检测边缘 .map(new Func1&lt;Bitmap, Mat&gt;() { @Override public Mat call(Bitmap bitmap) { Mat grayMat = new Mat(); Mat cannyEdges = new Mat(); // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 原图置灰 Imgproc.cvtColor(src, grayMat, Imgproc.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -291,7 +291,7 @@ Imgproc.Sobel(grayMat, grad_y, CvType.CV_16S, 0, 1, 3, 1, 0); Core.convertScaleA
 这里用到了两个3 * 3的核对图像做卷积来近似地计算水平和垂直方向的灰度梯度
 封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 /** * Sobel滤波器 * * @param bitmap 要检测的图片 */ public void sobel(Bitmap bitmap) { if (null !</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -340,7 +340,7 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
 高阈值 &lt; 灰度梯度值
   封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 /** * Canny边缘检测算法 * * @param bitmap 要检测的图片 */ public void canny(Bitmap bitmap) { if (null !</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -384,7 +384,7 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
 // 将两幅模糊后的图像相减 Mat diff = new Mat(); Core.absdiff(blur1, blur2, diff);   该方法只对图像做了高斯模糊，这是计算图像边缘最快的方法之一，但是，该方法的结果也不是很理想，这种方式对某些图像效果很好，但是在某些情况下可能会完全失效。
 封装 这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 /** * 高斯差分算法边缘检测 * * @param bitmap 要检测的图片 */ public void differenceOfGaussian(Bitmap bitmap) { if (null != mSubscriber) Observable .</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -431,7 +431,7 @@ Imgproc.threshold(src, src, 100, 255, Imgproc.THRESH_BINARY);  其中100是阈�
  常量C：从对每个像素计算得到的均值或加权均值减去的常量
   图像置灰
 Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);  自适应阈值化</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -473,7 +473,7 @@ Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);  自适应阈值化</p>
 Mat kernelErode = Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE, new Size(5, 5));  然后调用Imgproc.erode()方法把图像的暗区放大
 // 扩大暗区（腐蚀） Imgproc.erode(src, src, kernelErode);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 /** * 扩大图片暗区（腐蚀图片） * * @param bitmap 要处理的图片 */ public void erode(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&lt;Bitmap, Bitmap&gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelErode = Imgproc.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -515,7 +515,7 @@ Mat kernelErode = Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE, new Size(
 Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3, 3));  然后调用Imgproc.dilate()方法把图像的亮区放大
 // 扩大亮区 Imgproc.dilate(src, src, kernelDilate);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 /** * 扩大图片亮区 * * @param bitmap 要处理的图片 */ public void dilate(Bitmap bitmap) { // 使用RxJava处理图片 if (null != mSubscriber) Observable .just(bitmap) .map(new Func1&lt;Bitmap, Bitmap&gt;() { @Override public Bitmap call(Bitmap bitmap) { // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src); // 定义一个合适大小的核 Mat kernelDilate = Imgproc.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -557,7 +557,7 @@ Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3,
 定义完核以后，我们对图像和核做卷积操作
 // 对图像和自定义核做卷积 Imgproc.filter2D(src, src, src.depth(), kernel);   第一个参数表示输入的图像 第二个参数表示输出的图像 第三个参数表示图像的深度 第四个参数是我们自定义的核  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 /** * 锐化图片 * * @param bitmap 要处理的图片 */ public void filter2D(Bitmap bitmap) { // 使用RxJava处理图片 if (null !</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -596,7 +596,7 @@ Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3,
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的中值模糊方法  // 中值模糊方法 Imgproc.medianBlur(src, src, 33);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.Subscriber; import rx.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -605,11 +605,11 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 
                         <ul class="pager">
                             
-                            <li class="previous"><a href="https://chuxinshequ.github.io//blog/page/4/">&larr; </a></li>
+                            <li class="previous"><a href="https://chuxinshequ.github.io//blog/page/4/">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next"><a href="https://chuxinshequ.github.io//blog/page/6/"> &rarr;</a></li>
+                            <li class="next"><a href="https://chuxinshequ.github.io//blog/page/6/">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -628,13 +628,13 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -653,7 +653,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -696,7 +696,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -829,7 +829,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -842,7 +842,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -896,7 +896,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -909,7 +909,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -934,10 +934,10 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

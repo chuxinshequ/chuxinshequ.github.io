@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="蓝牙通信 logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="蓝牙通信 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">蓝牙通信 - </span>
+                    <span class="sr-only">蓝牙通信 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -198,7 +198,7 @@ Android蓝牙通信 效果图  两台真机设备
  关于设备的连接、通信。已经封装到了 BluetoothService 类
   注：下面的全部内容，主要是思路，具体的可以参考上面的源码，如果对你有帮助记得给个赞哦。
 权限 &lt;!-- 蓝牙的权限 --&gt; &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&gt;  蓝牙的打开与关闭 开启蓝牙 mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter(); /** * 开启蓝牙 */ public void openBluetooth() { try { mBluetoothAdapter.enable(); } catch (Exception e) { e.printStackTrace(); } }  关闭蓝牙 mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter(); /** * 关闭蓝牙 */ public void closeBluetooth() { try { mBluetoothAdapter.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -207,11 +207,11 @@ Android蓝牙通信 效果图  两台真机设备
 
                         <ul class="pager">
                             
-                            <li class="previous disabled"><a href="#">&larr; </a></li>
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -230,13 +230,13 @@ Android蓝牙通信 效果图  两台真机设备
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -255,7 +255,7 @@ Android蓝牙通信 效果图  两台真机设备
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -298,7 +298,7 @@ Android蓝牙通信 效果图  两台真机设备
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -431,7 +431,7 @@ Android蓝牙通信 效果图  两台真机设备
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -444,7 +444,7 @@ Android蓝牙通信 效果图  两台真机设备
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -498,7 +498,7 @@ Android蓝牙通信 效果图  两台真机设备
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -511,7 +511,7 @@ Android蓝牙通信 效果图  两台真机设备
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -536,10 +536,10 @@ Android蓝牙通信 效果图  两台真机设备
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

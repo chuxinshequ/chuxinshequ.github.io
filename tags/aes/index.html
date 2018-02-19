@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="Aes logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="Aes logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Aes - </span>
+                    <span class="sr-only">Aes - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -196,7 +196,7 @@ ASE 加密、解密的关键在于秘钥、只有使用加密时使用的秘钥�
 生成秘钥的代码网上一大堆，下面的代码可生成一个秘钥
 private SecretKey generateKey(String seed) throws Exception { // 获取秘钥生成器 KeyGenerator keyGenerator = KeyGenerator.getInstance(&quot;AES&quot;); // 通过种子初始化 SecureRandom secureRandom = new SecureRandom(); secureRandom.setSeed(seed.getBytes(&quot;UTF-8&quot;)); keyGenerator.init(128, secureRandom); // 生成秘钥并返回 return keyGenerator.generateKey(); }  然后使用秘钥进行加密
 private byte[] encrypt(String content, SecretKey secretKey) throws Exception { // 秘钥 byte[] enCodeFormat = secretKey.getEncoded(); // 创建AES秘钥 SecretKeySpec key = new SecretKeySpec(enCodeFormat, &quot;AES&quot;); // 创建密码器 Cipher cipher = Cipher.getInstance(&quot;AES&quot;); // 初始化加密器 cipher.init(Cipher.ENCRYPT_MODE, key); // 加密 return cipher.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -205,11 +205,11 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 
                         <ul class="pager">
                             
-                            <li class="previous disabled"><a href="#">&larr; </a></li>
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -228,13 +228,13 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -253,7 +253,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -296,7 +296,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -429,7 +429,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -442,7 +442,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -496,7 +496,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -509,7 +509,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -534,10 +534,10 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

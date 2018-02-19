@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="Blogs logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="Blogs logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Blogs - </span>
+                    <span class="sr-only">Blogs - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -200,7 +200,7 @@
                                     <p class="intro">数据结构面试中经常会被问到篇排序相关的问题，那么这篇文章会研究下怎么用python来实现排序。
  冒泡排序 #coding：utf-8 # 冒泡排序 def maopao(): a = [2,1,4,3,9,5,6,8,7] for i in range(len(a)-1): for j in range(len(a)-1-i): if a[j]&gt;a[j+1]: temp = a[j] a[j] = a[j+1] a[j+1] = temp print(a) maopao()  结果为：
 [1, 2, 3, 4, 5, 6, 7, 8, 9]  归并排序 # 归并排序 def merge(a,b): i,j = 0,0 c = [] while i&lt;=len(a)-1 and j&lt;=len(b)-1: if a[i]&lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&lt;=len(a)-1: for m in a[i:]: c.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
  注意：py2中
 print root.elem,  在py3中要换成
 print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node: def __init__(self,elem = -1,): self.elem = elem self.left = None self.right = None # 定义二叉树 class Tree: def __init__(self): self.root = Node() self.myqu = [] # 添加节点 def add(self,elem): node = Node(elem) if self.root.elem == -1: # 判断如果是根节点 self.root = node self.myqu.append(self.root) else: treenode = self.myqu[0] if treenode.left == None: treenode.left = node self.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -286,7 +286,7 @@ $$ PE = \theta _{0} + \theta _{0} * AT + \theta _{0} * V +\theta _{0} * AP +\the
 sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details/77761884
 3：使用pandas来进行数据的读取 import pandas as pd # pandas 读取数据 data = pd.read_csv(&quot;Folds5x2_pp.csv&quot;) data.head()  然后会看到如下结果，说明数据读取成功：
 	AT	V	AP	RH	PE 0	8.34	40.77	1010.84	90.01	480.48 1	23.64	58.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -321,7 +321,7 @@ sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details
 设计师标注通常会以某个尺寸为基准标注一套尺寸，下面工具类以 720 * 1280 分辨率为基准，实际开发过程中，与设计师保持一致即可。
  MakeXml.java
 import java.io.File; import java.io.FileNotFoundException; import java.io.FileOutputStream; import java.io.PrintWriter; /** * Created by kongqw on 2015/11/21. */ public class MakeXml { // Mac路径 private final static String rootPath = &quot;layoutroot/values-{0}x{1}/&quot;; // Windows 路径 // private final static String rootPath = &quot;C:\\layoutroot\\values-{0}x{1}\\&quot;; /** * 设置基准分辨率 * 一般标注按照多大的图标，这里我们就设置多大尺寸 */ private final static float dw = 720f; private final static float dh = 1280f; private final static String WTemplate = &quot;&lt;dimen name=\&quot;x{0}\&quot;&gt;{1}px&lt;/dimen&gt;\n&quot;; private final static String HTemplate = &quot;&lt;dimen name=\&quot;y{0}\&quot;&gt;{1}px&lt;/dimen&gt;\n&quot;; // 手机分辨率 public static void main(String [] args){ makeString(320, 480); makeString(480, 800); makeString(480, 854); makeString(540, 960); makeString(600, 1024); makeString(720, 1184); makeString(720, 1196); makeString(720, 1280); makeString(768, 1024); makeString(800, 1280); makeString(1080, 1812); makeString(1080, 1920); makeString(1440, 2560); } public static void makeString(int w, int h) { StringBuffer sb = new StringBuffer(); sb.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/06/2017-11-06-android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/06/2017-11-06-android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -360,7 +360,7 @@ import java.io.File; import java.io.FileNotFoundException; import java.io.FileOu
  一元线性回归 预测房价： 输入编号 | 平方米 | 价格 -|-|- 1 | 150 | 6450 2 | 200 | 7450 3| 250 |8450 4| 300 |9450 5| 350 |11450 6| 400 |15450 7| 600| 18450
 针对上边这种一元数据来讲，我们可以构建的一元线性回归函数为 $$ H(x) = k*x + b $$ 其中H(x)为平方米价格表，k是一元回归系数，b为常数。最小二乘法的公式： $$ k =\frac{ \sum{1}^{n} (x{i} - \bar{x} )(y{i} - \bar{y}) } { \sum{1}^{n}(x_{i}-\bar{x})^{2} } $$ 自己使用python代码实现为：
 def leastsq(x,y): &quot;&quot;&quot; x,y分别是要拟合的数据的自变量列表和因变量列表 &quot;&quot;&quot; meanX = sum(x) * 1.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -410,7 +410,7 @@ Dis_1 = |3.5-2| + |2-3.5| + |5-2| + |1.5-3.5| + |2-3| = 9  同样使用欧式距
 Dis_2 = sqrt( (3.5-2)^2 + (2-3.5)^2 + (5-2)^2 + (1.5-3.5)^2 + (2-3)^2 ) = 4.3  当对Angelica和Bill，Bill和Chan进行距离对比时，由于两者的共同评分过的乐队均为5，数据都在一个5维空间里，是公平的，如果现在要计算Angelica和Hailey与Bill的距离时，会发现，Angelica与Bill共同评分的有5个乐队，Hailey与Bill共同评分的有3个乐队，也就是说两者数据一个在5维空间里，一个在三维空间里，这样明显是不公平的。这将会对我们进行计算时产生不好的影响，所以曼哈顿距离和欧几里得距离在数据完整的情况下效果最好。
 用户问题／皮尔逊相关系数／分数膨胀 现象——用户问题 仔细观察用户对乐队的评分数据，可以发现每个用户的评分标准不同：
  Bill没有打出极端的分数，都在2-4分之间 Jordyn似乎喜欢所有的乐队，打分都在4-5之间 Hailey是一个有趣的人，他的评分不是1就是4  那么如何比较这些用户呢？比如说Hailey的4分是相当于Jordyn的4分还是5分呢？我觉得更接近5分，这样一来，就影响推荐系统的准确性了！</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -440,7 +440,7 @@ Dis_2 = sqrt( (3.5-2)^2 + (2-3.5)^2 + (5-2)^2 + (1.5-3.5)^2 + (2-3)^2 ) = 4.3  �
                                         </p>
                                     </div>
                                     <p class="intro"> 查看用户名及邮箱地址 $ git config user.name $ git config user.email  修改用户名及邮箱地址 $ git config --global user.name &quot;用户名&quot; $ git config --global user.email &quot;邮箱地址&quot;  </p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/19/2017-09-19-git%E6%8C%87%E4%BB%A4/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/19/2017-09-19-git%E6%8C%87%E4%BB%A4/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -470,7 +470,7 @@ Dis_2 = sqrt( (3.5-2)^2 + (2-3.5)^2 + (5-2)^2 + (1.5-3.5)^2 + (2-3)^2 ) = 4.3  �
                                         </p>
                                     </div>
                                     <p class="intro">写文件 读文件 Assets文件读取 Bitmap保存 文件删除  写文件 /** * 写文件 * * @param filePath 文件绝对路径 * @param content 写入内容 * @return 写入是否成功 */ public static boolean writeFile(String filePath, String content) { FileOutputStream fileOutputStream = null; BufferedOutputStream bufferedOutputStream = null; try { File file = new File(filePath); if (file.createNewFile()) { fileOutputStream = new FileOutputStream(filePath); bufferedOutputStream = new BufferedOutputStream(fileOutputStream); bufferedOutputStream.write(content.getBytes(&quot;UTF-8&quot;)); bufferedOutputStream.flush(); return true; } } catch (IOException e) { e.printStackTrace(); } finally { if (null !</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/15/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/15/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -520,7 +520,7 @@ $$ X_{scale} = \frac{x-\mu }{\sigma } $$
 其中μ为所有样本数据的均值，σ为所有样本数据的标准差。
 其对应的python实现为：
 import numpy as np #x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] def z_score(x): return (x - np.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -554,7 +554,7 @@ ASE 加密、解密的关键在于秘钥、只有使用加密时使用的秘钥�
 生成秘钥的代码网上一大堆，下面的代码可生成一个秘钥
 private SecretKey generateKey(String seed) throws Exception { // 获取秘钥生成器 KeyGenerator keyGenerator = KeyGenerator.getInstance(&quot;AES&quot;); // 通过种子初始化 SecureRandom secureRandom = new SecureRandom(); secureRandom.setSeed(seed.getBytes(&quot;UTF-8&quot;)); keyGenerator.init(128, secureRandom); // 生成秘钥并返回 return keyGenerator.generateKey(); }  然后使用秘钥进行加密
 private byte[] encrypt(String content, SecretKey secretKey) throws Exception { // 秘钥 byte[] enCodeFormat = secretKey.getEncoded(); // 创建AES秘钥 SecretKeySpec key = new SecretKeySpec(enCodeFormat, &quot;AES&quot;); // 创建密码器 Cipher cipher = Cipher.getInstance(&quot;AES&quot;); // 初始化加密器 cipher.init(Cipher.ENCRYPT_MODE, key); // 加密 return cipher.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -563,11 +563,11 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 
                         <ul class="pager">
                             
-                            <li class="previous"><a href="https://chuxinshequ.github.io//blog/">&larr; </a></li>
+                            <li class="previous"><a href="https://chuxinshequ.github.io//blog/">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next"><a href="https://chuxinshequ.github.io//blog/page/3/"> &rarr;</a></li>
+                            <li class="next"><a href="https://chuxinshequ.github.io//blog/page/3/">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -586,13 +586,13 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -611,7 +611,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -654,7 +654,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -787,7 +787,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -800,7 +800,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -854,7 +854,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -867,7 +867,7 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -892,10 +892,10 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="Blogs logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="Blogs logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Blogs - </span>
+                    <span class="sr-only">Blogs - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -201,7 +201,7 @@
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -240,7 +240,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -293,7 +293,7 @@ File -&gt; New -&gt; Import Module
  安装OpenCV Manager
 加载OpenCV Manager，如果诶呦安装会有提示
   private BaseLoaderCallback mOpenCVCallBack = new BaseLoaderCallback(this) { @Override public void onManagerConnected(int status) { switch (status) { case LoaderCallbackInterface.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -337,7 +337,7 @@ File -&gt; New -&gt; Import Module
    前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  总结 科大讯飞语音方面更灵活，更好用。
 灵云语音，在人工智能方面提供的技术更全面（还包括图像识别，手写识别，人脸识别，指纹识别、机器翻译等），偏定制（智能家居、车载系统、机器人等智能设备的定制）。
 单从语音能力角度来比较，讯飞更好。</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -380,7 +380,7 @@ File -&gt; New -&gt; Import Module
  唤醒不是即时的，即使我们准确的说出唤醒词，并保持不再有声音录入，也要至少等待后端点时间过去，录音结束以后，才会识别（被唤醒）。
  这种方式的唤醒其实就是在进行语音识别，如果一直开启唤醒，消耗性能，耗电。
    前端点超时时间: 在前置端点时间内没有有效的声音录入，表示此次录音无效，结束录音. 后端点超时时间: 录音结束以后，在后置端点时间内没有再录入有效声音，表示录音完成，结束录音。  </p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -420,7 +420,7 @@ File -&gt; New -&gt; Import Module
 在线语音识别 SDK下载 灵云SDK下载
 SDK集成 下载SDK以后，将jar和so导入工程
 权限 &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.SYSTEM_ALERT_WINDOW&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.RECORD_AUDIO&quot; /&gt;  封装 灵云配置类 package kong.qingwei.kqwhcidemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &quot;3d5d5466&quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &quot;eca643ff7b3c758745d7cf516e808d34&quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &quot;test.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -460,7 +460,7 @@ SDK集成 下载SDK以后，将jar和so导入工程
 SDK下载 灵云SDK下载
 SDK集成 下载SDK以后，将jar和so导入工程
 权限 &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.SYSTEM_ALERT_WINDOW&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;  封装 灵云配置类 package kong.qingwei.kqwhcidemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &quot;3d5d5466&quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &quot;eca643ff7b3c758745d7cf516e808d34&quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &quot;test.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -502,7 +502,7 @@ SDK集成 下载SDK以后，将jar和so导入工程
 如果使用在线功能，下载对应的SDK，里面有jar包和so，就可以满足需求了。如果要使用离线的语音功能，还需要下载灵云资源文件
 源码 GitHub
 灵云在线语音合成 权限 &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.SYSTEM_ALERT_WINDOW&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;  配置类 package kong.qingwei.kqwhcittsdemo; /** * Created by kqw on 2016/8/12. * 灵云配置信息 */ public final class ConfigUtil { /** * 灵云APP_KEY */ public static final String APP_KEY = &quot;填入自己的APP KEY&quot;; /** * 开发者密钥 */ public static final String DEVELOPER_KEY = &quot;填入自己的DEVELOPER KEY&quot;; /** * 灵云云服务的接口地址 */ public static final String CLOUD_URL = &quot;test.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/12/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/12/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -538,7 +538,7 @@ Android蓝牙通信 效果图  两台真机设备
  关于设备的连接、通信。已经封装到了 BluetoothService 类
   注：下面的全部内容，主要是思路，具体的可以参考上面的源码，如果对你有帮助记得给个赞哦。
 权限 &lt;!-- 蓝牙的权限 --&gt; &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&gt;  蓝牙的打开与关闭 开启蓝牙 mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter(); /** * 开启蓝牙 */ public void openBluetooth() { try { mBluetoothAdapter.enable(); } catch (Exception e) { e.printStackTrace(); } }  关闭蓝牙 mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter(); /** * 关闭蓝牙 */ public void closeBluetooth() { try { mBluetoothAdapter.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -593,7 +593,7 @@ SDK SDK下载
 人脸识别逻辑：人脸识别的主要方式就是获取到人脸的特征值，然后将两个特征值做比对，取到一个相似度去做人脸识别，OpenCV这里的特征值，其实就是一张图片。 我们的从回调的Mat数据检测到有人脸以后，提取特征值（也就是保存人脸的一张图片到某个路径），然后比较特征值
 为了提高识别的准确度，需要在检测到人脸以后，把人脸的部分截取出来，然后置灰（置灰的目的是为了方式色泽和明暗度对识别有影响）。
 保存人脸特征值 /** * 特征保存 * * @param image Mat * @param rect 人脸信息 * @param fileName 文件名字 * @return 保存是否成功 */ public boolean saveImage(Mat image, Rect rect, String fileName) { try { String PATH = Environment.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -602,11 +602,11 @@ SDK SDK下载
 
                         <ul class="pager">
                             
-                            <li class="previous"><a href="https://chuxinshequ.github.io//blog/page/5/">&larr; </a></li>
+                            <li class="previous"><a href="https://chuxinshequ.github.io//blog/page/5/">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next"><a href="https://chuxinshequ.github.io//blog/page/7/"> &rarr;</a></li>
+                            <li class="next"><a href="https://chuxinshequ.github.io//blog/page/7/">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -625,13 +625,13 @@ SDK SDK下载
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -650,7 +650,7 @@ SDK SDK下载
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -693,7 +693,7 @@ SDK SDK下载
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -826,7 +826,7 @@ SDK SDK下载
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -839,7 +839,7 @@ SDK SDK下载
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -893,7 +893,7 @@ SDK SDK下载
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -906,7 +906,7 @@ SDK SDK下载
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -931,10 +931,10 @@ SDK SDK下载
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="即拿即用 logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="即拿即用 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">即拿即用 - </span>
+                    <span class="sr-only">即拿即用 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -192,7 +192,7 @@
                                         </p>
                                     </div>
                                     <p class="intro">写文件 读文件 Assets文件读取 Bitmap保存 文件删除  写文件 /** * 写文件 * * @param filePath 文件绝对路径 * @param content 写入内容 * @return 写入是否成功 */ public static boolean writeFile(String filePath, String content) { FileOutputStream fileOutputStream = null; BufferedOutputStream bufferedOutputStream = null; try { File file = new File(filePath); if (file.createNewFile()) { fileOutputStream = new FileOutputStream(filePath); bufferedOutputStream = new BufferedOutputStream(fileOutputStream); bufferedOutputStream.write(content.getBytes(&quot;UTF-8&quot;)); bufferedOutputStream.flush(); return true; } } catch (IOException e) { e.printStackTrace(); } finally { if (null !</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/15/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/09/15/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -201,11 +201,11 @@
 
                         <ul class="pager">
                             
-                            <li class="previous disabled"><a href="#">&larr; </a></li>
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -224,13 +224,13 @@
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -249,7 +249,7 @@
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -292,7 +292,7 @@
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -425,7 +425,7 @@
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -438,7 +438,7 @@
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -492,7 +492,7 @@
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -505,7 +505,7 @@
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -530,10 +530,10 @@
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="Gradle logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="Gradle logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Gradle - </span>
+                    <span class="sr-only">Gradle - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -201,7 +201,7 @@ apply plugin: 'com.android.application' android { …… buildTypes { release { 
 因为是静态变量，取值时直接用类名点变量名即可
 上述属于在Java代码中添加字段，同样的，Gradle也支持添加xml属性，类似这样
 apply plugin: 'com.android.application' android { …… defaultConfig { …… } buildTypes { release { …… } debug { …… resValue(&quot;bool&quot;, &quot;is_debug&quot;, &quot;true&quot;) resValue(&quot;string&quot;, &quot;coder&quot;, &quot;\&quot;kongqw\&quot;&quot;) resValue(&quot;integer&quot;, &quot;age&quot;, &quot;26&quot;) } } } dependencies { …… }  添加完以后Rebuild，会在generated.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/03/02/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/03/02/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -210,11 +210,11 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
 
                         <ul class="pager">
                             
-                            <li class="previous disabled"><a href="#">&larr; </a></li>
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -233,13 +233,13 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -258,7 +258,7 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -301,7 +301,7 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -434,7 +434,7 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -447,7 +447,7 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -501,7 +501,7 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -514,7 +514,7 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -539,10 +539,10 @@ apply plugin: 'com.android.application' android { …… defaultConfig { …… 
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

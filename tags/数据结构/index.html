@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="数据结构 logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="数据结构 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">数据结构 - </span>
+                    <span class="sr-only">数据结构 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -199,7 +199,7 @@
                                     </div>
                                     <p class="intro">链表面试总结，使用python实现，参考：https://www.cnblogs.com/lixiaohui-ambition/archive/2012/09/25/2703195.html 
 #coding:utf-8 # 定义链表 class ListNode: def __init__(self): self.data = None self.pnext = None # 链表操作类 class ListNode_handle: def __init__(self): self.cur_node = None # 链表添加元素 def add(self,data): ln = ListNode() ln.data = data ln.pnext = self.cur_node self.cur_node = ln return ln # 打印链表 def prt(self,ln): while ln: print(ln.data,end=&quot; &quot;) ln = ln.pnext # 逆序输出 def _reverse(self,ln): _list = [] while ln: _list.append(ln.data) ln = ln.pnext ln_2 = ListNode() ln_h = ListNode_handle() for i in _list: ln_2 = ln_h.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -237,7 +237,7 @@
                                     <p class="intro">有序序列的合并，python实现。 
 #coding:utf-8 a = [2,4,6,8,10] b = [3,5,7,9,11,13,15] c = [] def merge(a,b): i,j = 0,0 while i&lt;=len(a)-1 and j&lt;=len(b)-1: if a[i]&lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&lt;=len(a)-1: for m in a[i:]: c.append(m) if j&lt;=len(b)-1: for n in b[j:]: c.append(n) print(c) merge(a,b)  运行结果为：
 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15]  </p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -275,7 +275,7 @@
                                     <p class="intro">数据结构面试中经常会被问到篇排序相关的问题，那么这篇文章会研究下怎么用python来实现排序。
  冒泡排序 #coding：utf-8 # 冒泡排序 def maopao(): a = [2,1,4,3,9,5,6,8,7] for i in range(len(a)-1): for j in range(len(a)-1-i): if a[j]&gt;a[j+1]: temp = a[j] a[j] = a[j+1] a[j+1] = temp print(a) maopao()  结果为：
 [1, 2, 3, 4, 5, 6, 7, 8, 9]  归并排序 # 归并排序 def merge(a,b): i,j = 0,0 c = [] while i&lt;=len(a)-1 and j&lt;=len(b)-1: if a[i]&lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&lt;=len(a)-1: for m in a[i:]: c.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -314,7 +314,7 @@
  注意：py2中
 print root.elem,  在py3中要换成
 print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node: def __init__(self,elem = -1,): self.elem = elem self.left = None self.right = None # 定义二叉树 class Tree: def __init__(self): self.root = Node() self.myqu = [] # 添加节点 def add(self,elem): node = Node(elem) if self.root.elem == -1: # 判断如果是根节点 self.root = node self.myqu.append(self.root) else: treenode = self.myqu[0] if treenode.left == None: treenode.left = node self.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -323,11 +323,11 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
 
                         <ul class="pager">
                             
-                            <li class="previous disabled"><a href="#">&larr; </a></li>
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -346,13 +346,13 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -371,7 +371,7 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -414,7 +414,7 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -547,7 +547,7 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -560,7 +560,7 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -614,7 +614,7 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -627,7 +627,7 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -652,10 +652,10 @@ print (root.elem,end=&quot; &quot;)  # coding:utf-8 # 定义节点类 class Node
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

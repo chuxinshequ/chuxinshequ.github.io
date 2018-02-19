@@ -79,11 +79,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="Opencv logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="Opencv logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Opencv - </span>
+                    <span class="sr-only">Opencv - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -201,7 +201,7 @@
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的中值模糊方法  // 中值模糊方法 Imgproc.medianBlur(src, src, 33);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.Subscriber; import rx.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -240,7 +240,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -279,7 +279,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -332,7 +332,7 @@ File -&gt; New -&gt; Import Module
  安装OpenCV Manager
 加载OpenCV Manager，如果诶呦安装会有提示
   private BaseLoaderCallback mOpenCVCallBack = new BaseLoaderCallback(this) { @Override public void onManagerConnected(int status) { switch (status) { case LoaderCallbackInterface.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@ SDK SDK下载
 人脸识别逻辑：人脸识别的主要方式就是获取到人脸的特征值，然后将两个特征值做比对，取到一个相似度去做人脸识别，OpenCV这里的特征值，其实就是一张图片。 我们的从回调的Mat数据检测到有人脸以后，提取特征值（也就是保存人脸的一张图片到某个路径），然后比较特征值
 为了提高识别的准确度，需要在检测到人脸以后，把人脸的部分截取出来，然后置灰（置灰的目的是为了方式色泽和明暗度对识别有影响）。
 保存人脸特征值 /** * 特征保存 * * @param image Mat * @param rect 人脸信息 * @param fileName 文件名字 * @return 保存是否成功 */ public boolean saveImage(Mat image, Rect rect, String fileName) { try { String PATH = Environment.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="btn btn-template-main"></a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -396,11 +396,11 @@ SDK SDK下载
 
                         <ul class="pager">
                             
-                            <li class="previous"><a href="https://chuxinshequ.github.io//categories/opencv/">&larr; </a></li>
+                            <li class="previous"><a href="https://chuxinshequ.github.io//categories/opencv/">&larr; 更新</a></li>
                             
 
                             
-                            <li class="next disabled"><a href="#"> &rarr;</a></li>
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -419,13 +419,13 @@ SDK SDK下载
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">搜索</h3>
     </div>
 
     <div class="panel-body">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
             <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
                 <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
@@ -444,7 +444,7 @@ SDK SDK下载
 <div class="panel panel-default sidebar-menu">
 
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">分类</h3>
     </div>
 
     <div class="panel-body">
@@ -487,7 +487,7 @@ SDK SDK下载
 
 <div class="panel sidebar-menu">
     <div class="panel-heading">
-      <h3 class="panel-title"></h3>
+      <h3 class="panel-title">标签</h3>
     </div>
 
     <div class="panel-body">
@@ -620,7 +620,7 @@ SDK SDK下载
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -633,7 +633,7 @@ SDK SDK下载
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -687,7 +687,7 @@ SDK SDK下载
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -700,7 +700,7 @@ SDK SDK下载
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -725,10 +725,10 @@ SDK SDK下载
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>

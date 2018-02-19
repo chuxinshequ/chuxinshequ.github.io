@@ -109,11 +109,11 @@
                 <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
                     <img src="https://chuxinshequ.github.io/img/logo.png" alt="不忘初心 logo" class="hidden-xs hidden-sm">
                     <img src="https://chuxinshequ.github.io/img/logo-small.png" alt="不忘初心 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">不忘初心 - </span>
+                    <span class="sr-only">不忘初心 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only"></span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -531,7 +531,7 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
+                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
@@ -540,14 +540,14 @@
                             <h4><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/">OpenCV高斯模糊方法</a></h4>
                             <p class="author-category">
                             
-                             August 17, 2016
+                            在 August 17, 2016
                             </p>
                             <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -566,7 +566,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
+                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
@@ -575,14 +575,14 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
                             <h4><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/">OpenCV均值模糊方法</a></h4>
                             <p class="author-category">
                             
-                             August 17, 2016
+                            在 August 17, 2016
                             </p>
                             <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main"></a>
+                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -601,7 +601,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
+                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
@@ -610,7 +610,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
                             <h4><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/">OpenCV的部署</a></h4>
                             <p class="author-category">
                             
-                             August 17, 2016
+                            在 August 17, 2016
                             </p>
                             <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 官网 官网
@@ -631,7 +631,7 @@ File -&gt; New -&gt; Import Module
 加载OpenCV Manager，如果诶呦安装会有提示
   private BaseLoaderCallback mOpenCVCallBack = new BaseLoaderCallback(this) { @Override public void onManagerConnected(int status) { switch (status) { case LoaderCallbackInterface.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="btn btn-template-main"></a>
+                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -650,7 +650,7 @@ File -&gt; New -&gt; Import Module
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> </a>
+                                    <a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
@@ -659,7 +659,7 @@ File -&gt; New -&gt; Import Module
                             <h4><a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/">科大讯飞与灵云语音对比</a></h4>
                             <p class="author-category">
                             
-                             August 16, 2016
+                            在 August 16, 2016
                             </p>
                             <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 对比     科大讯飞 灵云语音     语音能力 语音合成、语音识别、语义、命令词、唤醒 没有独立的唤醒功能，需要使用命令词实现唤醒。   初始化 我们购买完离线资源包以后，集成到工程里，就可以保持在离线环境下使用 即使使用离线语音能力，第一次使用的时候，也必须要联网，激活离线语音能力以后，才可以使用   网络请求 各种请求均异步操作，不会阻塞线程。 在线文字语义识别，是同步操作，其它是异步操作过程。（同步操作时间超过5秒会导致Android终端抛出NAR异常导致崩溃）   语义 场景定义灵活，开发者可在后台自定义，通过申请的方式，可以开通自定义场景，目前免费开放。语义解析失败，可以将语音转文字。 场景的定义需要联系客服人员开通，自定义场景需要付费（说是一般一个场景2万元）。语义解析失败不能转成文字   语音唤醒 支持（官方自称低功耗） 实际没有唤醒功能，是使用离线命令词的方式模拟出了唤醒，效果不理想。尚未发现可以发现可以设置门限值等常用参数的API。   命令词识别 离线使用BNF语法，在线使用ABNF语法，语法可以使用占位符等等的操作符 离线和在线都使用JSGF语法。    灵云唤醒机制 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
@@ -671,7 +671,7 @@ File -&gt; New -&gt; Import Module
 灵云语音，在人工智能方面提供的技术更全面（还包括图像识别，手写识别，人脸识别，指纹识别、机器翻译等），偏定制（智能家居、车载系统、机器人等智能设备的定制）。
 单从语音能力角度来比较，讯飞更好。</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/" class="btn btn-template-main"></a>
+                              <a href="https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -775,7 +775,7 @@ File -&gt; New -&gt; Import Module
 
         
         <div class="col-md-4 col-sm-6">
-            <h4></h4>
+            <h4>关于我们</h4>
 
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -788,7 +788,7 @@ File -&gt; New -&gt; Import Module
         <div class="col-md-4 col-sm-6">
 
              
-            <h4></h4>
+            <h4>最新博客</h4>
 
             <div class="blog-entries">
                 
@@ -842,7 +842,7 @@ File -&gt; New -&gt; Import Module
         
         <div class="col-md-4 col-sm-6">
 
-          <h4></h4>
+          <h4>联系</h4>
 
             <strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -855,7 +855,7 @@ File -&gt; New -&gt; Import Module
       
 
 
-            <a href="/contact" class="btn btn-small btn-template-main"></a>
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -880,10 +880,10 @@ File -&gt; New -&gt; Import Module
             <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
             
             <p class="pull-right">
-               <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
-               <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
             </p>
         </div>
     </div>
