@@ -388,13 +388,13 @@
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/categories/help/</loc>
+    <loc>https://chuxinshequ.github.io/tags/help/</loc>
     <lastmod>2018-02-19T02:02:02+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/tags/help/</loc>
+    <loc>https://chuxinshequ.github.io/categories/help/</loc>
     <lastmod>2018-02-19T02:02:02+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -406,26 +406,26 @@
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/categories/im/</loc>
-    <lastmod>2016-08-22T18:36:12+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://chuxinshequ.github.io/tags/im/</loc>
     <lastmod>2016-08-22T18:36:12+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/categories/opencv/</loc>
-    <lastmod>2016-08-22T11:35:23+00:00</lastmod>
+    <loc>https://chuxinshequ.github.io/categories/im/</loc>
+    <lastmod>2016-08-22T18:36:12+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://chuxinshequ.github.io/tags/opencv/</loc>
     <lastmod>2016-09-09T16:29:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chuxinshequ.github.io/categories/opencv/</loc>
+    <lastmod>2016-08-22T11:35:23+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -484,13 +484,13 @@
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/categories/%E5%A4%8F%E6%9C%AA%E7%9C%A0/</loc>
+    <loc>https://chuxinshequ.github.io/tags/%E5%A4%8F%E6%9C%AA%E7%9C%A0/</loc>
     <lastmod>2016-09-15T18:13:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/tags/%E5%A4%8F%E6%9C%AA%E7%9C%A0/</loc>
+    <loc>https://chuxinshequ.github.io/categories/%E5%A4%8F%E6%9C%AA%E7%9C%A0/</loc>
     <lastmod>2016-09-15T18:13:50+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -502,13 +502,13 @@
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/categories/%E5%BC%80%E6%BA%90/</loc>
+    <loc>https://chuxinshequ.github.io/tags/%E5%BC%80%E6%BA%90/</loc>
     <lastmod>2017-03-16T18:24:36+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/tags/%E5%BC%80%E6%BA%90/</loc>
+    <loc>https://chuxinshequ.github.io/categories/%E5%BC%80%E6%BA%90/</loc>
     <lastmod>2017-03-16T18:24:36+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -580,13 +580,13 @@
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/categories/%E8%AF%AD%E9%9F%B3/</loc>
+    <loc>https://chuxinshequ.github.io/tags/%E8%AF%AD%E9%9F%B3/</loc>
     <lastmod>2016-08-16T16:55:56+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/tags/%E8%AF%AD%E9%9F%B3/</loc>
+    <loc>https://chuxinshequ.github.io/categories/%E8%AF%AD%E9%9F%B3/</loc>
     <lastmod>2016-08-16T16:55:56+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -598,14 +598,14 @@
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/</loc>
-    <lastmod>2017-12-14T17:55:29+00:00</lastmod>
+    <loc>https://chuxinshequ.github.io/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/</loc>
+    <lastmod>2017-04-16T01:03:56+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chuxinshequ.github.io/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/</loc>
-    <lastmod>2017-04-16T01:03:56+00:00</lastmod>
+    <loc>https://chuxinshequ.github.io/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/</loc>
+    <lastmod>2017-12-14T17:55:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
