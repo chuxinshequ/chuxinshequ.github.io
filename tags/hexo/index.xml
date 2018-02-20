@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hexo on 不忘初心</title>
-    <link>https://chuxinshequ.github.io/tags/hexo/</link>
+    <link>https://chuxinshequ.github.io/tags/hexo.html</link>
     <description>Recent content in Hexo on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -14,10 +14,10 @@
     
     <item>
       <title>Hexo-Yilia加入相册功能</title>
-      <link>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD.html</link>
       <pubDate>Thu, 14 Dec 2017 17:55:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD.html</guid>
       <description>参考：点击查看
 但是其中有一些小问题，自己便重新整理了一下（本文适用于使用github存放照片）
  主页新建相册链接 主题_config.json文件的menu 中加入 相册和对应的链接

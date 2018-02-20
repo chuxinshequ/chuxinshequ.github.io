@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>加密 on 不忘初心</title>
-    <link>https://chuxinshequ.github.io/tags/%E5%8A%A0%E5%AF%86/</link>
+    <link>https://chuxinshequ.github.io/tags/%E5%8A%A0%E5%AF%86.html</link>
     <description>Recent content in 加密 on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -14,10 +14,10 @@
     
     <item>
       <title>Android AES 加密、解密</title>
-      <link>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86.html</link>
       <pubDate>Fri, 04 Aug 2017 15:32:49 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86.html</guid>
       <description>AES加密介绍
 ASE 加密、解密的关键在于秘钥、只有使用加密时使用的秘钥，才可以解密。
 生成秘钥的代码网上一大堆，下面的代码可生成一个秘钥

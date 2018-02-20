@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Help on 不忘初心</title>
-    <link>https://chuxinshequ.github.io/tags/help/</link>
+    <link>https://chuxinshequ.github.io/tags/help.html</link>
     <description>Recent content in Help on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -14,20 +14,20 @@
     
     <item>
       <title>Contact</title>
-      <link>https://chuxinshequ.github.io/blog/2018/02/20/contact/</link>
+      <link>https://chuxinshequ.github.io/blog/2018/02/20/contact.html</link>
       <pubDate>Tue, 20 Feb 2018 12:34:56 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2018/02/20/contact/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2018/02/20/contact.html</guid>
       <description> 微信群 如果上面的图片没有及时更新的话（这几乎是必然的），联系我拉你进群，联系方式有很多，哪种最快看缘分，都试试肯定及时：  Email: hu@daonao.com QQ 443089607 微博 @胡争辉 GitHub https://github.com/huzhenghui Facebook TODO Twitter TODO Bitbucket https://bitbucket.org/huzhenghui/ Docker https://hub.docker.com/r/huzhenghui
  微信 huzhenghui   </description>
     </item>
     
     <item>
       <title>How to compose article in chuxinshequ.github.io</title>
-      <link>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/</link>
+      <link>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html</link>
       <pubDate>Mon, 19 Feb 2018 02:02:02 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html</guid>
       <description>chuxinshequ.github.io Alpha Step 1 (manual, only once) &amp;ldquo;git submodule add&amp;rdquo; git repository and create soft link
 Step 2 create article in git reposity
 Important Please enter the correct format date in Front Matter in front of Markdown article. https://github.com/huzhenghui/public-article/blob/master/posts/help/Front-Matter-Sample.md
@@ -37,19 +37,19 @@ Step 4 wait 5 minutes then visit https://chuxinshequ.github.io/blog/</descriptio
     
     <item>
       <title>Markdown Tables Sample 表格示例</title>
-      <link>https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/</link>
+      <link>https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html</link>
       <pubDate>Tue, 30 Jan 2018 23:30:01 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html</guid>
       <description> Markdown Tables Sample 表格示例  Name | Age --------|------ Bob | 27 Alice | 23     Name Age     Bob 27   Alice 23    </description>
     </item>
     
     <item>
       <title>Front Matter Sample 格式示例</title>
-      <link>https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/</link>
+      <link>https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample.html</link>
       <pubDate>Tue, 30 Jan 2018 17:54:55 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample.html</guid>
       <description>Front Matter Sample 格式示例 目前使用的 Hugo 支持 Markdown Front Matter 语法 https://jekyllrb.com/docs/frontmatter/ 主要涉及 title、date、tags、categories四个变量 也就是 .md 文件的开头需要包含如下内容
 --- title: Post Format Sample 文章格式示例 date: 2018-01-30 17:54:55 tags: [help] categories: help ---  需要注意 Hugo 按照 .md 文件中的 date 变量排序，如果不写或者格式错误，那么就会被排在最后了。 可以在 GitHub 中预览 Markdown Front Matter 语法是否正确，例如上例预览效果为
    title date tags categories     Post Format Sample 文章格式示例 2018-01-30 09:54:55 -0800 help help    预览中在 date 变量看到时区，也就是 -0800 或者类似的字样代表正确。</description>

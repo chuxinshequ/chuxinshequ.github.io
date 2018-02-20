@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Es on 不忘初心</title>
-    <link>https://chuxinshequ.github.io/tags/es/</link>
+    <link>https://chuxinshequ.github.io/tags/es.html</link>
     <description>Recent content in Es on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -14,10 +14,10 @@
     
     <item>
       <title>异常检测之指数平滑（利用elasticsearch来实现）</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0.html</link>
       <pubDate>Mon, 20 Nov 2017 17:18:54 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0.html</guid>
       <description>指数平滑法是一种特殊的加权平均法，加权的特点是对离预测值较近的历史数据给予较大的权数，对离预测期较远的历史数据给予较小的权数，权数由近到远按指数规律递减，所以，这种预测方法被称为指数平滑法。它可分为一次指数平滑法、二次指数平滑法及更高次指数平滑法。 
 关于指数平滑的得相关资料：  ES API接口： &amp;gt; https://github.com/IBBD/IBBD.github.io/blob/master/elk/aggregations-pipeline.md https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-pipeline-movavg-aggregation.html
  理论概念 &amp;gt; http://blog.sina.com.cn/s/blog_4b9acb5201016nkd.html
@@ -27,10 +27,10 @@ curl -XPOST &#39;localhost:9200/_search?pretty&#39; -H &#39;Content-Type: applic
     
     <item>
       <title>Elasticsearch-DSL部分集合</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88.html</link>
       <pubDate>Tue, 14 Nov 2017 17:26:48 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88.html</guid>
       <description>ELK是日志收集分析神器，在这篇文章中将会介绍一些ES的常用命令。
 点击阅读：ELK Stack 从入门到放弃 
 DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 shards, which is over the limit of 1000. This limit exists because querying many shards at the same time can make the job of the coordinating node very CPU and/or memory intensive. It is usually a better idea to have a smaller number of larger shards. Update [action.search.shard_count.limit] to a greater value if you really want to query that many shards at the same time.</description>

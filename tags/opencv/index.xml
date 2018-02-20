@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opencv on 不忘初心</title>
-    <link>https://chuxinshequ.github.io/tags/opencv/</link>
+    <link>https://chuxinshequ.github.io/tags/opencv.html</link>
     <description>Recent content in Opencv on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -14,10 +14,10 @@
     
     <item>
       <title>OpenCV&#43;JavaCV实现人脸识别</title>
-      <link>https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Fri, 09 Sep 2016 16:29:53 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 OpenCV主要实现人脸检测功能
 JavaCV主要实现人脸对比功能
@@ -32,10 +32,10 @@ AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程�
     
     <item>
       <title>OpenCV检测图像轮廓</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93.html</link>
       <pubDate>Mon, 22 Aug 2016 11:35:23 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 轮廓只不过是图像中连接的曲线，或者图像中连通部分的边界，轮廓通常以图像中的边缘来计算，但是，边缘和轮廓的区别在于轮廓是闭合的，而边缘可以是任意的。边缘的概念局限于点及其邻域像素，轮廓将目标作为整体进行处理。
 效果图 源码 KqwOpenCVFeaturesDemo
@@ -44,10 +44,10 @@ AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程�
     
     <item>
       <title>OpenCV使用霍夫变换检测图像中的形状</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6.html</link>
       <pubDate>Mon, 22 Aug 2016 10:34:41 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 霍夫变换是一种被广泛使用的利用数学等式的参数形式在图像中检测形状的技术。 例如直线、椭圆、圆等形状。
 霍夫变换可以检测任何能以参数形式表示的形状，随着形状的复杂（维数的增加，例如球体），计算的消耗也会增加。 我们通常只考虑简单的霍夫形状，例如直线和圆。
@@ -59,10 +59,10 @@ AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程�
     
     <item>
       <title>OpenCV使用Harris算法实现角点检测</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B.html</link>
       <pubDate>Fri, 19 Aug 2016 19:32:39 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVFeaturesDemo
 角点是两条边缘的交点或者在局部邻域中有多个显著边缘方向的点。Harris角点检测是一种在角点检测中最常见的技术。
@@ -73,10 +73,10 @@ Harris角点检测器在图像上使用滑动窗口计算亮度的变化。
     
     <item>
       <title>OpenCV使用Sobel滤波器实现图像边缘检测</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</link>
       <pubDate>Fri, 19 Aug 2016 17:35:55 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVFeaturesDemo
 Sobel滤波器也叫Sobel算子，与Canny边缘检测一样，需要计算像素的灰度梯度，只不过是换用另一种方式。
@@ -92,10 +92,10 @@ Imgproc.Sobel(grayMat, grad_y, CvType.CV_16S, 0, 1, 3, 1, 0); Core.convertScaleA
     
     <item>
       <title>OpenCV使用Canny边缘检测器实现图像边缘检测</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</link>
       <pubDate>Fri, 19 Aug 2016 16:31:02 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVFeaturesDemo
 Canny边缘检测器是一种被广泛使用的算法，并被认为是边缘检测最优的算法，该方法使用了比高斯差分算法更复杂的技巧，如多向灰度梯度和滞后阈值化。
@@ -114,10 +114,10 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
     
     <item>
       <title>OpenCV高斯差分技术实现图像边缘检测</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</link>
       <pubDate>Fri, 19 Aug 2016 11:42:04 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVFeaturesDemo
 边缘是图像中像素亮度变化明显的点。
@@ -131,10 +131,10 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
     
     <item>
       <title>OpenCV实现图像阈值化</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96.html</link>
       <pubDate>Thu, 18 Aug 2016 18:59:50 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 阈值化是一种将我们想要在图像中分析的区域分割出来的方法。 我们把每个像素值都与一个预设的阈值做比较，再根据比较的结果调整像素值。
@@ -151,10 +151,10 @@ Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);  自适应阈值化</descrip
     
     <item>
       <title>OpenCV实现图像暗区扩张（腐蚀图片）</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87.html</link>
       <pubDate>Thu, 18 Aug 2016 18:19:08 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 暗区扩张，也叫腐蚀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最小值代替锚点像素。
@@ -166,10 +166,10 @@ Mat kernelErode = Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE, new Size(
     
     <item>
       <title>OpenCV实现图像亮区扩张</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0.html</link>
       <pubDate>Thu, 18 Aug 2016 17:43:36 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 亮区扩张，也叫膨胀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最大值代替锚点像素。膨胀可以用来融合可能被分割的目标。
@@ -181,10 +181,10 @@ Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3,
     
     <item>
       <title>OpenCV实现图片锐化</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96.html</link>
       <pubDate>Thu, 18 Aug 2016 16:39:48 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 锐化也可以看作是一种线性滤波操作，并且锚点像素有较高的权重，而周围的像素权重较低。 因此，我们可以自定义一个这样的核。
@@ -196,10 +196,10 @@ Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3,
     
     <item>
       <title>2OpenCV中值模糊方法</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</link>
       <pubDate>Thu, 18 Aug 2016 15:19:25 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的中值模糊方法  // 中值模糊方法 Imgproc.medianBlur(src, src, 33);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
@@ -208,10 +208,10 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
     
     <item>
       <title>OpenCV高斯模糊方法</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</link>
       <pubDate>Wed, 17 Aug 2016 18:57:10 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
@@ -220,10 +220,10 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
     
     <item>
       <title>OpenCV均值模糊方法</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</link>
       <pubDate>Wed, 17 Aug 2016 18:07:51 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
@@ -232,10 +232,10 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
     
     <item>
       <title>OpenCV的部署</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html</link>
       <pubDate>Wed, 17 Aug 2016 17:56:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 官网 官网
 之前时间比较紧张，在网上找了很多文章，写了一个人脸识别的程序，也是模棱两可，今天开始抽时间系统学习一下OpenCV在Android上的使用。
@@ -258,10 +258,10 @@ File -&amp;gt; New -&amp;gt; Import Module
     
     <item>
       <title>Android使用OpenCV实现人脸识别</title>
-      <link>https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Wed, 06 Jul 2016 17:48:57 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 先上效果图，GIF不好弄
 在网上找了在Android平台上使用OpenCV相关的教程，很少，大部分也都主要是介绍下人脸检测，很少有讲人脸识别，还有的人连人脸检测和人脸识别的概念都没有搞清，人脸识别只是识别到有人脸，能获取到一个人脸的大概位置，有几个人脸，而人脸识别是要获取到人脸特征做对比，识别这个人脸。有好多文章都写自己在讲人脸识别，实际上他只是在做人脸检测。

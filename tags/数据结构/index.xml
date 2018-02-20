@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数据结构 on 不忘初心</title>
-    <link>https://chuxinshequ.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+    <link>https://chuxinshequ.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</link>
     <description>Recent content in 数据结构 on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -14,20 +14,20 @@
     
     <item>
       <title>数据结构算法之链表</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8.html</link>
       <pubDate>Mon, 13 Nov 2017 00:58:37 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8.html</guid>
       <description>链表面试总结，使用python实现，参考：https://www.cnblogs.com/lixiaohui-ambition/archive/2012/09/25/2703195.html 
 #coding:utf-8 # 定义链表 class ListNode: def __init__(self): self.data = None self.pnext = None # 链表操作类 class ListNode_handle: def __init__(self): self.cur_node = None # 链表添加元素 def add(self,data): ln = ListNode() ln.data = data ln.pnext = self.cur_node self.cur_node = ln return ln # 打印链表 def prt(self,ln): while ln: print(ln.data,end=&amp;quot; &amp;quot;) ln = ln.pnext # 逆序输出 def _reverse(self,ln): _list = [] while ln: _list.append(ln.data) ln = ln.pnext ln_2 = ListNode() ln_h = ListNode_handle() for i in _list: ln_2 = ln_h.</description>
     </item>
     
     <item>
       <title>数据结构算法之合并两个有序序列</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97.html</link>
       <pubDate>Mon, 13 Nov 2017 00:55:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97.html</guid>
       <description>有序序列的合并，python实现。 
 #coding:utf-8 a = [2,4,6,8,10] b = [3,5,7,9,11,13,15] c = [] def merge(a,b): i,j = 0,0 while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.append(m) if j&amp;lt;=len(b)-1: for n in b[j:]: c.append(n) print(c) merge(a,b)  运行结果为：
 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15]  </description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>数据结构算法之排序</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F.html</link>
       <pubDate>Mon, 13 Nov 2017 00:51:28 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F.html</guid>
       <description>数据结构面试中经常会被问到篇排序相关的问题，那么这篇文章会研究下怎么用python来实现排序。
  冒泡排序 #coding：utf-8 # 冒泡排序 def maopao(): a = [2,1,4,3,9,5,6,8,7] for i in range(len(a)-1): for j in range(len(a)-1-i): if a[j]&amp;gt;a[j+1]: temp = a[j] a[j] = a[j+1] a[j+1] = temp print(a) maopao()  结果为：
 [1, 2, 3, 4, 5, 6, 7, 8, 9]  归并排序 # 归并排序 def merge(a,b): i,j = 0,0 c = [] while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.</description>
@@ -46,10 +46,10 @@
     
     <item>
       <title>数据结构算法之二叉树</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91.html</link>
       <pubDate>Mon, 13 Nov 2017 00:44:41 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91.html</guid>
       <description>数据结构面试中经常会被问到篇二叉树相关的问题，那么这篇文章会研究下怎么用python来进行二叉树的构建和遍历。
  注意：py2中
 print root.elem,  在py3中要换成

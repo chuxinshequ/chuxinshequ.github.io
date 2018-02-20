@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技术篇 on 不忘初心</title>
-    <link>https://chuxinshequ.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/</link>
+    <link>https://chuxinshequ.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87.html</link>
     <description>Recent content in 技术篇 on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -14,10 +14,10 @@
     
     <item>
       <title>梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降</title>
-      <link>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.html</link>
       <pubDate>Thu, 14 Dec 2017 14:40:43 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.html</guid>
       <description>在机器学习领域，体梯度下降算法分为三种
  批量梯度下降算法（BGD，Batch gradient descent algorithm） 随机梯度下降算法（SGD，Stochastic gradient descent algorithm） 小批量梯度下降算法（MBGD，Mini-batch gradient descent algorithm）   批量梯度下降算法 BGD是最原始的梯度下降算法，每一次迭代使用全部的样本，即权重的迭代公式中(公式中用$\theta$代替$\theta_i$)， $$ \jmath (\theta _0,\theta _1,&amp;hellip;,\theta n)=\sum{i=0}^{m}( h_\theta(x_0,x_1,&amp;hellip;,x_n)-y_i )^2
 $$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,&amp;hellip;,\theta _n)}{\partial \theta _i} $$ $$ 公式(1) $$
@@ -35,10 +35,10 @@ $$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,
     
     <item>
       <title>梯度算法之梯度上升和梯度下降</title>
-      <link>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.html</link>
       <pubDate>Thu, 14 Dec 2017 14:11:11 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.html</guid>
       <description>第一次看见随机梯度上升算法是看《机器学习实战》这本书，当时也是一知半解，只是大概知道和高等数学中的函数求导有一定的关系。下边我们就好好研究下随机梯度上升（下降）和梯度上升（下降）。 
 高数中的导数 设导数 y = f(x) 在 $ x_0 $的某个邻域内有定义，当自变量从 $ x0 $ 变成 $$ x{0} + \Delta x $$ 函数y=f(x)的增量
 $$ \Delta y = f(x_0 + \Delta x) - f(x_0) $$ 与自变量的增量 $ \Delta x $ 之比：
@@ -47,10 +47,10 @@ $$ \frac{ \Delta y }{ \Delta x } = \frac{ f(x_0 + \Delta x)-f(x0) }{ \Delta x } 
     
     <item>
       <title>异常检测之指数平滑（利用elasticsearch来实现）</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0.html</link>
       <pubDate>Mon, 20 Nov 2017 17:18:54 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0.html</guid>
       <description>指数平滑法是一种特殊的加权平均法，加权的特点是对离预测值较近的历史数据给予较大的权数，对离预测期较远的历史数据给予较小的权数，权数由近到远按指数规律递减，所以，这种预测方法被称为指数平滑法。它可分为一次指数平滑法、二次指数平滑法及更高次指数平滑法。 
 关于指数平滑的得相关资料：  ES API接口： &amp;gt; https://github.com/IBBD/IBBD.github.io/blob/master/elk/aggregations-pipeline.md https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-pipeline-movavg-aggregation.html
  理论概念 &amp;gt; http://blog.sina.com.cn/s/blog_4b9acb5201016nkd.html
@@ -60,10 +60,10 @@ curl -XPOST &#39;localhost:9200/_search?pretty&#39; -H &#39;Content-Type: applic
     
     <item>
       <title>Elasticsearch-DSL部分集合</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88.html</link>
       <pubDate>Tue, 14 Nov 2017 17:26:48 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88.html</guid>
       <description>ELK是日志收集分析神器，在这篇文章中将会介绍一些ES的常用命令。
 点击阅读：ELK Stack 从入门到放弃 
 DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 shards, which is over the limit of 1000. This limit exists because querying many shards at the same time can make the job of the coordinating node very CPU and/or memory intensive. It is usually a better idea to have a smaller number of larger shards. Update [action.search.shard_count.limit] to a greater value if you really want to query that many shards at the same time.</description>
@@ -71,20 +71,20 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
     
     <item>
       <title>数据结构算法之链表</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8.html</link>
       <pubDate>Mon, 13 Nov 2017 00:58:37 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8.html</guid>
       <description>链表面试总结，使用python实现，参考：https://www.cnblogs.com/lixiaohui-ambition/archive/2012/09/25/2703195.html 
 #coding:utf-8 # 定义链表 class ListNode: def __init__(self): self.data = None self.pnext = None # 链表操作类 class ListNode_handle: def __init__(self): self.cur_node = None # 链表添加元素 def add(self,data): ln = ListNode() ln.data = data ln.pnext = self.cur_node self.cur_node = ln return ln # 打印链表 def prt(self,ln): while ln: print(ln.data,end=&amp;quot; &amp;quot;) ln = ln.pnext # 逆序输出 def _reverse(self,ln): _list = [] while ln: _list.append(ln.data) ln = ln.pnext ln_2 = ListNode() ln_h = ListNode_handle() for i in _list: ln_2 = ln_h.</description>
     </item>
     
     <item>
       <title>数据结构算法之合并两个有序序列</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97.html</link>
       <pubDate>Mon, 13 Nov 2017 00:55:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97.html</guid>
       <description>有序序列的合并，python实现。 
 #coding:utf-8 a = [2,4,6,8,10] b = [3,5,7,9,11,13,15] c = [] def merge(a,b): i,j = 0,0 while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.append(m) if j&amp;lt;=len(b)-1: for n in b[j:]: c.append(n) print(c) merge(a,b)  运行结果为：
 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15]  </description>
@@ -92,10 +92,10 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
     
     <item>
       <title>数据结构算法之排序</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F.html</link>
       <pubDate>Mon, 13 Nov 2017 00:51:28 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F.html</guid>
       <description>数据结构面试中经常会被问到篇排序相关的问题，那么这篇文章会研究下怎么用python来实现排序。
  冒泡排序 #coding：utf-8 # 冒泡排序 def maopao(): a = [2,1,4,3,9,5,6,8,7] for i in range(len(a)-1): for j in range(len(a)-1-i): if a[j]&amp;gt;a[j+1]: temp = a[j] a[j] = a[j+1] a[j+1] = temp print(a) maopao()  结果为：
 [1, 2, 3, 4, 5, 6, 7, 8, 9]  归并排序 # 归并排序 def merge(a,b): i,j = 0,0 c = [] while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.</description>
@@ -103,10 +103,10 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
     
     <item>
       <title>数据结构算法之二叉树</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91.html</link>
       <pubDate>Mon, 13 Nov 2017 00:44:41 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91.html</guid>
       <description>数据结构面试中经常会被问到篇二叉树相关的问题，那么这篇文章会研究下怎么用python来进行二叉树的构建和遍历。
  注意：py2中
 print root.elem,  在py3中要换成
@@ -115,10 +115,10 @@ print (root.elem,end=&amp;quot; &amp;quot;)  # coding:utf-8 # 定义节点类 cl
     
     <item>
       <title>回归分析之Sklearn实现电力预测</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B.html</link>
       <pubDate>Tue, 07 Nov 2017 13:39:15 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B.html</guid>
       <description>参考原文：http://www.cnblogs.com/pinard/p/6016029.html 这里进行了手动实现，增强记忆。 
 1：数据集介绍 使用的数据是UCI大学公开的机器学习数据
 数据的介绍在这： http://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant
@@ -135,10 +135,10 @@ sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details
     
     <item>
       <title>回归分析之线性回归（N元线性回归）</title>
-      <link>https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.html</link>
       <pubDate>Fri, 29 Sep 2017 16:45:14 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.html</guid>
       <description>在上一篇文章中我们介绍了 回归分析之理论篇，在其中我们有聊到线性回归和非线性回归，包括广义线性回归，这一篇文章我们来聊下回归分析中的线性回归。
  一元线性回归 预测房价： 输入编号 | 平方米 | 价格 -|-|- 1 | 150 | 6450 2 | 200 | 7450 3| 250 |8450 4| 300 |9450 5| 350 |11450 6| 400 |15450 7| 600| 18450
 针对上边这种一元数据来讲，我们可以构建的一元线性回归函数为 $$ H(x) = k*x + b $$ 其中H(x)为平方米价格表，k是一元回归系数，b为常数。最小二乘法的公式： $$ k =\frac{ \sum{1}^{n} (x{i} - \bar{x} )(y{i} - \bar{y}) } { \sum{1}^{n}(x_{i}-\bar{x})^{2} } $$ 自己使用python代码实现为：
@@ -147,10 +147,10 @@ def leastsq(x,y): &amp;quot;&amp;quot;&amp;quot; x,y分别是要拟合的数据�
     
     <item>
       <title>几种距离计算公式在数据挖掘中的应用场景分析</title>
-      <link>https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90.html</link>
       <pubDate>Wed, 20 Sep 2017 10:23:39 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90.html</guid>
       <description>本文涉及以下几种距离计算公式的分析，参考资料为《面向程序员的数据挖掘指南》
  曼哈顿距离 欧几里得距离 闵可夫斯基距离 皮尔逊相关系数 余弦相似度   之前整理过一篇关于距离相关的文章：[机器学习算法中的距离和相似性计算公式，分析以及python实现]()
 闵可夫斯基距离 两个n维变量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的闵可夫斯基距离定义为： $$ \sqrt[p]{ \sum{k=1}^{n} \left | x{1k}-x_{2k} \right |^p} $$
@@ -170,10 +170,10 @@ Dis_2 = sqrt( (3.5-2)^2 + (2-3.5)^2 + (5-2)^2 + (1.5-3.5)^2 + (2-3)^2 ) = 4.3  �
     
     <item>
       <title>数据归一化和其在sklearn中的处理</title>
-      <link>https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86.html</link>
       <pubDate>Fri, 01 Sep 2017 11:33:50 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86.html</guid>
       <description>一：数据归一化 数据归一化（标准化）处理是数据挖掘的一项基础工作，不同评价指标往往具有不同的量纲和量纲单位，这样的情况会影响到数据分析的结果，为了消除指标之间的量纲影响，需要进行数据标准化处理，以解决数据指标之间的可比性。原始数据经过数据标准化处理后，各指标处于同一数量级，适合进行综合对比评价。  归一化方法有两种形式，一种是把数变为（0，1）之间的小数，一种是把有量纲表达式变为无量纲表达式。在机器学习中我们更关注的把数据变到0～1之间，接下来我们讨论的也是第一种形式。
 1）min-max标准化 min-max标准化也叫做离差标准化，是对原始数据的线性变换，使结果落到[0,1]区间，其对应的数学公式如下：
 $$ X_{scale} = \frac{x-min}{max-min} $$
@@ -193,10 +193,10 @@ import numpy as np #x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] def z_score(x): return (x
     
     <item>
       <title>MachingLearning中的距离和相似性计算以及python实现</title>
-      <link>https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0.html</link>
       <pubDate>Sun, 16 Jul 2017 12:14:43 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0.html</guid>
       <description>前言 写这篇文章的目的不是说摘抄网上其他人的总结，刚才最近在看这方面的东西，为了让自己能够实际的去感受下每种求距离公式的差别，然后用python进行具体实现。  在机器学习中，经常要用到距离和相似性的计算公式，我么要常计算个体之间的差异大小，继而评价个人之间的差异性和相似性，最常见的就是数据分析中的相关分析，数据挖掘中的分类和聚类算法。如利用k-means进行聚类时，判断个体所属的类别，要利用距离计算公式计算个体到簇心的距离，如利用KNN进行分类时，计算个体与已知类别之间的相似性，从而判断个体所属的类别等。
 文章编辑的过程中或许存在一个错误或者不合理的地方，欢迎指正。
 参考：http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html

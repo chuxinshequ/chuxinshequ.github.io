@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on 不忘初心</title>
-    <link>https://chuxinshequ.github.io/blog/</link>
+    <link>https://chuxinshequ.github.io/blog.html</link>
     <description>Recent content in Blogs on 不忘初心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -14,20 +14,20 @@
     
     <item>
       <title>Contact</title>
-      <link>https://chuxinshequ.github.io/blog/2018/02/20/contact/</link>
+      <link>https://chuxinshequ.github.io/blog/2018/02/20/contact.html</link>
       <pubDate>Tue, 20 Feb 2018 12:34:56 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2018/02/20/contact/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2018/02/20/contact.html</guid>
       <description> 微信群 如果上面的图片没有及时更新的话（这几乎是必然的），联系我拉你进群，联系方式有很多，哪种最快看缘分，都试试肯定及时：  Email: hu@daonao.com QQ 443089607 微博 @胡争辉 GitHub https://github.com/huzhenghui Facebook TODO Twitter TODO Bitbucket https://bitbucket.org/huzhenghui/ Docker https://hub.docker.com/r/huzhenghui
  微信 huzhenghui   </description>
     </item>
     
     <item>
       <title>How to compose article in chuxinshequ.github.io</title>
-      <link>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/</link>
+      <link>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html</link>
       <pubDate>Mon, 19 Feb 2018 02:02:02 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html</guid>
       <description>chuxinshequ.github.io Alpha Step 1 (manual, only once) &amp;ldquo;git submodule add&amp;rdquo; git repository and create soft link
 Step 2 create article in git reposity
 Important Please enter the correct format date in Front Matter in front of Markdown article. https://github.com/huzhenghui/public-article/blob/master/posts/help/Front-Matter-Sample.md
@@ -37,19 +37,19 @@ Step 4 wait 5 minutes then visit https://chuxinshequ.github.io/blog/</descriptio
     
     <item>
       <title>Markdown Tables Sample 表格示例</title>
-      <link>https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/</link>
+      <link>https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html</link>
       <pubDate>Tue, 30 Jan 2018 23:30:01 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html</guid>
       <description> Markdown Tables Sample 表格示例  Name | Age --------|------ Bob | 27 Alice | 23     Name Age     Bob 27   Alice 23    </description>
     </item>
     
     <item>
       <title>Front Matter Sample 格式示例</title>
-      <link>https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/</link>
+      <link>https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample.html</link>
       <pubDate>Tue, 30 Jan 2018 17:54:55 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample.html</guid>
       <description>Front Matter Sample 格式示例 目前使用的 Hugo 支持 Markdown Front Matter 语法 https://jekyllrb.com/docs/frontmatter/ 主要涉及 title、date、tags、categories四个变量 也就是 .md 文件的开头需要包含如下内容
 --- title: Post Format Sample 文章格式示例 date: 2018-01-30 17:54:55 tags: [help] categories: help ---  需要注意 Hugo 按照 .md 文件中的 date 变量排序，如果不写或者格式错误，那么就会被排在最后了。 可以在 GitHub 中预览 Markdown Front Matter 语法是否正确，例如上例预览效果为
    title date tags categories     Post Format Sample 文章格式示例 2018-01-30 09:54:55 -0800 help help    预览中在 date 变量看到时区，也就是 -0800 或者类似的字样代表正确。</description>
@@ -57,10 +57,10 @@ Step 4 wait 5 minutes then visit https://chuxinshequ.github.io/blog/</descriptio
     
     <item>
       <title>Hexo-Yilia加入相册功能</title>
-      <link>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD.html</link>
       <pubDate>Thu, 14 Dec 2017 17:55:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/12/14/hexo-yilia%E5%8A%A0%E5%85%A5%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD.html</guid>
       <description>参考：点击查看
 但是其中有一些小问题，自己便重新整理了一下（本文适用于使用github存放照片）
  主页新建相册链接 主题_config.json文件的menu 中加入 相册和对应的链接
@@ -72,10 +72,10 @@ themes/yilia/_config.json menu: 主页: / ... ... 相册: /photos  新建目录�
     
     <item>
       <title>梯度算法之批量梯度下降，随机梯度下降和小批量梯度下降</title>
-      <link>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.html</link>
       <pubDate>Thu, 14 Dec 2017 14:40:43 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%B0%8F%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.html</guid>
       <description>在机器学习领域，体梯度下降算法分为三种
  批量梯度下降算法（BGD，Batch gradient descent algorithm） 随机梯度下降算法（SGD，Stochastic gradient descent algorithm） 小批量梯度下降算法（MBGD，Mini-batch gradient descent algorithm）   批量梯度下降算法 BGD是最原始的梯度下降算法，每一次迭代使用全部的样本，即权重的迭代公式中(公式中用$\theta$代替$\theta_i$)， $$ \jmath (\theta _0,\theta _1,&amp;hellip;,\theta n)=\sum{i=0}^{m}( h_\theta(x_0,x_1,&amp;hellip;,x_n)-y_i )^2
 $$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,&amp;hellip;,\theta _n)}{\partial \theta _i} $$ $$ 公式(1) $$
@@ -93,10 +93,10 @@ $$ $$ \theta _i = \theta _i - \alpha \frac{\partial \jmath (\theta _1,\theta _2,
     
     <item>
       <title>梯度算法之梯度上升和梯度下降</title>
-      <link>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.html</link>
       <pubDate>Thu, 14 Dec 2017 14:11:11 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/12/14/%E6%A2%AF%E5%BA%A6%E7%AE%97%E6%B3%95%E4%B9%8B%E6%A2%AF%E5%BA%A6%E4%B8%8A%E5%8D%87%E5%92%8C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.html</guid>
       <description>第一次看见随机梯度上升算法是看《机器学习实战》这本书，当时也是一知半解，只是大概知道和高等数学中的函数求导有一定的关系。下边我们就好好研究下随机梯度上升（下降）和梯度上升（下降）。 
 高数中的导数 设导数 y = f(x) 在 $ x_0 $的某个邻域内有定义，当自变量从 $ x0 $ 变成 $$ x{0} + \Delta x $$ 函数y=f(x)的增量
 $$ \Delta y = f(x_0 + \Delta x) - f(x_0) $$ 与自变量的增量 $ \Delta x $ 之比：
@@ -105,10 +105,10 @@ $$ \frac{ \Delta y }{ \Delta x } = \frac{ f(x_0 + \Delta x)-f(x0) }{ \Delta x } 
     
     <item>
       <title>异常检测之指数平滑（利用elasticsearch来实现）</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0.html</link>
       <pubDate>Mon, 20 Nov 2017 17:18:54 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/20/%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E4%B9%8B%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%88%A9%E7%94%A8elasticsearch%E6%9D%A5%E5%AE%9E%E7%8E%B0.html</guid>
       <description>指数平滑法是一种特殊的加权平均法，加权的特点是对离预测值较近的历史数据给予较大的权数，对离预测期较远的历史数据给予较小的权数，权数由近到远按指数规律递减，所以，这种预测方法被称为指数平滑法。它可分为一次指数平滑法、二次指数平滑法及更高次指数平滑法。 
 关于指数平滑的得相关资料：  ES API接口： &amp;gt; https://github.com/IBBD/IBBD.github.io/blob/master/elk/aggregations-pipeline.md https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-pipeline-movavg-aggregation.html
  理论概念 &amp;gt; http://blog.sina.com.cn/s/blog_4b9acb5201016nkd.html
@@ -118,10 +118,10 @@ curl -XPOST &#39;localhost:9200/_search?pretty&#39; -H &#39;Content-Type: applic
     
     <item>
       <title>Elasticsearch-DSL部分集合</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88.html</link>
       <pubDate>Tue, 14 Nov 2017 17:26:48 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/14/elasticsearch-dsl%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88.html</guid>
       <description>ELK是日志收集分析神器，在这篇文章中将会介绍一些ES的常用命令。
 点击阅读：ELK Stack 从入门到放弃 
 DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 shards, which is over the limit of 1000. This limit exists because querying many shards at the same time can make the job of the coordinating node very CPU and/or memory intensive. It is usually a better idea to have a smaller number of larger shards. Update [action.search.shard_count.limit] to a greater value if you really want to query that many shards at the same time.</description>
@@ -129,20 +129,20 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
     
     <item>
       <title>数据结构算法之链表</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8.html</link>
       <pubDate>Mon, 13 Nov 2017 00:58:37 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E9%93%BE%E8%A1%A8.html</guid>
       <description>链表面试总结，使用python实现，参考：https://www.cnblogs.com/lixiaohui-ambition/archive/2012/09/25/2703195.html 
 #coding:utf-8 # 定义链表 class ListNode: def __init__(self): self.data = None self.pnext = None # 链表操作类 class ListNode_handle: def __init__(self): self.cur_node = None # 链表添加元素 def add(self,data): ln = ListNode() ln.data = data ln.pnext = self.cur_node self.cur_node = ln return ln # 打印链表 def prt(self,ln): while ln: print(ln.data,end=&amp;quot; &amp;quot;) ln = ln.pnext # 逆序输出 def _reverse(self,ln): _list = [] while ln: _list.append(ln.data) ln = ln.pnext ln_2 = ListNode() ln_h = ListNode_handle() for i in _list: ln_2 = ln_h.</description>
     </item>
     
     <item>
       <title>数据结构算法之合并两个有序序列</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97.html</link>
       <pubDate>Mon, 13 Nov 2017 00:55:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97.html</guid>
       <description>有序序列的合并，python实现。 
 #coding:utf-8 a = [2,4,6,8,10] b = [3,5,7,9,11,13,15] c = [] def merge(a,b): i,j = 0,0 while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.append(m) if j&amp;lt;=len(b)-1: for n in b[j:]: c.append(n) print(c) merge(a,b)  运行结果为：
 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15]  </description>
@@ -150,10 +150,10 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
     
     <item>
       <title>数据结构算法之排序</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F.html</link>
       <pubDate>Mon, 13 Nov 2017 00:51:28 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E6%8E%92%E5%BA%8F.html</guid>
       <description>数据结构面试中经常会被问到篇排序相关的问题，那么这篇文章会研究下怎么用python来实现排序。
  冒泡排序 #coding：utf-8 # 冒泡排序 def maopao(): a = [2,1,4,3,9,5,6,8,7] for i in range(len(a)-1): for j in range(len(a)-1-i): if a[j]&amp;gt;a[j+1]: temp = a[j] a[j] = a[j+1] a[j+1] = temp print(a) maopao()  结果为：
 [1, 2, 3, 4, 5, 6, 7, 8, 9]  归并排序 # 归并排序 def merge(a,b): i,j = 0,0 c = [] while i&amp;lt;=len(a)-1 and j&amp;lt;=len(b)-1: if a[i]&amp;lt;b[j]: c.append(a[i]) i+=1 else: c.append(b[j]) j+=1 if i&amp;lt;=len(a)-1: for m in a[i:]: c.</description>
@@ -161,10 +161,10 @@ DSL中遇到的错误及解决办法 分片限制错误 Trying to query 2632 sha
     
     <item>
       <title>数据结构算法之二叉树</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91.html</link>
       <pubDate>Mon, 13 Nov 2017 00:44:41 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91.html</guid>
       <description>数据结构面试中经常会被问到篇二叉树相关的问题，那么这篇文章会研究下怎么用python来进行二叉树的构建和遍历。
  注意：py2中
 print root.elem,  在py3中要换成
@@ -173,10 +173,10 @@ print (root.elem,end=&amp;quot; &amp;quot;)  # coding:utf-8 # 定义节点类 cl
     
     <item>
       <title>回归分析之Sklearn实现电力预测</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B.html</link>
       <pubDate>Tue, 07 Nov 2017 13:39:15 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/07/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8Bsklearn%E5%AE%9E%E7%8E%B0%E7%94%B5%E5%8A%9B%E9%A2%84%E6%B5%8B.html</guid>
       <description>参考原文：http://www.cnblogs.com/pinard/p/6016029.html 这里进行了手动实现，增强记忆。 
 1：数据集介绍 使用的数据是UCI大学公开的机器学习数据
 数据的介绍在这： http://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant
@@ -193,10 +193,10 @@ sklearn的归一化处理参考：http://blog.csdn.net/gamer_gyt/article/details
     
     <item>
       <title>Android屏幕适配</title>
-      <link>https://chuxinshequ.github.io/blog/2017/11/06/2017-11-06-android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/11/06/2017-11-06-android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D.html</link>
       <pubDate>Mon, 06 Nov 2017 11:12:58 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/11/06/2017-11-06-android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/11/06/2017-11-06-android%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D.html</guid>
       <description>老文章了，拿到个人站里。
 生成适配文件，我们先创建工具类，通过工具类直接生成适配文件，放到工程中即可。
 工具类  下面工具类中，列举了10余种屏幕尺寸，如果有特殊分辨率需要适配，在main方法中添加即可。
@@ -207,10 +207,10 @@ import java.io.File; import java.io.FileNotFoundException; import java.io.FileOu
     
     <item>
       <title>回归分析之线性回归（N元线性回归）</title>
-      <link>https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.html</link>
       <pubDate>Fri, 29 Sep 2017 16:45:14 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/09/29/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%8B%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92n%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.html</guid>
       <description>在上一篇文章中我们介绍了 回归分析之理论篇，在其中我们有聊到线性回归和非线性回归，包括广义线性回归，这一篇文章我们来聊下回归分析中的线性回归。
  一元线性回归 预测房价： 输入编号 | 平方米 | 价格 -|-|- 1 | 150 | 6450 2 | 200 | 7450 3| 250 |8450 4| 300 |9450 5| 350 |11450 6| 400 |15450 7| 600| 18450
 针对上边这种一元数据来讲，我们可以构建的一元线性回归函数为 $$ H(x) = k*x + b $$ 其中H(x)为平方米价格表，k是一元回归系数，b为常数。最小二乘法的公式： $$ k =\frac{ \sum{1}^{n} (x{i} - \bar{x} )(y{i} - \bar{y}) } { \sum{1}^{n}(x_{i}-\bar{x})^{2} } $$ 自己使用python代码实现为：
@@ -219,10 +219,10 @@ def leastsq(x,y): &amp;quot;&amp;quot;&amp;quot; x,y分别是要拟合的数据�
     
     <item>
       <title>几种距离计算公式在数据挖掘中的应用场景分析</title>
-      <link>https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90.html</link>
       <pubDate>Wed, 20 Sep 2017 10:23:39 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/09/20/%E5%87%A0%E7%A7%8D%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90.html</guid>
       <description>本文涉及以下几种距离计算公式的分析，参考资料为《面向程序员的数据挖掘指南》
  曼哈顿距离 欧几里得距离 闵可夫斯基距离 皮尔逊相关系数 余弦相似度   之前整理过一篇关于距离相关的文章：[机器学习算法中的距离和相似性计算公式，分析以及python实现]()
 闵可夫斯基距离 两个n维变量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的闵可夫斯基距离定义为： $$ \sqrt[p]{ \sum{k=1}^{n} \left | x{1k}-x_{2k} \right |^p} $$
@@ -242,28 +242,28 @@ Dis_2 = sqrt( (3.5-2)^2 + (2-3.5)^2 + (5-2)^2 + (1.5-3.5)^2 + (2-3)^2 ) = 4.3  �
     
     <item>
       <title>Git指令</title>
-      <link>https://chuxinshequ.github.io/blog/2017/09/19/2017-09-19-git%E6%8C%87%E4%BB%A4/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/09/19/2017-09-19-git%E6%8C%87%E4%BB%A4.html</link>
       <pubDate>Tue, 19 Sep 2017 12:04:34 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/09/19/2017-09-19-git%E6%8C%87%E4%BB%A4/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/09/19/2017-09-19-git%E6%8C%87%E4%BB%A4.html</guid>
       <description> 查看用户名及邮箱地址 $ git config user.name $ git config user.email  修改用户名及邮箱地址 $ git config --global user.name &amp;quot;用户名&amp;quot; $ git config --global user.email &amp;quot;邮箱地址&amp;quot;  </description>
     </item>
     
     <item>
       <title>即拿即用一Android文件存取</title>
-      <link>https://chuxinshequ.github.io/blog/2017/09/15/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/09/15/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96.html</link>
       <pubDate>Fri, 15 Sep 2017 14:46:37 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/09/15/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/09/15/2017-09-19-%E5%8D%B3%E6%8B%BF%E5%8D%B3%E7%94%A8android%E6%96%87%E4%BB%B6%E5%AD%98%E5%8F%96.html</guid>
       <description>写文件 读文件 Assets文件读取 Bitmap保存 文件删除  写文件 /** * 写文件 * * @param filePath 文件绝对路径 * @param content 写入内容 * @return 写入是否成功 */ public static boolean writeFile(String filePath, String content) { FileOutputStream fileOutputStream = null; BufferedOutputStream bufferedOutputStream = null; try { File file = new File(filePath); if (file.createNewFile()) { fileOutputStream = new FileOutputStream(filePath); bufferedOutputStream = new BufferedOutputStream(fileOutputStream); bufferedOutputStream.write(content.getBytes(&amp;quot;UTF-8&amp;quot;)); bufferedOutputStream.flush(); return true; } } catch (IOException e) { e.printStackTrace(); } finally { if (null !</description>
     </item>
     
     <item>
       <title>数据归一化和其在sklearn中的处理</title>
-      <link>https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86.html</link>
       <pubDate>Fri, 01 Sep 2017 11:33:50 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/09/01/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E5%85%B6%E5%9C%A8sklearn%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86.html</guid>
       <description>一：数据归一化 数据归一化（标准化）处理是数据挖掘的一项基础工作，不同评价指标往往具有不同的量纲和量纲单位，这样的情况会影响到数据分析的结果，为了消除指标之间的量纲影响，需要进行数据标准化处理，以解决数据指标之间的可比性。原始数据经过数据标准化处理后，各指标处于同一数量级，适合进行综合对比评价。  归一化方法有两种形式，一种是把数变为（0，1）之间的小数，一种是把有量纲表达式变为无量纲表达式。在机器学习中我们更关注的把数据变到0～1之间，接下来我们讨论的也是第一种形式。
 1）min-max标准化 min-max标准化也叫做离差标准化，是对原始数据的线性变换，使结果落到[0,1]区间，其对应的数学公式如下：
 $$ X_{scale} = \frac{x-min}{max-min} $$
@@ -283,10 +283,10 @@ import numpy as np #x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] def z_score(x): return (x
     
     <item>
       <title>Android AES 加密、解密</title>
-      <link>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86.html</link>
       <pubDate>Fri, 04 Aug 2017 15:32:49 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86.html</guid>
       <description>AES加密介绍
 ASE 加密、解密的关键在于秘钥、只有使用加密时使用的秘钥，才可以解密。
 生成秘钥的代码网上一大堆，下面的代码可生成一个秘钥
@@ -296,10 +296,10 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
     
     <item>
       <title>MachingLearning中的距离和相似性计算以及python实现</title>
-      <link>https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0.html</link>
       <pubDate>Sun, 16 Jul 2017 12:14:43 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0.html</guid>
       <description>前言 写这篇文章的目的不是说摘抄网上其他人的总结，刚才最近在看这方面的东西，为了让自己能够实际的去感受下每种求距离公式的差别，然后用python进行具体实现。  在机器学习中，经常要用到距离和相似性的计算公式，我么要常计算个体之间的差异大小，继而评价个人之间的差异性和相似性，最常见的就是数据分析中的相关分析，数据挖掘中的分类和聚类算法。如利用k-means进行聚类时，判断个体所属的类别，要利用距离计算公式计算个体到簇心的距离，如利用KNN进行分类时，计算个体与已知类别之间的相似性，从而判断个体所属的类别等。
 文章编辑的过程中或许存在一个错误或者不合理的地方，欢迎指正。
 参考：http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html
@@ -315,10 +315,10 @@ $$ \sqrt{\sum{n}^{k=1}(x{1k}-x_{2k})^2 } $$ python 实现为：</description>
     
     <item>
       <title>一切的闹闹哄哄，只是他在水帘洞躲避风沙那晚做的一个梦</title>
-      <link>https://chuxinshequ.github.io/blog/2017/04/16/%E4%B8%80%E5%88%87%E7%9A%84%E9%97%B9%E9%97%B9%E5%93%84%E5%93%84%E5%8F%AA%E6%98%AF%E4%BB%96%E5%9C%A8%E6%B0%B4%E5%B8%98%E6%B4%9E%E8%BA%B2%E9%81%BF%E9%A3%8E%E6%B2%99%E9%82%A3%E6%99%9A%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A2%A6/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/04/16/%E4%B8%80%E5%88%87%E7%9A%84%E9%97%B9%E9%97%B9%E5%93%84%E5%93%84%E5%8F%AA%E6%98%AF%E4%BB%96%E5%9C%A8%E6%B0%B4%E5%B8%98%E6%B4%9E%E8%BA%B2%E9%81%BF%E9%A3%8E%E6%B2%99%E9%82%A3%E6%99%9A%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A2%A6.html</link>
       <pubDate>Sun, 16 Apr 2017 01:03:56 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/04/16/%E4%B8%80%E5%88%87%E7%9A%84%E9%97%B9%E9%97%B9%E5%93%84%E5%93%84%E5%8F%AA%E6%98%AF%E4%BB%96%E5%9C%A8%E6%B0%B4%E5%B8%98%E6%B4%9E%E8%BA%B2%E9%81%BF%E9%A3%8E%E6%B2%99%E9%82%A3%E6%99%9A%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A2%A6/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/04/16/%E4%B8%80%E5%88%87%E7%9A%84%E9%97%B9%E9%97%B9%E5%93%84%E5%93%84%E5%8F%AA%E6%98%AF%E4%BB%96%E5%9C%A8%E6%B0%B4%E5%B8%98%E6%B4%9E%E8%BA%B2%E9%81%BF%E9%A3%8E%E6%B2%99%E9%82%A3%E6%99%9A%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A2%A6.html</guid>
       <description>送同学走之后，我在路边默默的站了有五分钟，突然觉得我无处可去，有一种深入骨髓的悲哀和无奈，然后我就想起了一个命题，“如今的你，何去何从！”我不知道为什么会突然想到这样一个命题，或许是我们每个人都是至尊宝吧。其实每个人对《大话》的理解都是有所不同的，同样的人在不同的时期认识也会有偏差，就好比我第一次看的时候，笑得腹背抽筋，呲牙咧嘴，第二次看的时候，笑得少了，想的多了，过后便什么感觉也没有了，第三次看得时候，忽然觉得不知道是该哭还是该笑，笑得时候太牵强，哭得时候太尴尬。第四次便是这一次，看完之后觉得有一种无可奈何的悲哀。
   对《大话》的解读 有人说这是一部烂片，也有人说这是一部经典，有人说这是对西游文化的过度消费，有人说这是一代人的反思与成长，有人说阴差阳错的蝴蝶效应，让一个年代的人支撑起了这部超越中国电影水平50年的无厘头式作品，也有人说这是一部笑中带泪，总有一天你走在路上也会像一条狗的悲剧。
 一千个人眼中有一千个哈姆雷特，对于一部影视作品，我们无法去评论任何一个人的理解是对还是错，因为经历不同，就像你不能把你的情感强加到别人身上。喜欢一部作品，在不知不觉间你会忽略他的缺点，讨厌一个事物，在不知不觉间就会放大他的短处。我们也不能用我们现代的思维和观念去评判20世纪港台电影的文化和情感。
@@ -347,10 +347,10 @@ $$ \sqrt{\sum{n}^{k=1}(x{1k}-x_{2k})^2 } $$ python 实现为：</description>
     
     <item>
       <title>Android APK添加系统签名</title>
-      <link>https://chuxinshequ.github.io/blog/2017/04/05/2017-04-05-android-apk%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E7%AD%BE%E5%90%8D/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/04/05/2017-04-05-android-apk%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E7%AD%BE%E5%90%8D.html</link>
       <pubDate>Wed, 05 Apr 2017 11:52:01 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/04/05/2017-04-05-android-apk%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E7%AD%BE%E5%90%8D/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/04/05/2017-04-05-android-apk%E6%B7%BB%E5%8A%A0%E7%B3%BB%E7%BB%9F%E7%AD%BE%E5%90%8D.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 将应用设置为系统级应用。可以调用系统级别API。
 下载 签名文件
@@ -363,10 +363,10 @@ java -jar signapk.jar platform.x509.pem platform.pk8 上一步生成的未添加
     
     <item>
       <title>Android蓝牙通信——AndroidBluetoothManager</title>
-      <link>https://chuxinshequ.github.io/blog/2017/03/16/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/03/16/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager.html</link>
       <pubDate>Thu, 16 Mar 2017 18:24:36 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/03/16/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/03/16/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 
 To get a Git project into your build:
@@ -381,10 +381,10 @@ GIF
     
     <item>
       <title>Android自定义雷达扫描控件</title>
-      <link>https://chuxinshequ.github.io/blog/2017/03/10/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/03/10/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6.html</link>
       <pubDate>Fri, 10 Mar 2017 18:28:14 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/03/10/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/03/10/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 Android 雷达扫描控件 
 To get a Git project into your build:
@@ -397,10 +397,10 @@ dependencies { compile &#39;com.github.kongqw:AndroidRadarScanView:1.0.1&#39; } 
     
     <item>
       <title>Gradle常用技巧</title>
-      <link>https://chuxinshequ.github.io/blog/2017/03/02/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/03/02/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7.html</link>
       <pubDate>Thu, 02 Mar 2017 14:46:09 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/03/02/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/03/02/2017-03-02-gradle%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 Gradle http://google.github.io/android-gradle-dsl/current/index.html
 https://docs.gradle.org/current/userguide/java_plugin.html
@@ -413,10 +413,10 @@ apply plugin: &#39;com.android.application&#39; android { …… defaultConfig {
     
     <item>
       <title>打造简洁高效的动态权限管理器</title>
-      <link>https://chuxinshequ.github.io/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/</link>
+      <link>https://chuxinshequ.github.io/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8.html</link>
       <pubDate>Thu, 16 Feb 2017 10:50:45 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2017/02/16/2017-02-16-%E6%89%93%E9%80%A0%E7%AE%80%E6%B4%81%E9%AB%98%E6%95%88%E7%9A%84%E5%8A%A8%E6%80%81%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%99%A8.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图
 GitHub地址：PermissionsManager
@@ -430,10 +430,10 @@ mPermissionsManager = new PermissionsManager(this) { @Override public void autho
     
     <item>
       <title>Android自定义View绘图基础</title>
-      <link>https://chuxinshequ.github.io/blog/2016/12/13/2016-12-13-android%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/12/13/2016-12-13-android%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80.html</link>
       <pubDate>Tue, 13 Dec 2016 16:16:52 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/12/13/2016-12-13-android%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/12/13/2016-12-13-android%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 Android自定义View绘图基础 View的测量 控件的测量可以说是固定写法，原生的View只支持EXACTLY的测量模式，我们自定义的控件可以重写onMeasure方法
 @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) { setMeasuredDimension(getMeasuredSize(widthMeasureSpec), getMeasuredSize(heightMeasureSpec)); }  onMeasure方法给我们返回的widthMeasureSpec和heightMeasureSpec，我们并不能直接拿过来使用，需要使用MeasureSpec类进行解析，来获取测量后的具体值。 首先需要获取测量模式
@@ -445,10 +445,10 @@ MeasureSpec.getSize(measureSpec)  根据上面的意思，可以封装我们的g
     
     <item>
       <title>Android与Javascript交互</title>
-      <link>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E4%B8%8Ejavascript%E4%BA%A4%E4%BA%92/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E4%B8%8Ejavascript%E4%BA%A4%E4%BA%92.html</link>
       <pubDate>Wed, 16 Nov 2016 17:59:39 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E4%B8%8Ejavascript%E4%BA%A4%E4%BA%92/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E4%B8%8Ejavascript%E4%BA%A4%E4%BA%92.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 本篇参考Android与HTML+JS交互入门
 效果图 加载本地Html contentWebView = (WebView) findViewById(R.id.webview); // 加载Assets下的Html contentWebView.loadUrl(&amp;quot;file:///android_asset/html/test.html&amp;quot;);  启用Javascript contentWebView.getSettings().setJavaScriptEnabled(true); contentWebView.addJavascriptInterface(this, &amp;quot;android&amp;quot;);  Android调用Javascript的方法 Javascript写法
@@ -459,10 +459,10 @@ MeasureSpec.getSize(measureSpec)  根据上面的意思，可以封装我们的g
     
     <item>
       <title>Android播放音效</title>
-      <link>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88.html</link>
       <pubDate>Wed, 16 Nov 2016 10:56:36 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 有些时候程序需要播放几个很短的低延迟的音效来响应与用户的交互。
 Android通过SoundPool将文件音频缓存加载到内存中，然后在响应用户操作的时候快速地播放。 Android框架低通了SoundPool来解码小音频文件，并在内存中操作它们来进行音频快速和重复的播放。SoundPool还有一些其他特性，比如可以在运行时控制音量和播放速度。
@@ -473,10 +473,10 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
     
     <item>
       <title>App启动优化最佳实践</title>
-      <link>https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html</link>
       <pubDate>Mon, 14 Nov 2016 17:43:17 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
  看了医生写的文章一触即发——App启动优化最佳实践，收获是有的。
  做Android开发，一定写给过启动页，在这里做一些初始化的操作，还有就是显示推广信息。
@@ -491,10 +491,10 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
     
     <item>
       <title>Android串口通信</title>
-      <link>https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html</link>
       <pubDate>Tue, 01 Nov 2016 15:40:53 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
  串口通信偏向嵌入式一点，是Android设备通过串口与其他设备进行通信的一种方式，本文介绍的Android纯串口的通信，并不是手机上的USB串口通信。
   手机上是没有这个串口的哦。
@@ -514,10 +514,10 @@ static { System.loadLibrary(&amp;quot;SerialPort&amp;quot;); System.loadLibrary(
     
     <item>
       <title>这夏未眠.简介</title>
-      <link>https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B.html</link>
       <pubDate>Thu, 15 Sep 2016 18:13:50 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B.html</guid>
       <description>书整体分为三部分《夏之过往》，《夏之流年》，《夏之未至》。整本书讲的是男主人公顾艾哲（小艾）与莫晨（晨晨）之间的故事，从初中到高中再到大学，从相遇到相知再到相离。  两人同在陌乘一中念初中，同班同学，在中考来临的那段日子，两人相互鼓励，于是顾艾哲（小艾）考上了他从来都没有想过能考上的孟川一高，而莫晨（晨晨）呢，考上了预料之中的平阳一高，而她在这之前却从来没告诉过顾艾哲（小艾）她要去平阳，就这样，两个人分开了，一些都看起来那么顺理成章，一切又看起来那么暗淡失望。
 在经历过高中的二年之后，顾艾哲（小艾）终于联系上了莫晨（晨晨），那天晚上，他用妈妈的电话给莫晨（晨晨）通了两个小时的电话，似乎要把两人两年里没有说的话都说完，可是有太多的话是无法用言语表达的，就这样电话欠费了，终止了聊天，可是那天晚上，小艾高兴的一宿没睡，那一晚上，他的笑容都是幸福的。
 可是事情永远不会那么顺利，在香山公园里，当他拿起他买的情侣戒指送给晨晨时，晨晨没有接受，说了一堆他也没有听进去的话，就这样，又开始了分离，而谁也不知道这次分离竟然时一辈子的再也不见。
@@ -526,10 +526,10 @@ static { System.loadLibrary(&amp;quot;SerialPort&amp;quot;); System.loadLibrary(
     
     <item>
       <title>这夏未眠.序</title>
-      <link>https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E5%BA%8F/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E5%BA%8F.html</link>
       <pubDate>Thu, 15 Sep 2016 18:08:51 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E5%BA%8F/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E5%BA%8F.html</guid>
       <description>这本书的整体构思是小主大学一年级时刚去的时候的一个想法，当时刚刚步入大学的我们，心里是那么的迷茫与懵懂，开学前两周，除了军训还是军训，晚上偶尔有个空闲时间，我想大概也许是无聊的，记得那个时候坐在图书馆靠窗的位置，看着窗外，没有明月，没有佳人，有的只是一望无际的黑暗。  那个时候，还没有遇到你所想遇到的人，或许回忆还沉淀在高中的时光里，或是幸福，或是苦涩，或是幸福之后的苦涩，回过头来，看着满屋子的学长学姐，心里是及其复杂的，有种说不出的难过，那时候我是不是在想，现在的你（们）会在哪里念大学呢？
 想着想着眼角便淌出了泪水，我想我的大学要完成一件至少我自己觉得满意的事，于是便有了你现在看到的这个序，不知道是不是受郭敬明的影响，因为我看过他的唯一一本小说，也是我看过的唯一一本小说——《夏至未至》，我想写一本书，或者更准确的说，我想写一个人的青春。
 在13年军训结束之后，我构思了整个体系，定了这本书的名字——《这夏未眠》，熟悉我的朋友，也知道这是我的QQ网名，QQ作为那个时代的记忆，总会残留一些悲伤的故事，于是我到现在四年了，我从没换过QQ网名，或许是害怕，害怕那些好久不联系的朋友，找不到我吧。</description>
@@ -537,10 +537,10 @@ static { System.loadLibrary(&amp;quot;SerialPort&amp;quot;); System.loadLibrary(
     
     <item>
       <title>OpenCV&#43;JavaCV实现人脸识别</title>
-      <link>https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Fri, 09 Sep 2016 16:29:53 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/09/09/2016-09-09-opencv-javacv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 OpenCV主要实现人脸检测功能
 JavaCV主要实现人脸对比功能
@@ -555,10 +555,10 @@ AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程�
     
     <item>
       <title>Android自定义摇杆</title>
-      <link>https://chuxinshequ.github.io/blog/2016/09/01/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/09/01/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86.html</link>
       <pubDate>Thu, 01 Sep 2016 17:37:11 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/09/01/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/09/01/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwRockerDemo
 喜欢就给个star，谢谢！
@@ -568,10 +568,10 @@ AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程�
     
     <item>
       <title>Android输出正弦波音频信号(左右声道对称)</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html</link>
       <pubDate>Mon, 29 Aug 2016 15:01:34 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 需求：左右声道分别输出不同的音频数据，波形要是一个正弦波，左右声道还要对称！ 对硬件不是很了解，说是要通过音波避障。
 效果图 之前已经介绍了如何在左右声道输出不同的音频数据。 那么这里主要介绍如何模拟出波形是正弦波的音频数据。
@@ -580,10 +580,10 @@ AndroidRuntime: java.lang.RuntimeException: setParameters failed  当打开程�
     
     <item>
       <title>Android左右声道的控制</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/26/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/26/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6.html</link>
       <pubDate>Fri, 26 Aug 2016 15:36:50 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/26/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/26/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 AndroidSoundManagerDemo
 我这里主要是用到了AudioTrack实现的左右声道的控制，手机一般都只有两个声道，即左声道和右声道，我们在输出的时候可以选择单声道，也可以选择双声道（立体声）。
@@ -598,10 +598,10 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
     
     <item>
       <title>环信即时通讯在Android平台的部署</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2.html</link>
       <pubDate>Mon, 22 Aug 2016 18:36:12 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-%E7%8E%AF%E4%BF%A1%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%9C%A8android%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%83%A8%E7%BD%B2.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 官网 环信
 下载SDK
@@ -612,10 +612,10 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
     
     <item>
       <title>OpenCV检测图像轮廓</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93.html</link>
       <pubDate>Mon, 22 Aug 2016 11:35:23 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E8%BD%AE%E5%BB%93.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 轮廓只不过是图像中连接的曲线，或者图像中连通部分的边界，轮廓通常以图像中的边缘来计算，但是，边缘和轮廓的区别在于轮廓是闭合的，而边缘可以是任意的。边缘的概念局限于点及其邻域像素，轮廓将目标作为整体进行处理。
 效果图 源码 KqwOpenCVFeaturesDemo
@@ -624,10 +624,10 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
     
     <item>
       <title>OpenCV使用霍夫变换检测图像中的形状</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6.html</link>
       <pubDate>Mon, 22 Aug 2016 10:34:41 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/22/2016-08-22-opencv%E4%BD%BF%E7%94%A8%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2%E6%A3%80%E6%B5%8B%E5%9B%BE%E5%83%8F%E4%B8%AD%E7%9A%84%E5%BD%A2%E7%8A%B6.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 霍夫变换是一种被广泛使用的利用数学等式的参数形式在图像中检测形状的技术。 例如直线、椭圆、圆等形状。
 霍夫变换可以检测任何能以参数形式表示的形状，随着形状的复杂（维数的增加，例如球体），计算的消耗也会增加。 我们通常只考虑简单的霍夫形状，例如直线和圆。
@@ -639,10 +639,10 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
     
     <item>
       <title>OpenCV使用Harris算法实现角点检测</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B.html</link>
       <pubDate>Fri, 19 Aug 2016 19:32:39 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8harris%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVFeaturesDemo
 角点是两条边缘的交点或者在局部邻域中有多个显著边缘方向的点。Harris角点检测是一种在角点检测中最常见的技术。
@@ -653,10 +653,10 @@ Harris角点检测器在图像上使用滑动窗口计算亮度的变化。
     
     <item>
       <title>OpenCV使用Sobel滤波器实现图像边缘检测</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</link>
       <pubDate>Fri, 19 Aug 2016 17:35:55 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8sobel%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVFeaturesDemo
 Sobel滤波器也叫Sobel算子，与Canny边缘检测一样，需要计算像素的灰度梯度，只不过是换用另一种方式。
@@ -672,10 +672,10 @@ Imgproc.Sobel(grayMat, grad_y, CvType.CV_16S, 0, 1, 3, 1, 0); Core.convertScaleA
     
     <item>
       <title>OpenCV使用Canny边缘检测器实现图像边缘检测</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</link>
       <pubDate>Fri, 19 Aug 2016 16:31:02 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E4%BD%BF%E7%94%A8canny%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%99%A8%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVFeaturesDemo
 Canny边缘检测器是一种被广泛使用的算法，并被认为是边缘检测最优的算法，该方法使用了比高斯差分算法更复杂的技巧，如多向灰度梯度和滞后阈值化。
@@ -694,10 +694,10 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
     
     <item>
       <title>OpenCV高斯差分技术实现图像边缘检测</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</link>
       <pubDate>Fri, 19 Aug 2016 11:42:04 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/19/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVFeaturesDemo
 边缘是图像中像素亮度变化明显的点。
@@ -711,10 +711,10 @@ Canny边缘检测器算法基本步骤  平滑图像：通过使用合适的模�
     
     <item>
       <title>OpenCV实现图像阈值化</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96.html</link>
       <pubDate>Thu, 18 Aug 2016 18:59:50 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC%E5%8C%96.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 阈值化是一种将我们想要在图像中分析的区域分割出来的方法。 我们把每个像素值都与一个预设的阈值做比较，再根据比较的结果调整像素值。
@@ -731,10 +731,10 @@ Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);  自适应阈值化</descrip
     
     <item>
       <title>OpenCV实现图像暗区扩张（腐蚀图片）</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87.html</link>
       <pubDate>Thu, 18 Aug 2016 18:19:08 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E6%9A%97%E5%8C%BA%E6%89%A9%E5%BC%A0%E8%85%90%E8%9A%80%E5%9B%BE%E7%89%87.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 暗区扩张，也叫腐蚀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最小值代替锚点像素。
@@ -746,10 +746,10 @@ Mat kernelErode = Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE, new Size(
     
     <item>
       <title>OpenCV实现图像亮区扩张</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0.html</link>
       <pubDate>Thu, 18 Aug 2016 17:43:36 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%8C%BA%E6%89%A9%E5%BC%A0.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 亮区扩张，也叫膨胀，要实现这样的效果，我们可以选取一个合适大小的核，用被核覆盖的最大值代替锚点像素。膨胀可以用来融合可能被分割的目标。
@@ -761,10 +761,10 @@ Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3,
     
     <item>
       <title>OpenCV实现图片锐化</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96.html</link>
       <pubDate>Thu, 18 Aug 2016 16:39:48 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%94%90%E5%8C%96.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 锐化也可以看作是一种线性滤波操作，并且锚点像素有较高的权重，而周围的像素权重较低。 因此，我们可以自定义一个这样的核。
@@ -776,10 +776,10 @@ Mat kernelDilate = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(3,
     
     <item>
       <title>2OpenCV中值模糊方法</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</link>
       <pubDate>Thu, 18 Aug 2016 15:19:25 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的中值模糊方法  // 中值模糊方法 Imgproc.medianBlur(src, src, 33);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
@@ -788,10 +788,10 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
     
     <item>
       <title>OpenCV高斯模糊方法</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</link>
       <pubDate>Wed, 17 Aug 2016 18:57:10 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
@@ -800,10 +800,10 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
     
     <item>
       <title>OpenCV均值模糊方法</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</link>
       <pubDate>Wed, 17 Aug 2016 18:07:51 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwOpenCVBlurDemo
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
@@ -812,10 +812,10 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
     
     <item>
       <title>OpenCV的部署</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html</link>
       <pubDate>Wed, 17 Aug 2016 17:56:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 官网 官网
 之前时间比较紧张，在网上找了很多文章，写了一个人脸识别的程序，也是模棱两可，今天开始抽时间系统学习一下OpenCV在Android上的使用。
@@ -838,10 +838,10 @@ File -&amp;gt; New -&amp;gt; Import Module
     
     <item>
       <title>科大讯飞与灵云语音对比</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94.html</link>
       <pubDate>Tue, 16 Aug 2016 16:55:56 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E4%B8%8E%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%AF%B9%E6%AF%94.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 对比     科大讯飞 灵云语音     语音能力 语音合成、语音识别、语义、命令词、唤醒 没有独立的唤醒功能，需要使用命令词实现唤醒。   初始化 我们购买完离线资源包以后，集成到工程里，就可以保持在离线环境下使用 即使使用离线语音能力，第一次使用的时候，也必须要联网，激活离线语音能力以后，才可以使用   网络请求 各种请求均异步操作，不会阻塞线程。 在线文字语义识别，是同步操作，其它是异步操作过程。（同步操作时间超过5秒会导致Android终端抛出NAR异常导致崩溃）   语义 场景定义灵活，开发者可在后台自定义，通过申请的方式，可以开通自定义场景，目前免费开放。语义解析失败，可以将语音转文字。 场景的定义需要联系客服人员开通，自定义场景需要付费（说是一般一个场景2万元）。语义解析失败不能转成文字   语音唤醒 支持（官方自称低功耗） 实际没有唤醒功能，是使用离线命令词的方式模拟出了唤醒，效果不理想。尚未发现可以发现可以设置门限值等常用参数的API。   命令词识别 离线使用BNF语法，在线使用ABNF语法，语法可以使用占位符等等的操作符 离线和在线都使用JSGF语法。    灵云唤醒机制 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
 个人认为这种方式实现唤醒效果不好，原因如下：
@@ -855,10 +855,10 @@ File -&amp;gt; New -&amp;gt; Import Module
     
     <item>
       <title>灵云语音唤醒</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92.html</link>
       <pubDate>Tue, 16 Aug 2016 16:41:32 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/16/2016-08-16-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92.html</guid>
       <description> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 严格来讲，灵云没有语音唤醒功能，但是通过命令词的方式可以实现
 实现方式 用命令词的方式实现唤醒，用唤醒词做命令词，做好标识，然后循环开启命令词识别，当识别到唤醒的命令词的时候，视为被唤醒了。
@@ -871,10 +871,10 @@ File -&amp;gt; New -&amp;gt; Import Module
     
     <item>
       <title>灵云语音识别</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Mon, 15 Aug 2016 17:19:29 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 源码 GitHub
 在线语音识别 SDK下载 灵云SDK下载
@@ -884,10 +884,10 @@ SDK集成 下载SDK以后，将jar和so导入工程
     
     <item>
       <title>灵云语义理解</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3.html</link>
       <pubDate>Mon, 15 Aug 2016 17:13:32 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/15/2016-08-15-%E7%81%B5%E4%BA%91%E8%AF%AD%E4%B9%89%E7%90%86%E8%A7%A3.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 GitHub
 SDK下载 灵云SDK下载
@@ -897,10 +897,10 @@ SDK集成 下载SDK以后，将jar和so导入工程
     
     <item>
       <title>灵云语音合成</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/12/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/12/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.html</link>
       <pubDate>Fri, 12 Aug 2016 12:57:44 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/12/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/12/2016-08-12-%E7%81%B5%E4%BA%91%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 注册 官网
 注册比较简单，就不做过多介绍了，注册万应用以后，在后台创建自己的应用，创建完应用以后需要给应用开通对应的语音能力。
@@ -912,10 +912,10 @@ SDK集成 下载SDK以后，将jar和so导入工程
     
     <item>
       <title>Android蓝牙通信</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1.html</link>
       <pubDate>Tue, 02 Aug 2016 17:44:54 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 Android蓝牙通信 效果图  两台真机设备
  源码 GitHub
@@ -927,10 +927,10 @@ Android蓝牙通信 效果图  两台真机设备
     
     <item>
       <title>Android使用OpenCV实现人脸识别</title>
-      <link>https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Wed, 06 Jul 2016 17:48:57 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 先上效果图，GIF不好弄
 在网上找了在Android平台上使用OpenCV相关的教程，很少，大部分也都主要是介绍下人脸检测，很少有讲人脸识别，还有的人连人脸检测和人脸识别的概念都没有搞清，人脸识别只是识别到有人脸，能获取到一个人脸的大概位置，有几个人脸，而人脸识别是要获取到人脸特征做对比，识别这个人脸。有好多文章都写自己在讲人脸识别，实际上他只是在做人脸检测。
@@ -955,10 +955,10 @@ SDK SDK下载
     
     <item>
       <title>科大讯飞离线语音合成（语记）</title>
-      <link>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</link>
+      <link>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0.html</link>
       <pubDate>Sun, 30 Aug 2015 18:14:13 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 离线语音合成（语记） 讯飞的语音合成有三种方式
  在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用语记实现离线语音合成
@@ -972,10 +972,10 @@ SDK SDK下载
     
     <item>
       <title>科大讯飞离线语音合成</title>
-      <link>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <link>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.html</link>
       <pubDate>Sun, 30 Aug 2015 18:06:35 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 离线语音合成（离线资源包） 讯飞的语音合成有三种方式
  在线语音合成（免费） 离线使用语记语音合成（免费，需要本地装一个语记App并且下载离线资源） 使用讯飞离线语音包（付费）  这里使用离线资源包实现离线语音合成，因为正式版是要付费的，所以这里使用试用的离线包（35天试用期、3个装机量）。
@@ -989,10 +989,10 @@ package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application
     
     <item>
       <title>科大讯飞语义识别</title>
-      <link>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Sun, 30 Aug 2015 18:00:28 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9064463
 语义测试接口 地址：http://osp.voicecloud.cn/index.php/default/quicktest/index
@@ -1008,10 +1008,10 @@ package com.example.kongqw.kqwunderstanddemo; import android.app.Application; im
     
     <item>
       <title>科大讯飞在线语音合成</title>
-      <link>https://chuxinshequ.github.io/blog/2015/08/29/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</link>
+      <link>https://chuxinshequ.github.io/blog/2015/08/29/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.html</link>
       <pubDate>Sat, 29 Aug 2015 18:19:12 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2015/08/29/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2015/08/29/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9062261
 下载SDK 1. 选择服务 2. 选择平台 3. 选择应用 4. 下载SDK 说明 之前的工程都是在Eclipse下演示的，随着Android Studio的普及，我这里也开始使用Android Studio写Demo，虽然细节导入jar包和so库的过程可能不太一样，但是整体的流程是一样的。
@@ -1023,10 +1023,10 @@ package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application
     
     <item>
       <title>科大讯飞语音识别</title>
-      <link>https://chuxinshequ.github.io/blog/2015/08/21/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2015/08/21/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Fri, 21 Aug 2015 18:31:38 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2015/08/21/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2015/08/21/2015-08-21-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 离线语音识别（语记） 效果图 源码 下载地址：http://download.csdn.net/detail/q4878802/9032149
 下载语记并安装离线资源 集成 初始化 在清单文件中application标签下添加
@@ -1036,10 +1036,10 @@ package com.example.kqwlocalspeechdemo; import com.iflytek.cloud.SpeechConstant;
     
     <item>
       <title>科大讯飞离线命令词&#43;语义识别</title>
-      <link>https://chuxinshequ.github.io/blog/2015/08/20/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D-%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2015/08/20/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D-%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Thu, 20 Aug 2015 18:46:11 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2015/08/20/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D-%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2015/08/20/2015-08-20-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D-%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB.html</guid>
       <description> 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 离线命令词+语义识别 意思就是先走离线命令词识别，如果离线命令词识别没有识别到结果，那么就再走语义接口，如果已开通对应场景，则转为语义，如果没有开通对应场景，则将语音转为文字
 效果图  说的话满足本地构建的语法&amp;mdash;-离线命令词识别   说的话离线命令词无法识别，走语义识别并且满足语义场景&amp;mdash;-将语音转为语义   说话既不满足离线命令词识别也不满足语义开通的场景&amp;mdash;-将语音转为文字  程序和离线命令词识别基本一样
@@ -1051,10 +1051,10 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
     
     <item>
       <title>科大讯飞语音唤醒</title>
-      <link>https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</link>
+      <link>https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92.html</link>
       <pubDate>Wed, 19 Aug 2015 18:53:57 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%94%A4%E9%86%92.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 语音唤醒 唤醒功能，顾名思义，通过语音，唤醒服务，做我们想做的事情。
 效果图  开启应用后说讯飞语音或者讯飞语点唤醒
@@ -1070,10 +1070,10 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
     
     <item>
       <title>科大讯飞离线命令词识别</title>
-      <link>https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</link>
+      <link>https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB.html</link>
       <pubDate>Wed, 19 Aug 2015 17:41:31 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB/</guid>
+      <guid>https://chuxinshequ.github.io/blog/2015/08/19/2015-08-19-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E5%91%BD%E4%BB%A4%E8%AF%8D%E8%AF%86%E5%88%AB.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图  示例源码  地址：http://download.csdn.net/detail/q4878802/9023825
 步骤： 1. 下载SDK 前面文章有，就不在复述了。这里要选择离线命令词的服务以后，重新加载，因为需要下载离线命令词识别的资源文件
@@ -1087,10 +1087,10 @@ mAsr.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_MIX);  因为�
     
     <item>
       <title></title>
-      <link>https://chuxinshequ.github.io/blog/1/01/01/2016-04-15-android%E6%9C%8D%E5%8A%A1/</link>
+      <link>https://chuxinshequ.github.io/blog/1/01/01/2016-04-15-android%E6%9C%8D%E5%8A%A1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/1/01/01/2016-04-15-android%E6%9C%8D%E5%8A%A1/</guid>
+      <guid>https://chuxinshequ.github.io/blog/1/01/01/2016-04-15-android%E6%9C%8D%E5%8A%A1.html</guid>
       <description>layout: w title: Android服务 date: 2016-04-15 18:51:03 categories:
 tags: [服务,Android] 转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 服务  Service 是一个可以在后台执行长时间运行操作而不使用用户界面的应用组件。服务可由其他应用组件启动，而且即使用户切换到其他应用，服务仍将在后台继续运行。 此外，组件可以绑定到服务，以与之进行交互，甚至是执行进程间通信 (IPC)。 例如，服务可以处理网络事务、播放音乐，执行文件 I/O 或与内容提供程序交互，而所有这一切均可在后台进行。
