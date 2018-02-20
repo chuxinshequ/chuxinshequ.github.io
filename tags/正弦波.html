@@ -192,7 +192,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                   <div class="image">
-                                      <a href="https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html">
+                                      <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html">
                                           
                                           <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
                                           
@@ -200,7 +200,7 @@
                                   </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html">Android输出正弦波音频信号(左右声道对称)</a></h2>
+                                    <h2><a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html">Android输出正弦波音频信号(左右声道对称)</a></h2>
                                     <div class="clearfix">
                                         <p class="author-category">
                                           
@@ -210,14 +210,14 @@
 
                                         </p>
                                         <p class="date-comments">
-                                            <a href="https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html"><i class="fa fa-calendar-o"></i> August 29, 2016</a>
+                                            <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html"><i class="fa fa-calendar-o"></i> August 29, 2016</a>
                                         </p>
                                     </div>
                                     <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 需求：左右声道分别输出不同的音频数据，波形要是一个正弦波，左右声道还要对称！ 对硬件不是很了解，说是要通过音波避障。
 效果图 之前已经介绍了如何在左右声道输出不同的音频数据。 那么这里主要介绍如何模拟出波形是正弦波的音频数据。
 模拟正弦波 /** * 模拟正弦波音频数据 * @param isLeft 左右声道 * @return 音频数据 */ private short[] initData(boolean isLeft) { double phase = 0.0; int amp = 10000; short[] data = new short[bufferSize]; double phaseIncrement = (2 * Math.PI * mFrequency) / mSampleRateInHz; for (int i = 0; i &lt; bufferSize; i++) { if (isLeft) { data[i] = (short) (amp * Math.sin(phase)); } else { data[i] = (short) (-amp * Math.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html" class="btn btn-template-main">继续阅读</a>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -469,40 +469,40 @@
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/02/20/contact.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/contact.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Contact">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/20/contact.html">Contact</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/contact.html">Contact</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/chuxinshequ.github.io.alpha.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html">How to compose article in chuxinshequ.github.io</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/chuxinshequ.github.io.alpha.html">How to compose article in chuxinshequ.github.io</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/markdown-tables-sample.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html">Markdown Tables Sample 表格示例</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/markdown-tables-sample.html">Markdown Tables Sample 表格示例</a></h5>
                     </div>
                 </div>
                 

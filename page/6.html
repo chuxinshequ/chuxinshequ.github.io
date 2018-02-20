@@ -561,13 +561,13 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                    <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html">2OpenCV中值模糊方法</a></h4>
+                            <h4><a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html">2OpenCV中值模糊方法</a></h4>
                             <p class="author-category">
                             
                             在 August 18, 2016
@@ -577,7 +577,7 @@
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的中值模糊方法  // 中值模糊方法 Imgproc.medianBlur(src, src, 33);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.Subscriber; import rx.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/18/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-main">继续阅读</a>
+                              <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-18-opencv%E4%B8%AD%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -596,13 +596,13 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                    <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html">OpenCV高斯模糊方法</a></h4>
+                            <h4><a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html">OpenCV高斯模糊方法</a></h4>
                             <p class="author-category">
                             
                             在 August 17, 2016
@@ -612,7 +612,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的高斯模糊方法  // 高斯模糊方法 Imgproc.GaussianBlur(src, src, new Size(91, 91), 0);   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-main">继续阅读</a>
+                              <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -631,13 +631,13 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                    <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html">OpenCV均值模糊方法</a></h4>
+                            <h4><a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html">OpenCV均值模糊方法</a></h4>
                             <p class="author-category">
                             
                             在 August 17, 2016
@@ -647,7 +647,7 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
 步骤  将获取到的Bitmap图片转成Mat对象  // Bitmap转为Mat Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4); Utils.bitmapToMat(bitmap, src);   调用OpenCV的均值模糊方法  // 均值模糊方法 Imgproc.blur(src, src, new Size(100, 100));   将处理完的Mat数据转成Bitmap对象   // Mat转Bitmap Bitmap processedImage = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888); Utils.matToBitmap(src, processedImage);  封装 这里我用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。
 package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import org.opencv.android.Utils; import org.opencv.core.CvType; import org.opencv.core.Mat; import org.opencv.core.Size; import org.opencv.imgproc.Imgproc; import rx.Observable; import rx.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-main">继续阅读</a>
+                              <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E5%9D%87%E5%80%BC%E6%A8%A1%E7%B3%8A%E6%96%B9%E6%B3%95.html" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -666,13 +666,13 @@ package kong.qingwei.kqwopencvblurdemo; import android.graphics.Bitmap; import o
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                    <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html">OpenCV的部署</a></h4>
+                            <h4><a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html">OpenCV的部署</a></h4>
                             <p class="author-category">
                             
                             在 August 17, 2016
@@ -696,7 +696,7 @@ File -&gt; New -&gt; Import Module
 加载OpenCV Manager，如果诶呦安装会有提示
   private BaseLoaderCallback mOpenCVCallBack = new BaseLoaderCallback(this) { @Override public void onManagerConnected(int status) { switch (status) { case LoaderCallbackInterface.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/08/17/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html" class="btn btn-template-main">继续阅读</a>
+                              <a href="https://chuxinshequ.github.io/blog/kongqw/2016-08-17-opencv%E7%9A%84%E9%83%A8%E7%BD%B2.html" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -819,40 +819,40 @@ File -&gt; New -&gt; Import Module
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/02/20/contact.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/contact.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Contact">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/20/contact.html">Contact</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/contact.html">Contact</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/chuxinshequ.github.io.alpha.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html">How to compose article in chuxinshequ.github.io</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/chuxinshequ.github.io.alpha.html">How to compose article in chuxinshequ.github.io</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/markdown-tables-sample.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html">Markdown Tables Sample 表格示例</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/markdown-tables-sample.html">Markdown Tables Sample 表格示例</a></h5>
                     </div>
                 </div>
                 

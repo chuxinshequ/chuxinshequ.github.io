@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenCV高斯差分技术实现图像边缘检测</title>
+  <meta name="author" content="" />
+
+  
+  <meta name="keywords" content="devows, hugo, go">
+  
+
+  
+  <meta name="description" content="Site template made by devcows using hugo">
+  
+
+  <meta name="generator" content="Hugo 0.30.2" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="https://chuxinshequ.github.io/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="https://chuxinshequ.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+
+  
+  <link href="https://chuxinshequ.github.io/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="https://chuxinshequ.github.io/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://chuxinshequ.github.io/img/apple-touch-icon.png" />
+  
+
+  <link href="https://chuxinshequ.github.io/css/owl.carousel.css" rel="stylesheet">
+  <link href="https://chuxinshequ.github.io/css/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://chuxinshequ.github.io/index.xml" type="application/rss+xml" title="不忘初心">
+
+  
+  <meta property="og:title" content="OpenCV高斯差分技术实现图像边缘检测" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/blog/kongqw/2016-08-19-opencv%E9%AB%98%E6%96%AF%E5%B7%AE%E5%88%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%83%8F%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B.html/" />
+  <meta property="og:image" content="img/logo200x50.PNG" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://chuxinshequ.github.io/">
+                    
+                      <img src="https://chuxinshequ.github.io/img/logo200x50.PNG" alt="OpenCV高斯差分技术实现图像边缘检测 logo" class="hidden-xs hidden-sm">
+                    
+                    
+                      <img src="https://chuxinshequ.github.io/img/logo200x50.PNG" alt="OpenCV高斯差分技术实现图像边缘检测 logo" class="visible-xs visible-sm">
+                    
+                    <span class="sr-only">OpenCV高斯差分技术实现图像边缘检测 - 跳到主页</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">切换导航</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">
+                      
+                        主页
+                      
+                    </a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/blog/">
+                      
+                        博客
+                      
+                    </a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">
+                      
+                        FAQ
+                      
+                    </a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">
+                      
+                        联系我们
+                      
+                    </a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>OpenCV高斯差分技术实现图像边缘检测</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">August 19, 2016</p>
+
+                        <div id="post-content">
+                          
+
+<hr />
+
+<p>转载请说明出处！
+作者：<a href="http://kongqw.github.io/about/index.html">kqw攻城狮</a>
+出处：<a href="http://kongqw.github.io">个人站</a> | <a href="http://blog.csdn.net/q4878802/">CSDN</a></p>
+
+<hr />
+
+<h1 id="效果图">效果图</h1>
+
+<p><img src="http://img.blog.csdn.net/20160819120419353" alt="边缘检测结果" /></p>
+
+<p><img src="http://img.blog.csdn.net/20160819120428374" alt="原图" /></p>
+
+<h1 id="源码">源码</h1>
+
+<p><a href="https://github.com/kongqw/KqwOpenCVFeaturesDemo">KqwOpenCVFeaturesDemo</a></p>
+
+<p><strong>边缘</strong>是图像中像素亮度变化明显的点。</p>
+
+<h1 id="高斯差分算法步骤">高斯差分算法步骤</h1>
+
+<ol>
+<li><p>将图像转为灰度图像</p>
+
+<pre><code class="language-java">// 原图置灰
+Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);
+</code></pre></li>
+
+<li><p>用两个不同的模糊半径对灰度图像执行高斯模糊（取得两幅高斯模糊图像）</p>
+
+<pre><code class="language-java">// 以两个不同的模糊半径对图像做模糊处理
+Imgproc.GaussianBlur(grayMat, blur1, new Size(15, 15), 5);
+Imgproc.GaussianBlur(grayMat, blur2, new Size(21, 21), 5);
+</code></pre></li>
+
+<li><p>将两幅高斯模糊图像做减法，得到一幅包含边缘点的结果图像</p>
+
+<pre><code class="language-java">// 将两幅模糊后的图像相减
+Mat diff = new Mat();
+Core.absdiff(blur1, blur2, diff);
+</code></pre></li>
+</ol>
+
+<p><strong>该方法只对图像做了高斯模糊，这是计算图像边缘最快的方法之一，但是，该方法的结果也不是很理想，这种方式对某些图像效果很好，但是在某些情况下可能会完全失效。</strong></p>
+
+<h1 id="封装">封装</h1>
+
+<p>这里用到了RxJava。主要是因为图片处理是耗时操作，会阻塞线程，为了防止界面卡顿，这里使用RxJava进行了线程切换。</p>
+
+<pre><code class="language-java">/**
+ * 高斯差分算法边缘检测
+ *
+ * @param bitmap 要检测的图片
+ */
+public void differenceOfGaussian(Bitmap bitmap) {
+    if (null != mSubscriber)
+        Observable
+                .just(bitmap)
+                .map(new Func1&lt;Bitmap, Bitmap&gt;() {
+
+                    @Override
+                    public Bitmap call(Bitmap bitmap) {
+
+                        Mat grayMat = new Mat();
+                        Mat blur1 = new Mat();
+                        Mat blur2 = new Mat();
+
+                        // Bitmap转为Mat
+                        Mat src = new Mat(bitmap.getHeight(), bitmap.getWidth(), CvType.CV_8UC4);
+                        Utils.bitmapToMat(bitmap, src);
+
+                        // 原图置灰
+                        Imgproc.cvtColor(src, grayMat, Imgproc.COLOR_BGR2GRAY);
+
+                        // 以两个不同的模糊半径对图像做模糊处理
+                        Imgproc.GaussianBlur(grayMat, blur1, new Size(15, 15), 5);
+                        Imgproc.GaussianBlur(grayMat, blur2, new Size(21, 21), 5);
+
+                        // 将两幅模糊后的图像相减
+                        Mat diff = new Mat();
+                        Core.absdiff(blur1, blur2, diff);
+
+                        // 反转二值阈值化
+                        Core.multiply(diff, new Scalar(100), diff);
+                        Imgproc.threshold(diff, diff, 50, 255, Imgproc.THRESH_BINARY_INV);
+
+                        // Mat转Bitmap
+                        Bitmap processedImage = Bitmap.createBitmap(grayMat.cols(), grayMat.rows(), Bitmap.Config.ARGB_8888);
+                        Utils.matToBitmap(diff, processedImage);
+
+                        return processedImage;
+                    }
+                })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(mSubscriber);
+}
+</code></pre>
+
+<h1 id="使用">使用</h1>
+
+<pre><code class="language-java">// 图片特征提取的工具类
+mFeaturesUtil = new FeaturesUtil(new Subscriber&lt;Bitmap&gt;() {
+    @Override
+    public void onCompleted() {
+        // 图片处理完成
+        dismissProgressDialog();
+    }
+
+    @Override
+    public void onError(Throwable e) {
+        // 图片处理异常
+        dismissProgressDialog();
+    }
+
+    @Override
+    public void onNext(Bitmap bitmap) {
+        // 获取到处理后的图片
+        mImageView.setImageBitmap(bitmap);
+    }
+});
+
+// 高斯差分技术检测图像边缘
+mFeaturesUtil.differenceOfGaussian(mSelectImage);
+</code></pre>
+
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "devcows" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">搜索</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
+                <input type="hidden" name="sitesearch" value="https://chuxinshequ.github.io/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://chuxinshequ.github.io/categories/help">help (4)</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/categories/im">im (1)</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/categories/opencv">opencv (15)</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/categories/%e5%a4%8f%e6%9c%aa%e7%9c%a0">夏未眠 (2)</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/categories/%e5%bc%80%e6%ba%90">开源 (5)</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/categories/%e6%8a%80%e6%9c%af%e7%af%87">技术篇 (13)</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/categories/%e8%af%ad%e9%9f%b3">语音 (13)</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/categories/%e9%9a%8f%e6%89%8b%e8%ae%b0">随手记 (2)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://chuxinshequ.github.io/tags/aes"><i class="fa fa-tags"></i> aes</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/android"><i class="fa fa-tags"></i> android</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/elk"><i class="fa fa-tags"></i> elk</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/es"><i class="fa fa-tags"></i> es</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/gradle"><i class="fa fa-tags"></i> gradle</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/help"><i class="fa fa-tags"></i> help</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/hexo"><i class="fa fa-tags"></i> hexo</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/im"><i class="fa fa-tags"></i> im</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/opencv"><i class="fa fa-tags"></i> opencv</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/sklearn"><i class="fa fa-tags"></i> sklearn</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e4%b8%b2%e5%8f%a3"><i class="fa fa-tags"></i> 串口</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%8a%a0%e5%af%86"><i class="fa fa-tags"></i> 加密</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%8a%a8%e6%80%81%e6%9d%83%e9%99%90"><i class="fa fa-tags"></i> 动态权限</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%8d%b3%e6%8b%bf%e5%8d%b3%e7%94%a8"><i class="fa fa-tags"></i> 即拿即用</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%9b%9e%e5%bd%92%e5%88%86%e6%9e%90"><i class="fa fa-tags"></i> 回归分析</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%a3%b0%e9%81%93"><i class="fa fa-tags"></i> 声道</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%a4%8f%e6%9c%aa%e7%9c%a0"><i class="fa fa-tags"></i> 夏未眠</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%a4%9a%e5%aa%92%e4%bd%93"><i class="fa fa-tags"></i> 多媒体</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%bc%80%e6%ba%90"><i class="fa fa-tags"></i> 开源</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e5%bc%82%e5%b8%b8%e6%a3%80%e6%b5%8b"><i class="fa fa-tags"></i> 异常检测</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e6%91%87%e6%9d%86"><i class="fa fa-tags"></i> 摇杆</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e6%95%b0%e6%8d%ae%e5%bd%92%e4%b8%80%e5%8c%96"><i class="fa fa-tags"></i> 数据归一化</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84"><i class="fa fa-tags"></i> 数据结构</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e6%96%87%e4%bb%b6%e5%ad%98%e5%8f%96"><i class="fa fa-tags"></i> 文件存取</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e6%a2%af%e5%ba%a6%e4%b8%8b%e9%99%8d"><i class="fa fa-tags"></i> 梯度下降</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e6%ad%a3%e5%bc%a6%e6%b3%a2"><i class="fa fa-tags"></i> 正弦波</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e7%8e%af%e4%bf%a1"><i class="fa fa-tags"></i> 环信</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e8%93%9d%e7%89%99"><i class="fa fa-tags"></i> 蓝牙</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e8%93%9d%e7%89%99%e9%80%9a%e4%bf%a1"><i class="fa fa-tags"></i> 蓝牙通信</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e8%af%ad%e9%9f%b3"><i class="fa fa-tags"></i> 语音</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e8%b7%9d%e7%a6%bb%e8%ae%a1%e7%ae%97"><i class="fa fa-tags"></i> 距离计算</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e9%9a%8f%e6%89%8b%e8%ae%b0"><i class="fa fa-tags"></i> 随手记</a>
+            </li>
+            
+            <li><a href="https://chuxinshequ.github.io/tags/%e9%9b%b7%e8%be%be"><i class="fa fa-tags"></i> 雷达</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>关于我们</h4>
+
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>最新博客</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/contact.html">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Contact">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/contact.html">Contact</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/chuxinshequ.github.io.alpha.html">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/chuxinshequ.github.io.alpha.html">How to compose article in chuxinshequ.github.io</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/markdown-tables-sample.html">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/markdown-tables-sample.html">Markdown Tables Sample 表格示例</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>联系</h4>
+
+            <strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      
+
+
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
+            
+            <p class="pull-right">
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              
+
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y&v=3.exp"></script>
+
+<script src="https://chuxinshequ.github.io/js/hpneo.gmaps.js"></script>
+<script src="https://chuxinshequ.github.io/js/gmaps.init.js"></script>
+<script src="https://chuxinshequ.github.io/js/front.js"></script>
+
+
+<script src="https://chuxinshequ.github.io/js/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>

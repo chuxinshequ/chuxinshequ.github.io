@@ -14,10 +14,10 @@
     
     <item>
       <title>Android AES 加密、解密</title>
-      <link>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86.html</link>
+      <link>https://chuxinshequ.github.io/blog/kongqw/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86.html</link>
       <pubDate>Fri, 04 Aug 2017 15:32:49 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86.html</guid>
+      <guid>https://chuxinshequ.github.io/blog/kongqw/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86.html</guid>
       <description>AES加密介绍
 ASE 加密、解密的关键在于秘钥、只有使用加密时使用的秘钥，才可以解密。
 生成秘钥的代码网上一大堆，下面的代码可生成一个秘钥
@@ -27,10 +27,10 @@ private byte[] encrypt(String content, SecretKey secretKey) throws Exception { /
     
     <item>
       <title>Android蓝牙通信——AndroidBluetoothManager</title>
-      <link>https://chuxinshequ.github.io/blog/2017/03/16/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager.html</link>
+      <link>https://chuxinshequ.github.io/blog/kongqw/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager.html</link>
       <pubDate>Thu, 16 Mar 2017 18:24:36 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/03/16/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager.html</guid>
+      <guid>https://chuxinshequ.github.io/blog/kongqw/2017-03-16-android-%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1androidbluetoothmanager.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 
 To get a Git project into your build:
@@ -45,10 +45,10 @@ GIF
     
     <item>
       <title>Android自定义雷达扫描控件</title>
-      <link>https://chuxinshequ.github.io/blog/2017/03/10/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6.html</link>
+      <link>https://chuxinshequ.github.io/blog/kongqw/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6.html</link>
       <pubDate>Fri, 10 Mar 2017 18:28:14 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2017/03/10/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6.html</guid>
+      <guid>https://chuxinshequ.github.io/blog/kongqw/2017-03-10-android%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9B%B7%E8%BE%BE%E6%89%AB%E6%8F%8F%E6%8E%A7%E4%BB%B6.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 Android 雷达扫描控件 
 To get a Git project into your build:
@@ -61,10 +61,10 @@ dependencies { compile &#39;com.github.kongqw:AndroidRadarScanView:1.0.1&#39; } 
     
     <item>
       <title>Android自定义摇杆</title>
-      <link>https://chuxinshequ.github.io/blog/2016/09/01/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86.html</link>
+      <link>https://chuxinshequ.github.io/blog/kongqw/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86.html</link>
       <pubDate>Thu, 01 Sep 2016 17:37:11 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/09/01/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86.html</guid>
+      <guid>https://chuxinshequ.github.io/blog/kongqw/2016-09-01-android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%91%87%E6%9D%86.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 KqwRockerDemo
 喜欢就给个star，谢谢！
@@ -74,10 +74,10 @@ dependencies { compile &#39;com.github.kongqw:AndroidRadarScanView:1.0.1&#39; } 
     
     <item>
       <title>Android输出正弦波音频信号(左右声道对称)</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html</link>
+      <link>https://chuxinshequ.github.io/blog/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html</link>
       <pubDate>Mon, 29 Aug 2016 15:01:34 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/29/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html</guid>
+      <guid>https://chuxinshequ.github.io/blog/kongqw/2016-08-29-android%E8%BE%93%E5%87%BA%E6%AD%A3%E5%BC%A6%E6%B3%A2%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7-%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E5%AF%B9%E7%A7%B0.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 需求：左右声道分别输出不同的音频数据，波形要是一个正弦波，左右声道还要对称！ 对硬件不是很了解，说是要通过音波避障。
 效果图 之前已经介绍了如何在左右声道输出不同的音频数据。 那么这里主要介绍如何模拟出波形是正弦波的音频数据。
@@ -86,10 +86,10 @@ dependencies { compile &#39;com.github.kongqw:AndroidRadarScanView:1.0.1&#39; } 
     
     <item>
       <title>Android左右声道的控制</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/26/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6.html</link>
+      <link>https://chuxinshequ.github.io/blog/kongqw/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6.html</link>
       <pubDate>Fri, 26 Aug 2016 15:36:50 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/26/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6.html</guid>
+      <guid>https://chuxinshequ.github.io/blog/kongqw/2016-08-26-android%E5%B7%A6%E5%8F%B3%E5%A3%B0%E9%81%93%E7%9A%84%E6%8E%A7%E5%88%B6.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 效果图 源码 AndroidSoundManagerDemo
 我这里主要是用到了AudioTrack实现的左右声道的控制，手机一般都只有两个声道，即左声道和右声道，我们在输出的时候可以选择单声道，也可以选择双声道（立体声）。
@@ -104,10 +104,10 @@ AudioTrack (int streamType, int sampleRateInHz, int channelConfig, int audioForm
     
     <item>
       <title>Android蓝牙通信</title>
-      <link>https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1.html</link>
+      <link>https://chuxinshequ.github.io/blog/kongqw/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1.html</link>
       <pubDate>Tue, 02 Aug 2016 17:44:54 +0000</pubDate>
       
-      <guid>https://chuxinshequ.github.io/blog/2016/08/02/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1.html</guid>
+      <guid>https://chuxinshequ.github.io/blog/kongqw/2016-08-02-android%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1.html</guid>
       <description>转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
 Android蓝牙通信 效果图  两台真机设备
  源码 GitHub

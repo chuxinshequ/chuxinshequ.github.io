@@ -561,13 +561,13 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                    <a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88.html">Android播放音效</a></h4>
+                            <h4><a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88.html">Android播放音效</a></h4>
                             <p class="author-category">
                             
                             在 November 16, 2016
@@ -579,7 +579,7 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
 准备音频文件 将音频文件放置在assets目录下
 初始化SoundPool SoundPool mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);  加载音频文件 int streamID = mSoundPool.load(getApplicationContext().getAssets().openFd(&quot;beep/beep1.mp3&quot;), 1);  播放音频文件 mSoundPool.play(streamID, 10, 10, 1, 0, 1.0f);  释放SoundPool mSoundPool.release(); mSoundPool = null;  Code package com.kongqw.kqwplaybeepdemo; import android.media.AudioManager; import android.media.SoundPool; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.util.Log; import android.view.View; import java.io.IOException; import java.util.HashMap; public class MainActivity extends AppCompatActivity implements View.OnClickListener { private static final String TAG = &quot;MainActivity&quot;; private SoundPool mSoundPool; private int streamID; private HashMap&lt;String, Integer&gt; mSoundMap; @Override protected void onCreate(Bundle savedInstanceState) { super.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88.html" class="btn btn-template-main">继续阅读</a>
+                              <a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88.html" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -598,13 +598,13 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                    <a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html">App启动优化最佳实践</a></h4>
+                            <h4><a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html">App启动优化最佳实践</a></h4>
                             <p class="author-category">
                             
                             在 November 14, 2016
@@ -620,7 +620,7 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
 &lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:opacity=&quot;opaque&quot;&gt; &lt;!-- The background color, preferably the same as your normal theme --&gt; &lt;item android:drawable=&quot;@android:color/holo_blue_dark&quot; /&gt; &lt;!-- Your product logo - 144dp color version of your app icon --&gt; &lt;item&gt; &lt;bitmap android:gravity=&quot;center&quot; android:src=&quot;@mipmap/ic_launcher&quot; /&gt; &lt;/item&gt; &lt;/layer-list&gt;  最后，在清单文件设置启动页使用我们自定义的主题
 &lt;?xml version=&quot;1.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/11/14/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html" class="btn btn-template-main">继续阅读</a>
+                              <a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-14-app%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.html" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -639,13 +639,13 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                    <a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html">Android串口通信</a></h4>
+                            <h4><a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html">Android串口通信</a></h4>
                             <p class="author-category">
                             
                             在 November 1, 2016
@@ -666,7 +666,7 @@ android { …… externalNativeBuild { cmake { path &quot;src/main/cpp/CMakeList
 cmake_minimum_required(VERSION 3.4.1) add_library(SerialPort SHARED SerialPort.c) # Include libraries needed for libserial_port lib target_link_libraries(SerialPort android log)  SerialPort.java
 static { System.loadLibrary(&quot;SerialPort&quot;); System.loadLibrary(&quot;serial_port&quot;); }  使用 基类 需要使用串口通信的类继承 SerialPortActivity.</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/11/01/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html" class="btn btn-template-main">继续阅读</a>
+                              <a href="https://chuxinshequ.github.io/blog/kongqw/2016-11-01-android%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1.html" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -685,13 +685,13 @@ static { System.loadLibrary(&quot;SerialPort&quot;); System.loadLibrary(&quot;se
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                    <a href="https://chuxinshequ.github.io/blog/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B.html">这夏未眠.简介</a></h4>
+                            <h4><a href="https://chuxinshequ.github.io/blog/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B.html">这夏未眠.简介</a></h4>
                             <p class="author-category">
                             
                             在 September 15, 2016
@@ -701,7 +701,7 @@ static { System.loadLibrary(&quot;SerialPort&quot;); System.loadLibrary(&quot;se
 可是事情永远不会那么顺利，在香山公园里，当他拿起他买的情侣戒指送给晨晨时，晨晨没有接受，说了一堆他也没有听进去的话，就这样，又开始了分离，而谁也不知道这次分离竟然时一辈子的再也不见。
 后来的后来，他又遇见了别的女孩，不知道是不是因为后来的女孩都像小艾记忆里的莫晨。只知道，他都很珍惜。</p>
                             <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2016/09/15/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B.html" class="btn btn-template-main">继续阅读</a>
+                              <a href="https://chuxinshequ.github.io/blog/thinkgamer/%E5%A4%8F%E6%9C%AA%E7%9C%A0/%E8%BF%99%E5%A4%8F%E6%9C%AA%E7%9C%A0-%E7%AE%80%E4%BB%8B.html" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -824,40 +824,40 @@ static { System.loadLibrary(&quot;SerialPort&quot;); System.loadLibrary(&quot;se
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/02/20/contact.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/contact.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Contact">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/20/contact.html">Contact</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/contact.html">Contact</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/chuxinshequ.github.io.alpha.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha.html">How to compose article in chuxinshequ.github.io</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/chuxinshequ.github.io.alpha.html">How to compose article in chuxinshequ.github.io</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html">
+                        <a href="https://chuxinshequ.github.io/blog/huzhenghui/help/markdown-tables-sample.html">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Markdown Tables Sample 表格示例">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample.html">Markdown Tables Sample 表格示例</a></h5>
+                        <h5><a href="https://chuxinshequ.github.io/blog/huzhenghui/help/markdown-tables-sample.html">Markdown Tables Sample 表格示例</a></h5>
                     </div>
                 </div>
                 
