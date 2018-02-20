@@ -561,6 +561,57 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
+                                    <a href="https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h4><a href="https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/">Android使用OpenCV实现人脸识别</a></h4>
+                            <p class="author-category">
+                            
+                            在 July 6, 2016
+                            </p>
+                            <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
+效果图 先上效果图，GIF不好弄
+在网上找了在Android平台上使用OpenCV相关的教程，很少，大部分也都主要是介绍下人脸检测，很少有讲人脸识别，还有的人连人脸检测和人脸识别的概念都没有搞清，人脸识别只是识别到有人脸，能获取到一个人脸的大概位置，有几个人脸，而人脸识别是要获取到人脸特征做对比，识别这个人脸。有好多文章都写自己在讲人脸识别，实际上他只是在做人脸检测。
+OpenCV官网
+官方给的Demo是在Eclipse工程下的，如果你现在已经是在Android Studio下开发，因为Eclipse工程有makefile文件，迁移到Android Studio好像还是有点麻烦，我是干脆就在Eclipse下跑的Demo。
+先甩过来官方给的一些文档：
+OpenCV4Android SDK
+Android Development with OpenCV
+实现方式 按照官方的文档，我们在Eclipse里导入Demo进去以后，是不能直接运行的，需要安装Manager的一个APK,然后在Demo工程里通过AIDL的方式，调用OpenCV的核心方法，不过Demo给实现的功能也只是一个人脸检测。
+SDK SDK下载
+下面来看一下SDK
+目录：
+ apk：Manager的apk doc：一些文档 samples：示例工程和一些编译好的apk sdk：一些库文件   当然, 如果你的C/C++足够好，你肯定可以自己编译一个库，直接导入到工程，就不用安装Manager了，可惜了我自己还不行，哈哈……无奈安装Manager把……
+ 如何将Demo导入到Eclipse并运行，上面官方的文档已经说的比较清楚了，至于会有什么问题就自行Google吧。
+人脸检测 其实人脸检测并不是重点，Demo里已经实现了人脸检测的功能。
+主要的实现方式：OpenCV有一个自己的org.opencv.android.JavaCameraView自定义控件，它循环的从摄像头抓取数据，在回调方法中，我们能获取到Mat数据，然后通过调用OpenCV的Native方法，检测当前是否有人脸，我们会获取到一个Rect数组，里面会有人脸数据，最后将人脸画在屏幕上，到此为止，Demo的人脸检测功能，就结束了。
+人脸识别 人脸识别我这里用到了JavaCV
+人脸识别逻辑：人脸识别的主要方式就是获取到人脸的特征值，然后将两个特征值做比对，取到一个相似度去做人脸识别，OpenCV这里的特征值，其实就是一张图片。 我们的从回调的Mat数据检测到有人脸以后，提取特征值（也就是保存人脸的一张图片到某个路径），然后比较特征值
+为了提高识别的准确度，需要在检测到人脸以后，把人脸的部分截取出来，然后置灰（置灰的目的是为了方式色泽和明暗度对识别有影响）。
+保存人脸特征值 /** * 特征保存 * * @param image Mat * @param rect 人脸信息 * @param fileName 文件名字 * @return 保存是否成功 */ public boolean saveImage(Mat image, Rect rect, String fileName) { try { String PATH = Environment.</p>
+                            <p class="read-more">
+                              <a href="https://chuxinshequ.github.io/blog/2016/07/06/2016-07-06-android%E4%BD%BF%E7%94%A8opencv%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="btn btn-template-main">继续阅读</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="box-image-text blog">
+                        <div class="top">
+                            <div class="image" style="overflow:hidden">
+                                
+                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                
+                            </div>
+                            <div class="bg"></div>
+                            <div class="text">
+                                <p class="buttons">
                                     <a href="https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E7%A6%BB%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E8%AF%AD%E8%AE%B0/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
                                 </p>
                             </div>
@@ -665,44 +716,6 @@ package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application
 package com.example.kongqw.kqwunderstanddemo; import android.app.Application; import android.widget.Toast; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; /** * Created by kongqw on 2015/8/29. */ public class InitApplication extends Application { @Override public void onCreate() { Toast.makeText(this, &quot;InitApplication&quot;, Toast.LENGTH_LONG).show(); // 应用程序入口处调用,避免手机内存过小,杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null // 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton // 注意：此接口在非主进程调用会返回null对象，如需在非主进程使用语音功能，请增加参数：SpeechConstant.FORCE_LOGIN+&quot;=true&quot; // 参数间使用“,”分隔。 // 设置你申请的应用appid StringBuffer param = new StringBuffer(); param.</p>
                             <p class="read-more">
                               <a href="https://chuxinshequ.github.io/blog/2015/08/30/2015-08-30-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E4%B9%89%E8%AF%86%E5%88%AB/" class="btn btn-template-main">继续阅读</a>
-                            </p>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="box-image-text blog">
-                        <div class="top">
-                            <div class="image" style="overflow:hidden">
-                                
-                                <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                
-                            </div>
-                            <div class="bg"></div>
-                            <div class="text">
-                                <p class="buttons">
-                                    <a href="https://chuxinshequ.github.io/blog/2015/08/29/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> 阅读更多</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <h4><a href="https://chuxinshequ.github.io/blog/2015/08/29/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/">科大讯飞在线语音合成</a></h4>
-                            <p class="author-category">
-                            
-                            在 August 29, 2015
-                            </p>
-                            <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
-效果图 源码 下载地址（Android Studio工程）：http://download.csdn.net/detail/q4878802/9062261
-下载SDK 1. 选择服务 2. 选择平台 3. 选择应用 4. 下载SDK 说明 之前的工程都是在Eclipse下演示的，随着Android Studio的普及，我这里也开始使用Android Studio写Demo，虽然细节导入jar包和so库的过程可能不太一样，但是整体的流程是一样的。
-将jar包和so库导入Android Studio工程 将jar包copy到libs目录下 在main目录下创建jniLibs目录，将so文件copy过来
-添加网络权限 &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt; &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;  初始化 在清单文件中application标签下添加name属性
-android:name=&quot;.InitApplication&quot;  初始化
-package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application; import android.widget.Toast; import com.iflytek.cloud.SpeechConstant; import com.iflytek.cloud.SpeechUtility; /** * Created by kongqw on 2015/8/29. */ public class InitApplication extends Application { @Override public void onCreate() { Toast.makeText(this, &quot;InitApplication&quot;, Toast.</p>
-                            <p class="read-more">
-                              <a href="https://chuxinshequ.github.io/blog/2015/08/29/2015-08-29-%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E5%9C%A8%E7%BA%BF%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90/" class="btn btn-template-main">继续阅读</a>
                             </p>
                         </div>
                     </div>
@@ -825,6 +838,19 @@ package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/20/contact/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Contact">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/20/contact/">Contact</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
@@ -846,19 +872,6 @@ package com.example.kongqw.kqwspeechcompounddemo; import android.app.Application
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
                     </div>
                 </div>
                 

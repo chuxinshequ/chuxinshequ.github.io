@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 19 Feb 2018 02:02:02 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Feb 2018 12:34:56 +0000</lastBuildDate>
     
 	<atom:link href="https://chuxinshequ.github.io/categories/help/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contact</title>
+      <link>https://chuxinshequ.github.io/blog/2018/02/20/contact/</link>
+      <pubDate>Tue, 20 Feb 2018 12:34:56 +0000</pubDate>
+      
+      <guid>https://chuxinshequ.github.io/blog/2018/02/20/contact/</guid>
+      <description> 微信群 如果上面的图片没有及时更新的话（这几乎是必然的），联系我拉你进群，联系方式有很多，哪种最快看缘分，都试试肯定及时：  Email: hu@daonao.com QQ 443089607 微博 @胡争辉 GitHub https://github.com/huzhenghui Facebook TODO Twitter TODO Bitbucket https://bitbucket.org/huzhenghui/ Docker https://hub.docker.com/r/huzhenghui
+ 微信 huzhenghui   </description>
+    </item>
     
     <item>
       <title>How to compose article in chuxinshequ.github.io</title>

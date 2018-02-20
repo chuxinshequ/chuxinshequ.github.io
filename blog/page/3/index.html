@@ -192,6 +192,40 @@
                             <div class="row">
                                 <div class="col-md-4">
                                   <div class="image">
+                                      <a href="https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/">
+                                          
+                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/">Android AES 加密、解密</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/"><i class="fa fa-calendar-o"></i> August 4, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">AES加密介绍
+ASE 加密、解密的关键在于秘钥、只有使用加密时使用的秘钥，才可以解密。
+生成秘钥的代码网上一大堆，下面的代码可生成一个秘钥
+private SecretKey generateKey(String seed) throws Exception { // 获取秘钥生成器 KeyGenerator keyGenerator = KeyGenerator.getInstance(&quot;AES&quot;); // 通过种子初始化 SecureRandom secureRandom = new SecureRandom(); secureRandom.setSeed(seed.getBytes(&quot;UTF-8&quot;)); keyGenerator.init(128, secureRandom); // 生成秘钥并返回 return keyGenerator.generateKey(); }  然后使用秘钥进行加密
+private byte[] encrypt(String content, SecretKey secretKey) throws Exception { // 秘钥 byte[] enCodeFormat = secretKey.getEncoded(); // 创建AES秘钥 SecretKeySpec key = new SecretKeySpec(enCodeFormat, &quot;AES&quot;); // 创建密码器 Cipher cipher = Cipher.getInstance(&quot;AES&quot;); // 初始化加密器 cipher.init(Cipher.ENCRYPT_MODE, key); // 加密 return cipher.</p>
+                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2017/08/04/2017-08-04-android-aes-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/" class="btn btn-template-main">继续阅读</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
                                       <a href="https://chuxinshequ.github.io/blog/2017/07/16/machinglearning%E4%B8%AD%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%92%8C%E7%9B%B8%E4%BC%BC%E6%80%A7%E8%AE%A1%E7%AE%97%E4%BB%A5%E5%8F%8Apython%E5%AE%9E%E7%8E%B0/">
                                           
                                           <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
@@ -578,43 +612,6 @@ MeasureSpec.getSize(measureSpec)  根据上面的意思，可以封装我们的g
                             </div>
                         </section>
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/">
-                                          
-                                          <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/">Android播放音效</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/"><i class="fa fa-calendar-o"></i> November 16, 2016</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro">转载请说明出处！ 作者：kqw攻城狮 出处：个人站 | CSDN
-有些时候程序需要播放几个很短的低延迟的音效来响应与用户的交互。
-Android通过SoundPool将文件音频缓存加载到内存中，然后在响应用户操作的时候快速地播放。 Android框架低通了SoundPool来解码小音频文件，并在内存中操作它们来进行音频快速和重复的播放。SoundPool还有一些其他特性，比如可以在运行时控制音量和播放速度。
-播放音效也很简单，总共分5步
-准备音频文件 将音频文件放置在assets目录下
-初始化SoundPool SoundPool mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);  加载音频文件 int streamID = mSoundPool.load(getApplicationContext().getAssets().openFd(&quot;beep/beep1.mp3&quot;), 1);  播放音频文件 mSoundPool.play(streamID, 10, 10, 1, 0, 1.0f);  释放SoundPool mSoundPool.release(); mSoundPool = null;  Code package com.kongqw.kqwplaybeepdemo; import android.media.AudioManager; import android.media.SoundPool; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.util.Log; import android.view.View; import java.io.IOException; import java.util.HashMap; public class MainActivity extends AppCompatActivity implements View.OnClickListener { private static final String TAG = &quot;MainActivity&quot;; private SoundPool mSoundPool; private int streamID; private HashMap&lt;String, Integer&gt; mSoundMap; @Override protected void onCreate(Bundle savedInstanceState) { super.</p>
-                                    <p class="read-more"><a href="https://chuxinshequ.github.io/blog/2016/11/16/2016-11-16-android%E6%92%AD%E6%94%BE%E9%9F%B3%E6%95%88/" class="btn btn-template-main">继续阅读</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
 
                         <ul class="pager">
                             
@@ -672,7 +669,7 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked">
             
-            <li><a href="https://chuxinshequ.github.io/categories/help">help (3)</a>
+            <li><a href="https://chuxinshequ.github.io/categories/help">help (4)</a>
             </li>
             
             <li><a href="https://chuxinshequ.github.io/categories/im">im (1)</a>
@@ -861,6 +858,19 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://chuxinshequ.github.io/blog/2018/02/20/contact/">
+                          
+                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Contact">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://chuxinshequ.github.io/blog/2018/02/20/contact/">Contact</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://chuxinshequ.github.io/blog/2018/02/19/chuxinshequ.github.io.alpha/">
                           
                             <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="How to compose article in chuxinshequ.github.io">
@@ -882,19 +892,6 @@ Android通过SoundPool将文件音频缓存加载到内存中，然后在响应�
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/markdown-tables-sample/">Markdown Tables Sample 表格示例</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">
-                          
-                            <img src="https://chuxinshequ.github.io/img/placeholder.png" class="img-responsive" alt="Front Matter Sample 格式示例">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://chuxinshequ.github.io/blog/2018/01/30/front-matter-sample/">Front Matter Sample 格式示例</a></h5>
                     </div>
                 </div>
                 
