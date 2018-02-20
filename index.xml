@@ -1106,5 +1106,15 @@ FRONT MATTER SAMPLE 格式示例 FRONT MATTER SAMPLE 格式示例
 MARKDOWN TABLES SAMPLE 表格示例 Markdown Tables Sample 表格示例</description>
     </item>
     
+    <item>
+      <title>联系我们</title>
+      <link>https://chuxinshequ.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chuxinshequ.github.io/contact/</guid>
+      <description> 微信群 如果上面的图片没有及时更新的话（这几乎是必然的），联系我拉你进群，联系方式有很多，哪种最快看缘分，都试试肯定及时：  Email: hu@daonao.com QQ 443089607 微博 @胡争辉 GitHub https://github.com/huzhenghui Facebook TODO Twitter TODO Bitbucket https://bitbucket.org/huzhenghui/ Docker https://hub.docker.com/r/huzhenghui
+ 微信 huzhenghui   </description>
+    </item>
+    
   </channel>
 </rss>
